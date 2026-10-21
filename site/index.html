@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overseas data centres of Chinese firms</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Overseas data centres of Chinese firms</h1>
+    <p class="lead">Data-centre capacity outside mainland China in which Chinese firms hold a role, as owner, operator, tenant, user, builder, equipment supplier or financier. Every row cites the page that supports it, and a script has checked that the cited passage is on that page.</p>
+    <p class="counts" id="counts"></p>
+  </header>
+
+  <section class="controls" aria-label="Filters">
+    <label><input type="checkbox" id="show-sites" checked> Sites</label>
+    <label><input type="checkbox" id="show-regions" checked> Cloud regions</label>
+    <label>Firm <select id="firm"><option value="">All firms</option></select></label>
+    <label>Role <select id="role"><option value="">All roles</option></select></label>
+    <label>Country <select id="country"><option value="">All countries</option></select></label>
+    <label class="search">Search <input type="search" id="search" placeholder="Name, city or note"></label>
+  </section>
+
+  <div id="map" role="region" aria-label="Map of sites and cloud regions"></div>
+  <p class="map-note">Red points mark places with at least one site, and blue points mark places with cloud regions only. Each point marks the centre of the city that the source names, not the building.</p>
+
+  <section aria-label="Records">
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Firms and roles</th><th>Place</th><th>Status</th><th>MW</th><th>Source</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Data and code: <a href="https://github.com/newlivehung123123/overseas_data_centres_china">github.com/newlivehung123123/overseas_data_centres_china</a>. The codebook in the repository defines every role and variable. The data are under the Creative Commons Attribution 4.0 licence. Map data © OpenStreetMap contributors.</p>
+    <p id="built"></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+:root {
+  --bg: #fbfaf7;
+  --ink: #1f2328;
+  --muted: #5b6470;
+  --line: #d9dde3;
+  --site: #b3261e;
+  --region: #1f5fa8;
+  --panel: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --ink: #e8eaed;
+    --muted: #a3abb5;
+    --line: #333840;
+    --site: #ef6b61;
+    --region: #6ea8f0;
+    --panel: #1d2024;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 16px 32px;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+header h1 { font-size: 1.6rem; margin: 24px 0 8px; }
+.lead { max-width: 62rem; margin: 0 0 8px; }
+.counts, .map-note, footer { color: var(--muted); font-size: 0.9rem; }
+.controls {
+  display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center;
+  padding: 12px; margin: 12px 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+}
+.controls select, .controls input[type="search"] {
+  font: inherit; padding: 4px 6px; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 4px; max-width: 100%;
+}
+.controls .search { flex: 1 1 220px; }
+.controls .search input { width: 100%; }
+#map { height: 460px; border: 1px solid var(--line); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.92rem; }
+th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; }
+td .quote { color: var(--muted); font-size: 0.85rem; display: block; margin-top: 2px; }
+.tag { display: inline-block; padding: 0 6px; border-radius: 3px; font-size: 0.8rem; color: #fff; }
+.tag.site { background: var(--site); }
+.tag.cloud_region { background: var(--region); }
+a { color: var(--region); }
+.leaflet-popup-content { font-size: 0.85rem; max-height: 260px; overflow-y: auto; }
+@media (max-width: 720px) {
+  #map { height: 340px; }
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  tr { border-bottom: 1px solid var(--line); padding: 6px 0; }
+  td { border: none; padding: 2px 0; }
+}

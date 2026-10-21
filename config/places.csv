@@ -1,0 +1,56 @@
+city,country,lat,lon,osm_type,osm_id,display_name,source_url
+Buenos Aires,Argentina,-34.6095579,-58.3887904,relation,1224652,"Buenos Aires, Comuna 1, Ciudad Autónoma de Buenos Aires, Argentina",https://nominatim.openstreetmap.org/search?q=Buenos+Aires%2C+Argentina&format=json&limit=1
+"Caucaia, Ceará",Brazil,-3.7717370,-38.7905693,relation,302624,"Caucaia, Ceará, Região Nordeste, Brasil",https://nominatim.openstreetmap.org/search?q=Caucaia%2C+Cear%C3%A1%2C+Brazil&format=json&limit=1
+Sao Paulo,Brazil,-23.5506507,-46.6333824,relation,298285,"São Paulo, Região Sudeste, Brasil",https://nominatim.openstreetmap.org/search?q=Sao+Paulo%2C+Brazil&format=json&limit=1
+Toronto,Canada,43.6534817,-79.3839347,relation,324211,"Toronto, Ontario, Canada",https://nominatim.openstreetmap.org/search?q=Toronto%2C+Canada&format=json&limit=1
+Santiago,Chile,-33.4376995,-70.6510671,node,50016356,"Santiago, Provincia de Santiago, Región Metropolitana de Santiago, 8320000, Chile",https://nominatim.openstreetmap.org/search?q=Santiago%2C+Chile&format=json&limit=1
+Cairo,Egypt,30.0443879,31.2357257,relation,5466227,"القاهرة, مصر",https://nominatim.openstreetmap.org/search?q=Cairo%2C+Egypt&format=json&limit=1
+,Finland,63.2467777,25.9209164,relation,54224,Suomi / Finland,https://nominatim.openstreetmap.org/search?q=Finland&format=json&limit=1
+Kouvola,Finland,60.8679237,26.7041116,relation,2472594,"Kouvola, Kouvolan seutukunta, Kymenlaakso, Manner-Suomi, Suomi / Finland",https://nominatim.openstreetmap.org/search?q=Kouvola%2C+Finland&format=json&limit=1
+Lahti,Finland,60.9826280,25.6613418,relation,345901,"Lahti, Lahden seutukunta, Päijät-Häme, Manner-Suomi, Suomi / Finland",https://nominatim.openstreetmap.org/search?q=Lahti%2C+Finland&format=json&limit=1
+Paris,France,48.8534951,2.3483915,relation,71525,"Paris, Île-de-France, France métropolitaine, France",https://nominatim.openstreetmap.org/search?q=Paris%2C+France&format=json&limit=1
+Frankfurt,Germany,50.1106444,8.6820917,relation,62400,"Frankfurt am Main, Hessen, Deutschland",https://nominatim.openstreetmap.org/search?q=Frankfurt%2C+Germany&format=json&limit=1
+Mörfelden,Germany,49.9704847,8.5700579,relation,17019060,"Mörfelden, Mörfelden-Walldorf, Kreis Groß-Gerau, Hessen, 64546, Deutschland",https://nominatim.openstreetmap.org/search?q=M%C3%B6rfelden%2C+Germany&format=json&limit=1
+,Hong Kong,22.3492361,114.1857778,relation,913110,"香港 Hong Kong, 中国",https://nominatim.openstreetmap.org/search?q=Hong+Kong&format=json&limit=1
+Hong Kong,Hong Kong,22.2818333,114.1582831,relation,20044132,"香港 Hong Kong, 中国",https://nominatim.openstreetmap.org/search?q=Hong+Kong%2C+Hong+Kong&format=json&limit=1
+Tseung Kwan O,Hong Kong,22.3087855,114.2596330,node,308769094,"將軍澳 Tseung Kwan O, 香港 Hong Kong, 中国",https://nominatim.openstreetmap.org/search?q=Tseung+Kwan+O%2C+Hong+Kong&format=json&limit=1
+West Kowloon,Hong Kong,22.3036814,114.1649267,node,7919700008,"香港西九龍 Hong Kong West Kowloon, 連翔道 Lin Cheung Road, 西九龍 West Kowloon, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",https://nominatim.openstreetmap.org/search?q=West+Kowloon%2C+Hong+Kong&format=json&limit=1
+Batam,Indonesia,1.1030815,104.0383696,relation,10660353,"Batam, Kepulauan Riau, Indonesia",https://nominatim.openstreetmap.org/search?q=Batam%2C+Indonesia&format=json&limit=1
+Jakarta,Indonesia,-6.1754049,106.8271680,relation,6362934,"Daerah Khusus Ibukota Jakarta, Indonesia",https://nominatim.openstreetmap.org/search?q=Jakarta%2C+Indonesia&format=json&limit=1
+,Ireland,52.8651960,-7.9794599,relation,62273,Éire / Ireland,https://nominatim.openstreetmap.org/search?q=Ireland&format=json&limit=1
+Dublin,Ireland,53.3493795,-6.2605593,relation,1109531,"Dublin, County Dublin, Leinster, Éire / Ireland",https://nominatim.openstreetmap.org/search?q=Dublin%2C+Ireland&format=json&limit=1
+"Fuchu, Tokyo",Japan,35.6693751,139.4774094,relation,5302327,"府中市, 東京都, 日本",https://nominatim.openstreetmap.org/search?q=Fuchu%2C+Tokyo%2C+Japan&format=json&limit=1
+"Imari, Kyushu",Japan,33.2644557,129.8808439,relation,4013086,"伊万里市, 佐賀県, 日本",https://nominatim.openstreetmap.org/search?q=Imari%2C+Saga+Prefecture%2C+Japan&format=json&limit=1
+"Kodaira, Tokyo",Japan,35.7252200,139.4766060,relation,5302159,"小平市, 東京都, 日本",https://nominatim.openstreetmap.org/search?q=Kodaira%2C+Tokyo%2C+Japan&format=json&limit=1
+Osaka,Japan,34.6937569,135.5014539,relation,358674,"大阪市, 大阪府, 日本",https://nominatim.openstreetmap.org/search?q=Osaka%2C+Japan&format=json&limit=1
+Tokyo,Japan,35.6768601,139.7638947,relation,1543125,"東京都, 日本",https://nominatim.openstreetmap.org/search?q=Tokyo%2C+Japan&format=json&limit=1
+"Iskandar Puteri, Johor",Malaysia,1.4522711,103.6144729,relation,12337490,"Iskandar Puteri, Johor Bahru, Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Iskandar+Puteri%2C+Johor%2C+Malaysia&format=json&limit=1
+Johor,Malaysia,2.0228821,103.3114564,relation,2939653,"Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Johor%2C+Malaysia&format=json&limit=1
+Johor Bahru,Malaysia,1.4581986,103.7649059,node,254237831,"Johor Bahru, Johor, 80730, Malaysia",https://nominatim.openstreetmap.org/search?q=Johor+Bahru%2C+Malaysia&format=json&limit=1
+Kuala Lumpur,Malaysia,3.1516964,101.6942371,relation,2939672,"Kuala Lumpur, Malaysia",https://nominatim.openstreetmap.org/search?q=Kuala+Lumpur%2C+Malaysia&format=json&limit=1
+"Sedenak, Johor",Malaysia,1.7126551,103.5257302,node,4486473991,"Sedenak, Kulai, Johor, 81030, Malaysia",https://nominatim.openstreetmap.org/search?q=Sedenak%2C+Johor%2C+Malaysia&format=json&limit=1
+Mexico City,Mexico,19.3207722,-99.1514678,relation,1376330,"Ciudad de México, México",https://nominatim.openstreetmap.org/search?q=Mexico+City%2C+Mexico&format=json&limit=1
+Queretaro,Mexico,20.8052225,-99.8837376,relation,2340903,"Querétaro, México",https://nominatim.openstreetmap.org/search?q=Queretaro%2C+Mexico&format=json&limit=1
+,Netherlands,52.2434979,5.6343227,relation,47796,Nederland,https://nominatim.openstreetmap.org/search?q=Netherlands&format=json&limit=1
+Amsterdam,Netherlands,52.3730796,4.8924534,relation,271110,"Amsterdam, Noord-Holland, Nederland",https://nominatim.openstreetmap.org/search?q=Amsterdam%2C+Netherlands&format=json&limit=1
+Hamar,Norway,61.0014937,11.1647964,relation,410882,"Hamar, Innlandet, Norge",https://nominatim.openstreetmap.org/search?q=Hamar%2C+Norway&format=json&limit=1
+Lima,Peru,-12.0459808,-77.0305912,node,4289361265,"Lima, Lima Metropolitana, Lima, 15001, Perú",https://nominatim.openstreetmap.org/search?q=Lima%2C+Peru&format=json&limit=1
+Manila,Philippines,14.5904492,120.9803621,relation,103703,"Manila, Capital District, Metro Manila, Philippines",https://nominatim.openstreetmap.org/search?q=Manila%2C+Philippines&format=json&limit=1
+Riyadh,Saudi Arabia,24.6389160,46.7160104,node,315358390,"الرياض, محافظة الرياض, منطقة الرياض, 12643, السعودية",https://nominatim.openstreetmap.org/search?q=Riyadh%2C+Saudi+Arabia&format=json&limit=1
+Singapore,Singapore,1.2899175,103.8519072,relation,17140517,Singapore,https://nominatim.openstreetmap.org/search?q=Singapore%2C+Singapore&format=json&limit=1
+Tai Seng,Singapore,1.3437712,103.8876194,relation,19910239,"Tai Seng, Hougang, North-east Region, Singapore",https://nominatim.openstreetmap.org/search?q=Tai+Seng%2C+Singapore&format=json&limit=1
+Johannesburg,South Africa,-26.2050000,28.0497220,node,261833893,"Johannesburg, City of Johannesburg Metropolitan Municipality, Gauteng, 2001, South Africa",https://nominatim.openstreetmap.org/search?q=Johannesburg%2C+South+Africa&format=json&limit=1
+Seoul,South Korea,37.5666791,126.9782914,relation,2297418,"서울특별시, 대한민국",https://nominatim.openstreetmap.org/search?q=Seoul%2C+South+Korea&format=json&limit=1
+Madrid,Spain,40.4167820,-3.7035070,relation,5326784,"Madrid, Comunidad de Madrid, España",https://nominatim.openstreetmap.org/search?q=Madrid%2C+Spain&format=json&limit=1
+Zaragoza,Spain,41.6915847,-0.9101268,relation,345740,"Zaragoza, Aragón, España",https://nominatim.openstreetmap.org/search?q=Zaragoza%2C+Spain&format=json&limit=1
+Bangkok,Thailand,13.7524938,100.4935089,relation,92277,"กรุงเทพมหานคร, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Bangkok%2C+Thailand&format=json&limit=1
+Chachoengsao,Thailand,13.6093192,101.5467201,relation,1908767,"จังหวัดฉะเชิงเทรา, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Chachoengsao%2C+Thailand&format=json&limit=1
+Chonburi,Thailand,13.1857117,101.1210777,relation,1908773,"จังหวัดชลบุรี, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Chonburi%2C+Thailand&format=json&limit=1
+Samut Prakan,Thailand,13.6531651,100.8182578,relation,1908815,"จังหวัดสมุทรปราการ, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Samut+Prakan%2C+Thailand&format=json&limit=1
+,Turkey,39.2940760,35.2316631,relation,174737,Türkiye,https://nominatim.openstreetmap.org/search?q=Turkey&format=json&limit=1
+Istanbul,Turkey,41.0063810,28.9758715,node,1882099475,"İstanbul, Fatih, İstanbul, Marmara Bölgesi, 34122, Türkiye",https://nominatim.openstreetmap.org/search?q=Istanbul%2C+Turkey&format=json&limit=1
+Dubai,United Arab Emirates,25.0742823,55.1885624,relation,4479752,"دبي, الإمارات العربية المتحدة",https://nominatim.openstreetmap.org/search?q=Dubai%2C+United+Arab+Emirates&format=json&limit=1
+London,United Kingdom,51.5074456,-0.1277653,relation,175342,"Greater London, England, United Kingdom",https://nominatim.openstreetmap.org/search?q=London%2C+United+Kingdom&format=json&limit=1
+Slough,United Kingdom,51.5111014,-0.5940682,relation,117097,"Slough, England, United Kingdom",https://nominatim.openstreetmap.org/search?q=Slough%2C+United+Kingdom&format=json&limit=1
+Silicon Valley,United States,37.4429964,-122.1545229,node,5368437129,"Silicon Valley, Palo Alto, Santa Clara County, California, 94301, United States",https://nominatim.openstreetmap.org/search?q=Silicon+Valley%2C+United+States&format=json&limit=1
+Virginia,United States,37.1232245,-78.4927721,relation,224042,"Virginia, United States",https://nominatim.openstreetmap.org/search?q=Virginia%2C+United+States&format=json&limit=1

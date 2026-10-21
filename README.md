@@ -54,6 +54,20 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 3. Find out from other sources whether the 12 e-government and network projects coded unspecified built a data centre.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
 
+## Dashboard
+
+The folder `site` holds a static dashboard in HTML, CSS and JavaScript with no build step. It shows the sites and the cloud regions on a map and in a table, with filters by firm, role and country and a search box, and each row shows the cited passage and the result of its check. Each point marks the centre of the city that the source names, from OpenStreetMap, because most sources name the city and not the building. The government data centres of the AidData layer are left out of the dashboard until the article pitched on them has been answered.
+
+The dashboard reads `site/data/dashboard.json`, which `scripts/build_site_data.py` writes from the checked layers and `config/places.csv`. The script `scripts/geocode_places.py` finds the point of each new city from the Nominatim service of OpenStreetMap, at most one request a second, and records the OpenStreetMap object behind each point.
+
+```bash
+.venv/bin/python scripts/geocode_places.py
+.venv/bin/python scripts/build_site_data.py
+python3 -m http.server 8731 --directory site
+```
+
+The workflow in `.github/workflows/pages.yml` publishes the folder `site` with GitHub Pages on each push to `main`, once Pages is set to deploy from GitHub Actions in the repository settings.
+
 ## Setup
 
 Python 3.11 or later is needed, with the packages in `requirements.txt`.
@@ -102,6 +116,7 @@ The tests use small tables and passages written in the test files and need no do
 | `codebook.md` | Roles, firms, levels and variables |
 | `config/firm_links.csv` | Ownership links between listed firms and Chinese firms, each with its page and passage |
 | `config/operator_markets.csv` | Capacity that operators report by market, each with its page and passage |
+| `config/places.csv` | Map point of each city, with the OpenStreetMap object it comes from |
 | `config/site_roles.csv` | Roles of firms at sites, each with its page and passage |
 | `config/sites.csv` | Sites, each with its page and passage |
 | `config/cloud_regions_manual.csv` | Regions that the provider pages do not list, each with the page that reports it |
@@ -115,8 +130,11 @@ The tests use small tables and passages written in the test files and need no do
 | `data/sites.csv` | Sites with the result of the check |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |
 | `scripts/build_aiddata_layer.py` | Build of the government data centre layer from the AidData file and the coding |
+| `scripts/build_site_data.py` | Build of the dashboard data from the checked layers |
 | `scripts/check_sources.py` | Check that each passage of the site layer is on its page |
 | `scripts/fetch_cloud_regions.py` | Download of the provider region pages and build of the cloud region layer |
+| `site/` | Dashboard, with its data in `site/data/dashboard.json` |
+| `scripts/geocode_places.py` | Map point of each city from OpenStreetMap |
 | `tests/test_build_aiddata_layer.py` | Offline tests of the AidData build |
 | `tests/test_check_sources.py` | Offline tests of the passage check |
 | `tests/test_fetch_cloud_regions.py` | Offline tests of the region parsers |

@@ -1,0 +1,2761 @@
+{
+ "built": "2026-10-21",
+ "records": [
+  {
+   "layer": "site",
+   "id": "MYS-0001",
+   "name": "Bridge Data Centres MY06",
+   "city": "Sedenak, Johor",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "110",
+   "capacity_basis": "unspecified",
+   "note": "Capacity of the three-building project; the first phase opened in October 2022. The operator, Bridge Data Centres, was part of the ChinData group when the site opened and is now held by Bain Capital, so it is not a listed firm",
+   "source": "https://www.mida.gov.my/media-release/bridge-data-centres-and-bytedance-celebrate-grand-opening-of-the-first-phase-hyperscale-data-centre-my06-in-johor-malaysia/",
+   "quote": "Phase 1 covers the first of the three buildings in the 110MW hyperscale data centre project which spans across 38 acres of land area.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.mida.gov.my/media-release/bridge-data-centres-and-bytedance-celebrate-grand-opening-of-the-first-phase-hyperscale-data-centre-my06-in-johor-malaysia/",
+     "quote": "ByteDance System Sdn. Bhd, will be the anchor tenant of BDC’s hyperscale data centre with long-term investment commitment in the country.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.7127,
+    103.5257
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "IDN-0001",
+   "name": "DayOne Kabil Industrial Tech Park campus",
+   "city": "Batam",
+   "country": "Indonesia",
+   "status": "under_construction",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "A 450 MW power purchase agreement; the IT capacity is not disclosed",
+   "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/",
+   "quote": "The company signed a 450MW PPA with state-run utility PLN Batam to power its under-development data center campus in Kabil, Batam.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/",
+     "quote": "DayOne is currently developing a data center at the Kabil Industrial Tech Park (KITP) in Batam, Indonesia.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.1031,
+    104.0384
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0002",
+   "name": "DayOne Gerbang Nusajaya site",
+   "city": "Iskandar Puteri, Johor",
+   "country": "Malaysia",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "A 65-acre site under a conditional sale; no data centre details disclosed",
+   "source": "https://baxtel.com/news/dayone-to-acquire-65-acre-johor-land-parcel-from-malaysia-s-paragon-globe",
+   "quote": "Paragon Globe has agreed to sell a 65-acre site in Iskandar Puteri, Johor, to DayOne Data Centers for RM398 million ($96 million) under a conditional agreement disclosed to Bursa Malaysia.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "owner",
+     "source": "https://baxtel.com/news/dayone-to-acquire-65-acre-johor-land-parcel-from-malaysia-s-paragon-globe",
+     "quote": "Paragon Globe has agreed to sell a 65-acre site in Iskandar Puteri, Johor, to DayOne Data Centers",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.4523,
+    103.6145
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "FIN-0001",
+   "name": "Hyperco Kouvola campus",
+   "city": "Kouvola",
+   "country": "Finland",
+   "status": "under_construction",
+   "capacity_mw": "100",
+   "capacity_basis": "it",
+   "note": "Initial IT capacity",
+   "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
+   "quote": "That campus will be developed by Hyperco, and is projected to have an initial IT capacity of 100MW.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "user",
+     "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
+     "quote": "DayOne disclosed that it had invested in Hyperco's Kouvola data center project, which is being used by TikTok.",
+     "check": "found"
+    },
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "owner",
+     "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
+     "quote": "DayOne disclosed that it had invested in Hyperco's Kouvola data center project",
+     "check": "found"
+    }
+   ],
+   "point": [
+    60.8679,
+    26.7041
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "FIN-0002",
+   "name": "TikTok second data centre in Finland",
+   "city": "Lahti",
+   "country": "Finland",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The developer is not disclosed; the site may be the DayOne campus FIN-0003",
+   "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
+   "quote": "The second data center project is set to be located in the Kiveriö district of Lahti, Finland",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "user",
+     "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
+     "quote": "The second data center project is set to be located in the Kiveriö district of Lahti, Finland",
+     "check": "found"
+    }
+   ],
+   "point": [
+    60.9826,
+    25.6613
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "FIN-0003",
+   "name": "DayOne Lahti campus",
+   "city": "Lahti",
+   "country": "Finland",
+   "status": "planned",
+   "capacity_mw": "128",
+   "capacity_basis": "unspecified",
+   "note": "The source does not confirm that this campus is the TikTok site FIN-0002",
+   "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
+   "quote": "data center company DayOne is known to be developing a 128MW campus in Lahti.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
+     "quote": "data center company DayOne is known to be developing a 128MW campus in Lahti.",
+     "check": "found"
+    },
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "owner",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "we entered the Greater Helsinki market by investing in data center campuses in Kouvola and Lahti, Finland",
+     "check": "found"
+    }
+   ],
+   "point": [
+    60.9826,
+    25.6613
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "BRA-0001",
+   "name": "Data Center Pecém",
+   "city": "Caucaia, Ceará",
+   "country": "Brazil",
+   "status": "under_construction",
+   "capacity_mw": "300",
+   "capacity_basis": "power",
+   "note": "Installed power, not IT capacity; operation expected in 2027",
+   "source": "https://www.poder360.com.br/poder-infra/mpf-vai-a-justica-contra-data-center-do-tiktok-no-ceara/",
+   "quote": "O data center projeta potência instalada de 300 MW, 120 geradores a diesel, subestação elétrica e captação de água subterrânea para resfriamento.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.poder360.com.br/poder-infra/mpf-vai-a-justica-contra-data-center-do-tiktok-no-ceara/",
+     "quote": "A estrutura será alugada e equipada pela empresa chinesa e receberá mais de R$ 200 bilhões em investimentos nos próximos 10 anos.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -3.7717,
+    -38.7906
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0003",
+   "name": "DayOne Nusajaya Tech Park campus",
+   "city": "Johor",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "DayOne reports capacity for Johor as a whole",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    2.0229,
+    103.3115
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0004",
+   "name": "DayOne Kempas Tech Park campus",
+   "city": "Johor",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "DayOne reports capacity for Johor as a whole",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    2.0229,
+    103.3115
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "IDN-0002",
+   "name": "DayOne Nongsa Digital Park campus",
+   "city": "Batam",
+   "country": "Indonesia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "DayOne reports capacity for Batam as a whole",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "our Batam campuses at Nongsa Digital Park and Kabil Industrial Tech Park are among the first large-scale AI sites in Indonesia",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "our Batam campuses at Nongsa Digital Park and Kabil Industrial Tech Park are among the first large-scale AI sites in Indonesia",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.1031,
+    104.0384
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "SGP-0001",
+   "name": "DayOne Singapore campus",
+   "city": "Singapore",
+   "country": "Singapore",
+   "status": "under_construction",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The filing does not name the site",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "our presence in Singapore, where our campus is currently under development, anchors a tri-node deployment strategy for the SIJORI market.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "our presence in Singapore, where our campus is currently under development, anchors a tri-node deployment strategy for the SIJORI market.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.2899,
+    103.8519
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0005",
+   "name": "DayOne Klang Valley Tech Park campus",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "status": "under_construction",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The Kuala Lumpur campuses have 128 MW of bookings together",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
+     "check": "found"
+    }
+   ],
+   "point": [
+    3.1517,
+    101.6942
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0006",
+   "name": "DayOne Banting Tech Park campus",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "status": "under_construction",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The Kuala Lumpur campuses have 128 MW of bookings together",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
+     "check": "found"
+    }
+   ],
+   "point": [
+    3.1517,
+    101.6942
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "THA-0001",
+   "name": "DayOne Chonburi Tech Park campus",
+   "city": "Chonburi",
+   "country": "Thailand",
+   "status": "operational",
+   "capacity_mw": "110",
+   "capacity_basis": "unspecified",
+   "note": "An order of 110 MW from one hyperscale customer",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "The hyperscale customer anchored the campus, Chonburi Tech Park (CTP), with a 73MW order, which was later upsized to 110MW",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "The hyperscale customer anchored the campus, Chonburi Tech Park (CTP), with a 73MW order, which was later upsized to 110MW",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.1857,
+    101.1211
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "JPN-0001",
+   "name": "DayOne Imari Tech Park",
+   "city": "Imari, Kyushu",
+   "country": "Japan",
+   "status": "planned",
+   "capacity_mw": "160",
+   "capacity_basis": "power",
+   "note": "Secured powered land",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "In 2026, we entered Kyushu through Imari Tech Park (ITP) in Imari, a city in the northwest corner of the island of Kyushu. The site provides approximately 160MW of Secured Powered Land.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "In 2026, we entered Kyushu through Imari Tech Park (ITP) in Imari, a city in the northwest corner of the island of Kyushu. The site provides approximately 160MW of Secured Powered Land.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    33.2645,
+    129.8808
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "JPN-0002",
+   "name": "DayOne Fuchu Intelligent Park",
+   "city": "Fuchu, Tokyo",
+   "country": "Japan",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "A long-term build-to-suit lease of a powered shell; the Tokyo sites have 60 MW of secured powered land together",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "we established a foothold in Tokyo to develop our first Japan data center project by entering into a long-term build-to-suit lease for a powered shell. The project, Fuchu Intelligent Park (FIP), is located in Fuchu City",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "tenant",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "we established a foothold in Tokyo to develop our first Japan data center project by entering into a long-term build-to-suit lease for a powered shell. The project, Fuchu Intelligent Park (FIP), is located in Fuchu City",
+     "check": "found"
+    }
+   ],
+   "point": [
+    35.6694,
+    139.4774
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "JPN-0003",
+   "name": "DayOne Kodaira site",
+   "city": "Kodaira, Tokyo",
+   "country": "Japan",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "A freehold site; the Tokyo sites have 60 MW of secured powered land together",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "We subsequently expanded our presence in 2025 by acquiring a freehold site in Kodaira, in western Tokyo.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "owner",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "We subsequently expanded our presence in 2025 by acquiring a freehold site in Kodaira, in western Tokyo.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    35.7252,
+    139.4766
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "HKG-0001",
+   "name": "DayOne West Kowloon virtual campus",
+   "city": "West Kowloon",
+   "country": "Hong Kong",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Four adjacent buildings",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "Our Hong Kong sites are strategically located in West Kowloon. We have a closely clustered “virtual campus” across four adjacent buildings",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "Our Hong Kong sites are strategically located in West Kowloon. We have a closely clustered “virtual campus” across four adjacent buildings",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.3037,
+    114.1649
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "ESP-0001",
+   "name": "DayOne Zaragoza site",
+   "city": "Zaragoza",
+   "country": "Spain",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "DayOne reports 304 MW of secured powered land in Zaragoza",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "entered Europe with sites in Greater Helsinki, Finland and Zaragoza, Spain.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "DayOne",
+     "origin": "GDS",
+     "role": "operator",
+     "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+     "quote": "entered Europe with sites in Greater Helsinki, Finland and Zaragoza, Spain.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    41.6916,
+    -0.9101
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "NOR-0001",
+   "name": "Green Mountain OSL-Hamar campus",
+   "city": "Hamar",
+   "country": "Norway",
+   "status": "operational",
+   "capacity_mw": "90",
+   "capacity_basis": "unspecified",
+   "note": "Three buildings of 30 MW each, all leased to TikTok; the developer, Green Mountain, is not a Chinese firm",
+   "source": "https://btw.media/all/news/tiktok-data-centre-at-osl-hamar-powered-by-norway-green-energy",
+   "quote": "now houses three operational buildings, each with 30 MW capacity, fully leased to TikTok under its European data sovereignty scheme, Project Clover.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://btw.media/all/news/tiktok-data-centre-at-osl-hamar-powered-by-norway-green-energy",
+     "quote": "three operational buildings, each with 30 MW capacity, fully leased to TikTok",
+     "check": "found"
+    }
+   ],
+   "point": [
+    61.0015,
+    11.1648
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "IRL-0001",
+   "name": "TikTok operational data centre in Ireland",
+   "city": "",
+   "country": "Ireland",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "TikTok does not name the site or the operator",
+   "source": "https://newsroom.tiktok.com/en-eu/tiktok-sets-new-standards-for-security-and-sustainability-through-12-bn-project-clover-programme",
+   "quote": "one of the data centres in Ireland is operational already and began storing user data earlier this year",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "user",
+     "source": "https://newsroom.tiktok.com/en-eu/tiktok-sets-new-standards-for-security-and-sustainability-through-12-bn-project-clover-programme",
+     "quote": "the operations of the Norway data centre and our two other data centres in Ireland, which will collectively be home to European user data",
+     "check": "found"
+    }
+   ],
+   "point": [
+    52.8652,
+    -7.9795
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "THA-0002",
+   "name": "TikTok data hosting in Bangkok",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The source gives the province, not the site; the approved investment of 842 billion baht covers the three provinces together",
+   "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
+   "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "user",
+     "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
+     "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.7525,
+    100.4935
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "THA-0003",
+   "name": "TikTok data hosting in Samut Prakan",
+   "city": "Samut Prakan",
+   "country": "Thailand",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The source gives the province, not the site; the approved investment of 842 billion baht covers the three provinces together",
+   "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
+   "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "user",
+     "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
+     "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.6532,
+    100.8183
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "THA-0004",
+   "name": "TikTok data hosting in Chachoengsao",
+   "city": "Chachoengsao",
+   "country": "Thailand",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The source gives the province, not the site; the approved investment of 842 billion baht covers the three provinces together",
+   "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
+   "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "user",
+     "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
+     "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.6093,
+    101.5467
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "SGP-0002",
+   "name": "China Mobile International Singapore data centre",
+   "city": "Tai Seng",
+   "country": "Singapore",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "More than 2,100 racks and 17,490 square metres",
+   "source": "https://www.datacenterdynamics.com/en/news/china-mobile-international-launches-singapore-dc/",
+   "quote": "The six-story data center is located at Tai Seng Industrial Park in the eastern part of Singapore, and houses more than 2,100 racks with a gross area of 17,490 sq m (188,300 sq ft).",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Mobile International",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/china-mobile-international-launches-singapore-dc/",
+     "quote": "China Mobile International's data center in Singapore",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.3438,
+    103.8876
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "GBR-0001",
+   "name": "China Mobile International United Kingdom 1 Data Centre",
+   "city": "Slough",
+   "country": "United Kingdom",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Uptime Institute lists a Tier award for the site; the source does not say whether the site is operating",
+   "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
+   "quote": "United Kingdom 1 Data Centre, Phase 1 London Slough, Slough, United Kingdom",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Mobile International",
+     "origin": "",
+     "role": "operator",
+     "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
+     "quote": "Client: China Mobile International",
+     "check": "found"
+    }
+   ],
+   "point": [
+    51.5111,
+    -0.5941
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "DEU-0001",
+   "name": "China Mobile International Germany 1 Data Center (DE1)",
+   "city": "Mörfelden",
+   "country": "Germany",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Uptime Institute lists a Tier award for the site; the source does not say whether the site is operating",
+   "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
+   "quote": "Germany 1 Data Center (DE1) Mörfelden, Germany",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Mobile International",
+     "origin": "",
+     "role": "operator",
+     "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
+     "quote": "Client: China Mobile International",
+     "check": "found"
+    }
+   ],
+   "point": [
+    49.9705,
+    8.5701
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "HKG-0002",
+   "name": "China Mobile International Global Network Center",
+   "city": "",
+   "country": "Hong Kong",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Uptime Institute lists a Tier award for the site; the source does not say whether the site is operating",
+   "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
+   "quote": "Global Network Center Hong Kong, Phase 2 Hong Kong, Hong Kong",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Mobile International",
+     "origin": "",
+     "role": "operator",
+     "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
+     "quote": "Client: China Mobile International",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.3492,
+    114.1858
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "HKG-0003",
+   "name": "China Unicom Hong Kong Intelligent Cloud Data Center",
+   "city": "Tseung Kwan O",
+   "country": "Hong Kong",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "37,000 square metres, launched in 2016",
+   "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+   "quote": "The 37,000-square-metre Intelligent Cloud Data Center, which launched in 2016, reaches more than 60 countries and regions via 15 submarine cables",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Unicom Global",
+     "origin": "",
+     "role": "operator",
+     "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+     "quote": "China Unicom Global, for one, has been taking big strides to power the next phases of growth by optimising the capabilities of its Тier-IV-ready data centre in the Tseung Kwan O area of Hong Kong",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.3088,
+    114.2596
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "SGP-0003",
+   "name": "China Unicom Global data centre in Singapore",
+   "city": "Singapore",
+   "country": "Singapore",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Reported in 2023 as being rolled out; the status has not been confirmed since",
+   "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+   "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Unicom Global",
+     "origin": "",
+     "role": "operator",
+     "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+     "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.2899,
+    103.8519
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "JPN-0004",
+   "name": "China Unicom Global data centre in Tokyo",
+   "city": "Tokyo",
+   "country": "Japan",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Reported in 2023 as being rolled out; the status has not been confirmed since",
+   "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+   "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Unicom Global",
+     "origin": "",
+     "role": "operator",
+     "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+     "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    35.6769,
+    139.7639
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "DEU-0002",
+   "name": "China Unicom Global data centre in Frankfurt",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Reported in 2023 as being rolled out; the status has not been confirmed since",
+   "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+   "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "China Unicom Global",
+     "origin": "",
+     "role": "operator",
+     "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
+     "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    50.1106,
+    8.6821
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0007",
+   "name": "zData Johor data centre",
+   "city": "Johor",
+   "country": "Malaysia",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "A 38-acre site bought by zData's Malaysian unit; financing of about US$500 million sought in 2025",
+   "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
+   "quote": "Zdata’s Malaysian unit, Computility Technology (Malaysia) Sdn Bhd, bought 38 acres of land last year from developer Tropicana Corporation Bhd. to build the Johor facility.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "zData",
+     "origin": "",
+     "role": "owner",
+     "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
+     "quote": "Zdata’s Malaysian unit, Computility Technology (Malaysia) Sdn Bhd, bought 38 acres of land last year from developer Tropicana Corporation Bhd. to build the Johor facility.",
+     "check": "found"
+    },
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
+     "quote": "The financing would support the buildout of a data centre in Johor, serving major clients including Alibaba, ByteDance and Tencent",
+     "check": "found"
+    },
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
+     "quote": "The financing would support the buildout of a data centre in Johor, serving major clients including Alibaba, ByteDance and Tencent",
+     "check": "found"
+    },
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
+     "quote": "The financing would support the buildout of a data centre in Johor, serving major clients including Alibaba, ByteDance and Tencent",
+     "check": "found"
+    }
+   ],
+   "point": [
+    2.0229,
+    103.3115
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "NLD-0001",
+   "name": "Global Switch Amsterdam",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    52.3731,
+    4.8925
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "DEU-0003",
+   "name": "Global Switch Frankfurt",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    50.1106,
+    8.6821
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "HKG-0004",
+   "name": "Global Switch Hong Kong",
+   "city": "Hong Kong",
+   "country": "Hong Kong",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.2818,
+    114.1583
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "GBR-0002",
+   "name": "Global Switch London",
+   "city": "London",
+   "country": "United Kingdom",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    51.5074,
+    -0.1278
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "ESP-0002",
+   "name": "Global Switch Madrid",
+   "city": "Madrid",
+   "country": "Spain",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    40.4168,
+    -3.7035
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "FRA-0001",
+   "name": "Global Switch Paris",
+   "city": "Paris",
+   "country": "France",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    48.8535,
+    2.3484
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "SGP-0004",
+   "name": "Global Switch Singapore",
+   "city": "Singapore",
+   "country": "Singapore",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.2899,
+    103.8519
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0008",
+   "name": "Global Switch Johor",
+   "city": "Johor",
+   "country": "Malaysia",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded; listed as coming soon",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    2.0229,
+    103.3115
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "THA-0005",
+   "name": "Global Switch Bangkok",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Global Switch lists the city; the buildings in the city are not yet recorded; listed as coming soon",
+   "source": "https://www.globalswitch.com/",
+   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/",
+     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.7525,
+    100.4935
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Brazil (São Paulo)",
+   "name": "Alibaba Cloud Brazil (São Paulo)",
+   "city": "Sao Paulo",
+   "country": "Brazil",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2026",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Brazil (São Paulo) Availability Zone: 2 Released in 2026",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Brazil (São Paulo) Availability Zone: 2 Released in 2026",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -23.5507,
+    -46.6334
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "France (Paris)",
+   "name": "Alibaba Cloud France (Paris)",
+   "city": "Paris",
+   "country": "France",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2026",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "France (Paris) Availability Zone: 2 Released in 2026",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "France (Paris) Availability Zone: 2 Released in 2026",
+     "check": "found"
+    }
+   ],
+   "point": [
+    48.8535,
+    2.3484
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Germany (Frankfurt)",
+   "name": "Alibaba Cloud Germany (Frankfurt)",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2016",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Germany (Frankfurt) Availability Zone: 3 Released in 2016",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Germany (Frankfurt) Availability Zone: 3 Released in 2016",
+     "check": "found"
+    }
+   ],
+   "point": [
+    50.1106,
+    8.6821
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "China (Hong Kong)",
+   "name": "Alibaba Cloud China (Hong Kong)",
+   "city": "Hong Kong",
+   "country": "Hong Kong",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2014",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "China (Hong Kong) Availability Zone: 3 Released in 2014",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "China (Hong Kong) Availability Zone: 3 Released in 2014",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.2818,
+    114.1583
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Indonesia (Jakarta)",
+   "name": "Alibaba Cloud Indonesia (Jakarta)",
+   "city": "Jakarta",
+   "country": "Indonesia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2018",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Indonesia (Jakarta) Availability Zone: 3 Released in 2018",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Indonesia (Jakarta) Availability Zone: 3 Released in 2018",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -6.1754,
+    106.8272
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Japan (Tokyo)",
+   "name": "Alibaba Cloud Japan (Tokyo)",
+   "city": "Tokyo",
+   "country": "Japan",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2016",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Japan (Tokyo) Availability Zone: 5 Released in 2016",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Japan (Tokyo) Availability Zone: 5 Released in 2016",
+     "check": "found"
+    }
+   ],
+   "point": [
+    35.6769,
+    139.7639
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Malaysia (Johor)",
+   "name": "Alibaba Cloud Malaysia (Johor)",
+   "city": "Johor",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2026",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Malaysia (Johor) Availability Zone: 3 Released in 2026",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Malaysia (Johor) Availability Zone: 3 Released in 2026",
+     "check": "found"
+    }
+   ],
+   "point": [
+    2.0229,
+    103.3115
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Malaysia (Kuala Lumpur)",
+   "name": "Alibaba Cloud Malaysia (Kuala Lumpur)",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2017",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Malaysia (Kuala Lumpur) Availability Zone: 3 Released in 2017",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Malaysia (Kuala Lumpur) Availability Zone: 3 Released in 2017",
+     "check": "found"
+    }
+   ],
+   "point": [
+    3.1517,
+    101.6942
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Mexico (Querétaro)",
+   "name": "Alibaba Cloud Mexico (Querétaro)",
+   "city": "Queretaro",
+   "country": "Mexico",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2025",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Mexico (Querétaro) Availability Zone: 2 Released in 2025",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Mexico (Querétaro) Availability Zone: 2 Released in 2025",
+     "check": "found"
+    }
+   ],
+   "point": [
+    20.8052,
+    -99.8837
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Philippines (Manila)",
+   "name": "Alibaba Cloud Philippines (Manila)",
+   "city": "Manila",
+   "country": "Philippines",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2021",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Philippines (Manila) Availability Zone: 2 Released in 2021",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Philippines (Manila) Availability Zone: 2 Released in 2021",
+     "check": "found"
+    }
+   ],
+   "point": [
+    14.5904,
+    120.9804
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "SAU (Riyadh - Partner Region)",
+   "name": "Alibaba Cloud SAU (Riyadh - Partner Region)",
+   "city": "Riyadh",
+   "country": "Saudi Arabia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2022",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "SAU (Riyadh - Partner Region) Availability Zone: 2 Released in 2022",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "SAU (Riyadh - Partner Region) Availability Zone: 2 Released in 2022",
+     "check": "found"
+    }
+   ],
+   "point": [
+    24.6389,
+    46.716
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Singapore",
+   "name": "Alibaba Cloud Singapore",
+   "city": "Singapore",
+   "country": "Singapore",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2015",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Singapore Availability Zone: 4 Released in 2015",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Singapore Availability Zone: 4 Released in 2015",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.2899,
+    103.8519
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "South Korea (Seoul)",
+   "name": "Alibaba Cloud South Korea (Seoul)",
+   "city": "Seoul",
+   "country": "South Korea",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2022",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "South Korea (Seoul) Availability Zone: 3 Released in 2022",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "South Korea (Seoul) Availability Zone: 3 Released in 2022",
+     "check": "found"
+    }
+   ],
+   "point": [
+    37.5667,
+    126.9783
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Thailand (Bangkok)",
+   "name": "Alibaba Cloud Thailand (Bangkok)",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2022",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "Thailand (Bangkok) Availability Zone: 2 Released in 2022",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "Thailand (Bangkok) Availability Zone: 2 Released in 2022",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.7525,
+    100.4935
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "UAE (Dubai)",
+   "name": "Alibaba Cloud UAE (Dubai)",
+   "city": "Dubai",
+   "country": "United Arab Emirates",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2016",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "UAE (Dubai) Availability Zone: 2 Released in 2016",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "UAE (Dubai) Availability Zone: 2 Released in 2016",
+     "check": "found"
+    }
+   ],
+   "point": [
+    25.0743,
+    55.1886
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "UK (London)",
+   "name": "Alibaba Cloud UK (London)",
+   "city": "London",
+   "country": "United Kingdom",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2018",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "UK (London) Availability Zone: 2 Released in 2018",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "UK (London) Availability Zone: 2 Released in 2018",
+     "check": "found"
+    }
+   ],
+   "point": [
+    51.5074,
+    -0.1278
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "US (Silicon Valley)",
+   "name": "Alibaba Cloud US (Silicon Valley)",
+   "city": "Silicon Valley",
+   "country": "United States",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2014",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "US (Silicon Valley) Availability Zone: 2 Released in 2014",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "US (Silicon Valley) Availability Zone: 2 Released in 2014",
+     "check": "found"
+    }
+   ],
+   "point": [
+    37.443,
+    -122.1545
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "US (Virginia)",
+   "name": "Alibaba Cloud US (Virginia)",
+   "city": "Virginia",
+   "country": "United States",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Launched 2015",
+   "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+   "quote": "US (Virginia) Availability Zone: 2 Released in 2015",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
+     "quote": "US (Virginia) Availability Zone: 2 Released in 2015",
+     "check": "found"
+    }
+   ],
+   "point": [
+    37.1232,
+    -78.4928
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "",
+   "name": "Alibaba Cloud",
+   "city": "",
+   "country": "Finland",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
+   "quote": "Finland, the Netherlands - DCD Search Channels",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
+     "quote": "Finland, the Netherlands - DCD Search Channels",
+     "check": "found"
+    }
+   ],
+   "point": [
+    63.2468,
+    25.9209
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "",
+   "name": "Alibaba Cloud",
+   "city": "",
+   "country": "Netherlands",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
+   "quote": "Netherlands - DCD Search Channels Recommended for y",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
+     "quote": "Netherlands - DCD Search Channels Recommended for y",
+     "check": "found"
+    }
+   ],
+   "point": [
+    52.2435,
+    5.6343
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "",
+   "name": "Alibaba Cloud",
+   "city": "",
+   "country": "Turkey",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
+   "quote": "Turkey, Finland, the Netherlands - DCD Search",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
+     "quote": "Turkey, Finland, the Netherlands - DCD Search",
+     "check": "found"
+    }
+   ],
+   "point": [
+    39.2941,
+    35.2317
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Hong Kong",
+   "name": "BytePlus Hong Kong",
+   "city": "Hong Kong",
+   "country": "Hong Kong",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
+   "quote": "Hong Kong 150.5.146.60, 150.5.168.25 Southeast Asia (Johor) 10",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "BytePlus",
+     "origin": "",
+     "role": "operator",
+     "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
+     "quote": "Hong Kong 150.5.146.60, 150.5.168.25 Southeast Asia (Johor) 10",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.2818,
+    114.1583
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Southeast Asia (Jakarta)",
+   "name": "BytePlus Southeast Asia (Jakarta)",
+   "city": "Jakarta",
+   "country": "Indonesia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
+   "quote": "Southeast Asia (Jakarta) 163.7.17.61, 163.7.18.196 Last updated: December 30",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "BytePlus",
+     "origin": "",
+     "role": "operator",
+     "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
+     "quote": "Southeast Asia (Jakarta) 163.7.17.61, 163.7.18.196 Last updated: December 30",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -6.1754,
+    106.8272
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "Southeast Asia (Johor)",
+   "name": "BytePlus Southeast Asia (Johor)",
+   "city": "Johor",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
+   "quote": "Southeast Asia (Johor) 101.47.140.89, 101.47.11.124 Southeast Asia (Jakarta)",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "BytePlus",
+     "origin": "",
+     "role": "operator",
+     "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
+     "quote": "Southeast Asia (Johor) 101.47.140.89, 101.47.11.124 Southeast Asia (Jakarta)",
+     "check": "found"
+    }
+   ],
+   "point": [
+    2.0229,
+    103.3115
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "LA-Buenos Aires",
+   "name": "Huawei Cloud LA-Buenos Aires",
+   "city": "Buenos Aires",
+   "country": "Argentina",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "LA-Buenos Aires, and LA-Lima. Parent topic: Service Sco",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "LA-Buenos Aires, and LA-Lima. Parent topic: Service Sco",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -34.6096,
+    -58.3888
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "LA-Sao Paulo",
+   "name": "Huawei Cloud LA-Sao Paulo",
+   "city": "Sao Paulo",
+   "country": "Brazil",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "LA-Sao Paulo, LA-Santiago, LA-Buenos Aires, and LA-L",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "LA-Sao Paulo, LA-Santiago, LA-Buenos Aires, and LA-L",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -23.5507,
+    -46.6334
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "LA-Santiago",
+   "name": "Huawei Cloud LA-Santiago",
+   "city": "Santiago",
+   "country": "Chile",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "LA-Santiago, LA-Buenos Aires, and LA-Lima. Parent t",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "LA-Santiago, LA-Buenos Aires, and LA-Lima. Parent t",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -33.4377,
+    -70.6511
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "AF-Cairo",
+   "name": "Huawei Cloud AF-Cairo",
+   "city": "Cairo",
+   "country": "Egypt",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "AF-Cairo, AF-Johannesburg, TR-Istanbul, LA-Mexic",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "AF-Cairo, AF-Johannesburg, TR-Istanbul, LA-Mexic",
+     "check": "found"
+    }
+   ],
+   "point": [
+    30.0444,
+    31.2357
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "CN-Hong Kong",
+   "name": "Huawei Cloud CN-Hong Kong",
+   "city": "Hong Kong",
+   "country": "Hong Kong",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "CN-Hong Kong, AP-Bangkok, AP-Singapore, AP-Jakarta,",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "CN-Hong Kong, AP-Bangkok, AP-Singapore, AP-Jakarta,",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.2818,
+    114.1583
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "AP-Jakarta",
+   "name": "Huawei Cloud AP-Jakarta",
+   "city": "Jakarta",
+   "country": "Indonesia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "AP-Jakarta, AP-Kuala Lumpur, AP-Manila, ME-Riyadh,",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "AP-Jakarta, AP-Kuala Lumpur, AP-Manila, ME-Riyadh,",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -6.1754,
+    106.8272
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "EU-Dublin",
+   "name": "Huawei Cloud EU-Dublin",
+   "city": "Dublin",
+   "country": "Ireland",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/productdesc-cc/cc_01_0003.html",
+   "quote": "EU-Dublin Parent Topic: Region Availability Previ",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/productdesc-cc/cc_01_0003.html",
+     "quote": "EU-Dublin Parent Topic: Region Availability Previ",
+     "check": "found"
+    }
+   ],
+   "point": [
+    53.3494,
+    -6.2606
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "AP-Kuala Lumpur",
+   "name": "Huawei Cloud AP-Kuala Lumpur",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "AP-Kuala Lumpur, AP-Manila, ME-Riyadh, AF-Cairo, AF-Joh",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "AP-Kuala Lumpur, AP-Manila, ME-Riyadh, AF-Cairo, AF-Joh",
+     "check": "found"
+    }
+   ],
+   "point": [
+    3.1517,
+    101.6942
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "LA-Mexico City",
+   "name": "Huawei Cloud LA-Mexico City",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "LA-Mexico City, LA-Sao Paulo, LA-Santiago, LA-Buenos A",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "LA-Mexico City, LA-Sao Paulo, LA-Santiago, LA-Buenos A",
+     "check": "found"
+    }
+   ],
+   "point": [
+    19.3208,
+    -99.1515
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "LA-Lima",
+   "name": "Huawei Cloud LA-Lima",
+   "city": "Lima",
+   "country": "Peru",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "LA-Lima. Parent topic: Service Scope What is yo",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "LA-Lima. Parent topic: Service Scope What is yo",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -12.046,
+    -77.0306
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "AP-Manila",
+   "name": "Huawei Cloud AP-Manila",
+   "city": "Manila",
+   "country": "Philippines",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "AP-Manila, ME-Riyadh, AF-Cairo, AF-Johannesburg,",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "AP-Manila, ME-Riyadh, AF-Cairo, AF-Johannesburg,",
+     "check": "found"
+    }
+   ],
+   "point": [
+    14.5904,
+    120.9804
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ME-Riyadh",
+   "name": "Huawei Cloud ME-Riyadh",
+   "city": "Riyadh",
+   "country": "Saudi Arabia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "ME-Riyadh, AF-Cairo, AF-Johannesburg, TR-Istanbul",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "ME-Riyadh, AF-Cairo, AF-Johannesburg, TR-Istanbul",
+     "check": "found"
+    }
+   ],
+   "point": [
+    24.6389,
+    46.716
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "AP-Singapore",
+   "name": "Huawei Cloud AP-Singapore",
+   "city": "Singapore",
+   "country": "Singapore",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "AP-Singapore, AP-Jakarta, AP-Kuala Lumpur, AP-Manila",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "AP-Singapore, AP-Jakarta, AP-Kuala Lumpur, AP-Manila",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.2899,
+    103.8519
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "AF-Johannesburg",
+   "name": "Huawei Cloud AF-Johannesburg",
+   "city": "Johannesburg",
+   "country": "South Africa",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "AF-Johannesburg, TR-Istanbul, LA-Mexico City, LA-Sao Pa",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "AF-Johannesburg, TR-Istanbul, LA-Mexico City, LA-Sao Pa",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -26.205,
+    28.0497
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "AP-Bangkok",
+   "name": "Huawei Cloud AP-Bangkok",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "AP-Bangkok, AP-Singapore, AP-Jakarta, AP-Kuala Lum",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "AP-Bangkok, AP-Singapore, AP-Jakarta, AP-Kuala Lum",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.7525,
+    100.4935
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "TR-Istanbul",
+   "name": "Huawei Cloud TR-Istanbul",
+   "city": "Istanbul",
+   "country": "Turkey",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+   "quote": "TR-Istanbul, LA-Mexico City, LA-Sao Paulo, LA-Santi",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
+     "quote": "TR-Istanbul, LA-Mexico City, LA-Sao Paulo, LA-Santi",
+     "check": "found"
+    }
+   ],
+   "point": [
+    41.0064,
+    28.9759
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "sa-saopaulo",
+   "name": "Tencent Cloud São Paulo",
+   "city": "Sao Paulo",
+   "country": "Brazil",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(São Paulo) Coverage: South America sa-saopaulo 1",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(São Paulo) Coverage: South America sa-saopaulo 1",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -23.5507,
+    -46.6334
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "eu-frankfurt",
+   "name": "Tencent Cloud Frankfurt",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Frankfurt) Coverage: Europe eu-frankfurt 3",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Frankfurt) Coverage: Europe eu-frankfurt 3",
+     "check": "found"
+    }
+   ],
+   "point": [
+    50.1106,
+    8.6821
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-hongkong",
+   "name": "Tencent Cloud Hong Kong",
+   "city": "Hong Kong",
+   "country": "Hong Kong",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(China) ap-hongkong 3",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(China) ap-hongkong 3",
+     "check": "found"
+    }
+   ],
+   "point": [
+    22.2818,
+    114.1583
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-jakarta",
+   "name": "Tencent Cloud Jakarta",
+   "city": "Jakarta",
+   "country": "Indonesia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Jakarta) Coverage: Southeast Asia ap-jakarta 3",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Jakarta) Coverage: Southeast Asia ap-jakarta 3",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -6.1754,
+    106.8272
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-osaka",
+   "name": "Tencent Cloud Osaka",
+   "city": "Osaka",
+   "country": "Japan",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Osaka) Coverage: Northeast Asia ap-osaka 1",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Osaka) Coverage: Northeast Asia ap-osaka 1",
+     "check": "found"
+    }
+   ],
+   "point": [
+    34.6938,
+    135.5015
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-tokyo",
+   "name": "Tencent Cloud Tokyo",
+   "city": "Tokyo",
+   "country": "Japan",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Tokyo) Coverage: Northeast Asia ap-tokyo 2",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Tokyo) Coverage: Northeast Asia ap-tokyo 2",
+     "check": "found"
+    }
+   ],
+   "point": [
+    35.6769,
+    139.7639
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-johorbahru",
+   "name": "Tencent Cloud Johor Bahru",
+   "city": "Johor Bahru",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Johor Bahru) Coverage: Southeast Asia ap-johorbahru 2",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Johor Bahru) Coverage: Southeast Asia ap-johorbahru 2",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.4582,
+    103.7649
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "na-queretaro",
+   "name": "Tencent Cloud Queretaro",
+   "city": "Queretaro",
+   "country": "Mexico",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Queretaro) Coverage: North America na-queretaro 1",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Queretaro) Coverage: North America na-queretaro 1",
+     "check": "found"
+    }
+   ],
+   "point": [
+    20.8052,
+    -99.8837
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "me-saudi-arabia",
+   "name": "Tencent Cloud Saudi Arabia",
+   "city": "Riyadh",
+   "country": "Saudi Arabia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Saudi Arabia) Coverage: Middle East me-saudi-arabia 2",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Saudi Arabia) Coverage: Middle East me-saudi-arabia 2",
+     "check": "found"
+    }
+   ],
+   "point": [
+    24.6389,
+    46.716
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-singapore",
+   "name": "Tencent Cloud Singapore",
+   "city": "Singapore",
+   "country": "Singapore",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Singapore) Coverage: Southeast Asia ap-singapore 4",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Singapore) Coverage: Southeast Asia ap-singapore 4",
+     "check": "found"
+    }
+   ],
+   "point": [
+    1.2899,
+    103.8519
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-seoul",
+   "name": "Tencent Cloud Seoul",
+   "city": "Seoul",
+   "country": "South Korea",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Seoul) Coverage: Northeast Asia ap-seoul 2",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Seoul) Coverage: Northeast Asia ap-seoul 2",
+     "check": "found"
+    }
+   ],
+   "point": [
+    37.5667,
+    126.9783
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "ap-bangkok",
+   "name": "Tencent Cloud Bangkok",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Bangkok) Coverage: Southeast Asia ap-bangkok 3",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Bangkok) Coverage: Southeast Asia ap-bangkok 3",
+     "check": "found"
+    }
+   ],
+   "point": [
+    13.7525,
+    100.4935
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "na-siliconvalley",
+   "name": "Tencent Cloud Silicon Valley",
+   "city": "Silicon Valley",
+   "country": "United States",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Silicon Valley) Coverage: Western United States na-siliconvalley 2",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Silicon Valley) Coverage: Western United States na-siliconvalley 2",
+     "check": "found"
+    }
+   ],
+   "point": [
+    37.443,
+    -122.1545
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "na-ashburn",
+   "name": "Tencent Cloud Virginia",
+   "city": "Virginia",
+   "country": "United States",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+   "quote": "(Virginia) Coverage: Eastern United States na-ashburn 2",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://intl.cloud.tencent.com/document/product/213/6091",
+     "quote": "(Virginia) Coverage: Eastern United States na-ashburn 2",
+     "check": "found"
+    }
+   ],
+   "point": [
+    37.1232,
+    -78.4928
+   ]
+  },
+  {
+   "layer": "cloud_region",
+   "id": "",
+   "name": "Tencent Cloud",
+   "city": "Toronto",
+   "country": "Canada",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "",
+   "source": "https://www.datacenterdynamics.com/en/news/tencent-cloud-launches-availability-zone-in-franfurt-germany/",
+   "quote": "Toronto), Europe (Frankfurt), and South America",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/tencent-cloud-launches-availability-zone-in-franfurt-germany/",
+     "quote": "Toronto), Europe (Frankfurt), and South America",
+     "check": "found"
+    }
+   ],
+   "point": [
+    43.6535,
+    -79.3839
+   ]
+  }
+ ]
+}
