@@ -4,7 +4,7 @@ This project records the data-centre capacity outside mainland China in which Ch
 
 ## Status
 
-The repository holds two layers as of 21 October 2026, the government data centres financed by Chinese state lenders and agencies, and the public cloud regions of Chinese providers. Every row of the cloud region layer carries the passage of its source page, and the script that writes the layer checks the passage against the downloaded page. The rows of the AidData layer cite AidData records, which have not yet been checked against the AidData project pages, because those pages did not respond.
+The repository holds three layers as of 21 October 2026: the government data centres financed by Chinese state lenders and agencies, the public cloud regions of Chinese providers, and the first sites in which Chinese firms hold a role. Every row of the cloud region and site layers carries a passage of its source page, and a script checks the passage against the downloaded page. The rows of the AidData layer come from AidData's own dataset file.
 
 ### Government data centres financed by Chinese state lenders
 
@@ -33,11 +33,15 @@ The amounts cover the whole project, and in 41 of the 45 records the data centre
 
 Of the 55 regions, 47 are operational outside mainland China, Hong Kong and Macau, in 22 countries. Alibaba Cloud, Huawei Cloud and Tencent Cloud account for 45 of the 47, against a count of 43 by WireScreen for the same three providers. The Tencent page lists one region, in Queretaro in Mexico, that an earlier list built from search results had missed. The BytePlus rows come from the documentation of one service and do not cover the other BytePlus services.
 
+### Sites
+
+`data/sites.csv` holds 7 sites in Malaysia, Indonesia, Finland and Brazil, and `data/site_roles.csv` holds 9 roles of ByteDance, DayOne and Bridge Data Centres at those sites. ByteDance is a tenant at 4 sites: the 110 MW MY06 campus of Bridge Data Centres in Johor, the Hyperco campus in Kouvola, a planned site in Lahti and the Pecém campus in Ceará, which has 300 MW of installed power and is expected to operate in 2027. DayOne, which began as the international unit of GDS, holds a role at 4 sites, in Batam, Johor, Kouvola and Lahti. All 16 passages were found on their pages. The sites are a first sample for testing the method, not a complete list.
+
 ### Next steps
 
-1. Check the AidData rows against the AidData project pages.
-2. Read and code the 62 AidData records that match only the related terms.
-3. Add the sites of ByteDance, of the data-centre operators in Table 2 of the codebook and of the state telecom firms, from company filings, announcements and permits.
+1. Add the remaining sites of ByteDance, such as Hamar in Norway and its sites in Ireland and Thailand, the full portfolios of DayOne, Bridge Data Centres, GDS, VNET and zData, and the overseas data centres of the state telecom firms.
+2. Read DayOne's 2026 listing filing at the SEC, which needs a User-Agent with a contact email that the owner of the repository chooses.
+3. Read and code the 62 AidData records that match only the related terms.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
 
 ## Setup
@@ -62,6 +66,12 @@ The cloud region layer needs no download by hand. The script downloads each prov
 .venv/bin/python scripts/fetch_cloud_regions.py
 ```
 
+The site layer is written by hand in `config/sites.csv` and `config/site_roles.csv`, and the check downloads each cited page, saves it in `data/raw/pages/sources` and writes `data/sites.csv` and `data/site_roles.csv` with the result for each row.
+
+```bash
+.venv/bin/python scripts/check_sources.py
+```
+
 The first command writes `data/government_data_centres_aiddata.csv` and `data/aiddata_summary.json` and prints the figures above. The option `--candidates` also writes `data/aiddata_candidates.csv`, the records that match a search term and are not coded yet. The option `--gcdf` gives another path to the Excel file.
 
 ## Tests
@@ -78,15 +88,21 @@ The tests use small tables and passages written in the test files and need no do
 |---|---|
 | `CONTRIBUTING.md` | Purpose of the project, data rules and writing rules for anyone who works on the repository |
 | `codebook.md` | Roles, firms, levels and variables |
+| `config/site_roles.csv` | Roles of firms at sites, each with its page and passage |
+| `config/sites.csv` | Sites, each with its page and passage |
 | `config/cloud_regions_manual.csv` | Regions that the provider pages do not list, each with the page that reports it |
 | `config/aiddata_coding.csv` | Coding of each AidData record read, with a note on the data centre or the reason for exclusion |
 | `data/aiddata_candidates.csv` | AidData records that match a related term and are not coded yet |
 | `data/aiddata_summary.json` | Figures of the government data centre layer |
 | `data/cloud_regions.csv` | Public cloud regions of Chinese providers outside mainland China |
+| `data/site_roles.csv` | Roles with the result of the check |
+| `data/sites.csv` | Sites with the result of the check |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |
 | `scripts/build_aiddata_layer.py` | Build of the government data centre layer from the AidData file and the coding |
+| `scripts/check_sources.py` | Check that each passage of the site layer is on its page |
 | `scripts/fetch_cloud_regions.py` | Download of the provider region pages and build of the cloud region layer |
 | `tests/test_build_aiddata_layer.py` | Offline tests of the AidData build |
+| `tests/test_check_sources.py` | Offline tests of the passage check |
 | `tests/test_fetch_cloud_regions.py` | Offline tests of the region parsers |
 
 ## Licence and attribution

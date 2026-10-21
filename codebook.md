@@ -68,11 +68,44 @@ One row for each public cloud region that a Chinese provider lists outside mainl
 | check_status | category | found, not_found, not_read | found when the passage is on the downloaded page, not_found when the page was read and the passage is not on it, not_read when the page could not be downloaded |
 | retrieved | date | YYYY-MM-DD | Date the page was downloaded |
 
+### data/sites.csv and data/site_roles.csv
+
+`data/sites.csv` has one row for each site, which is a building or a campus, and `data/site_roles.csv` has one row for each role that a listed firm holds at a site. A person writes both files in `config/sites.csv` and `config/site_roles.csv`, with the page that supports each row and a passage copied from the page. The script `scripts/check_sources.py` downloads each page and adds the result of the check. A site enters the file only when at least one row of `site_roles.csv` gives a listed firm a role at the site.
+
+**Table 5. Variables in sites.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| site_id | text | ISO 3166-1 alpha-3 code, a hyphen and four digits | Identifier of the site, assigned once and never reused |
+| site_name | text | | Name of the site as the source gives it |
+| city | text | | City or area, with the state or province where the source gives one |
+| country, country_iso3 | text | | Country and its code |
+| status | category | operational, under_construction, planned, unclear | Stage of the site at the date of the source |
+| capacity_mw | number | | Capacity in megawatts that the source gives, empty when it gives none |
+| capacity_basis | category | it, power, unspecified | it for IT capacity, power for the installed power or the power contracted, unspecified when the source does not say |
+| note | text | | Limits of the source, such as a capacity that covers several phases |
+| source_url, source_quote | text | | Page that supports the row and the passage copied from it |
+| check_status | category | found, partly_found, not_found, not_read | Result of the check, as defined below |
+| share_found | number | 0 to 1 | Share of the passage's pieces found on the page |
+| retrieved | date | YYYY-MM-DD | Date the page was downloaded |
+
+**Table 6. Variables in site_roles.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| site_id | text | | Site in `sites.csv` |
+| firm | text | | Firm as Table 2 names it |
+| firm_origin | text | | Chinese firm from which the firm began, such as GDS for DayOne, empty when the firm is itself Chinese |
+| role | category | Table 1 | Role of the firm at the site |
+| source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
+
+A passage counts as found when at least 90 percent of its overlapping pieces of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as partly found from 50 percent. A role recorded as owner can rest on an investment in the project whose share is not disclosed, and the passage then says so.
+
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 5. Coding values**
+**Table 7. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -82,12 +115,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | building | A building financed by China that contains a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 6. Variables in government_data_centres_aiddata.csv**
+**Table 8. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 5 |
+| coding | category | Value from Table 7 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |
