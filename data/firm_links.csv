@@ -1,2 +1,3 @@
 firm,related_firm,relation,share,as_of,source_url,source_quote,check_status,share_found,retrieved
 DayOne,GDS,shareholder,0.194,,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Our Company was deconsolidated from GDS with effect from December 31, 2024 and GDS now holds 19.4% of our shares.",found,1.00,2026-10-21
+Bridge Data Centres,ChinData,former group member,,,https://datacenterdynamics.com/en/news/bain-capital-sells-china-data-center-business-for-4bn,"APAC-focused Bridge Data Centres, which was merged with ChinData after Bain purchased it in 2019 and was, according to Reuters , informally separated after Bain took ChinData private in 2023, will remain part of the private investment firm's portfolio.",found,1.00,2026-10-21

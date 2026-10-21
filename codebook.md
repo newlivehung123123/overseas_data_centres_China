@@ -28,9 +28,11 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 |---|---|
 | Cloud and AI | Alibaba Cloud, Huawei Cloud, Tencent Cloud, ByteDance (including BytePlus and Volcano Engine), Baidu AI Cloud |
 | State telecom | China Mobile International, China Telecom Global, China Unicom Global |
-| Data-centre operators | GDS, VNET, zData, DayOne (origin in GDS), Bridge Data Centres (origin in Chindata) |
+| Data-centre operators | GDS, VNET, zData, ChinData, DayOne (origin in GDS) |
 | Builders and equipment | Huawei, ZTE, Inspur, Sugon |
 | State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA |
+
+Bridge Data Centres is not a listed firm. Bain Capital bought ChinData in 2019 and merged it with Bridge, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge is therefore not Chinese-owned and did not begin as the international arm of a Chinese firm, and `data/firm_links.csv` records its former link to ChinData. A site that Bridge operates enters the dataset only when a listed firm holds a role there, such as ByteDance as tenant.
 
 ## Levels
 
@@ -121,7 +123,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | Variable | Type | Description |
 |---|---|---|
 | firm, related_firm | text | The listed firm and the Chinese firm linked to it |
-| relation | category | shareholder, parent or former parent |
+| relation | category | shareholder, parent, former parent or former group member |
 | share | number | Share held, from 0 to 1, empty when the source gives none |
 | as_of | date | Date of the share, empty when the source gives none |
 | source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
