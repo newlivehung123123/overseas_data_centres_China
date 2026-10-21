@@ -34,7 +34,7 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 
 Bridge Data Centres is not a listed firm. Bain Capital bought ChinData in 2019 and merged it with Bridge, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge is therefore not Chinese-owned and did not begin as the international arm of a Chinese firm, and `data/firm_links.csv` records its former link to ChinData. A site that Bridge operates enters the dataset only when a listed firm holds a role there, such as ByteDance as tenant.
 
-Ownership can change, so each link between a firm and its Chinese owner in `data/firm_links.csv` carries the date of its source. The most recent source found for Global Switch, from May 2022, describes the company as controlled by Jiangsu Shagang Group, and Global Switch stays a listed firm until a source reports a change of control.
+Ownership can change, so each link between a firm and its Chinese owner in `data/firm_links.csv` carries the date of its source. Global Switch has been under the control of a consortium of Chinese companies including Jiangsu Shagang Group since 2018, and the most recent source found, from January 2023, still names Shagang among its owners. Global Switch stays a listed firm until a source reports a change of control.
 
 ## Levels
 
@@ -130,11 +130,28 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | as_of | date | Date of the share, empty when the source gives none |
 | source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
 
+### data/rules.csv
+
+`data/rules.csv` has one row for each rule, bill or guidance that bears on the AI chips in a host country or on remote access to them, with the part of the rule that the row records. A rule with several parts, such as a permit that covers exports but not use within the country, has one row for each part. The file is written by hand in `config/rules.csv` and checked by `scripts/check_sources.py`.
+
+**Table 9. Variables in rules.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| rule_id | text | ISO 3166-1 alpha-3 code, a hyphen and four digits | Identifier of the row |
+| jurisdiction, country_iso3 | text | | Country whose rule it is |
+| instrument | text | | Name of the law, rule, bill or guidance |
+| covers | category | chip_export, chip_transit, remote_access, use_in_country, guidance | Part of the chain from shipment to use that the row records |
+| status | category | in_force, pending, rescinded, announced | in_force for a rule or guidance that applies, pending for a bill not yet passed, rescinded for a rule withdrawn, announced for a measure whose taking effect the source does not confirm |
+| date | date | | Date of the vote, notice or announcement |
+| note | text | | What the row records, in one sentence |
+| source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
+
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 9. Coding values**
+**Table 10. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -146,12 +163,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 10. Variables in government_data_centres_aiddata.csv**
+**Table 11. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 9 |
+| coding | category | Value from Table 10 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |

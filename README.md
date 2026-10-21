@@ -39,20 +39,25 @@ Of the 55 regions, 47 are operational outside mainland China, Hong Kong and Maca
 
 ByteDance holds a role at 10 sites. It is a tenant at 4 of them: the 110 MW MY06 campus in Johor, the 90 MW OSL-Hamar campus of Green Mountain in Norway, the Pecém campus in Ceará, which has 300 MW of installed power and is expected to operate in 2027, and the Johor data centre that zData plans on 38 acres, where Alibaba and Tencent are also named as clients. At the other 6 the sources say that TikTok uses or plans the site but not whether it owns or rents it, so the role is coded user. These are Kouvola and Lahti in Finland, a site in Ireland, and Bangkok, Samut Prakan and Chachoengsao in Thailand, where Thailand's Board of Investment approved in May 2026 an investment of about 842 billion baht by TikTok's Thai unit.
 
-DayOne, which began as the international unit of GDS, holds a role at 16 sites, 12 of them named in its 2026 registration statement at the SEC. DayOne reports capacity by market and not by site, so most DayOne sites have no capacity of their own. China Mobile International operates a data centre of more than 2,100 racks in Singapore, and Uptime Institute lists Tier awards for its sites in Slough, Mörfelden and Hong Kong. China Unicom Global operates a data centre of 37,000 square metres in Tseung Kwan O and was reported in 2023 to be rolling out data centres in Singapore, Tokyo and Frankfurt. Global Switch, which the most recent source found, from May 2022, describes as controlled by Jiangsu Shagang Group, lists data centres in Amsterdam, Frankfurt, Hong Kong, London, Madrid, Paris and Singapore and new sites in Johor and Bangkok, recorded for now at the level of the city.
+DayOne, which began as the international unit of GDS, holds a role at 16 sites, 12 of them named in its 2026 registration statement at the SEC. DayOne reports capacity by market and not by site, so most DayOne sites have no capacity of their own. China Mobile International operates a data centre of more than 2,100 racks in Singapore, and Uptime Institute lists Tier awards for its sites in Slough, Mörfelden and Hong Kong. China Unicom Global operates a data centre of 37,000 square metres in Tseung Kwan O and was reported in 2023 to be rolling out data centres in Singapore, Tokyo and Frankfurt. Global Switch, which a consortium of Chinese companies including Jiangsu Shagang Group has controlled since 2018, lists data centres in Amsterdam, Frankfurt, Hong Kong, London, Madrid, Paris and Singapore and new sites in Johor and Bangkok, recorded for now at the level of the city.
 
 An earlier version also listed Bridge Data Centres, the operator of MY06, as a Chinese operator, which was wrong. Bain Capital separated Bridge from ChinData and kept it when it sold ChinData in September 2025, so the codebook now explains why Bridge is not a listed firm.
 
 ### DayOne by market
 
-DayOne's registration statement at the SEC, which DayOne filed for its listing in 2026, reports its capacity by market as of 20 September 2026 and not by site. `data/operator_markets.csv` records the 10 markets: 962 MW in service, 1,328 MW under construction and 2,308 MW of secured powered land, or 4,597 MW in all, in Malaysia, Indonesia, Singapore, Thailand, Japan, Hong Kong, Finland and Spain. Johor holds 789 MW of the 962 MW in service. The rows add up to 1 MW more or less than the totals in the filing, because the filing rounds each figure. The same filing states that GDS holds 19.4 percent of DayOne's shares, which `data/firm_links.csv` records together with the former link between Bridge Data Centres and ChinData and the control of Global Switch by Jiangsu Shagang Group. All 13 passages were found on their pages.
+DayOne's registration statement at the SEC, which DayOne filed for its listing in 2026, reports its capacity by market as of 20 September 2026 and not by site. `data/operator_markets.csv` records the 10 markets: 962 MW in service, 1,328 MW under construction and 2,308 MW of secured powered land, or 4,597 MW in all, in Malaysia, Indonesia, Singapore, Thailand, Japan, Hong Kong, Finland and Spain. Johor holds 789 MW of the 962 MW in service. The rows add up to 1 MW more or less than the totals in the filing, because the filing rounds each figure. The same filing states that GDS holds 19.4 percent of DayOne's shares, which `data/firm_links.csv` records together with the former link between Bridge Data Centres and ChinData and two sources on the control of Global Switch by Jiangsu Shagang Group, the later from January 2023. All 14 passages were found on their pages.
+
+### Rules in the host countries
+
+`data/rules.csv` records 7 parts of rules, bills and guidance that bear on the AI chips in a host country or on remote access to them, each with its passage, and all 7 passages were found on their pages. US export rules control shipments of advanced chips but not access to the chips through a cloud service. The Remote Access Security Act, which would cover such access, passed the House by 369 votes to 22 on 12 January 2026 and has not passed the Senate. The AI Diffusion Rule, issued on 15 January 2025, was rescinded in May 2025 before it took effect, and the notice of rescission announced licensing requirements for exports of advanced chips to Malaysia and Thailand. Malaysia has required a permit since July 2025 for exports, transshipments and transits of US-origin AI chips, but the permit does not cover the use of the chips within Malaysia. A Chinese firm that rents servers in Johor and trains a model on them therefore falls under none of these rules, as the sources stand.
 
 ### Next steps
 
-1. Add the remaining sites of ByteDance, such as its second site in Ireland, the portfolios of GDS, VNET and zData outside mainland China, the overseas data centres of China Telecom Global, the buildings of Global Switch in each city, and a source dated after 2022 on who controls Global Switch.
+1. Add the remaining sites of ByteDance, such as its second site in Ireland, the portfolios of GDS, VNET and zData outside mainland China, the overseas data centres of China Telecom Global, the buildings of Global Switch in each city, and a source dated after January 2023 on who controls Global Switch.
 2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement.
 3. Find out from other sources whether the 12 e-government and network projects coded unspecified built a data centre.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
+5. Add the rules of the other host countries, such as Singapore, Thailand, Indonesia, the United Arab Emirates and Saudi Arabia, and link each site to the rules of its country.
 
 ## Dashboard
 
@@ -117,6 +122,7 @@ The tests use small tables and passages written in the test files and need no do
 | `config/firm_links.csv` | Ownership links between listed firms and Chinese firms, each with its page and passage |
 | `config/operator_markets.csv` | Capacity that operators report by market, each with its page and passage |
 | `config/places.csv` | Map point of each city, with the OpenStreetMap object it comes from |
+| `config/rules.csv` | Parts of rules that bear on AI chips in host countries, each with its page and passage |
 | `config/site_roles.csv` | Roles of firms at sites, each with its page and passage |
 | `config/sites.csv` | Sites, each with its page and passage |
 | `config/cloud_regions_manual.csv` | Regions that the provider pages do not list, each with the page that reports it |
@@ -126,6 +132,7 @@ The tests use small tables and passages written in the test files and need no do
 | `data/cloud_regions.csv` | Public cloud regions of Chinese providers outside mainland China |
 | `data/firm_links.csv` | Ownership links with the result of the check |
 | `data/operator_markets.csv` | Capacity by market with the result of the check |
+| `data/rules.csv` | Rules with the result of the check |
 | `data/site_roles.csv` | Roles with the result of the check |
 | `data/sites.csv` | Sites with the result of the check |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |

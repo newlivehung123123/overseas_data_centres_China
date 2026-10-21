@@ -7,8 +7,8 @@ check downloads every page once, saves its text in data/raw/pages/sources, and l
 passage on the page. A passage counts as found when at least 90 percent of its overlapping pieces
 of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the
-result for each row, and checks config/operator_markets.csv and config/firm_links.csv in the same
-way. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
+result for each row, and checks config/operator_markets.csv, config/firm_links.csv and
+config/rules.csv in the same way. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
 
     python scripts/check_sources.py              downloads pages not saved yet
     python scripts/check_sources.py --refetch    downloads every page again
@@ -35,7 +35,8 @@ SITES_OUT = ROOT / "data" / "sites.csv"
 ROLES_OUT = ROOT / "data" / "site_roles.csv"
 # Further tables whose rows each carry a page and a passage, checked in the same way.
 OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "operator_markets.csv"),
-                (ROOT / "config" / "firm_links.csv", ROOT / "data" / "firm_links.csv")]
+                (ROOT / "config" / "firm_links.csv", ROOT / "data" / "firm_links.csv"),
+                (ROOT / "config" / "rules.csv", ROOT / "data" / "rules.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found
