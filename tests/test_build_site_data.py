@@ -1,0 +1,50 @@
+"""Offline tests of the dashboard data, on small tables written here."""
+
+import csv
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+from unittest import mock
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+import build_site_data as b  # noqa: E402
+
+TABLES = {
+    "config/places.csv": [{"city": "Johor", "country": "Malaysia", "lat": "2.02288", "lon": "103.3114"}],
+    "data/sites.csv": [{"site_id": "MYS-0001", "site_name": "A site", "city": "Johor", "country": "Malaysia",
+                        "country_iso3": "MYS", "status": "operational", "capacity_mw": "110", "capacity_basis": "it",
+                        "note": "", "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
+    "data/site_roles.csv": [{"site_id": "MYS-0001", "firm": "ByteDance", "firm_origin": "", "role": "tenant",
+                             "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
+    "data/cloud_regions.csv": [{"provider": "Tencent Cloud", "region_label": "Seoul", "region_id": "ap-seoul", "city": "Seoul",
+                                "country": "South Korea", "country_iso3": "KOR", "status": "operational", "launch_year": "",
+                                "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
+    "data/rules.csv": [{"rule_id": "MYS-0001", "jurisdiction": "Malaysia", "country_iso3": "MYS", "applies_in": "MYS",
+                        "instrument": "Permit", "covers": "chip_transit", "status": "in_force", "date": "2025-07", "note": "",
+                        "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
+}
+
+
+class BuildTest(unittest.TestCase):
+    def test_records_carry_roles_points_and_rules(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for name, rows in TABLES.items():
+                (root / name).parent.mkdir(parents=True, exist_ok=True)
+                with (root / name).open("w", newline="") as f:
+                    writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+                    writer.writeheader()
+                    writer.writerows(rows)
+            with mock.patch.object(b, "ROOT", root):
+                data = b.build()
+        site, region = data["records"]
+        self.assertEqual(site["roles"][0]["firm"], "ByteDance")
+        self.assertEqual(site["point"], [2.0229, 103.3114])
+        self.assertIsNone(region["point"])
+        self.assertEqual(region["roles"][0]["role"], "operator")
+        self.assertEqual(data["rules"][0]["applies_in"], ["MYS"])
+
+
+if __name__ == "__main__":
+    unittest.main()

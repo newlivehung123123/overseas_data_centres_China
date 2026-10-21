@@ -51,7 +51,7 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 
 ### Rules in the host countries
 
-`data/rules.csv` records 7 parts of rules, bills and guidance that bear on the AI chips in a host country or on remote access to them, each with its passage, and all 7 passages were found on their pages. US export rules control shipments of advanced chips but not access to the chips through a cloud service. The Remote Access Security Act, which would cover such access, passed the House by 369 votes to 22 on 12 January 2026 and has not passed the Senate. The AI Diffusion Rule, issued on 15 January 2025, was rescinded in May 2025 before it took effect, and the notice of rescission announced licensing requirements for exports of advanced chips to Malaysia and Thailand. Malaysia has required a permit since July 2025 for exports, transshipments and transits of US-origin AI chips, but the permit does not cover the use of the chips within Malaysia. A Chinese firm that rents servers in Johor and trains a model on them therefore falls under none of these rules, as the sources stand.
+`data/rules.csv` records 9 parts of rules, bills and guidance that bear on the AI chips in a host country or on remote access to them, each with its passage and the countries where it applies, and all 9 passages were found on their pages. US export rules control shipments of advanced chips but not access to the chips through a cloud service. The Remote Access Security Act, which would cover such access, passed the House by 369 votes to 22 on 12 January 2026 and has not passed the Senate. The AI Diffusion Rule, issued on 15 January 2025, was rescinded in May 2025 before it took effect, and the notice of rescission announced licensing requirements for exports of advanced chips to Malaysia and Thailand. Malaysia has required a permit since July 2025 for exports, transshipments and transits of US-origin AI chips, but the permit does not cover the use of the chips within Malaysia. A Chinese firm that rents servers in Johor and trains a model on them therefore falls under none of these rules, as the sources stand. In the Gulf, the US approved in November 2025 exports of up to the equivalent of 35,000 Nvidia GB300 chips each to G42 in the United Arab Emirates and Humain in Saudi Arabia, on condition of security and reporting requirements that are not public, and the UAE describes a Regulated Technology Environment of audits and oversight for organisations that acquire such chips.
 
 ### Next steps
 
@@ -59,7 +59,7 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement.
 3. Find out from other sources whether the 12 e-government and network projects coded unspecified built a data centre.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
-5. Add the rules of the other host countries, such as Singapore, Thailand, Indonesia, the United Arab Emirates and Saudi Arabia, and link each site to the rules of its country.
+5. Add the rules of the other host countries, such as Singapore, Thailand, Indonesia, Brazil and the members of the European Union.
 
 ## Dashboard
 

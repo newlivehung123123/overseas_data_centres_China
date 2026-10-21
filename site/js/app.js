@@ -92,12 +92,12 @@
         radius: Math.min(5 + group.length * 1.5, 16), weight: 1, color: "#ffffff", fillOpacity: 0.85,
         fillColor: colour(hasSite ? "site" : "cloud_region")
       });
-      var local = state.rules.filter(function (x) { return x.iso3 === group[0].iso3; });
+      var local = state.rules.filter(function (x) { return (x.applies_in || []).indexOf(group[0].iso3) >= 0; });
       marker.bindPopup("<strong>" + place(group[0]) + "</strong><br>" + group.map(function (r) {
         return LABELS[r.layer] + ": " + escape(r.name) + "<br><small>" + roleText(r) + "</small>";
       }).join("<hr>") + "<hr><small>" + (local.length ? "Rules recorded for this country: " + local.map(function (x) {
         return escape(x.instrument) + " (" + (COVERS[x.covers] || escape(x.covers)) + ", " + (RULE_STATUS[x.status] || escape(x.status)) + ")";
-      }).join("; ") : "No rules of this country recorded yet") + ".</small>");
+      }).join("; ") : "No rules specific to this country recorded yet") + ". US export rules apply to US-origin chips everywhere.</small>");
       state.layer.addLayer(marker);
     });
   }
@@ -115,7 +115,7 @@
   function drawRules() {
     el("rules").innerHTML = state.rules.map(function (x) {
       return "<tr><td>" + escape(x.instrument) + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td>" +
-        "<td>" + escape(x.jurisdiction) + "</td><td>" + (COVERS[x.covers] || escape(x.covers)) + "</td>" +
+        "<td>" + escape(x.jurisdiction) + ((x.applies_in || []).join() === "all" ? "" : "<span class='quote'>Applies in " + escape((x.applies_in || []).join(", ")) + "</span>") + "</td><td>" + (COVERS[x.covers] || escape(x.covers)) + "</td>" +
         "<td>" + (RULE_STATUS[x.status] || escape(x.status)) + (x.date ? " (" + escape(x.date) + ")" : "") + "</td>" +
         "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
         escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";

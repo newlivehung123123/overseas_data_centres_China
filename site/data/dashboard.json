@@ -3005,6 +3005,9 @@
    "id": "USA-0001",
    "jurisdiction": "United States",
    "iso3": "USA",
+   "applies_in": [
+    "all"
+   ],
    "instrument": "Export Administration Regulations",
    "covers": "remote_access",
    "status": "in_force",
@@ -3018,6 +3021,9 @@
    "id": "USA-0002",
    "jurisdiction": "United States",
    "iso3": "USA",
+   "applies_in": [
+    "all"
+   ],
    "instrument": "Remote Access Security Act (H.R. 2683)",
    "covers": "remote_access",
    "status": "pending",
@@ -3031,6 +3037,9 @@
    "id": "USA-0003",
    "jurisdiction": "United States",
    "iso3": "USA",
+   "applies_in": [
+    "all"
+   ],
    "instrument": "AI Diffusion Rule",
    "covers": "chip_export",
    "status": "rescinded",
@@ -3044,6 +3053,10 @@
    "id": "USA-0004",
    "jurisdiction": "United States",
    "iso3": "USA",
+   "applies_in": [
+    "MYS",
+    "THA"
+   ],
    "instrument": "Licensing requirements for exports of advanced chips to Malaysia and Thailand",
    "covers": "chip_export",
    "status": "announced",
@@ -3057,6 +3070,9 @@
    "id": "USA-0005",
    "jurisdiction": "United States",
    "iso3": "USA",
+   "applies_in": [
+    "all"
+   ],
    "instrument": "Guidance on the training of Chinese AI models with US chips",
    "covers": "guidance",
    "status": "in_force",
@@ -3070,6 +3086,9 @@
    "id": "MYS-0001",
    "jurisdiction": "Malaysia",
    "iso3": "MYS",
+   "applies_in": [
+    "MYS"
+   ],
    "instrument": "Strategic Trade Act 2010, permit for US-origin AI chips",
    "covers": "chip_transit",
    "status": "in_force",
@@ -3083,6 +3102,9 @@
    "id": "MYS-0002",
    "jurisdiction": "Malaysia",
    "iso3": "MYS",
+   "applies_in": [
+    "MYS"
+   ],
    "instrument": "Strategic Trade Act 2010, permit for US-origin AI chips",
    "covers": "use_in_country",
    "status": "in_force",
@@ -3090,6 +3112,39 @@
    "note": "The permit does not cover the use of the chips within Malaysia",
    "source": "https://techwireasia.com/2025/09/malaysia-tightens-oversight-of-data-centres-amid-ai-chip-controls/",
    "quote": "The rule does not completely cut off access — chips can still be used within Malaysia — but it puts projects with Chinese investors under closer watch.",
+   "check": "found"
+  },
+  {
+   "id": "USA-0006",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "applies_in": [
+    "ARE",
+    "SAU"
+   ],
+   "instrument": "Approvals of AI chip exports to G42 and Humain",
+   "covers": "chip_export",
+   "status": "in_force",
+   "date": "2025-11-19",
+   "note": "Up to the equivalent of 35,000 Nvidia GB300 chips for each company, on condition of security and reporting requirements that are not public",
+   "source": "https://www.ajot.com/news/statement-on-uae-and-saudi-chip-exports",
+   "quote": "The approvals are conditioned on both companies meeting rigorous security and reporting requirements.",
+   "check": "found"
+  },
+  {
+   "id": "ARE-0001",
+   "jurisdiction": "United Arab Emirates",
+   "iso3": "ARE",
+   "applies_in": [
+    "ARE"
+   ],
+   "instrument": "Regulated Technology Environment of the US-UAE AI Acceleration Partnership",
+   "covers": "use_in_country",
+   "status": "announced",
+   "date": "2025-05",
+   "note": "Described by the UAE ambassador to the United States; the terms are not public",
+   "source": "https://www.uae-embassy.org/news/statement-ambassador-yousef-al-otaiba-us-uae-ai-acceleration-partnership",
+   "quote": "approved UAE organizations acquiring regulated U.S. technologies will adhere to extensive physical and cybersecurity protocols. These involve regular audits, third-party validations, and active oversight by both nations’ governments.",
    "check": "found"
   }
  ]

@@ -140,6 +140,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 |---|---|---|---|
 | rule_id | text | ISO 3166-1 alpha-3 code, a hyphen and four digits | Identifier of the row |
 | jurisdiction, country_iso3 | text | | Country whose rule it is |
+| applies_in | text | all, or ISO 3166-1 alpha-3 codes separated by semicolons | Countries where the rule applies, with all for a US export rule that follows US-origin chips everywhere |
 | instrument | text | | Name of the law, rule, bill or guidance |
 | covers | category | chip_export, chip_transit, remote_access, use_in_country, guidance | Part of the chain from shipment to use that the row records |
 | status | category | in_force, pending, rescinded, announced | in_force for a rule or guidance that applies, pending for a bill not yet passed, rescinded for a rule withdrawn, announced for a measure whose taking effect the source does not confirm |

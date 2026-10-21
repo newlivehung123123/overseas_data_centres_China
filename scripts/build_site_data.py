@@ -56,7 +56,7 @@ def build() -> dict:
                        "quote": c["source_quote"], "check": c["check_status"]}],
             "iso3": c["country_iso3"], "point": point(places, c["city"], c["country"]),
         })
-    rules = [{"id": r["rule_id"], "jurisdiction": r["jurisdiction"], "iso3": r["country_iso3"],
+    rules = [{"id": r["rule_id"], "jurisdiction": r["jurisdiction"], "iso3": r["country_iso3"], "applies_in": r["applies_in"].split(";"),
               "instrument": r["instrument"], "covers": r["covers"], "status": r["status"], "date": r["date"],
               "note": r["note"], "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"]}
              for r in read("data/rules.csv")]
