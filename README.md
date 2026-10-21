@@ -4,7 +4,7 @@ This project records the data-centre capacity outside mainland China in which Ch
 
 ## Status
 
-The repository holds two layers as of 21 October 2026, the government data centres financed by Chinese state lenders and agencies, and the public cloud regions of Chinese providers. Neither layer has been through the source check yet, which downloads each cited page and confirms the value, because the pages could not be downloaded in the environment where the rows were written.
+The repository holds two layers as of 21 October 2026, the government data centres financed by Chinese state lenders and agencies, and the public cloud regions of Chinese providers. Every row of the cloud region layer carries the passage of its source page, and the script that writes the layer checks the passage against the downloaded page. The rows of the AidData layer cite AidData records, which have not yet been checked against the AidData project pages, because those pages did not respond.
 
 ### Government data centres financed by Chinese state lenders
 
@@ -29,11 +29,13 @@ The amounts cover the whole project, and in 41 of the 45 records the data centre
 
 ### Cloud regions of Chinese providers
 
-`data/cloud_regions.csv` lists 53 regions of Alibaba Cloud, Huawei Cloud, Tencent Cloud and BytePlus. Of these, 46 are operational outside mainland China, Hong Kong and Macau, in 22 countries, 3 are planned, 1 is unclear and 3 are in Hong Kong. Alibaba Cloud, Huawei Cloud and Tencent Cloud account for 44 of the 46, against a count of 43 by WireScreen for the same three providers. The BytePlus rows come from the documentation of one service and do not cover the other BytePlus services.
+`data/cloud_regions.csv` lists 55 regions of Alibaba Cloud, Huawei Cloud, Tencent Cloud and BytePlus. The script read 51 of them from the providers' own region pages on 21 October 2026, and the other 4, three regions that Alibaba Cloud has announced for Finland, the Netherlands and Turkey and a Tencent Cloud region in Toronto that the current Tencent page does not list, come from reports in DatacenterDynamics. All 55 passages were found on their pages.
+
+Of the 55 regions, 47 are operational outside mainland China, Hong Kong and Macau, in 22 countries. Alibaba Cloud, Huawei Cloud and Tencent Cloud account for 45 of the 47, against a count of 43 by WireScreen for the same three providers. The Tencent page lists one region, in Queretaro in Mexico, that an earlier list built from search results had missed. The BytePlus rows come from the documentation of one service and do not cover the other BytePlus services.
 
 ### Next steps
 
-1. Run the source check on every row, once the cited pages can be downloaded.
+1. Check the AidData rows against the AidData project pages.
 2. Read and code the 62 AidData records that match only the related terms.
 3. Add the sites of ByteDance, of the data-centre operators in Table 2 of the codebook and of the state telecom firms, from company filings, announcements and permits.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
@@ -54,11 +56,17 @@ AidData distributes the GCDF 3.0 file itself, so the file is not committed. Down
 .venv/bin/python scripts/build_aiddata_layer.py --candidates
 ```
 
+The cloud region layer needs no download by hand. The script downloads each provider page, saves the page with its text in `data/raw/pages`, which is not committed, and writes `data/cloud_regions.csv`. The option `--offline` reads the saved pages instead.
+
+```bash
+.venv/bin/python scripts/fetch_cloud_regions.py
+```
+
 The first command writes `data/government_data_centres_aiddata.csv` and `data/aiddata_summary.json` and prints the figures above. The option `--candidates` also writes `data/aiddata_candidates.csv`, the records that match a search term and are not coded yet. The option `--gcdf` gives another path to the Excel file.
 
 ## Tests
 
-The tests use small tables written in the test file and need no download.
+The tests use small tables and passages written in the test files and need no download.
 
 ```bash
 .venv/bin/python -m unittest discover -s tests
@@ -70,13 +78,16 @@ The tests use small tables written in the test file and need no download.
 |---|---|
 | `CONTRIBUTING.md` | Purpose of the project, data rules and writing rules for anyone who works on the repository |
 | `codebook.md` | Roles, firms, levels and variables |
+| `config/cloud_regions_manual.csv` | Regions that the provider pages do not list, each with the page that reports it |
 | `config/aiddata_coding.csv` | Coding of each AidData record read, with a note on the data centre or the reason for exclusion |
 | `data/aiddata_candidates.csv` | AidData records that match a related term and are not coded yet |
 | `data/aiddata_summary.json` | Figures of the government data centre layer |
 | `data/cloud_regions.csv` | Public cloud regions of Chinese providers outside mainland China |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |
 | `scripts/build_aiddata_layer.py` | Build of the government data centre layer from the AidData file and the coding |
-| `tests/test_build_aiddata_layer.py` | Offline tests of the build |
+| `scripts/fetch_cloud_regions.py` | Download of the provider region pages and build of the cloud region layer |
+| `tests/test_build_aiddata_layer.py` | Offline tests of the AidData build |
+| `tests/test_fetch_cloud_regions.py` | Offline tests of the region parsers |
 
 ## Licence and attribution
 

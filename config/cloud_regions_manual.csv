@@ -1,0 +1,5 @@
+provider,region_label,region_id,city,country,country_iso3,status,launch_year,availability_zones,source_url,source_quote
+Alibaba Cloud,,,,Finland,FIN,planned,,,https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/,
+Alibaba Cloud,,,,Netherlands,NLD,planned,,,https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/,
+Alibaba Cloud,,,,Turkey,TUR,planned,,,https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/,
+Tencent Cloud,,,Toronto,Canada,CAN,unclear,,,https://www.datacenterdynamics.com/en/news/tencent-cloud-launches-availability-zone-in-franfurt-germany/,

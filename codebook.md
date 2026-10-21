@@ -47,24 +47,26 @@ Every record is coded at level A. Records with announced capacity of at least 20
 
 ### data/cloud_regions.csv
 
-One row for each public cloud region that a Chinese provider lists outside mainland China. A region is a service area and can span several buildings, so a region is linked to its buildings at level B.
+One row for each public cloud region that a Chinese provider lists outside mainland China. A region is a service area and can span several buildings, so a region is linked to its buildings at level B. The script `scripts/fetch_cloud_regions.py` reads the operational regions from each provider's own region page and keeps the passage of the page that supports each row. Regions that the provider pages do not list, such as announced regions, come from `config/cloud_regions_manual.csv`, and the script checks each of those rows against the page it cites.
 
 **Table 4. Variables in cloud_regions.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
 | provider | text | | Cloud provider as it names itself |
+| region_label | text | | Name of the region as the page writes it, such as Malaysia (Johor) or ME-Riyadh |
+| region_id | text | | Code of the region where the page gives one, such as ap-johorbahru |
 | city | text | | City or area of the region, empty for a planned region with no city announced |
 | country | text | | Country in English |
 | country_iso3 | text | ISO 3166-1 alpha-3 | Country code |
-| status | category | operational, planned, unclear | unclear when sources disagree on whether the region exists |
-| launch_year | integer | | Year the provider gives for the launch, empty when no source gives one |
-| availability_zones | integer | | Number of zones the source gives, empty when none |
+| status | category | operational, planned, unclear | operational when the provider's region page lists the region, planned when a source reports an announcement, unclear when sources disagree on whether the region exists |
+| launch_year | integer | | Year the page gives for the launch, empty when the page gives none |
+| availability_zones | integer | | Number of zones the page gives, empty when it gives none |
 | hong_kong_macau | category | yes, no | yes for Hong Kong and Macau |
 | source_url | text | | Page that supports the row |
-| source_note | text | | What the page states, and any conflict with other sources |
-| check_status | category | not_checked, found, not_found | Result of the source check, which downloads the page and confirms the row |
-| retrieved | date | YYYY-MM-DD | Date the row was written |
+| source_quote | text | | Passage of the page that supports the row |
+| check_status | category | found, not_found, not_read | found when the passage is on the downloaded page, not_found when the page was read and the passage is not on it, not_read when the page could not be downloaded |
+| retrieved | date | YYYY-MM-DD | Date the page was downloaded |
 
 ### data/government_data_centres_aiddata.csv
 
