@@ -35,7 +35,7 @@ Of the 55 regions, 47 are operational outside mainland China, Hong Kong and Maca
 
 ### Sites
 
-`data/sites.csv` holds 7 sites in Malaysia, Indonesia, Finland and Brazil, and `data/site_roles.csv` holds 9 roles of ByteDance, DayOne and Bridge Data Centres at those sites. ByteDance is a tenant at 4 sites: the 110 MW MY06 campus of Bridge Data Centres in Johor, the Hyperco campus in Kouvola, a planned site in Lahti and the Pecém campus in Ceará, which has 300 MW of installed power and is expected to operate in 2027. DayOne, which began as the international unit of GDS, holds a role at 4 sites, in Batam, Johor, Kouvola and Lahti. All 16 passages were found on their pages. The sites are a first sample for testing the method, not a complete list.
+`data/sites.csv` holds 19 sites in Malaysia, Indonesia, Singapore, Thailand, Japan, Hong Kong, Finland, Spain and Brazil, and `data/site_roles.csv` holds 22 roles of ByteDance, DayOne and Bridge Data Centres at those sites. ByteDance is a tenant at 4 sites: the 110 MW MY06 campus of Bridge Data Centres in Johor, the Hyperco campus in Kouvola, a planned site in Lahti and the Pecém campus in Ceará, which has 300 MW of installed power and is expected to operate in 2027. DayOne, which began as the international unit of GDS, holds a role at 16 sites, 12 of them named in its 2026 registration statement at the SEC. All 41 passages were found on their pages. DayOne reports capacity by market and not by site, so most DayOne sites have no capacity of their own, and the sites are a first sample for testing the method, not a complete list.
 
 ### DayOne by market
 
@@ -44,7 +44,7 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 ### Next steps
 
 1. Add the remaining sites of ByteDance, such as Hamar in Norway and its sites in Ireland and Thailand, the full portfolios of DayOne, Bridge Data Centres, GDS, VNET and zData, and the overseas data centres of the state telecom firms.
-2. Link DayOne's markets to its sites, from the site descriptions in the same filing.
+2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement.
 3. Read and code the 62 AidData records that match only the related terms.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
 
