@@ -32,7 +32,7 @@ DEFAULT_GCDF = ROOT / "data" / "raw" / "AidDatasGlobalChineseDevelopmentFinanceD
 SHEET = "GCDF_3.0"
 PROJECT_URL = "https://china.aiddata.org/projects/"
 
-CODINGS = {"primary", "component", "scientific", "building", "excluded"}
+CODINGS = {"primary", "component", "scientific", "building", "command_centre", "unspecified", "excluded"}
 GOVERNMENT = {"primary", "component"}
 
 # Terms that name a data centre, searched in the title and description of every record.
@@ -119,6 +119,8 @@ def summarise(layer: pd.DataFrame) -> dict:
         "loans_first_principal_repayment_2024_2027": int(repayment_year.between(2024, 2027).sum()),
         "scientific_records": int((layer["coding"] == "scientific").sum()),
         "building_records": int((layer["coding"] == "building").sum()),
+        "command_centre_records": int((layer["coding"] == "command_centre").sum()),
+        "unspecified_records": int((layer["coding"] == "unspecified").sum()),
     }
 
 

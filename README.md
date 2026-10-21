@@ -8,7 +8,7 @@ The repository holds three layers as of 21 October 2026: the government data cen
 
 ### Government data centres financed by Chinese state lenders
 
-A search of the title and description of all 20,985 records in AidData's Global Chinese Development Finance Dataset, Version 3.0, found 69 records that name a data centre. A person read each record and coded it, and 17 of the 69 matched by chance, such as the acronym IDC for industrial development corporations. A second search for related terms such as e-government and supercomputer added 6 records, and 62 records that match only the related terms remain to be read.
+A search of the title and description of all 20,985 records in AidData's Global Chinese Development Finance Dataset, Version 3.0, found 69 records that name a data centre. A person read each record and coded it, and 17 of the 69 matched by chance, such as the acronym IDC for industrial development corporations. A second search for related terms such as e-government, safe city and supercomputer added 6 records and found 62 more, which were also read. Of those 62, 18 paid for a security or emergency command centre that receives surveillance data, 12 are e-government or network projects whose records do not say whether they built a data centre, and 32 are unrelated, such as debt suspensions, seminars and broadband networks.
 
 Of the coded records, 48 paid for a government data centre, 8 for a scientific or high-performance computing centre and 2 for a building that contains a data centre. The figures below use the 45 government records that AidData recommends for totals, which leaves out three pledges.
 
@@ -51,7 +51,7 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 
 1. Add the remaining sites of ByteDance, such as its second site in Ireland, the portfolios of GDS, VNET and zData outside mainland China, the overseas data centres of China Telecom Global, the buildings of Global Switch in each city, and a source dated after 2022 on who controls Global Switch.
 2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement.
-3. Read and code the 62 AidData records that match only the related terms.
+3. Find out from other sources whether the 12 e-government and network projects coded unspecified built a data centre.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
 
 ## Setup

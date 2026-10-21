@@ -142,6 +142,8 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | component | The data centre is one part of a wider e-government, broadband, security or education project |
 | scientific | A seismic, research or high-performance computing centre |
 | building | A building financed by China that contains a data centre |
+| command_centre | A security or emergency command centre that receives surveillance data, which the record does not describe as a data centre |
+| unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
 **Table 10. Variables in government_data_centres_aiddata.csv**

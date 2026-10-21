@@ -24,5 +24,7 @@
   "financial_distress_records": 6,
   "loans_first_principal_repayment_2024_2027": 7,
   "scientific_records": 8,
-  "building_records": 2
+  "building_records": 2,
+  "command_centre_records": 18,
+  "unspecified_records": 12
 }
