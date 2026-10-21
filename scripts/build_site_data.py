@@ -2,7 +2,7 @@
 """Write the data file that the dashboard in site/ reads, from the checked layers.
 
 The dashboard shows the sites with the roles of firms at each site and the cloud regions, each at
-the point of its city in config/places.csv. The government data centres of the AidData layer are
+the point of its city in config/places.csv, and the rules recorded for each country. The government data centres of the AidData layer are
 left out of the dashboard until the article pitched on them has been answered, as CONTRIBUTING.md asks.
 
     python scripts/build_site_data.py    writes site/data/dashboard.json
@@ -44,7 +44,7 @@ def build() -> dict:
             "layer": "site", "id": s["site_id"], "name": s["site_name"], "city": s["city"], "country": s["country"],
             "status": s["status"], "capacity_mw": s["capacity_mw"], "capacity_basis": s["capacity_basis"],
             "note": s["note"], "source": s["source_url"], "quote": s["source_quote"], "check": s["check_status"],
-            "roles": roles[s["site_id"]], "point": point(places, s["city"], s["country"]),
+            "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "point": point(places, s["city"], s["country"]),
         })
     for c in read("data/cloud_regions.csv"):
         records.append({
@@ -54,9 +54,13 @@ def build() -> dict:
             "quote": c["source_quote"], "check": c["check_status"],
             "roles": [{"firm": c["provider"], "origin": "", "role": "operator", "source": c["source_url"],
                        "quote": c["source_quote"], "check": c["check_status"]}],
-            "point": point(places, c["city"], c["country"]),
+            "iso3": c["country_iso3"], "point": point(places, c["city"], c["country"]),
         })
-    return {"built": date.today().isoformat(), "records": records}
+    rules = [{"id": r["rule_id"], "jurisdiction": r["jurisdiction"], "iso3": r["country_iso3"],
+              "instrument": r["instrument"], "covers": r["covers"], "status": r["status"], "date": r["date"],
+              "note": r["note"], "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"]}
+             for r in read("data/rules.csv")]
+    return {"built": date.today().isoformat(), "records": records, "rules": rules}
 
 
 def main() -> None:

@@ -5,8 +5,11 @@
   var COLOURS = { site: "--site", cloud_region: "--region" };
   var LABELS = { site: "Site", cloud_region: "Cloud region" };
   var STATUS = { operational: "Operational", under_construction: "Under construction", planned: "Planned", unclear: "Unclear" };
+  var RULE_STATUS = { in_force: "In force", pending: "Pending", rescinded: "Rescinded", announced: "Announced" };
+  var COVERS = { chip_export: "Export of chips", chip_transit: "Export, transshipment and transit of chips",
+    remote_access: "Remote access through the cloud", use_in_country: "Use of chips in the country", guidance: "Guidance" };
 
-  var state = { records: [], map: null, layer: null };
+  var state = { records: [], rules: [], map: null, layer: null };
   var el = function (id) { return document.getElementById(id); };
 
   function escape(text) {
@@ -89,9 +92,12 @@
         radius: Math.min(5 + group.length * 1.5, 16), weight: 1, color: "#ffffff", fillOpacity: 0.85,
         fillColor: colour(hasSite ? "site" : "cloud_region")
       });
+      var local = state.rules.filter(function (x) { return x.iso3 === group[0].iso3; });
       marker.bindPopup("<strong>" + place(group[0]) + "</strong><br>" + group.map(function (r) {
         return LABELS[r.layer] + ": " + escape(r.name) + "<br><small>" + roleText(r) + "</small>";
-      }).join("<hr>"));
+      }).join("<hr>") + "<hr><small>" + (local.length ? "Rules recorded for this country: " + local.map(function (x) {
+        return escape(x.instrument) + " (" + (COVERS[x.covers] || escape(x.covers)) + ", " + (RULE_STATUS[x.status] || escape(x.status)) + ")";
+      }).join("; ") : "No rules of this country recorded yet") + ".</small>");
       state.layer.addLayer(marker);
     });
   }
@@ -106,8 +112,20 @@
       countries + " countries and territories.";
   }
 
+  function drawRules() {
+    el("rules").innerHTML = state.rules.map(function (x) {
+      return "<tr><td>" + escape(x.instrument) + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td>" +
+        "<td>" + escape(x.jurisdiction) + "</td><td>" + (COVERS[x.covers] || escape(x.covers)) + "</td>" +
+        "<td>" + (RULE_STATUS[x.status] || escape(x.status)) + (x.date ? " (" + escape(x.date) + ")" : "") + "</td>" +
+        "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
+        escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";
+    }).join("");
+  }
+
   function start(data) {
     state.records = data.records;
+    state.rules = data.rules || [];
+    drawRules();
     el("built").textContent = "Data built on " + data.built + ".";
     var firms = [], roles = [], countries = [];
     data.records.forEach(function (r) {

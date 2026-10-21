@@ -14,6 +14,7 @@
    "source": "https://www.mida.gov.my/media-release/bridge-data-centres-and-bytedance-celebrate-grand-opening-of-the-first-phase-hyperscale-data-centre-my06-in-johor-malaysia/",
    "quote": "Phase 1 covers the first of the three buildings in the 110MW hyperscale data centre project which spans across 38 acres of land area.",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "ByteDance",
@@ -42,6 +43,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/",
    "quote": "The company signed a 450MW PPA with state-run utility PLN Batam to power its under-development data center campus in Kabil, Batam.",
    "check": "found",
+   "iso3": "IDN",
    "roles": [
     {
      "firm": "DayOne",
@@ -70,6 +72,7 @@
    "source": "https://baxtel.com/news/dayone-to-acquire-65-acre-johor-land-parcel-from-malaysia-s-paragon-globe",
    "quote": "Paragon Globe has agreed to sell a 65-acre site in Iskandar Puteri, Johor, to DayOne Data Centers for RM398 million ($96 million) under a conditional agreement disclosed to Bursa Malaysia.",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "DayOne",
@@ -98,6 +101,7 @@
    "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
    "quote": "That campus will be developed by Hyperco, and is projected to have an initial IT capacity of 100MW.",
    "check": "found",
+   "iso3": "FIN",
    "roles": [
     {
      "firm": "ByteDance",
@@ -134,6 +138,7 @@
    "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
    "quote": "The second data center project is set to be located in the Kiveriö district of Lahti, Finland",
    "check": "found",
+   "iso3": "FIN",
    "roles": [
     {
      "firm": "ByteDance",
@@ -162,6 +167,7 @@
    "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
    "quote": "data center company DayOne is known to be developing a 128MW campus in Lahti.",
    "check": "found",
+   "iso3": "FIN",
    "roles": [
     {
      "firm": "DayOne",
@@ -198,6 +204,7 @@
    "source": "https://www.poder360.com.br/poder-infra/mpf-vai-a-justica-contra-data-center-do-tiktok-no-ceara/",
    "quote": "O data center projeta potência instalada de 300 MW, 120 geradores a diesel, subestação elétrica e captação de água subterrânea para resfriamento.",
    "check": "found",
+   "iso3": "BRA",
    "roles": [
     {
      "firm": "ByteDance",
@@ -226,6 +233,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "DayOne",
@@ -254,6 +262,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "DayOne",
@@ -282,6 +291,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "our Batam campuses at Nongsa Digital Park and Kabil Industrial Tech Park are among the first large-scale AI sites in Indonesia",
    "check": "found",
+   "iso3": "IDN",
    "roles": [
     {
      "firm": "DayOne",
@@ -310,6 +320,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "our presence in Singapore, where our campus is currently under development, anchors a tri-node deployment strategy for the SIJORI market.",
    "check": "found",
+   "iso3": "SGP",
    "roles": [
     {
      "firm": "DayOne",
@@ -338,6 +349,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "DayOne",
@@ -366,6 +378,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "DayOne",
@@ -394,6 +407,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "The hyperscale customer anchored the campus, Chonburi Tech Park (CTP), with a 73MW order, which was later upsized to 110MW",
    "check": "found",
+   "iso3": "THA",
    "roles": [
     {
      "firm": "DayOne",
@@ -422,6 +436,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "In 2026, we entered Kyushu through Imari Tech Park (ITP) in Imari, a city in the northwest corner of the island of Kyushu. The site provides approximately 160MW of Secured Powered Land.",
    "check": "found",
+   "iso3": "JPN",
    "roles": [
     {
      "firm": "DayOne",
@@ -450,6 +465,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "we established a foothold in Tokyo to develop our first Japan data center project by entering into a long-term build-to-suit lease for a powered shell. The project, Fuchu Intelligent Park (FIP), is located in Fuchu City",
    "check": "found",
+   "iso3": "JPN",
    "roles": [
     {
      "firm": "DayOne",
@@ -478,6 +494,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "We subsequently expanded our presence in 2025 by acquiring a freehold site in Kodaira, in western Tokyo.",
    "check": "found",
+   "iso3": "JPN",
    "roles": [
     {
      "firm": "DayOne",
@@ -506,6 +523,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "Our Hong Kong sites are strategically located in West Kowloon. We have a closely clustered “virtual campus” across four adjacent buildings",
    "check": "found",
+   "iso3": "HKG",
    "roles": [
     {
      "firm": "DayOne",
@@ -534,6 +552,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "entered Europe with sites in Greater Helsinki, Finland and Zaragoza, Spain.",
    "check": "found",
+   "iso3": "ESP",
    "roles": [
     {
      "firm": "DayOne",
@@ -562,6 +581,7 @@
    "source": "https://btw.media/all/news/tiktok-data-centre-at-osl-hamar-powered-by-norway-green-energy",
    "quote": "now houses three operational buildings, each with 30 MW capacity, fully leased to TikTok under its European data sovereignty scheme, Project Clover.",
    "check": "found",
+   "iso3": "NOR",
    "roles": [
     {
      "firm": "ByteDance",
@@ -590,6 +610,7 @@
    "source": "https://newsroom.tiktok.com/en-eu/tiktok-sets-new-standards-for-security-and-sustainability-through-12-bn-project-clover-programme",
    "quote": "one of the data centres in Ireland is operational already and began storing user data earlier this year",
    "check": "found",
+   "iso3": "IRL",
    "roles": [
     {
      "firm": "ByteDance",
@@ -618,6 +639,7 @@
    "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
    "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
    "check": "found",
+   "iso3": "THA",
    "roles": [
     {
      "firm": "ByteDance",
@@ -646,6 +668,7 @@
    "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
    "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
    "check": "found",
+   "iso3": "THA",
    "roles": [
     {
      "firm": "ByteDance",
@@ -674,6 +697,7 @@
    "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
    "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
    "check": "found",
+   "iso3": "THA",
    "roles": [
     {
      "firm": "ByteDance",
@@ -702,6 +726,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/china-mobile-international-launches-singapore-dc/",
    "quote": "The six-story data center is located at Tai Seng Industrial Park in the eastern part of Singapore, and houses more than 2,100 racks with a gross area of 17,490 sq m (188,300 sq ft).",
    "check": "found",
+   "iso3": "SGP",
    "roles": [
     {
      "firm": "China Mobile International",
@@ -730,6 +755,7 @@
    "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
    "quote": "United Kingdom 1 Data Centre, Phase 1 London Slough, Slough, United Kingdom",
    "check": "found",
+   "iso3": "GBR",
    "roles": [
     {
      "firm": "China Mobile International",
@@ -758,6 +784,7 @@
    "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
    "quote": "Germany 1 Data Center (DE1) Mörfelden, Germany",
    "check": "found",
+   "iso3": "DEU",
    "roles": [
     {
      "firm": "China Mobile International",
@@ -786,6 +813,7 @@
    "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
    "quote": "Global Network Center Hong Kong, Phase 2 Hong Kong, Hong Kong",
    "check": "found",
+   "iso3": "HKG",
    "roles": [
     {
      "firm": "China Mobile International",
@@ -814,6 +842,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "The 37,000-square-metre Intelligent Cloud Data Center, which launched in 2016, reaches more than 60 countries and regions via 15 submarine cables",
    "check": "found",
+   "iso3": "HKG",
    "roles": [
     {
      "firm": "China Unicom Global",
@@ -842,6 +871,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
    "check": "found",
+   "iso3": "SGP",
    "roles": [
     {
      "firm": "China Unicom Global",
@@ -870,6 +900,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
    "check": "found",
+   "iso3": "JPN",
    "roles": [
     {
      "firm": "China Unicom Global",
@@ -898,6 +929,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
    "check": "found",
+   "iso3": "DEU",
    "roles": [
     {
      "firm": "China Unicom Global",
@@ -926,6 +958,7 @@
    "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
    "quote": "Zdata’s Malaysian unit, Computility Technology (Malaysia) Sdn Bhd, bought 38 acres of land last year from developer Tropicana Corporation Bhd. to build the Johor facility.",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "zData",
@@ -978,6 +1011,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "NLD",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1006,6 +1040,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "DEU",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1034,6 +1069,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "HKG",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1062,6 +1098,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "GBR",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1090,6 +1127,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "ESP",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1118,6 +1156,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "FRA",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1146,6 +1185,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "SGP",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1174,6 +1214,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1202,6 +1243,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "iso3": "THA",
    "roles": [
     {
      "firm": "Global Switch",
@@ -1230,6 +1272,7 @@
    "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
    "quote": "The launch of Johor region brings Alibaba Cloud’s total data centre footprint in Malaysia to five facilities",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -1258,6 +1301,7 @@
    "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
    "quote": "Since 2017, Alibaba Cloud has been among the earliest global cloud providers to invest in Malaysia, including establishing its first twin data centre presence and adding third facility last year in the country.",
    "check": "found",
+   "iso3": "MYS",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -1286,6 +1330,7 @@
    "source": "https://telecomreview.com/editorial-topics/wholesale-and-capacity/6164-new-data-centers-address-cloud-service-demand-in-saudi-arabia/",
    "quote": "SCCC unveiled the opening of two data centers in Riyadh as part of the sixteen centers throughout the administrative regions of the Kingdom.",
    "check": "found",
+   "iso3": "SAU",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -1314,6 +1359,7 @@
    "source": "https://businesstech.co.za/news/cloud-hosting/303386/huawei-cloud-now-available-in-south-africa/",
    "quote": "it is leasing a data centre in Johannesburg from a partner from where it is deploying localised public cloud services",
    "check": "found",
+   "iso3": "ZAF",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -1352,6 +1398,7 @@
      "check": "found"
     }
    ],
+   "iso3": "BRA",
    "point": [
     -23.5507,
     -46.6334
@@ -1380,6 +1427,7 @@
      "check": "found"
     }
    ],
+   "iso3": "FRA",
    "point": [
     48.8535,
     2.3484
@@ -1408,6 +1456,7 @@
      "check": "found"
     }
    ],
+   "iso3": "DEU",
    "point": [
     50.1106,
     8.6821
@@ -1436,6 +1485,7 @@
      "check": "found"
     }
    ],
+   "iso3": "HKG",
    "point": [
     22.2818,
     114.1583
@@ -1464,6 +1514,7 @@
      "check": "found"
     }
    ],
+   "iso3": "IDN",
    "point": [
     -6.1754,
     106.8272
@@ -1492,6 +1543,7 @@
      "check": "found"
     }
    ],
+   "iso3": "JPN",
    "point": [
     35.6769,
     139.7639
@@ -1520,6 +1572,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MYS",
    "point": [
     2.0229,
     103.3115
@@ -1548,6 +1601,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MYS",
    "point": [
     3.1517,
     101.6942
@@ -1576,6 +1630,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MEX",
    "point": [
     20.8052,
     -99.8837
@@ -1604,6 +1659,7 @@
      "check": "found"
     }
    ],
+   "iso3": "PHL",
    "point": [
     14.5904,
     120.9804
@@ -1632,6 +1688,7 @@
      "check": "found"
     }
    ],
+   "iso3": "SAU",
    "point": [
     24.6389,
     46.716
@@ -1660,6 +1717,7 @@
      "check": "found"
     }
    ],
+   "iso3": "SGP",
    "point": [
     1.2899,
     103.8519
@@ -1688,6 +1746,7 @@
      "check": "found"
     }
    ],
+   "iso3": "KOR",
    "point": [
     37.5667,
     126.9783
@@ -1716,6 +1775,7 @@
      "check": "found"
     }
    ],
+   "iso3": "THA",
    "point": [
     13.7525,
     100.4935
@@ -1744,6 +1804,7 @@
      "check": "found"
     }
    ],
+   "iso3": "ARE",
    "point": [
     25.0743,
     55.1886
@@ -1772,6 +1833,7 @@
      "check": "found"
     }
    ],
+   "iso3": "GBR",
    "point": [
     51.5074,
     -0.1278
@@ -1800,6 +1862,7 @@
      "check": "found"
     }
    ],
+   "iso3": "USA",
    "point": [
     37.443,
     -122.1545
@@ -1828,6 +1891,7 @@
      "check": "found"
     }
    ],
+   "iso3": "USA",
    "point": [
     37.1232,
     -78.4928
@@ -1856,6 +1920,7 @@
      "check": "found"
     }
    ],
+   "iso3": "FIN",
    "point": [
     63.2468,
     25.9209
@@ -1884,6 +1949,7 @@
      "check": "found"
     }
    ],
+   "iso3": "NLD",
    "point": [
     52.2435,
     5.6343
@@ -1912,6 +1978,7 @@
      "check": "found"
     }
    ],
+   "iso3": "TUR",
    "point": [
     39.2941,
     35.2317
@@ -1940,6 +2007,7 @@
      "check": "found"
     }
    ],
+   "iso3": "HKG",
    "point": [
     22.2818,
     114.1583
@@ -1968,6 +2036,7 @@
      "check": "found"
     }
    ],
+   "iso3": "IDN",
    "point": [
     -6.1754,
     106.8272
@@ -1996,6 +2065,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MYS",
    "point": [
     2.0229,
     103.3115
@@ -2024,6 +2094,7 @@
      "check": "found"
     }
    ],
+   "iso3": "ARG",
    "point": [
     -34.6096,
     -58.3888
@@ -2052,6 +2123,7 @@
      "check": "found"
     }
    ],
+   "iso3": "BRA",
    "point": [
     -23.5507,
     -46.6334
@@ -2080,6 +2152,7 @@
      "check": "found"
     }
    ],
+   "iso3": "CHL",
    "point": [
     -33.4377,
     -70.6511
@@ -2108,6 +2181,7 @@
      "check": "found"
     }
    ],
+   "iso3": "EGY",
    "point": [
     30.0444,
     31.2357
@@ -2136,6 +2210,7 @@
      "check": "found"
     }
    ],
+   "iso3": "HKG",
    "point": [
     22.2818,
     114.1583
@@ -2164,6 +2239,7 @@
      "check": "found"
     }
    ],
+   "iso3": "IDN",
    "point": [
     -6.1754,
     106.8272
@@ -2192,6 +2268,7 @@
      "check": "found"
     }
    ],
+   "iso3": "IRL",
    "point": [
     53.3494,
     -6.2606
@@ -2220,6 +2297,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MYS",
    "point": [
     3.1517,
     101.6942
@@ -2248,6 +2326,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MEX",
    "point": [
     19.3208,
     -99.1515
@@ -2276,6 +2355,7 @@
      "check": "found"
     }
    ],
+   "iso3": "PER",
    "point": [
     -12.046,
     -77.0306
@@ -2304,6 +2384,7 @@
      "check": "found"
     }
    ],
+   "iso3": "PHL",
    "point": [
     14.5904,
     120.9804
@@ -2332,6 +2413,7 @@
      "check": "found"
     }
    ],
+   "iso3": "SAU",
    "point": [
     24.6389,
     46.716
@@ -2360,6 +2442,7 @@
      "check": "found"
     }
    ],
+   "iso3": "SGP",
    "point": [
     1.2899,
     103.8519
@@ -2388,6 +2471,7 @@
      "check": "found"
     }
    ],
+   "iso3": "ZAF",
    "point": [
     -26.205,
     28.0497
@@ -2416,6 +2500,7 @@
      "check": "found"
     }
    ],
+   "iso3": "THA",
    "point": [
     13.7525,
     100.4935
@@ -2444,6 +2529,7 @@
      "check": "found"
     }
    ],
+   "iso3": "TUR",
    "point": [
     41.0064,
     28.9759
@@ -2472,6 +2558,7 @@
      "check": "found"
     }
    ],
+   "iso3": "BRA",
    "point": [
     -23.5507,
     -46.6334
@@ -2500,6 +2587,7 @@
      "check": "found"
     }
    ],
+   "iso3": "DEU",
    "point": [
     50.1106,
     8.6821
@@ -2528,6 +2616,7 @@
      "check": "found"
     }
    ],
+   "iso3": "HKG",
    "point": [
     22.2818,
     114.1583
@@ -2556,6 +2645,7 @@
      "check": "found"
     }
    ],
+   "iso3": "IDN",
    "point": [
     -6.1754,
     106.8272
@@ -2584,6 +2674,7 @@
      "check": "found"
     }
    ],
+   "iso3": "JPN",
    "point": [
     34.6938,
     135.5015
@@ -2612,6 +2703,7 @@
      "check": "found"
     }
    ],
+   "iso3": "JPN",
    "point": [
     35.6769,
     139.7639
@@ -2640,6 +2732,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MYS",
    "point": [
     1.4582,
     103.7649
@@ -2668,6 +2761,7 @@
      "check": "found"
     }
    ],
+   "iso3": "MEX",
    "point": [
     20.8052,
     -99.8837
@@ -2696,6 +2790,7 @@
      "check": "found"
     }
    ],
+   "iso3": "SAU",
    "point": [
     24.6389,
     46.716
@@ -2724,6 +2819,7 @@
      "check": "found"
     }
    ],
+   "iso3": "SGP",
    "point": [
     1.2899,
     103.8519
@@ -2752,6 +2848,7 @@
      "check": "found"
     }
    ],
+   "iso3": "KOR",
    "point": [
     37.5667,
     126.9783
@@ -2780,6 +2877,7 @@
      "check": "found"
     }
    ],
+   "iso3": "THA",
    "point": [
     13.7525,
     100.4935
@@ -2808,6 +2906,7 @@
      "check": "found"
     }
    ],
+   "iso3": "USA",
    "point": [
     37.443,
     -122.1545
@@ -2836,6 +2935,7 @@
      "check": "found"
     }
    ],
+   "iso3": "USA",
    "point": [
     37.1232,
     -78.4928
@@ -2864,10 +2964,104 @@
      "check": "found"
     }
    ],
+   "iso3": "CAN",
    "point": [
     43.6535,
     -79.3839
    ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "USA-0001",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "instrument": "Export Administration Regulations",
+   "covers": "remote_access",
+   "status": "in_force",
+   "date": "",
+   "note": "Exports of advanced chips are controlled, but access to the chips through a cloud service is not, as of the source date",
+   "source": "https://www.asiafinancial.com/china-using-microsoft-amazon-cloud-to-beat-ai-chip-sanctions",
+   "quote": "Providing access to advanced chips — like that of Nvidia — or advanced AI models through the cloud is not a violation of US regulations since only exports or transfers of a commodity, software or technology are regulated.",
+   "check": "found"
+  },
+  {
+   "id": "USA-0002",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "instrument": "Remote Access Security Act (H.R. 2683)",
+   "covers": "remote_access",
+   "status": "pending",
+   "date": "2026-01-12",
+   "note": "Passed the House by 369 votes to 22 on 12 January 2026; not passed by the Senate as of October 2026",
+   "source": "https://clerk.house.gov/evs/2026/roll013",
+   "quote": "H R 2683 2/3 YEA-AND-NAY 12-Jan-2026 6:56 PM QUESTION: On Motion to Suspend the Rules and Pass, as Amended BILL TITLE: Remote Access Security Act",
+   "check": "found"
+  },
+  {
+   "id": "USA-0003",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "instrument": "AI Diffusion Rule",
+   "covers": "chip_export",
+   "status": "rescinded",
+   "date": "2025-05-13",
+   "note": "Issued on 15 January 2025 and rescinded before its compliance date of 15 May 2025",
+   "source": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens",
+   "quote": "Today, the Department of Commerce (DOC) announced a rescission of the Biden Administration’s AI Diffusion Rule, while rolling out additional steps to strengthen export controls on semiconductors worldwide.",
+   "check": "found"
+  },
+  {
+   "id": "USA-0004",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "instrument": "Licensing requirements for exports of advanced chips to Malaysia and Thailand",
+   "covers": "chip_export",
+   "status": "announced",
+   "date": "2025-05-13",
+   "note": "Announced with the rescission; the source does not confirm that the requirement took effect",
+   "source": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens",
+   "quote": "Imposing additional export licensing requirements for exports of SI chips to Malaysia and Thailand, due to known instances of diversion.",
+   "check": "found"
+  },
+  {
+   "id": "USA-0005",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "instrument": "Guidance on the training of Chinese AI models with US chips",
+   "covers": "guidance",
+   "status": "in_force",
+   "date": "2025-05-13",
+   "note": "Guidance, not a rule",
+   "source": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens",
+   "quote": "Issuing guidance warning the public about the potential consequences of allowing U.S. SI chips to be used for training and inference of Chinese SI models.",
+   "check": "found"
+  },
+  {
+   "id": "MYS-0001",
+   "jurisdiction": "Malaysia",
+   "iso3": "MYS",
+   "instrument": "Strategic Trade Act 2010, permit for US-origin AI chips",
+   "covers": "chip_transit",
+   "status": "in_force",
+   "date": "2025-07",
+   "note": "Covers exports, transshipments and transits of US-origin high-performance AI chips",
+   "source": "https://www.scmp.com/week-asia/economics/article/3318099/malaysia-imposes-trade-permits-us-linked-ai-chip-shipments",
+   "quote": "all exports, transshipments and transits of high-performance AI chips of US origin would need to come with a Strategic Trade Permit “effective immediately”.",
+   "check": "found"
+  },
+  {
+   "id": "MYS-0002",
+   "jurisdiction": "Malaysia",
+   "iso3": "MYS",
+   "instrument": "Strategic Trade Act 2010, permit for US-origin AI chips",
+   "covers": "use_in_country",
+   "status": "in_force",
+   "date": "2025-07",
+   "note": "The permit does not cover the use of the chips within Malaysia",
+   "source": "https://techwireasia.com/2025/09/malaysia-tightens-oversight-of-data-centres-amid-ai-chip-controls/",
+   "quote": "The rule does not completely cut off access — chips can still be used within Malaysia — but it puts projects with Chinese investors under closer watch.",
+   "check": "found"
   }
  ]
 }
