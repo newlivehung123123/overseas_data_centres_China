@@ -42,13 +42,17 @@ def build() -> dict:
     for a in read("data/ai_compute.csv"):
         compute[a["site_id"]].append({"firm": a["firm"], "chips": a["chips"], "count": a["chip_count"], "access": a["access"],
                                       "status": a["status"], "source": a["source_url"], "quote": a["source_quote"]})
+    capacity = defaultdict(list)
+    for c in read("data/site_capacity.csv"):
+        capacity[c["site_id"]].append({"mw": c["capacity_mw"], "basis": c["basis"], "stage": c["stage"], "date": c["date"],
+                                       "note": c["note"], "source": c["source_url"]})
     records = []
     for s in read("data/sites.csv"):
         records.append({
             "layer": "site", "id": s["site_id"], "name": s["site_name"], "city": s["city"], "country": s["country"],
             "status": s["status"], "capacity_mw": s["capacity_mw"], "capacity_basis": s["capacity_basis"],
             "note": s["note"], "source": s["source_url"], "quote": s["source_quote"], "check": s["check_status"],
-            "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "ai": compute[s["site_id"]],
+            "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "ai": compute[s["site_id"]], "capacity": capacity[s["site_id"]],
             "point": point(places, s["city"], s["country"]),
         })
     for c in read("data/cloud_regions.csv"):

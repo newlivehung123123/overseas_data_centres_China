@@ -23,6 +23,9 @@ TABLES = {
     "data/ai_compute.csv": [{"site_id": "MYS-0001", "firm": "ByteDance", "chip_count": "36000", "chips": "Nvidia B200",
                              "access": "rented", "status": "planned", "date": "2026-03", "note": "",
                              "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
+    "data/site_capacity.csv": [{"site_id": "MYS-0001", "capacity_mw": "300", "basis": "power", "stage": "planned_total",
+                                "date": "2025-11", "note": "", "source_url": "https://example.org", "source_quote": "q",
+                                "check_status": "found"}],
     "data/rules.csv": [{"rule_id": "MYS-0001", "jurisdiction": "Malaysia", "country_iso3": "MYS", "applies_in": "MYS",
                         "instrument": "Permit", "covers": "chip_transit", "status": "in_force", "date": "2025-07", "note": "",
                         "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
@@ -48,6 +51,7 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(region["roles"][0]["role"], "operator")
         self.assertEqual(data["rules"][0]["applies_in"], ["MYS"])
         self.assertEqual(site["ai"][0]["count"], "36000")
+        self.assertEqual(site["capacity"][0]["mw"], "300")
         self.assertEqual(region.get("ai", []), [])
 
 

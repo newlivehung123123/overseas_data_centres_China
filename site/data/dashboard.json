@@ -26,6 +26,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     1.7127,
     103.5257
@@ -56,6 +57,16 @@
     }
    ],
    "ai": [],
+   "capacity": [
+    {
+     "mw": "450",
+     "basis": "power",
+     "stage": "contracted",
+     "date": "2025",
+     "note": "Power contracted from PLN Batam, delivered in phases between 2026 and 2027",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/"
+    }
+   ],
    "point": [
     1.1031,
     104.0384
@@ -86,6 +97,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     1.4523,
     103.6145
@@ -124,6 +136,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     60.8679,
     26.7041
@@ -154,6 +167,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     60.9826,
     25.6613
@@ -192,6 +206,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     60.9826,
     25.6613
@@ -222,6 +237,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     -3.7717,
     -38.7906
@@ -252,6 +268,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     2.0229,
     103.3115
@@ -282,6 +299,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     2.0229,
     103.3115
@@ -312,6 +330,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     1.1031,
     104.0384
@@ -342,6 +361,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     1.2899,
     103.8519
@@ -372,6 +392,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     3.1517,
     101.6942
@@ -402,6 +423,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     3.1517,
     101.6942
@@ -432,6 +454,24 @@
     }
    ],
    "ai": [],
+   "capacity": [
+    {
+     "mw": "180",
+     "basis": "power",
+     "stage": "first_phase",
+     "date": "2025-03",
+     "note": "Grid capacity of the first facility at groundbreaking",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-to-expand-ctp1-thailand-data-center-to-300mw-signs-mou-with-amata-for-ctp2/"
+    },
+    {
+     "mw": "300",
+     "basis": "unspecified",
+     "stage": "planned_total",
+     "date": "2025-11",
+     "note": "Capacity of CTP1 after the expansion onto 16.3 acres of adjacent land",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-to-expand-ctp1-thailand-data-center-to-300mw-signs-mou-with-amata-for-ctp2/"
+    }
+   ],
    "point": [
     13.1857,
     101.1211
@@ -462,6 +502,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     33.2645,
     129.8808
@@ -492,6 +533,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     35.6694,
     139.4774
@@ -522,6 +564,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     35.7252,
     139.4766
@@ -552,6 +595,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     22.3037,
     114.1649
@@ -582,6 +626,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     41.6916,
     -0.9101
@@ -612,6 +657,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     61.0015,
     11.1648
@@ -642,6 +688,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     52.8652,
     -7.9795
@@ -672,6 +719,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     13.7525,
     100.4935
@@ -702,6 +750,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     13.6532,
     100.8183
@@ -732,6 +781,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     13.6093,
     101.5467
@@ -762,6 +812,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     1.3438,
     103.8876
@@ -792,6 +843,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     51.5111,
     -0.5941
@@ -822,6 +874,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     49.9705,
     8.5701
@@ -852,6 +905,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     22.3492,
     114.1858
@@ -882,6 +936,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     22.3088,
     114.2596
@@ -912,6 +967,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     1.2899,
     103.8519
@@ -942,6 +998,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     35.6769,
     139.7639
@@ -972,6 +1029,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     50.1106,
     8.6821
@@ -1026,6 +1084,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     2.0229,
     103.3115
@@ -1056,6 +1115,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     52.3731,
     4.8925
@@ -1086,6 +1146,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     50.1106,
     8.6821
@@ -1116,6 +1177,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     22.2818,
     114.1583
@@ -1146,6 +1208,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     51.5074,
     -0.1278
@@ -1176,6 +1239,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     40.4168,
     -3.7035
@@ -1206,6 +1270,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     48.8535,
     2.3484
@@ -1236,6 +1301,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     1.2899,
     103.8519
@@ -1266,6 +1332,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     2.0229,
     103.3115
@@ -1296,6 +1363,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     13.7525,
     100.4935
@@ -1326,6 +1394,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     2.0229,
     103.3115
@@ -1356,6 +1425,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     3.1517,
     101.6942
@@ -1386,6 +1456,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     24.6389,
     46.716
@@ -1416,6 +1487,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     -26.205,
     28.0497
@@ -1446,6 +1518,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     52.8652,
     -7.9795
@@ -1486,6 +1559,7 @@
      "quote": "ByteDance is set to access about 36,000 Nvidia B200 Blackwell GPUs through 500 NVL72 GB200 systems deployed in Malaysia."
     }
    ],
+   "capacity": [],
    "point": [
     4.5694,
     102.2657
@@ -1526,6 +1600,7 @@
      "quote": "Indonesian telecommunications company, Indosat Ooredoo Hutchison, acquired 32 Nvidia GB200 server racks from Aivres. With each rack containing 72 Blackwell chips, this amounts to 2,304 GPUs"
     }
    ],
+   "capacity": [],
    "point": [
     -6.1754,
     106.8272
@@ -1566,6 +1641,7 @@
      "quote": "Megaspeed had purchased through its Malaysian subsidiary nearly US$2 billion worth of advanced Nvidia chips, which were then shipped to data centers in Malaysia and Indonesia that appeared to be remotely serving Chinese clients."
     }
    ],
+   "capacity": [],
    "point": [
     4.5694,
     102.2657
@@ -1606,6 +1682,7 @@
      "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand."
     }
    ],
+   "capacity": [],
    "point": [
     14.8972,
     100.8327
@@ -1636,6 +1713,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     -6.1754,
     106.8272
@@ -1666,6 +1744,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     -2.4834,
     117.8903
@@ -1696,6 +1775,7 @@
     }
    ],
    "ai": [],
+   "capacity": [],
    "point": [
     13.7525,
     100.4935

@@ -71,6 +71,10 @@
     el("rows").innerHTML = rows.map(function (r) {
       return "<tr><td><span class='tag " + r.layer + "'>" + LABELS[r.layer] + "</span> " + escape(r.name) +
         (r.note ? "<span class='quote'>" + escape(r.note) + "</span>" : "") +
+        (r.capacity || []).map(function (x) {
+          return "<span class='quote'>Capacity: " + escape(x.mw) + " MW (" + escape(x.basis) + ", " + escape(x.stage.replace(/_/g, " ")) +
+            ", " + escape(x.date) + "). <a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Source</a></span>";
+        }).join("") +
         (r.ai || []).map(function (x) {
           return "<span class='quote'>AI chips: " + escape(Number(x.count).toLocaleString("en-GB")) + " " + escape(x.chips) +
             ", " + escape(x.access) + " by " + escape(x.firm) + ", " + escape(x.status) + "</span>";

@@ -69,7 +69,7 @@ The script `scripts/summarise.py` counts the checked rows of the compute layer a
 ### Next steps
 
 1. Add the remaining sites of ByteDance, the portfolios of GDS, VNET and zData outside mainland China, the overseas data centres of China Telecom Global, the buildings of Global Switch in each city, and a source dated after January 2023 on who controls Global Switch.
-2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement.
+2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement, to `data/site_capacity.csv`, which holds 3 statements so far, for Chonburi and Kabil.
 3. Find out from other sources whether the 12 e-government and network projects coded unspecified built a data centre.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
 5. Add the rules of the other host countries, such as Singapore, Thailand, Indonesia, Brazil and the members of the European Union.
@@ -141,6 +141,7 @@ The tests use small tables and passages written in the test files and need no do
 | `config/site_roles.csv` | Roles of firms at sites, each with its page and passage |
 | `config/sites.csv` | Sites, each with its page and passage |
 | `config/ai_compute.csv` | Reports of AI chips at sites, each with its page and passage |
+| `config/site_capacity.csv` | Statements of capacity at sites, each with its page and passage |
 | `config/cloud_regions_manual.csv` | Regions that the provider pages do not list, each with the page that reports it |
 | `config/aiddata_coding.csv` | Coding of each AidData record read, with a note on the data centre or the reason for exclusion |
 | `data/ai_compute.csv` | Reports of AI chips with the result of the check |
@@ -151,6 +152,7 @@ The tests use small tables and passages written in the test files and need no do
 | `data/operator_markets.csv` | Capacity by market with the result of the check |
 | `data/rules.csv` | Rules with the result of the check |
 | `data/summary.json` | Figures of the compute layer |
+| `data/site_capacity.csv` | Statements of capacity with the result of the check |
 | `data/site_roles.csv` | Roles with the result of the check |
 | `data/sites.csv` | Sites with the result of the check |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |

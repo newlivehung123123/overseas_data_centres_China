@@ -167,11 +167,27 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | note | text | | Limits of the source |
 | source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
 
+### data/site_capacity.csv
+
+`data/site_capacity.csv` has one row for each statement of capacity at a site, because sources give a site's capacity at several stages and on several bases, such as the grid capacity of a first phase and the planned total of the campus. The `capacity_mw` of `sites.csv` keeps the figure of the source that supports the site. The file is written by hand in `config/site_capacity.csv` and checked by `scripts/check_sources.py`.
+
+**Table 11. Variables in site_capacity.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| site_id | text | | Site in `sites.csv` |
+| capacity_mw | number | | Capacity in MW as the source states it |
+| basis | category | it, power, unspecified | As in Table 5 |
+| stage | category | in_service, first_phase, planned_total, contracted | Stage of the site that the figure describes, with contracted for power bought under an agreement |
+| date | date | | Date of the statement |
+| note | text | | What the figure covers |
+| source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
+
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 11. Coding values**
+**Table 12. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -183,12 +199,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 12. Variables in government_data_centres_aiddata.csv**
+**Table 13. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 11 |
+| coding | category | Value from Table 12 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |
