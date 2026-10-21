@@ -66,7 +66,7 @@ The dashboard reads `site/data/dashboard.json`, which `scripts/build_site_data.p
 python3 -m http.server 8731 --directory site
 ```
 
-The workflow in `.github/workflows/pages.yml` publishes the folder `site` with GitHub Pages on each push to `main`, once Pages is set to deploy from GitHub Actions in the repository settings.
+The workflow in `.github/workflows/pages.yml` publishes the folder `site` with GitHub Pages on each push to the default branch of the repository, with Pages set to deploy from GitHub Actions in the repository settings.
 
 ## Setup
 
