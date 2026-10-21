@@ -35,7 +35,13 @@ Of the 55 regions, 47 are operational outside mainland China, Hong Kong and Maca
 
 ### Sites
 
-`data/sites.csv` holds 21 sites in Malaysia, Indonesia, Singapore, Thailand, Japan, Hong Kong, Finland, Norway, Ireland, Spain and Brazil, and `data/site_roles.csv` holds 23 roles of ByteDance and DayOne at those sites. ByteDance holds a role at 6 sites. It is a tenant at 3 of them: the 110 MW MY06 campus of Bridge Data Centres in Johor, the 90 MW OSL-Hamar campus of Green Mountain in Norway, and the Pecém campus in Ceará, which has 300 MW of installed power and is expected to operate in 2027. At the other 3, in Kouvola, in Lahti and in Ireland, the sources say that TikTok uses or plans the site but not whether it owns or rents it, so the role is coded user. DayOne, which began as the international unit of GDS, holds a role at 16 sites, 12 of them named in its 2026 registration statement at the SEC. All 44 passages were found on their pages. An earlier version also listed Bridge Data Centres as a Chinese operator, which was wrong: Bain Capital separated Bridge from ChinData and kept it when it sold ChinData in September 2025, so the codebook now explains why Bridge is not a listed firm. DayOne reports capacity by market and not by site, so most DayOne sites have no capacity of their own, and the sites are a first sample for testing the method, not a complete list.
+`data/sites.csv` holds 28 sites in 13 countries and territories, and `data/site_roles.csv` holds 30 roles of ByteDance, DayOne and China Mobile International at those sites. All 58 passages were found on their pages. The sites are a first sample for testing the method, not a complete list.
+
+ByteDance holds a role at 9 sites. It is a tenant at 3 of them: the 110 MW MY06 campus in Johor, the 90 MW OSL-Hamar campus of Green Mountain in Norway, and the Pecém campus in Ceará, which has 300 MW of installed power and is expected to operate in 2027. At the other 6 the sources say that TikTok uses or plans the site but not whether it owns or rents it, so the role is coded user. These are Kouvola and Lahti in Finland, a site in Ireland, and Bangkok, Samut Prakan and Chachoengsao in Thailand, where Thailand's Board of Investment approved in May 2026 an investment of about 842 billion baht by TikTok's Thai unit.
+
+DayOne, which began as the international unit of GDS, holds a role at 16 sites, 12 of them named in its 2026 registration statement at the SEC. DayOne reports capacity by market and not by site, so most DayOne sites have no capacity of their own. China Mobile International operates a data centre of more than 2,100 racks in Singapore, and Uptime Institute lists Tier awards for its sites in Slough, Mörfelden and Hong Kong.
+
+An earlier version also listed Bridge Data Centres, the operator of MY06, as a Chinese operator, which was wrong. Bain Capital separated Bridge from ChinData and kept it when it sold ChinData in September 2025, so the codebook now explains why Bridge is not a listed firm.
 
 ### DayOne by market
 
@@ -43,7 +49,7 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 
 ### Next steps
 
-1. Add the remaining sites of ByteDance, such as its second site in Ireland and its sites in Thailand, the full portfolios of GDS, VNET and zData, and the overseas data centres of the state telecom firms.
+1. Add the remaining sites of ByteDance, such as its second site in Ireland, the portfolios of GDS, VNET and zData outside mainland China, and the overseas data centres of China Telecom Global and China Unicom Global.
 2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement.
 3. Read and code the 62 AidData records that match only the related terms.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
