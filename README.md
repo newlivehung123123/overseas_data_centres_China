@@ -56,7 +56,7 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 
 ## Dashboard
 
-The folder `site` holds a static dashboard in HTML, CSS and JavaScript with no build step. It shows the sites and the cloud regions on a map and in a table, with filters by firm, role and country and a search box, and each row shows the cited passage and the result of its check. Each point marks the centre of the city that the source names, from OpenStreetMap, because most sources name the city and not the building. The government data centres of the AidData layer are left out of the dashboard until the article pitched on them has been answered.
+The dashboard is published at [https://newlivehung123123.github.io/overseas_data_centres_China/](https://newlivehung123123.github.io/overseas_data_centres_China/). The folder `site` holds it as a static page in HTML, CSS and JavaScript with no build step. It shows the sites and the cloud regions on a map and in a table, with filters by firm, role and country and a search box, and each row shows the cited passage and the result of its check. Each point marks the centre of the city that the source names, from OpenStreetMap, because most sources name the city and not the building. The government data centres of the AidData layer are left out of the dashboard until the article pitched on them has been answered.
 
 The dashboard reads `site/data/dashboard.json`, which `scripts/build_site_data.py` writes from the checked layers and `config/places.csv`. The script `scripts/geocode_places.py` finds the point of each new city from the Nominatim service of OpenStreetMap, at most one request a second, and records the OpenStreetMap object behind each point.
 
