@@ -4,7 +4,7 @@ The dataset records data-centre capacity outside mainland China in which a Chine
 
 ## Roles
 
-A record enters the dataset when a listed firm holds at least one of the six roles in Table 1. One site can carry several roles held by different firms, and the dataset records each role with its own source.
+A record enters the dataset when a listed firm holds at least one of the roles in Table 1. One site can carry several roles held by different firms, and the dataset records each role with its own source.
 
 **Table 1. Roles**
 
@@ -13,6 +13,7 @@ A record enters the dataset when a listed firm holds at least one of the six rol
 | owner | Holds the land, the building or the company that owns the site |
 | operator | Runs the site day to day |
 | tenant | Rents space, power or servers in a site that another firm owns or operates, including a cloud region hosted in a third-party building |
+| user | Stores data or runs servers at the site, where the source does not say whether the firm owns or rents the site |
 | builder | Designed or built the site under contract |
 | equipment supplier | Supplied the servers, storage, network or power equipment |
 | financier | Lent or granted the money that paid for the site |

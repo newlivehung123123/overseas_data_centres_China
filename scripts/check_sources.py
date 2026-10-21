@@ -40,7 +40,7 @@ OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "oper
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found
 PARTLY_FOUND = 0.5
-ROLES = {"owner", "operator", "tenant", "builder", "equipment supplier", "financier"}
+ROLES = {"owner", "operator", "tenant", "user", "builder", "equipment supplier", "financier"}
 STATUSES = {"operational", "under_construction", "planned", "unclear"}
 
 
