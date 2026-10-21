@@ -144,7 +144,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | applies_in | text | all, or ISO 3166-1 alpha-3 codes separated by semicolons | Countries where the rule applies, with all for a US export rule that follows US-origin chips everywhere |
 | instrument | text | | Name of the law, rule, bill or guidance |
 | covers | category | chip_export, chip_transit, remote_access, use_in_country, guidance | Part of the chain from shipment to use that the row records |
-| status | category | in_force, pending, rescinded, announced | in_force for a rule or guidance that applies, pending for a bill not yet passed, rescinded for a rule withdrawn, announced for a measure whose taking effect the source does not confirm |
+| status | category | in_force, pending, rescinded, announced, enforcement | in_force for a rule or guidance that applies, pending for a bill not yet passed, rescinded for a rule or draft withdrawn, announced for a measure whose taking effect the source does not confirm, enforcement for a prosecution or investigation under general law |
 | date | date | | Date of the vote, notice or announcement |
 | note | text | | What the row records, in one sentence |
 | source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |

@@ -3402,6 +3402,38 @@
    "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
    "quote": "Commerce shelved its own draft rules, including one curbing sales to Malaysia and Thailand over diversion fears.",
    "check": "found"
+  },
+  {
+   "id": "MYS-0003",
+   "jurisdiction": "Malaysia",
+   "iso3": "MYS",
+   "applies_in": [
+    "MYS"
+   ],
+   "instrument": "Statement of the Ministry of Investment, Trade and Industry on AI servers",
+   "covers": "use_in_country",
+   "status": "in_force",
+   "date": "2025-06",
+   "note": "Servers with Nvidia and other AI chips are not controlled goods in Malaysia, and data centres may decide whom to serve within Malaysian law",
+   "source": "https://w.media/pipeline-data-center-projects-unaffected-by-alleged-chinese-ai-training-in-malaysia-analysts/",
+   "quote": "Miti said that servers using Nvidia and AI chips are not classified as controlled goods in Malaysia, and businesses — including data centres — operating in Malaysia are free to make their own commercial decisions as long as they comply with Malaysian laws and regulations.",
+   "check": "found"
+  },
+  {
+   "id": "SGP-0001",
+   "jurisdiction": "Singapore",
+   "iso3": "SGP",
+   "applies_in": [
+    "SGP"
+   ],
+   "instrument": "Prosecutions for fraud on suppliers of AI servers",
+   "covers": "chip_transit",
+   "status": "enforcement",
+   "date": "2026-04-02",
+   "note": "Charges of fraud for false representations to server suppliers about end users, under general law rather than a rule on AI chips",
+   "source": "https://www.malaymail.com/news/singapore/2026/04/02/singapore-charges-another-individual-in-ai-chip-fraud-tied-to-dell-servers/214819",
+   "quote": "Singapore prosecutors charged one more person with fraud today ‌for making false representations to US server supplier Dell Technologies, linking her to two other individuals charged with similar offences in February last year.",
+   "check": "found"
   }
  ]
 }

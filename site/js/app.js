@@ -5,7 +5,7 @@
   var COLOURS = { site: "--site", cloud_region: "--region" };
   var LABELS = { site: "Site", cloud_region: "Cloud region" };
   var STATUS = { operational: "Operational", under_construction: "Under construction", planned: "Planned", unclear: "Unclear" };
-  var RULE_STATUS = { in_force: "In force", pending: "Pending", rescinded: "Rescinded", announced: "Announced" };
+  var RULE_STATUS = { in_force: "In force", pending: "Pending", rescinded: "Rescinded", announced: "Announced", enforcement: "Enforcement" };
   var COVERS = { chip_export: "Export of chips", chip_transit: "Export, transshipment and transit of chips",
     remote_access: "Remote access through the cloud", use_in_country: "Use of chips in the country", guidance: "Guidance" };
 
