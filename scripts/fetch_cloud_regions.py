@@ -18,10 +18,12 @@ import argparse
 import csv
 import html
 import json
+import os
 import re
 import sys
 import unicodedata
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -95,8 +97,18 @@ def page_text(raw: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def user_agent(url: str) -> str:
+    """The SEC accepts automated requests only with a contact email, read from SEC_CONTACT_EMAIL."""
+    if urllib.parse.urlparse(url).hostname in ("www.sec.gov", "sec.gov"):
+        email = os.environ.get("SEC_CONTACT_EMAIL", "").strip()
+        if not email:
+            raise OSError("set SEC_CONTACT_EMAIL to a contact email before reading pages on sec.gov")
+        return f"overseas_data_centres_china research {email}"
+    return USER_AGENT
+
+
 def download(url: str) -> str:
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "en"})
+    request = urllib.request.Request(url, headers={"User-Agent": user_agent(url), "Accept-Language": "en"})
     with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
         return response.read().decode("utf-8", errors="replace")
 

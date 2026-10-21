@@ -1,0 +1,11 @@
+firm,firm_origin,market,country,country_iso3,hong_kong_macau,in_service_mw,under_construction_mw,secured_powered_land_mw,total_mw,as_of,source_url,source_quote,check_status,share_found,retrieved
+DayOne,GDS,Johor,Malaysia,MYS,no,789,616,208,1613,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Johor, Malaysia 789 616 208 1,613 789 609 1,398",found,1.00,2026-10-21
+DayOne,GDS,Batam,Indonesia,IDN,no,72,240,120,432,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Batam, Indonesia 72 240 120 432 72 240 312",found,1.00,2026-10-21
+DayOne,GDS,Singapore,Singapore,SGP,no,0,0,20,20,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,Singapore — — 20 20 — — —,found,1.00,2026-10-21
+DayOne,GDS,Kuala Lumpur,Malaysia,MYS,no,0,128,1320,1448,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Kuala Lumpur, Malaysia — 128 1,320 1,448 — 128 128",found,1.00,2026-10-21
+DayOne,GDS,Greater Bangkok,Thailand,THA,no,73,47,94,214,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Greater Bangkok, Thailand 73 47 94 214 73 47 120",found,1.00,2026-10-21
+DayOne,GDS,Kyushu,Japan,JPN,no,0,0,160,160,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Kyushu, Japan — — 160 160 — — —",found,1.00,2026-10-21
+DayOne,GDS,Tokyo,Japan,JPN,no,0,0,60,60,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Tokyo, Japan — — 60 60 — — —",found,1.00,2026-10-21
+DayOne,GDS,Hong Kong,Hong Kong,HKG,yes,27,17,22,66,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,Hong Kong 27 17 22 66 19 23 42,found,1.00,2026-10-21
+DayOne,GDS,Greater Helsinki,Finland,FIN,no,0,281,0,281,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Greater Helsinki, Finland — 281 — 281 — 281 281",found,1.00,2026-10-21
+DayOne,GDS,Zaragoza,Spain,ESP,no,0,0,304,304,2026-09-20,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Zaragoza, Spain — — 304 304 — — —",found,1.00,2026-10-21

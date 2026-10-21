@@ -37,10 +37,14 @@ Of the 55 regions, 47 are operational outside mainland China, Hong Kong and Maca
 
 `data/sites.csv` holds 7 sites in Malaysia, Indonesia, Finland and Brazil, and `data/site_roles.csv` holds 9 roles of ByteDance, DayOne and Bridge Data Centres at those sites. ByteDance is a tenant at 4 sites: the 110 MW MY06 campus of Bridge Data Centres in Johor, the Hyperco campus in Kouvola, a planned site in Lahti and the Pecém campus in Ceará, which has 300 MW of installed power and is expected to operate in 2027. DayOne, which began as the international unit of GDS, holds a role at 4 sites, in Batam, Johor, Kouvola and Lahti. All 16 passages were found on their pages. The sites are a first sample for testing the method, not a complete list.
 
+### DayOne by market
+
+DayOne's registration statement at the SEC, which DayOne filed for its listing in 2026, reports its capacity by market as of 20 September 2026 and not by site. `data/operator_markets.csv` records the 10 markets: 962 MW in service, 1,328 MW under construction and 2,308 MW of secured powered land, or 4,597 MW in all, in Malaysia, Indonesia, Singapore, Thailand, Japan, Hong Kong, Finland and Spain. Johor holds 789 MW of the 962 MW in service. The rows add up to 1 MW more or less than the totals in the filing, because the filing rounds each figure. The same filing states that GDS holds 19.4 percent of DayOne's shares, which `data/firm_links.csv` records. All 11 passages were found in the filing.
+
 ### Next steps
 
 1. Add the remaining sites of ByteDance, such as Hamar in Norway and its sites in Ireland and Thailand, the full portfolios of DayOne, Bridge Data Centres, GDS, VNET and zData, and the overseas data centres of the state telecom firms.
-2. Read DayOne's 2026 listing filing at the SEC, which needs a User-Agent with a contact email that the owner of the repository chooses.
+2. Link DayOne's markets to its sites, from the site descriptions in the same filing.
 3. Read and code the 62 AidData records that match only the related terms.
 4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
 
@@ -69,8 +73,10 @@ The cloud region layer needs no download by hand. The script downloads each prov
 The site layer is written by hand in `config/sites.csv` and `config/site_roles.csv`, and the check downloads each cited page, saves it in `data/raw/pages/sources` and writes `data/sites.csv` and `data/site_roles.csv` with the result for each row.
 
 ```bash
-.venv/bin/python scripts/check_sources.py
+SEC_CONTACT_EMAIL=you@example.org .venv/bin/python scripts/check_sources.py
 ```
+
+The SEC accepts automated requests only with a contact email, so the check reads one from `SEC_CONTACT_EMAIL` and refuses pages on sec.gov without it. The email is sent only to the SEC and is not stored in the repository.
 
 The first command writes `data/government_data_centres_aiddata.csv` and `data/aiddata_summary.json` and prints the figures above. The option `--candidates` also writes `data/aiddata_candidates.csv`, the records that match a search term and are not coded yet. The option `--gcdf` gives another path to the Excel file.
 
@@ -88,6 +94,8 @@ The tests use small tables and passages written in the test files and need no do
 |---|---|
 | `CONTRIBUTING.md` | Purpose of the project, data rules and writing rules for anyone who works on the repository |
 | `codebook.md` | Roles, firms, levels and variables |
+| `config/firm_links.csv` | Ownership links between listed firms and Chinese firms, each with its page and passage |
+| `config/operator_markets.csv` | Capacity that operators report by market, each with its page and passage |
 | `config/site_roles.csv` | Roles of firms at sites, each with its page and passage |
 | `config/sites.csv` | Sites, each with its page and passage |
 | `config/cloud_regions_manual.csv` | Regions that the provider pages do not list, each with the page that reports it |
@@ -95,6 +103,8 @@ The tests use small tables and passages written in the test files and need no do
 | `data/aiddata_candidates.csv` | AidData records that match a related term and are not coded yet |
 | `data/aiddata_summary.json` | Figures of the government data centre layer |
 | `data/cloud_regions.csv` | Public cloud regions of Chinese providers outside mainland China |
+| `data/firm_links.csv` | Ownership links with the result of the check |
+| `data/operator_markets.csv` | Capacity by market with the result of the check |
 | `data/site_roles.csv` | Roles with the result of the check |
 | `data/sites.csv` | Sites with the result of the check |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |

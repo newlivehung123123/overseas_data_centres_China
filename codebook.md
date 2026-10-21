@@ -101,11 +101,35 @@ One row for each public cloud region that a Chinese provider lists outside mainl
 
 A passage counts as found when at least 90 percent of its overlapping pieces of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as partly found from 50 percent. A role recorded as owner can rest on an investment in the project whose share is not disclosed, and the passage then says so.
 
+### data/operator_markets.csv and data/firm_links.csv
+
+`data/operator_markets.csv` has one row for each market in which an operator in Table 2 reports its capacity, for operators that report by market and not by site. `data/firm_links.csv` has one row for each ownership link between a listed firm and a Chinese firm, such as the share of DayOne that GDS holds. Both files are written by hand in `config` and checked by `scripts/check_sources.py` in the same way as the site layer.
+
+**Table 7. Variables in operator_markets.csv**
+
+| Variable | Type | Description |
+|---|---|---|
+| firm, firm_origin | text | Operator and the Chinese firm from which it began |
+| market, country, country_iso3, hong_kong_macau | text | Market as the operator names it, with its country |
+| in_service_mw, under_construction_mw, secured_powered_land_mw, total_mw | number | Capacity in MW as the operator reports it, with 0 where the source shows a dash |
+| as_of | date | Date of the figures |
+| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
+
+**Table 8. Variables in firm_links.csv**
+
+| Variable | Type | Description |
+|---|---|---|
+| firm, related_firm | text | The listed firm and the Chinese firm linked to it |
+| relation | category | shareholder, parent or former parent |
+| share | number | Share held, from 0 to 1, empty when the source gives none |
+| as_of | date | Date of the share, empty when the source gives none |
+| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
+
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 7. Coding values**
+**Table 9. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -115,12 +139,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | building | A building financed by China that contains a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 8. Variables in government_data_centres_aiddata.csv**
+**Table 10. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 7 |
+| coding | category | Value from Table 9 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |

@@ -7,7 +7,8 @@ check downloads every page once, saves its text in data/raw/pages/sources, and l
 passage on the page. A passage counts as found when at least 90 percent of its overlapping pieces
 of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the
-result for each row.
+result for each row, and checks config/operator_markets.csv and config/firm_links.csv in the same
+way. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
 
     python scripts/check_sources.py              downloads pages not saved yet
     python scripts/check_sources.py --refetch    downloads every page again
@@ -32,6 +33,9 @@ SITES_IN = ROOT / "config" / "sites.csv"
 ROLES_IN = ROOT / "config" / "site_roles.csv"
 SITES_OUT = ROOT / "data" / "sites.csv"
 ROLES_OUT = ROOT / "data" / "site_roles.csv"
+# Further tables whose rows each carry a page and a passage, checked in the same way.
+OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "operator_markets.csv"),
+                (ROOT / "config" / "firm_links.csv", ROOT / "data" / "firm_links.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found
@@ -125,7 +129,9 @@ def main() -> None:
 
     sites, roles = read(SITES_IN), read(ROLES_IN)
     validate(sites, roles)
-    for name, rows, path in (("sites", sites, SITES_OUT), ("roles", roles, ROLES_OUT)):
+    tables = [("sites", sites, SITES_OUT), ("roles", roles, ROLES_OUT)]
+    tables += [(src.stem, read(src), out) for src, out in OTHER_TABLES if src.exists()]
+    for name, rows, path in tables:
         checked = check(rows, args.refetch)
         write(path, checked)
         counts = {status: sum(r["check_status"] == status for r in checked)

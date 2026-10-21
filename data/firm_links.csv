@@ -1,0 +1,2 @@
+firm,related_firm,relation,share,as_of,source_url,source_quote,check_status,share_found,retrieved
+DayOne,GDS,shareholder,0.194,,https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm,"Our Company was deconsolidated from GDS with effect from December 31, 2024 and GDS now holds 19.4% of our shares.",found,1.00,2026-10-21
