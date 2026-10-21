@@ -1,0 +1,28 @@
+{
+  "government_records": 45,
+  "government_records_not_in_totals": 3,
+  "countries": 23,
+  "countries_by_region": {
+    "Africa": 15,
+    "America": 1,
+    "Asia": 2,
+    "Europe": 1,
+    "Oceania": 4
+  },
+  "commitment_years": [
+    2006,
+    2020
+  ],
+  "amount_usd_nominal": 3498011191,
+  "amount_usd_2021": 4221054532,
+  "loans": 39,
+  "grants": 6,
+  "china_eximbank_records": 35,
+  "huawei_records": 38,
+  "huawei_countries": 21,
+  "primary_purpose_records": 4,
+  "financial_distress_records": 6,
+  "loans_first_principal_repayment_2024_2027": 7,
+  "scientific_records": 8,
+  "building_records": 2
+}
