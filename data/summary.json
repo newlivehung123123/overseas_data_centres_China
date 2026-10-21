@@ -1,21 +1,21 @@
 {
-  "sites": 48,
+  "sites": 51,
   "site_countries": 17,
   "sites_by_status": {
-    "operational": 21,
+    "operational": 22,
     "under_construction": 6,
     "planned": 17,
-    "unclear": 4
+    "unclear": 6
   },
   "sites_by_country": {
-    "Malaysia": 11,
-    "Thailand": 5,
+    "Malaysia": 12,
+    "Thailand": 6,
     "Singapore": 4,
     "Japan": 4,
     "Hong Kong": 4,
+    "Indonesia": 3,
     "Finland": 3,
     "Germany": 3,
-    "Indonesia": 2,
     "Spain": 2,
     "Ireland": 2,
     "United Kingdom": 2,
@@ -26,11 +26,11 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 53,
+  "roles": 56,
   "roles_by_role": {
     "operator": 31,
-    "tenant": 9,
-    "user": 7,
+    "tenant": 11,
+    "user": 8,
     "owner": 6
   },
   "sites_by_firm": {
@@ -42,7 +42,10 @@
     "Alibaba Cloud": 4,
     "zData": 1,
     "Tencent Cloud": 1,
-    "Huawei Cloud": 1
+    "Huawei Cloud": 1,
+    "INF Tech": 1,
+    "Megaspeed": 1,
+    "Moonshot AI": 1
   },
   "sites_with_capacity": 7,
   "site_capacity_mw_by_basis": {
@@ -66,5 +69,5 @@
       "total_mw": 4598
     }
   },
-  "rules": 9
+  "rules": 12
 }

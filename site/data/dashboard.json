@@ -1492,6 +1492,126 @@
    ]
   },
   {
+   "layer": "site",
+   "id": "IDN-0003",
+   "name": "Indosat Nvidia GB200 cluster",
+   "city": "Jakarta",
+   "country": "Indonesia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Reported by the Wall Street Journal in November 2025; Indosat is not a Chinese firm",
+   "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-ai-startup-gets-access-to-2-300-banned-blackwell-gpus-by-exploiting-cloud-loophole-rents-compute-from-indonesian-firm-with-32-nvidia-gb200-server-racks",
+   "quote": "Indonesian telecommunications company, Indosat Ooredoo Hutchison, acquired 32 Nvidia GB200 server racks from Aivres. With each rack containing 72 Blackwell chips, this amounts to 2,304 GPUs",
+   "check": "found",
+   "iso3": "IDN",
+   "roles": [
+    {
+     "firm": "INF Tech",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-ai-startup-gets-access-to-2-300-banned-blackwell-gpus-by-exploiting-cloud-loophole-rents-compute-from-indonesian-firm-with-32-nvidia-gb200-server-racks",
+     "quote": "INF Tech, a Shanghai-based startup developing AI for finance and health applications, gained access to 2,300 banned Nvidia AI GPUs operated by a company in Jakarta, Indonesia.",
+     "check": "found"
+    }
+   ],
+   "ai": [
+    {
+     "firm": "INF Tech",
+     "chips": "Nvidia Blackwell in 32 GB200 racks",
+     "count": "2304",
+     "access": "rented",
+     "status": "operational",
+     "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-ai-startup-gets-access-to-2-300-banned-blackwell-gpus-by-exploiting-cloud-loophole-rents-compute-from-indonesian-firm-with-32-nvidia-gb200-server-racks",
+     "quote": "Indonesian telecommunications company, Indosat Ooredoo Hutchison, acquired 32 Nvidia GB200 server racks from Aivres. With each rack containing 72 Blackwell chips, this amounts to 2,304 GPUs"
+    }
+   ],
+   "point": [
+    -6.1754,
+    106.8272
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0012",
+   "name": "Bridge Data Centres hub used by Megaspeed",
+   "city": "",
+   "country": "Malaysia",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Bridge removed Megaspeed from the hub in April 2026; the source does not name the site",
+   "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
+   "quote": "In April this year, Bain Capital’s Bridge Data Centers removed Megaspeed from their Malaysian computing hub.",
+   "check": "found",
+   "iso3": "MYS",
+   "roles": [
+    {
+     "firm": "Megaspeed",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
+     "quote": "In April this year, Bain Capital’s Bridge Data Centers removed Megaspeed from their Malaysian computing hub.",
+     "check": "found"
+    }
+   ],
+   "ai": [
+    {
+     "firm": "Megaspeed",
+     "chips": "Advanced Nvidia chips worth nearly US$2 billion",
+     "count": "",
+     "access": "owned",
+     "status": "unclear",
+     "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
+     "quote": "Megaspeed had purchased through its Malaysian subsidiary nearly US$2 billion worth of advanced Nvidia chips, which were then shipped to data centers in Malaysia and Indonesia that appeared to be remotely serving Chinese clients."
+    }
+   ],
+   "point": [
+    4.5694,
+    102.2657
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "THA-0006",
+   "name": "Unnamed facility in Thailand",
+   "city": "",
+   "country": "Thailand",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "An accusation by a White House official; the source reports no public evidence and does not name the facility",
+   "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
+   "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand.",
+   "check": "found",
+   "iso3": "THA",
+   "roles": [
+    {
+     "firm": "Moonshot AI",
+     "origin": "",
+     "role": "user",
+     "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
+     "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand.",
+     "check": "found"
+    }
+   ],
+   "ai": [
+    {
+     "firm": "Moonshot AI",
+     "chips": "Nvidia chips",
+     "count": "",
+     "access": "rented",
+     "status": "unclear",
+     "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
+     "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand."
+    }
+   ],
+   "point": [
+    14.8972,
+    100.8327
+   ]
+  },
+  {
    "layer": "cloud_region",
    "id": "Brazil (São Paulo)",
    "name": "Alibaba Cloud Brazil (São Paulo)",
@@ -3232,6 +3352,55 @@
    "note": "Described by the UAE ambassador to the United States; the terms are not public",
    "source": "https://www.uae-embassy.org/news/statement-ambassador-yousef-al-otaiba-us-uae-ai-acceleration-partnership",
    "quote": "approved UAE organizations acquiring regulated U.S. technologies will adhere to extensive physical and cybersecurity protocols. These involve regular audits, third-party validations, and active oversight by both nations’ governments.",
+   "check": "found"
+  },
+  {
+   "id": "USA-0007",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "applies_in": [
+    "all"
+   ],
+   "instrument": "Guidance on licences for advanced chips for entities with a parent in China or Macau",
+   "covers": "chip_export",
+   "status": "in_force",
+   "date": "2026-05-31",
+   "note": "Requires a licence for advanced chips for any entity whose ultimate parent is in China or Macau, wherever the entity is, a rule that BIS says has applied since November 2023",
+   "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
+   "quote": "issued guidance on May 31 clarifying that export licenses are required for advanced computing chips destined for any entity whose ultimate parent company is headquartered in China or Macau, regardless of where that entity is situated.",
+   "check": "found"
+  },
+  {
+   "id": "USA-0008",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "applies_in": [
+    "all"
+   ],
+   "instrument": "BIS enforcement review of remote access by Chinese AI firms",
+   "covers": "remote_access",
+   "status": "announced",
+   "date": "2026-08",
+   "note": "A review reported by Bloomberg that lists countries where Chinese firms reach chips remotely; it is not a rule, and remote access remains legal",
+   "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
+   "quote": "The review builds two lists. One names countries running black markets that move restricted Nvidia chips physically into China, which sits squarely in enforcement’s remit. The other names countries where Chinese firms tap the chips remotely.",
+   "check": "found"
+  },
+  {
+   "id": "USA-0009",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "applies_in": [
+    "MYS",
+    "THA"
+   ],
+   "instrument": "Draft rule on sales of advanced chips to Malaysia and Thailand",
+   "covers": "chip_export",
+   "status": "rescinded",
+   "date": "2026-08",
+   "note": "Reported as shelved, so the requirement announced in May 2025 did not become a rule",
+   "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
+   "quote": "Commerce shelved its own draft rules, including one curbing sales to Malaysia and Thailand over diversion fears.",
    "check": "found"
   }
  ]

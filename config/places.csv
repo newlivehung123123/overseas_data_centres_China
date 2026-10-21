@@ -44,6 +44,7 @@ Johannesburg,South Africa,-26.2050000,28.0497220,node,261833893,"Johannesburg, C
 Seoul,South Korea,37.5666791,126.9782914,relation,2297418,"서울특별시, 대한민국",https://nominatim.openstreetmap.org/search?q=Seoul%2C+South+Korea&format=json&limit=1
 Madrid,Spain,40.4167820,-3.7035070,relation,5326784,"Madrid, Comunidad de Madrid, España",https://nominatim.openstreetmap.org/search?q=Madrid%2C+Spain&format=json&limit=1
 Zaragoza,Spain,41.6915847,-0.9101268,relation,345740,"Zaragoza, Aragón, España",https://nominatim.openstreetmap.org/search?q=Zaragoza%2C+Spain&format=json&limit=1
+,Thailand,14.8971921,100.8327300,relation,2067731,ประเทศไทย,https://nominatim.openstreetmap.org/search?q=Thailand&format=json&limit=1
 Bangkok,Thailand,13.7524938,100.4935089,relation,92277,"กรุงเทพมหานคร, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Bangkok%2C+Thailand&format=json&limit=1
 Chachoengsao,Thailand,13.6093192,101.5467201,relation,1908767,"จังหวัดฉะเชิงเทรา, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Chachoengsao%2C+Thailand&format=json&limit=1
 Chonburi,Thailand,13.1857117,101.1210777,relation,1908773,"จังหวัดชลบุรี, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Chonburi%2C+Thailand&format=json&limit=1
