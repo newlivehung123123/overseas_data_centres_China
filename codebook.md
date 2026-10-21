@@ -28,11 +28,13 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 |---|---|
 | Cloud and AI | Alibaba Cloud, Huawei Cloud, Tencent Cloud, ByteDance (including BytePlus and Volcano Engine), Baidu AI Cloud |
 | State telecom | China Mobile International, China Telecom Global, China Unicom Global |
-| Data-centre operators | GDS, VNET, zData, ChinData, DayOne (origin in GDS) |
+| Data-centre operators | GDS, VNET, zData, ChinData, DayOne (origin in GDS), Global Switch (controlled by Jiangsu Shagang Group) |
 | Builders and equipment | Huawei, ZTE, Inspur, Sugon |
 | State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA |
 
 Bridge Data Centres is not a listed firm. Bain Capital bought ChinData in 2019 and merged it with Bridge, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge is therefore not Chinese-owned and did not begin as the international arm of a Chinese firm, and `data/firm_links.csv` records its former link to ChinData. A site that Bridge operates enters the dataset only when a listed firm holds a role there, such as ByteDance as tenant.
+
+Ownership can change, so each link between a firm and its Chinese owner in `data/firm_links.csv` carries the date of its source. The most recent source found for Global Switch, from May 2022, describes the company as controlled by Jiangsu Shagang Group, and Global Switch stays a listed firm until a source reports a change of control.
 
 ## Levels
 
