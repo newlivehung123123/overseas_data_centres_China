@@ -70,7 +70,11 @@
   function drawTable(rows) {
     el("rows").innerHTML = rows.map(function (r) {
       return "<tr><td><span class='tag " + r.layer + "'>" + LABELS[r.layer] + "</span> " + escape(r.name) +
-        (r.note ? "<span class='quote'>" + escape(r.note) + "</span>" : "") + "</td>" +
+        (r.note ? "<span class='quote'>" + escape(r.note) + "</span>" : "") +
+        (r.ai || []).map(function (x) {
+          return "<span class='quote'>AI chips: " + escape(Number(x.count).toLocaleString("en-GB")) + " " + escape(x.chips) +
+            ", " + escape(x.access) + " by " + escape(x.firm) + ", " + escape(x.status) + "</span>";
+        }).join("") + "</td>" +
         "<td>" + roleText(r) + "</td><td>" + place(r) + "</td><td>" + (STATUS[r.status] || escape(r.status)) + "</td>" +
         "<td>" + mw(r) + "</td><td><a href='" + escape(r.source) + "' rel='noopener' target='_blank'>Page</a>" +
         "<span class='quote'>“" + escape(r.quote) + "” (" + escape(r.check) + ")</span></td></tr>";

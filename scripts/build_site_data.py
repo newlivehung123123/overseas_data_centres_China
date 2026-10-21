@@ -38,13 +38,18 @@ def build() -> dict:
     for r in read("data/site_roles.csv"):
         roles[r["site_id"]].append({"firm": r["firm"], "origin": r["firm_origin"], "role": r["role"],
                                     "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"]})
+    compute = defaultdict(list)
+    for a in read("data/ai_compute.csv"):
+        compute[a["site_id"]].append({"firm": a["firm"], "chips": a["chips"], "count": a["chip_count"], "access": a["access"],
+                                      "status": a["status"], "source": a["source_url"], "quote": a["source_quote"]})
     records = []
     for s in read("data/sites.csv"):
         records.append({
             "layer": "site", "id": s["site_id"], "name": s["site_name"], "city": s["city"], "country": s["country"],
             "status": s["status"], "capacity_mw": s["capacity_mw"], "capacity_basis": s["capacity_basis"],
             "note": s["note"], "source": s["source_url"], "quote": s["source_quote"], "check": s["check_status"],
-            "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "point": point(places, s["city"], s["country"]),
+            "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "ai": compute[s["site_id"]],
+            "point": point(places, s["city"], s["country"]),
         })
     for c in read("data/cloud_regions.csv"):
         records.append({

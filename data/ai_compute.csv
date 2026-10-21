@@ -1,0 +1,2 @@
+site_id,firm,chips,chip_count,access,status,date,note,source_url,source_quote,check_status,share_found,retrieved
+MYS-0011,ByteDance,Nvidia B200 in 500 GB200 NVL72 systems,36000,rented,planned,2026-03,Valued at more than US$2.5 billion; the chips stay in Malaysia and ByteDance reaches them through Aolani's cloud,https://www.techrepublic.com/article/news-bytedance-malaysia-ai-chip-deal/,"ByteDance is set to access about 36,000 Nvidia B200 Blackwell GPUs through 500 NVL72 GB200 systems deployed in Malaysia.",found,1.00,2026-10-21
