@@ -53,6 +53,10 @@ DayOne's registration statement at the SEC, which DayOne filed for its listing i
 
 `data/rules.csv` records 9 parts of rules, bills and guidance that bear on the AI chips in a host country or on remote access to them, each with its passage and the countries where it applies, and all 9 passages were found on their pages. US export rules control shipments of advanced chips but not access to the chips through a cloud service. The Remote Access Security Act, which would cover such access, passed the House by 369 votes to 22 on 12 January 2026 and has not passed the Senate. The AI Diffusion Rule, issued on 15 January 2025, was rescinded in May 2025 before it took effect, and the notice of rescission announced licensing requirements for exports of advanced chips to Malaysia and Thailand. Malaysia has required a permit since July 2025 for exports, transshipments and transits of US-origin AI chips, but the permit does not cover the use of the chips within Malaysia. A Chinese firm that rents servers in Johor and trains a model on them therefore falls under none of these rules, as the sources stand. In the Gulf, the US approved in November 2025 exports of up to the equivalent of 35,000 Nvidia GB300 chips each to G42 in the United Arab Emirates and Humain in Saudi Arabia, on condition of security and reporting requirements that are not public, and the UAE describes a Regulated Technology Environment of audits and oversight for organisations that acquire such chips.
 
+### Figures
+
+The script `scripts/summarise.py` counts the checked rows of the compute layer and writes `data/summary.json`, so that every figure in the text above can be reproduced. Of the 47 sites, 21 are operational, 6 are under construction, 16 are planned and 4 are unclear, and Malaysia holds 10 of them, more than any other country. Of the 52 roles, 31 are operator, 8 tenant, 7 user and 6 owner. Only 7 sites have a capacity of their own in their sources, 100 MW of IT capacity, 460 MW of power and 438 MW whose basis the sources do not give, so most of the capacity recorded so far is the 4,597 MW that DayOne reports by market.
+
 ### Next steps
 
 1. Add the remaining sites of ByteDance, the portfolios of GDS, VNET and zData outside mainland China, the overseas data centres of China Telecom Global, the buildings of Global Switch in each city, and a source dated after January 2023 on who controls Global Switch.
@@ -135,12 +139,14 @@ The tests use small tables and passages written in the test files and need no do
 | `data/firm_links.csv` | Ownership links with the result of the check |
 | `data/operator_markets.csv` | Capacity by market with the result of the check |
 | `data/rules.csv` | Rules with the result of the check |
+| `data/summary.json` | Figures of the compute layer |
 | `data/site_roles.csv` | Roles with the result of the check |
 | `data/sites.csv` | Sites with the result of the check |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |
 | `scripts/build_aiddata_layer.py` | Build of the government data centre layer from the AidData file and the coding |
 | `scripts/build_site_data.py` | Build of the dashboard data from the checked layers |
 | `scripts/check_sources.py` | Check that each passage of the site layer is on its page |
+| `scripts/summarise.py` | Figures of the compute layer, written to `data/summary.json` |
 | `scripts/fetch_cloud_regions.py` | Download of the provider region pages and build of the cloud region layer |
 | `site/` | Dashboard, with its data in `site/data/dashboard.json` |
 | `scripts/geocode_places.py` | Map point of each city from OpenStreetMap |
