@@ -68,6 +68,7 @@ The tests use small tables written in the test file and need no download.
 
 | Path | Contents |
 |---|---|
+| `CONTRIBUTING.md` | Purpose of the project, data rules and writing rules for anyone who works on the repository |
 | `codebook.md` | Roles, firms, levels and variables |
 | `config/aiddata_coding.csv` | Coding of each AidData record read, with a note on the data centre or the reason for exclusion |
 | `data/aiddata_candidates.csv` | AidData records that match a related term and are not coded yet |
