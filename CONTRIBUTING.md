@@ -26,6 +26,10 @@ These apply to the README, the codebook, commit messages and every text written 
 - Define a term the first time it appears, and never refer back to something the text has not stated.
 - Keep the owner's own wording when asked to fix a text. Change only what is wrong and say what was changed.
 
+## Commits
+
+Every commit is authored and committed as the owner of the repository, Jason H., with the email 109253621+newlivehung123123@users.noreply.github.com. Commit messages carry no attribution lines, no links to sessions and no mention of any tool used to write the code.
+
 ## Commands
 
 ```bash
