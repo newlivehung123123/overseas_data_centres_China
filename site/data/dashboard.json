@@ -1612,6 +1612,96 @@
    ]
   },
   {
+   "layer": "site",
+   "id": "IDN-0004",
+   "name": "Tencent Cloud Jakarta data centres",
+   "city": "Jakarta",
+   "country": "Indonesia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Two data centres, as of November 2024",
+   "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
+   "quote": "Tencent currently has two data centers in Indonesia, both located in Jakarta.",
+   "check": "found",
+   "iso3": "IDN",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
+     "quote": "Tencent currently has two data centers in Indonesia, both located in Jakarta.",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "point": [
+    -6.1754,
+    106.8272
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "IDN-0005",
+   "name": "Tencent Cloud third data centre in Indonesia",
+   "city": "",
+   "country": "Indonesia",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Part of an investment of US$500 million by 2030; no source found confirms that it opened",
+   "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
+   "quote": "Tencent Holdings is set to invest $500 million as part of plans to develop a third data center in Indonesia.",
+   "check": "found",
+   "iso3": "IDN",
+   "roles": [
+    {
+     "firm": "Tencent Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
+     "quote": "Tencent Holdings is set to invest $500 million as part of plans to develop a third data center in Indonesia.",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "point": [
+    -2.4834,
+    117.8903
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "THA-0007",
+   "name": "Huawei Cloud third data centre in Bangkok",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Announced in 2021 with an investment of US$23 million and due in 2021; no source read confirms the opening",
+   "source": "https://datacentremagazine.com/automation/huawei-invest-dollar23mn-third-thai-data-centre",
+   "quote": "Huawei announced plans to invest a further $23mn into the construction of a new data centre in the Thai capital of Bangkok.",
+   "check": "found",
+   "iso3": "THA",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://datacentremagazine.com/automation/huawei-invest-dollar23mn-third-thai-data-centre",
+     "quote": "will be the company’s third data centre in the country.",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "point": [
+    13.7525,
+    100.4935
+   ]
+  },
+  {
    "layer": "cloud_region",
    "id": "Brazil (São Paulo)",
    "name": "Alibaba Cloud Brazil (São Paulo)",

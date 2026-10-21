@@ -15,6 +15,7 @@ Mörfelden,Germany,49.9704847,8.5700579,relation,17019060,"Mörfelden, Mörfelde
 Hong Kong,Hong Kong,22.2818333,114.1582831,relation,20044132,"香港 Hong Kong, 中国",https://nominatim.openstreetmap.org/search?q=Hong+Kong%2C+Hong+Kong&format=json&limit=1
 Tseung Kwan O,Hong Kong,22.3087855,114.2596330,node,308769094,"將軍澳 Tseung Kwan O, 香港 Hong Kong, 中国",https://nominatim.openstreetmap.org/search?q=Tseung+Kwan+O%2C+Hong+Kong&format=json&limit=1
 West Kowloon,Hong Kong,22.3036814,114.1649267,node,7919700008,"香港西九龍 Hong Kong West Kowloon, 連翔道 Lin Cheung Road, 西九龍 West Kowloon, 油麻地 Yau Ma Tei, 油尖旺區 Yau Tsim Mong District, 九龍 Kowloon, 香港 Hong Kong, 中国",https://nominatim.openstreetmap.org/search?q=West+Kowloon%2C+Hong+Kong&format=json&limit=1
+,Indonesia,-2.4833826,117.8902853,relation,304751,Indonesia,https://nominatim.openstreetmap.org/search?q=Indonesia&format=json&limit=1
 Batam,Indonesia,1.1030815,104.0383696,relation,10660353,"Batam, Kepulauan Riau, Indonesia",https://nominatim.openstreetmap.org/search?q=Batam%2C+Indonesia&format=json&limit=1
 Jakarta,Indonesia,-6.1754049,106.8271680,relation,6362934,"Daerah Khusus Ibukota Jakarta, Indonesia",https://nominatim.openstreetmap.org/search?q=Jakarta%2C+Indonesia&format=json&limit=1
 ,Ireland,52.8651960,-7.9794599,relation,62273,Éire / Ireland,https://nominatim.openstreetmap.org/search?q=Ireland&format=json&limit=1
