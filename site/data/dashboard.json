@@ -1218,6 +1218,118 @@
    ]
   },
   {
+   "layer": "site",
+   "id": "MYS-0009",
+   "name": "Alibaba Cloud Johor data centres",
+   "city": "Johor",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "The two data centres of the Johor region, opened in June 2026, which bring Alibaba Cloud's Malaysian footprint to five facilities",
+   "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
+   "quote": "The launch of Johor region brings Alibaba Cloud’s total data centre footprint in Malaysia to five facilities",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
+     "quote": "The launch of Johor region brings Alibaba Cloud’s total data centre footprint in Malaysia to five facilities",
+     "check": "found"
+    }
+   ],
+   "point": [
+    2.0229,
+    103.3115
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0010",
+   "name": "Alibaba Cloud Kuala Lumpur data centres",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "A twin data centre presence from 2017 and a third facility added in 2025",
+   "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
+   "quote": "Since 2017, Alibaba Cloud has been among the earliest global cloud providers to invest in Malaysia, including establishing its first twin data centre presence and adding third facility last year in the country.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
+     "quote": "Since 2017, Alibaba Cloud has been among the earliest global cloud providers to invest in Malaysia, including establishing its first twin data centre presence and adding third facility last year in the country.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    3.1517,
+    101.6942
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "SAU-0001",
+   "name": "Saudi Cloud Computing Company data centres",
+   "city": "Riyadh",
+   "country": "Saudi Arabia",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Two data centres opened in Riyadh in 2022 by a joint venture of Alibaba Cloud and Saudi partners; the shares are not disclosed",
+   "source": "https://telecomreview.com/editorial-topics/wholesale-and-capacity/6164-new-data-centers-address-cloud-service-demand-in-saudi-arabia/",
+   "quote": "SCCC unveiled the opening of two data centers in Riyadh as part of the sixteen centers throughout the administrative regions of the Kingdom.",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Alibaba Cloud",
+     "origin": "",
+     "role": "owner",
+     "source": "https://telecomreview.com/editorial-topics/wholesale-and-capacity/6164-new-data-centers-address-cloud-service-demand-in-saudi-arabia/",
+     "quote": "Saudi Cloud Computing Company (SCCC), a new joint venture formed by Alibaba Cloud, stc Group, eWTP Arabia Capital, the Saudi Company for Artificial Intelligence (SCAI), and the Saudi Information Technology Company (SITE)",
+     "check": "found"
+    }
+   ],
+   "point": [
+    24.6389,
+    46.716
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "ZAF-0001",
+   "name": "Huawei Cloud Johannesburg data centre",
+   "city": "Johannesburg",
+   "country": "South Africa",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Leased from a partner that the source does not name",
+   "source": "https://businesstech.co.za/news/cloud-hosting/303386/huawei-cloud-now-available-in-south-africa/",
+   "quote": "it is leasing a data centre in Johannesburg from a partner from where it is deploying localised public cloud services",
+   "check": "found",
+   "roles": [
+    {
+     "firm": "Huawei Cloud",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://businesstech.co.za/news/cloud-hosting/303386/huawei-cloud-now-available-in-south-africa/",
+     "quote": "it is leasing a data centre in Johannesburg from a partner from where it is deploying localised public cloud services",
+     "check": "found"
+    }
+   ],
+   "point": [
+    -26.205,
+    28.0497
+   ]
+  },
+  {
    "layer": "cloud_region",
    "id": "Brazil (São Paulo)",
    "name": "Alibaba Cloud Brazil (São Paulo)",
