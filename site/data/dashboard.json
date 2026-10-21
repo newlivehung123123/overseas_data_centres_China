@@ -1376,6 +1376,35 @@
    ]
   },
   {
+   "layer": "site",
+   "id": "IRL-0002",
+   "name": "TikTok second data centre in Ireland",
+   "city": "",
+   "country": "Ireland",
+   "status": "unclear",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Planned with a third-party service that TikTok did not name; no source found confirms that it opened",
+   "source": "https://www.bisnow.com/news/dublin/data-center/tiktok-announces-plans-to-build-second-data-centre-in-ireland-117712",
+   "quote": "TikTok is finalising plans for a second data centre in Ireland with a third-party service, in addition to a site it announced last year.",
+   "check": "found",
+   "iso3": "IRL",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "user",
+     "source": "https://www.bisnow.com/news/dublin/data-center/tiktok-announces-plans-to-build-second-data-centre-in-ireland-117712",
+     "quote": "TikTok is finalising plans for a second data centre in Ireland with a third-party service, in addition to a site it announced last year.",
+     "check": "found"
+    }
+   ],
+   "point": [
+    52.8652,
+    -7.9795
+   ]
+  },
+  {
    "layer": "cloud_region",
    "id": "Brazil (São Paulo)",
    "name": "Alibaba Cloud Brazil (São Paulo)",
