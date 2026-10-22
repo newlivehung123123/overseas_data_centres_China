@@ -3,8 +3,8 @@
 
 The dashboard shows the sites with the roles of firms at each site and the cloud regions, each at
 the point of its city in config/places.csv, and the rules recorded for each country. Each site carries its reports of AI chips,
-its statements of capacity and the estimates of Epoch AI where Epoch's database holds the site, and reports of AI chips
-whose sources name no site are listed apart. The government data centres of the AidData layer are left out of the
+its statements of capacity and the estimates of Epoch AI where Epoch's database holds the site. Reports of AI chips
+whose sources name no site, and the statements of how much operators depend on Chinese customers, are listed apart. The government data centres of the AidData layer are left out of the
 dashboard until the article pitched on them has been answered, as CONTRIBUTING.md asks.
 
     python scripts/build_site_data.py    writes site/data/dashboard.json
@@ -88,7 +88,12 @@ def build() -> dict:
               "instrument": r["instrument"], "covers": r["covers"], "status": r["status"], "date": r["date"],
               "note": r["note"], "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"]}
              for r in read("data/rules.csv")]
-    return {"built": date.today().isoformat(), "records": records, "rules": rules, "ai_without_site": compute[""]}
+    customers = [{"firm": c["firm"], "customer": c["customer"], "description": c["customer_description"],
+                  "identified_as": c["identified_as"], "share": c["share_of_revenue"], "revenue": c["revenue"],
+                  "period": c["period"], "note": c["note"], "source": c["source_url"], "quote": c["source_quote"],
+                  "check": c["check_status"]} for c in read("data/operator_customers.csv")]
+    return {"built": date.today().isoformat(), "records": records, "rules": rules, "ai_without_site": compute[""],
+            "customers": customers}
 
 
 def main() -> None:

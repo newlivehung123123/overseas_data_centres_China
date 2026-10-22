@@ -4404,5 +4404,111 @@
    "quote": "Tencent previously inked a $1.2 billion-plus deal for Datasection Blackwell rentals in Japan and Australia, the FT reported in December 2025.",
    "check": "found"
   }
+ ],
+ "customers": [
+  {
+   "firm": "DayOne",
+   "customer": "largest customer",
+   "description": "a global technology company with a leading short-form video platform serving a worldwide audience",
+   "identified_as": "",
+   "share": "0.694",
+   "revenue": "",
+   "period": "year 2025",
+   "note": "The registration statement does not name the customer",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "In 2025 and the six months ended June 30, 2026, our largest customer, a global technology company with a leading short-form video platform serving a worldwide audience, accounted for 69.4% and 69.2%, respectively, of our revenue",
+   "check": "found"
+  },
+  {
+   "firm": "DayOne",
+   "customer": "largest customer",
+   "description": "a global technology company with a leading short-form video platform serving a worldwide audience",
+   "identified_as": "",
+   "share": "0.692",
+   "revenue": "",
+   "period": "six months to 30 June 2026",
+   "note": "The registration statement does not name the customer",
+   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
+   "quote": "In 2025 and the six months ended June 30, 2026, our largest customer, a global technology company with a leading short-form video platform serving a worldwide audience, accounted for 69.4% and 69.2%, respectively, of our revenue",
+   "check": "found"
+  },
+  {
+   "firm": "DayOne",
+   "customer": "largest customer",
+   "description": "TikTok owner ByteDance",
+   "identified_as": "ByteDance",
+   "share": "",
+   "revenue": "",
+   "period": "as of 11 July 2025",
+   "note": "Reported by Bloomberg from unnamed sources",
+   "source": "https://www.datacenterknowledge.com/cloud/oracle-said-to-advance-indonesia-cloud-services-plan",
+   "quote": "boosting its partnership with a key regional operator that counts TikTok owner ByteDance as its largest customer.",
+   "check": "found"
+  },
+  {
+   "firm": "Nscale",
+   "customer": "largest customer",
+   "description": "",
+   "identified_as": "",
+   "share": "0.73",
+   "revenue": "",
+   "period": "year 2025",
+   "note": "The registration statement does not name the customer",
+   "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+   "quote": "For the year ended December 31, 2025, our largest customer accounted for 73% of our revenue.",
+   "check": "found"
+  },
+  {
+   "firm": "Nscale",
+   "customer": "Spring (SG)",
+   "description": "a ByteDance subsidiary named Spring",
+   "identified_as": "ByteDance",
+   "share": "",
+   "revenue": "US$24 million of US$33 million",
+   "period": "year 2025",
+   "note": "Reported by Tom's Hardware, citing the Financial Times",
+   "source": "https://www.tomshardware.com/tech-industry/data-centers/filing-reveals-how-bytedance-gained-access-to-over-2-000-nvidia-b200-chips-through-nscales-norway-data-center-singaporean-subsidiary-spring-contributed-73-percent-of-uk-neoclouds-2025-revenue",
+   "quote": "UK-based “neocloud” Nscale built its business on a major deal with a ByteDance subsidiary named Spring, which accounted for $24 million of its $33 million annual revenue in 2025.",
+   "check": "found"
+  },
+  {
+   "firm": "Global Switch",
+   "customer": "Huanbang (Hong Kong)",
+   "description": "an indirect wholly owned subsidiary of Jiangsu Shagang Group",
+   "identified_as": "Jiangsu Shagang Group",
+   "share": "",
+   "revenue": "£28.4 million",
+   "period": "year 2025",
+   "note": "Revenue under the 15 MW service agreement in the Hong Kong data centre; Shagang also controls Global Switch",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Revenue totalling £28.4 million was recognised in relation to transactions under the service agreement with Huanbang.",
+   "check": "found"
+  },
+  {
+   "firm": "Datasection",
+   "customer": "NauNau Japan",
+   "description": "a Tokyo-based business alliance partner, behind which the end customer is one of the world's largest cloud service providers",
+   "identified_as": "",
+   "share": "",
+   "revenue": "JPY 30.5 billion, essentially all AI infrastructure revenue",
+   "period": "year to March 2026",
+   "note": "Datasection does not name the end customer, citing confidentiality obligations",
+   "source": "https://w.media/japans-datasection-bets-on-dominance-with-gpu-supercluster-ambitions/",
+   "quote": "NauNau Japan, a Tokyo-based business alliance partner named in the company’s formal financial results as the major customer accounting for JPY 30.5 billion – essentially the entirety of AI infrastructure revenue – in FY03/26.",
+   "check": "found"
+  },
+  {
+   "firm": "Datasection",
+   "customer": "biggest customer",
+   "description": "Tencent, the Hong Kong-listed technology group",
+   "identified_as": "Tencent",
+   "share": "",
+   "revenue": "",
+   "period": "as of 20 May 2026",
+   "note": "Reported by media outlets including the Financial Times; Datasection has neither confirmed nor denied it",
+   "source": "https://w.media/japans-datasection-bets-on-dominance-with-gpu-supercluster-ambitions/",
+   "quote": "Media outlets including the UK’s Financial Times have reported that Datasection’s biggest customer is Tencent, the Hong Kong-listed technology group, although Datasection has not confirmed or denied this.",
+   "check": "found"
+  }
  ]
 }

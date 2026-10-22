@@ -31,6 +31,9 @@ TABLES = {
     "data/epoch_estimates.csv": [{"site_id": "MYS-0001", "epoch_name": "A site", "it_power_mw": "243", "h100_equivalents": "221052",
                                   "chip_types": "B200", "owner": "", "users": "", "source_url": "https://example.org/csv",
                                   "retrieved": "2026-10-22"}],
+    "data/operator_customers.csv": [{"firm": "Nscale", "customer": "largest customer", "customer_description": "",
+                                     "identified_as": "", "share_of_revenue": "0.73", "revenue": "", "period": "year 2025",
+                                     "note": "", "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
     "data/site_capacity.csv": [{"site_id": "MYS-0001", "capacity_mw": "300", "basis": "power", "stage": "planned_total",
                                 "date": "2025-11", "note": "", "source_url": "https://example.org", "source_quote": "q",
                                 "check_status": "found"}],
@@ -66,6 +69,7 @@ class BuildTest(unittest.TestCase):
         self.assertEqual([x["firm"] for x in data["ai_without_site"]], ["Tencent"])
         self.assertEqual(len(site["ai"]), 1)
         self.assertEqual(site["level"], "B")
+        self.assertEqual(data["customers"][0]["share"], "0.73")
 
     def test_level_b_needs_20_mw_or_a_report_of_ai_chips(self):
         self.assertEqual(b.level(["15", ""], 0), "A")

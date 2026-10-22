@@ -178,12 +178,25 @@
     }).join("");
   }
 
+  function drawCustomers(list) {
+    el("customers").innerHTML = list.map(function (x) {
+      var amount = x.share ? escape(Math.round(Number(x.share) * 1000) / 10) + " percent of revenue" : escape(x.revenue);
+      return "<tr><td>" + escape(x.firm) + "</td><td>" + escape(x.customer) +
+        (x.description ? "<span class='quote'>" + escape(x.description) + "</span>" : "") +
+        (x.identified_as ? "<span class='quote'>Identified as " + escape(x.identified_as) + "</span>" : "") + "</td>" +
+        "<td>" + amount + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td><td>" + escape(x.period) + "</td>" +
+        "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
+        escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";
+    }).join("");
+  }
+
   function start(data) {
     state.records = data.records;
     state.rules = data.rules || [];
     drawSummary(data);
     drawRules();
     drawUnplaced(data.ai_without_site || []);
+    drawCustomers(data.customers || []);
     el("built").textContent = "Data built on " + data.built + ".";
     var firms = [], roles = [], countries = [];
     data.records.forEach(function (r) {
