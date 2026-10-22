@@ -4,7 +4,7 @@ The dataset records data-centre capacity outside mainland China in which a Chine
 
 ## Roles
 
-A record enters the dataset when a listed firm holds at least one of the roles in Table 1. One site can carry several roles held by different firms, and the dataset records each role with its own source.
+A record enters the dataset when a listed firm holds at least one of the roles in Table 1. One site can carry several roles held by different firms, and the dataset records each role with its own source. A point of presence, which holds a carrier's network equipment in another firm's data centre, is not recorded as a role, because it holds no computing capacity. China Telecom Global, for example, appears in the sources found so far mainly through points of presence in third-party data centres.
 
 **Table 1. Roles**
 
@@ -208,11 +208,29 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 | owner, users | text | Owner and users of the chips that Epoch names, with its own confidence, such as #likely or #speculative |
 | source_url, retrieved | text | Epoch's database file and the date it was read |
 
+### data/operator_customers.csv
+
+`data/operator_customers.csv` has one row for each statement of how much an operator depends on a customer that is a Chinese firm or that a source identifies as one, such as a share of the operator's revenue. Filings often describe a customer without naming it, so the description is kept as the source gives it, and a separate row records a source that names the customer. The file is written by hand in `config/operator_customers.csv` and checked by `scripts/check_sources.py`.
+
+**Table 14. Variables in operator_customers.csv**
+
+| Variable | Type | Description |
+|---|---|---|
+| firm | text | Operator or cloud provider that serves the customer |
+| customer | text | Customer as the source refers to it, such as largest customer |
+| customer_description | text | Description of the customer in the words of the source |
+| identified_as | text | Chinese firm that the source names as the customer, empty when the source names none |
+| share_of_revenue | number | Share of the operator's revenue, from 0 to 1, empty when the source gives none |
+| revenue | text | Revenue from the customer as the source gives it |
+| period | text | Period or date of the statement |
+| note | text | Limits of the source |
+| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
+
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 14. Coding values**
+**Table 15. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -224,12 +242,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 15. Variables in government_data_centres_aiddata.csv**
+**Table 16. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 14 |
+| coding | category | Value from Table 15 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |

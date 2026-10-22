@@ -3,8 +3,8 @@
   "site_countries": 17,
   "sites_by_status": {
     "operational": 29,
-    "under_construction": 7,
-    "planned": 20,
+    "under_construction": 8,
+    "planned": 19,
     "unclear": 7
   },
   "sites_by_country": {
@@ -50,8 +50,8 @@
   },
   "sites_with_capacity": 8,
   "site_capacity_mw_by_basis": {
-    "unspecified": 438,
-    "it": 142,
+    "unspecified": 310,
+    "it": 270,
     "power": 460
   },
   "cloud_regions_operational_outside_china_hk_macau": 47,

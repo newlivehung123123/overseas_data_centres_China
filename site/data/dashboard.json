@@ -166,7 +166,7 @@
    "status": "planned",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "The developer is not disclosed; the site may be the DayOne campus FIN-0003",
+   "note": "The developer is not disclosed; DayOne's campus FIN-0003 is also in the Kiveriö district, but no source found confirms that the two are the same site",
    "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
    "quote": "The second data center project is set to be located in the Kiveriö district of Lahti, Finland",
    "check": "found",
@@ -195,12 +195,12 @@
    "name": "DayOne Lahti campus",
    "city": "Lahti",
    "country": "Finland",
-   "status": "planned",
+   "status": "under_construction",
    "capacity_mw": "128",
-   "capacity_basis": "unspecified",
-   "note": "The source does not confirm that this campus is the TikTok site FIN-0002",
-   "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
-   "quote": "data center company DayOne is known to be developing a 128MW campus in Lahti.",
+   "capacity_basis": "it",
+   "note": "In the Kiveriö district of Lahti, where TikTok also places its second Finnish data centre FIN-0002; no source found confirms that the two are the same site",
+   "source": "https://www.srv.fi/en/srv-as-a-company/newsroom/press-release/dayone-data-center-construction-to-start-in-lahti-srv-strengthens-its-position-in-the-growing-market-for-data-center-construction/",
+   "quote": "SRV is launching a data center construction project in Kiveriö, Lahti, for the Singapore-based DayOne. Construction work will begin immediately, and the data center is scheduled to start operations during 2027.",
    "check": "found",
    "iso3": "FIN",
    "roles": [
@@ -222,7 +222,24 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "50",
+     "basis": "it",
+     "stage": "first_phase",
+     "date": "2025-08-14",
+     "note": "First building, scheduled to be ready for service in 2027; DayOne had no tenant agreement at the date of the source",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-targets-128mw-data-center-campus-in-finland/"
+    },
+    {
+     "mw": "128",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2025-08-14",
+     "note": "IT load of the campus at full build-out",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-targets-128mw-data-center-campus-in-finland/"
+    }
+   ],
    "epoch": null,
    "point": [
     60.9826,
@@ -254,7 +271,16 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "200",
+     "basis": "unspecified",
+     "stage": "planned_total",
+     "date": "2026-07-02",
+     "note": "Planned capacity reported by Bloomberg, which the source says could rise to almost 1 GW; the data centre will have 20 halls and is expected to operate by late 2027",
+     "source": "https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/"
+    }
+   ],
    "epoch": null,
    "point": [
     -3.7717,
