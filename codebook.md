@@ -40,7 +40,7 @@ Ownership can change, so each link between a firm and its Chinese owner in `data
 
 ## Levels
 
-Every record is coded at level A. Records with announced capacity of at least 20 MW, or with announced AI chips, are also coded at level B, and the largest level B sites in each hub are checked at level C.
+Every record is coded at level A. Records with announced capacity of at least 20 MW, or with announced AI chips, are also coded at level B, and the largest level B sites in each hub are checked at level C. The scripts code level B from the checked rows: a site is at level B when its row in `sites.csv` or a row of `site_capacity.csv` gives at least 20 MW, or when `ai_compute.csv` holds a report of AI chips at the site. The estimates of Epoch AI do not count, because no firm has announced them, and a capacity that an operator reports for a whole market does not count for any one site in it.
 
 **Table 3. Levels**
 

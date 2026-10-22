@@ -48,6 +48,10 @@
     "Megaspeed": 1,
     "Moonshot AI": 1
   },
+  "sites_by_level": {
+    "A": 45,
+    "B": 18
+  },
   "sites_with_capacity": 8,
   "site_capacity_mw_by_basis": {
     "unspecified": 310,

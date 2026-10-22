@@ -75,14 +75,14 @@ Epoch AI's database of AI data centres, read on 22 October 2026, holds 95 data c
 
 ### Figures
 
-The script `scripts/summarise.py` counts the checked rows of the compute layer and writes `data/summary.json`, so that every figure in the text above can be reproduced. Of the 63 sites, 29 are operational, 8 are under construction, 19 are planned and 7 are unclear, and Malaysia holds 12 of them, more than any other country. Of the 85 roles, 42 are operator, 22 owner, 13 tenant and 8 user. Only 8 sites have a capacity of their own in the sources that support them, 270 MW of IT capacity, 460 MW of power and 310 MW whose basis the sources do not give, and `data/site_capacity.csv` holds a further 15 statements of capacity at several stages, so most of the capacity recorded so far is the 4,597 MW that DayOne reports by market.
+The script `scripts/summarise.py` counts the checked rows of the compute layer and writes `data/summary.json`, so that every figure in the text above can be reproduced. Of the 63 sites, 29 are operational, 8 are under construction, 19 are planned and 7 are unclear, and Malaysia holds 12 of them, more than any other country. Of the 85 roles, 42 are operator, 22 owner, 13 tenant and 8 user. 18 of the 63 sites are coded at level B, 13 of them for an announced capacity of at least 20 MW and 5 for a report of AI chips. DayOne's two campuses in Johor stay at level A only because DayOne reports the capacity of Johor as a whole, and Epoch AI estimates 473 MW and 422 MW of IT power for them. Only 8 sites have a capacity of their own in the sources that support them, 270 MW of IT capacity, 460 MW of power and 310 MW whose basis the sources do not give, and `data/site_capacity.csv` holds a further 15 statements of capacity at several stages, so most of the capacity recorded so far is the 4,597 MW that DayOne reports by market.
 
 ### Next steps
 
 1. Add the remaining sites of ByteDance, the portfolios of VNET and zData outside mainland China, and the capacity of each building of Global Switch. The sources found so far show China Telecom Global only through points of presence in third-party data centres, which the codebook does not record as roles, and through an agreement of 2017 for access to the data centres of Global Switch.
 2. Add the capacity of each DayOne site where another source gives it, such as a permit or a power purchase agreement, to `data/site_capacity.csv`, which holds 15 statements so far, all of whose passages were found on their pages.
 3. Find out from other sources whether the 12 e-government and network projects coded unspecified built a data centre.
-4. Link each cloud region to its buildings and code level B for sites of at least 20 MW.
+4. Link each cloud region to its buildings, and begin level C with satellite imagery, permits and power allocations for the largest level B sites in Johor, Batam and Bangkok.
 5. Add the rules of the other host countries, such as Singapore, Thailand, Indonesia, Brazil and the members of the European Union.
 6. Identify the Oracle data centres in Southeast Asia at which Tencent is reported to lease chips, and the sites of Datasection in Japan and Australia that serve its largest customer.
 7. Match further sites to Epoch AI's database as it grows, and compare its estimates with the statements of capacity in `data/site_capacity.csv`.

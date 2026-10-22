@@ -20,6 +20,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "site" / "data" / "dashboard.json"
+LEVEL_B_MW = 20    # announced capacity from which a site is coded at level B, as the codebook sets out
+
+
+def level(figures: list[str], ai_reports: int) -> str:
+    """Level B for a site with announced capacity of at least 20 MW or with a report of AI chips, else level A."""
+    if ai_reports or any(f and float(f) >= LEVEL_B_MW for f in figures):
+        return "B"
+    return "A"
 
 
 def read(name: str) -> list[dict]:
@@ -64,6 +72,7 @@ def build() -> dict:
             "note": s["note"], "source": s["source_url"], "quote": s["source_quote"], "check": s["check_status"],
             "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "ai": compute[s["site_id"]], "capacity": capacity[s["site_id"]],
             "epoch": epoch.get(s["site_id"]), "point": point(places, s["city"], s["country"]),
+            "level": level([s["capacity_mw"]] + [c["mw"] for c in capacity[s["site_id"]]], len(compute[s["site_id"]])),
         })
     for c in read("data/cloud_regions.csv"):
         records.append({

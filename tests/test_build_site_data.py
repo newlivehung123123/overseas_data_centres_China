@@ -65,6 +65,12 @@ class BuildTest(unittest.TestCase):
         self.assertIsNone(region.get("epoch"))
         self.assertEqual([x["firm"] for x in data["ai_without_site"]], ["Tencent"])
         self.assertEqual(len(site["ai"]), 1)
+        self.assertEqual(site["level"], "B")
+
+    def test_level_b_needs_20_mw_or_a_report_of_ai_chips(self):
+        self.assertEqual(b.level(["15", ""], 0), "A")
+        self.assertEqual(b.level(["15", "20"], 0), "B")
+        self.assertEqual(b.level([""], 1), "B")
 
 
 if __name__ == "__main__":

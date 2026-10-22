@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Count the checked rows of the compute layer and write the figures to data/summary.json.
 
-The figures cover the sites, the roles of firms at the sites, the cloud regions and the capacity
-that operators report by market. Only rows whose passage was found on its page are counted. The
+The figures cover the sites and their levels, the roles of firms at the sites, the cloud regions and
+the capacity that operators report by market. Only rows whose passage was found on its page are counted. The
 AidData layer has its own summary in data/aiddata_summary.json.
 
     python scripts/summarise.py
@@ -12,8 +12,12 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_site_data import level  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "summary.json"
@@ -38,6 +42,10 @@ def summarise() -> dict:
     for s in sites:
         if s["capacity_mw"]:
             capacity[s["capacity_basis"] or "unspecified"] += number(s["capacity_mw"])
+    figures, reports = defaultdict(list), Counter(a["site_id"] for a in read("data/ai_compute.csv"))
+    for c in read("data/site_capacity.csv"):
+        figures[c["site_id"]].append(c["capacity_mw"])
+    levels = {s["site_id"]: level([s["capacity_mw"]] + figures[s["site_id"]], reports[s["site_id"]]) for s in sites}
     operational = [r for r in regions if r["status"] == "operational" and r["hong_kong_macau"] == "no"]
     by_operator = defaultdict(lambda: defaultdict(float))
     for m in markets:
@@ -51,6 +59,7 @@ def summarise() -> dict:
         "roles": len(roles),
         "roles_by_role": dict(Counter(r["role"] for r in roles).most_common()),
         "sites_by_firm": {firm: len(ids) for firm, ids in sorted(firms_at.items(), key=lambda x: -len(x[1]))},
+        "sites_by_level": dict(sorted(Counter(levels.values()).items())),
         "sites_with_capacity": sum(1 for s in sites if s["capacity_mw"]),
         "site_capacity_mw_by_basis": {k: round(v) for k, v in capacity.items()},
         "cloud_regions_operational_outside_china_hk_macau": len(operational),

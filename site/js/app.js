@@ -85,7 +85,8 @@
 
   function drawTable(rows) {
     el("rows").innerHTML = rows.map(function (r) {
-      return "<tr><td><span class='tag " + r.layer + "'>" + LABELS[r.layer] + "</span> " + escape(r.name) +
+      return "<tr><td><span class='tag " + r.layer + "'>" + LABELS[r.layer] + "</span> " +
+        (r.level === "B" ? "<span class='tag level'>Level B</span> " : "") + escape(r.name) +
         (r.note ? "<span class='quote'>" + escape(r.note) + "</span>" : "") +
         (r.capacity || []).map(function (x) {
           return "<span class='quote'>Capacity: " + escape(x.mw) + " MW (" + escape(x.basis) + ", " + escape(x.stage.replace(/_/g, " ")) +
