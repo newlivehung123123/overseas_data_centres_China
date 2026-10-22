@@ -1,6 +1,6 @@
 # Overseas data centres of Chinese firms
 
-This project records the data-centre capacity outside mainland China in which Chinese firms and Chinese state lenders have a role, as owner, operator, tenant, builder, equipment supplier or financier. For each site the dataset will record how much of the capacity can run large AI workloads and which country's rules cover it. US export controls govern shipments of AI chips but not the remote use of those chips, and the Remote Access Security Act, which would add remote use, passed the House on 12 January 2026 and has not passed the Senate. Capacity that Chinese firms use in third countries can therefore sit outside the rules of the United States, of China and of the host country at once, and no open dataset records that capacity site by site together with the role of each Chinese firm and the rules that cover the site. The database of AI data centres of Epoch AI estimates the IT power of 4 of the sites in this dataset, as the section on Epoch's estimates below sets out. The codebook in `codebook.md` defines the roles, the firms covered, the three levels of detail and every variable.
+This project records the data-centre capacity outside mainland China in which Chinese firms and Chinese state lenders have a role, as owner, operator, tenant, builder, equipment supplier or financier. For each site the dataset will record how much of the capacity can run large AI workloads and which country's rules cover it. US export controls govern shipments of AI chips but not the remote use of those chips, and the Remote Access Security Act, which would add remote use, passed the House on 12 January 2026 and has not passed the Senate. Capacity that Chinese firms use in third countries can therefore sit outside the rules of the United States, of China and of the host country at once, and no open dataset records that capacity site by site together with the role of each Chinese firm and the rules that cover the site. The database of AI data centres of Epoch AI estimates the IT power of 4 of the sites in this dataset, as the section on Epoch's estimates below sets out. The codebook in `codebook.md` defines the roles, the firms covered, the three levels of detail and every variable. The note in `docs/preliminary_findings.md` sets out the main findings so far.
 
 ## Status
 
@@ -156,6 +156,7 @@ The tests use small tables and passages written in the test files and need no do
 |---|---|
 | `CONTRIBUTING.md` | Purpose of the project, data rules and writing rules for anyone who works on the repository |
 | `codebook.md` | Roles, firms, levels and variables |
+| `docs/preliminary_findings.md` | Main findings so far, with the figures from the checked rows |
 | `config/firm_links.csv` | Ownership links between listed firms and Chinese firms, each with its page and passage |
 | `config/operator_markets.csv` | Capacity that operators report by market, each with its page and passage |
 | `config/places.csv` | Map point of each city, with the OpenStreetMap object it comes from |
