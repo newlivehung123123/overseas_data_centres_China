@@ -55,7 +55,7 @@ Operators seldom name their customers, but their filings show how much of their 
 
 ### AI chips
 
-`data/ai_compute.csv` records the reports of AI chips that Chinese firms reach outside China, which are the evidence of AI workloads that level B needs, and all 7 passages were found on their pages. In 6 of the 7 reports a Chinese firm reaches US chips that sit outside China, and the seventh does not disclose the model of chip. In 6 of the 7 the firm rents the use of the chips from a firm that holds them, and the sources of 2 of the reports do not name the site.
+`data/ai_compute.csv` records the reports of AI chips that Chinese firms reach outside China, which are the evidence of AI workloads that level B needs, and all 10 passages were found on their pages. In 9 of the 10 reports a Chinese firm reaches US chips that sit outside China, and the tenth does not disclose the model of chip. In 9 of the 10 the firm rents the use of the chips from a firm that holds them, and the sources of 5 of the reports do not name the site.
 
 1. ByteDance is set to reach about 36,000 Nvidia B200 chips in 500 GB200 NVL72 systems that the cloud operator Aolani Cloud deploys in Malaysia, valued at more than US$2.5 billion, as the Wall Street Journal reported in March 2026 from unnamed sources.
 2. INF Tech, a Shanghai start-up, reached about 2,300 Nvidia Blackwell chips in 32 GB200 racks that the Indonesian telecom firm Indosat bought and operates in Jakarta, as the Wall Street Journal reported in November 2025.
@@ -64,6 +64,9 @@ Operators seldom name their customers, but their filings show how much of their 
 5. A White House official accused Moonshot AI in 2026 of reaching Nvidia chips remotely through an unnamed party in Thailand, an accusation for which the source reports no public evidence.
 6. Tencent leases about 100,000 advanced AI chips at several Oracle data centres in Southeast Asia for five years, in a deal worth about US$7 billion, as the Financial Times reported in October 2026. The companies have not confirmed the deal, and the countries, sites and models of chip are not disclosed.
 7. Tencent holds contracts worth more than US$1.2 billion for Blackwell chips of the Japanese firm Datasection in Japan and Australia, as the Financial Times reported in December 2025. Datasection has not confirmed that Tencent is its customer.
+8. Alibaba trains its latest large language models in data centres in Southeast Asia that non-Chinese firms own and operate, as the Financial Times reported in November 2025 from two people with direct knowledge. Reuters could not verify the report.
+9. ByteDance does the same, according to the same report.
+10. Engineers of a Chinese firm that the source does not name travelled to Malaysia in March 2025 with hard drives of training data to train AI models at data centres with Nvidia chips, as the Wall Street Journal reported. Malaysia's trade ministry answered that servers with such chips are not controlled goods in Malaysia, which `data/rules.csv` records.
 
 ### Estimates of Epoch AI
 

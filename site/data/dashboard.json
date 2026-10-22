@@ -4403,6 +4403,42 @@
    "source": "https://www.tomshardware.com/tech-industry/data-centers/tencent-scores-100-000-offshore-ai-chip-deal-with-oracle-for-usd7-billion-despite-climbing-prices-per-hour-costs-estimated-to-be-43-percent-under-standard-h100-rental-rates",
    "quote": "Tencent previously inked a $1.2 billion-plus deal for Datasection Blackwell rentals in Japan and Australia, the FT reported in December 2025.",
    "check": "found"
+  },
+  {
+   "firm": "Alibaba",
+   "chips": "Nvidia chips",
+   "count": "",
+   "access": "rented",
+   "status": "operational",
+   "date": "2025-11-26",
+   "note": "Training of large language models in Southeast Asian data centres that non-Chinese firms own and operate, as the Financial Times reported from two people with direct knowledge; Reuters could not verify the report",
+   "source": "https://finance.yahoo.com/news/chinas-tech-giants-move-ai-052307498.html",
+   "quote": "Alibaba and ByteDance are among the tech firms training their newest large language models in Southeast Asian data centres, the report said, citing two people with direct knowledge of the matter.",
+   "check": "found"
+  },
+  {
+   "firm": "ByteDance",
+   "chips": "Nvidia chips",
+   "count": "",
+   "access": "rented",
+   "status": "operational",
+   "date": "2025-11-26",
+   "note": "Training of large language models in Southeast Asian data centres that non-Chinese firms own and operate, as the Financial Times reported from two people with direct knowledge; Reuters could not verify the report",
+   "source": "https://finance.yahoo.com/news/chinas-tech-giants-move-ai-052307498.html",
+   "quote": "Alibaba and ByteDance are among the tech firms training their newest large language models in Southeast Asian data centres, the report said, citing two people with direct knowledge of the matter.",
+   "check": "found"
+  },
+  {
+   "firm": "Unnamed Chinese firm",
+   "chips": "Nvidia chips",
+   "count": "",
+   "access": "rented",
+   "status": "unclear",
+   "date": "2025-06-19",
+   "note": "Engineers travelled to Malaysia in March 2025 with hard drives of training data, as the Wall Street Journal reported; the source names neither the firm nor the data centre",
+   "source": "https://w.media/pipeline-data-center-projects-unaffected-by-alleged-chinese-ai-training-in-malaysia-analysts/",
+   "quote": "The Wall Street Journal recently reported that Chinese engineers had in March travelled to Malaysia with suitcases of hard drives to train AI models at data centres using Nvidia chips in an effort to circumvent US restrictions on China’s access to advanced chips for AI.",
+   "check": "found"
   }
  ],
  "customers": [
