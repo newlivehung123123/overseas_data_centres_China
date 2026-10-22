@@ -1415,6 +1415,14 @@
      "date": "2025-12-31",
      "note": "Contracted capacity that the first phase added on its completion in 2025",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf"
+    },
+    {
+     "mw": "8",
+     "basis": "it",
+     "stage": "first_phase",
+     "date": "2024-03-29",
+     "note": "Saleable IT power of the first phase, of which about 5 MW was pre-committed; the same report plans a further 24 MW in phases 2 to 4",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/01/06115528/Global-Switch-Holdings-Limited-Annual-Report-and-Financial-Statements-for-the-year-ended-31-December-2023.pdf"
     }
    ],
    "epoch": null,
@@ -1802,13 +1810,22 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "36",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2024-03-29",
+     "note": "IT capacity of the new data centre of 24,000 square metres beside the existing Madrid data centre, in the annual report for 2023",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/01/06115528/Global-Switch-Holdings-Limited-Annual-Report-and-Financial-Statements-for-the-year-ended-31-December-2023.pdf"
+    }
+   ],
    "epoch": null,
    "point": [
     40.4168,
     -3.7035
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
