@@ -96,8 +96,12 @@ def build() -> dict:
                   "identified_as": c["identified_as"], "share": c["share_of_revenue"], "revenue": c["revenue"],
                   "period": c["period"], "note": c["note"], "source": c["source_url"], "quote": c["source_quote"],
                   "check": c["check_status"]} for c in read("data/operator_customers.csv")]
+    census = [{"facility": c["facility"], "operator": c["operator"], "status": c["baxtel_status"], "page": c["baxtel_page"],
+               "link": c["chinese_link"], "site": c["site_id"], "note": c["note"], "source": c["source_url"],
+               "quote": c["source_quote"], "check": c["check_status"], "link_source": c["link_source_url"],
+               "link_quote": c["link_source_quote"], "link_check": c["link_check_status"]} for c in read("data/johor_census.csv")]
     return {"built": date.today().isoformat(), "records": records, "rules": rules, "ai_without_site": compute[""],
-            "customers": customers}
+            "customers": customers, "census": census}
 
 
 def main() -> None:

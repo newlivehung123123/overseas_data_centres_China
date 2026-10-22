@@ -4,7 +4,7 @@ This note sets out what the dataset of this repository shows so far about the da
 
 ## What the dataset holds
 
-The dataset records 63 sites in 17 countries and territories, with 85 roles held by 13 firms, and 55 public cloud regions of Alibaba Cloud, Huawei Cloud, Tencent Cloud and BytePlus. It also records 10 reports of AI chips that Chinese firms reach outside China, 17 statements of capacity at sites, 8 statements of how much operators depend on Chinese customers, and 16 rules, bills, guidance notes, reviews, prosecutions and contracts that bear on those chips. The 274 rows carry 274 passages, and all 274 were found on their pages.
+The dataset records 67 sites in 17 countries and territories, with 89 roles held by 16 firms and funds, and 55 public cloud regions of Alibaba Cloud, Huawei Cloud, Tencent Cloud and BytePlus. It also records 10 reports of AI chips that Chinese firms reach outside China, 21 statements of capacity at sites, 8 statements of how much operators depend on Chinese customers, 16 rules, bills, guidance notes, reviews, prosecutions and contracts that bear on those chips, and a census of the 84 data-centre facilities that a public list names in Johor. The 371 rows carry 397 passages, and all 397 were found on their pages.
 
 ## Findings
 
@@ -16,7 +16,9 @@ The dataset records 63 sites in 17 countries and territories, with 85 roles held
 
 **4. Chinese ownership reaches beyond the firms usually counted as Chinese operators.** Global Switch, which owns and operates 12 completed data centres in Amsterdam, Frankfurt, Hong Kong, London, Madrid, Paris and Singapore and 4 under development, states in its annual report for 2025 that Jiangsu Shagang Group holds an indirect stake of 51.8 percent and controls the group. A subsidiary of Shagang holds a service agreement for 15 MW in the Hong Kong data centre until the end of 2027, and the report does not say who uses that capacity. GDS still holds 19.4 percent of DayOne.
 
-**5. The capacity of one operator alone comes to 4,597 MW.** DayOne alone reports 962 MW in service, 1,328 MW under construction and 2,308 MW of secured powered land in 10 markets, or 4,597 MW in all, and Johor holds 789 MW of the 962 MW in service. Epoch AI estimates 1,210 MW of IT power at the 4 sites of this dataset that its database also holds. 19 of the 63 sites have an announced capacity of at least 20 MW or a report of AI chips, which places them at level B of the codebook.
+**5. A Chinese firm or a fund of a Chinese state lender holds a role at 25 of the 84 facilities in Johor.** Baxtel's public list names 84 data-centre facilities in Johor, run by 34 operators. Listed Chinese firms operate, build or plan 17 of them, among them 14 buildings of DayOne's Nusajaya Tech Park campus. A subsidiary of Megaspeed agreed to buy the land of a further campus in Kota Tinggi, subject to a power allocation of 300 MW. ByteDance is the anchor tenant of 4 buildings of Bridge Data Centres' MY06 campus. The China-ASEAN Investment Cooperation Fund II, whose main anchor sponsor is China Eximbank, invested in June 2026 in Racks Central, whose campus of up to 510 MW in Pasir Gudang counts 3 facilities on the list. A Chinese link is reported but not confirmed at 4 more facilities, and no source found names one at the other 55.
+
+**6. The capacity of one operator alone comes to 4,597 MW.** DayOne alone reports 962 MW in service, 1,328 MW under construction and 2,308 MW of secured powered land in 10 markets, or 4,597 MW in all, and Johor holds 789 MW of the 962 MW in service. Epoch AI estimates 1,210 MW of IT power at the 4 sites of this dataset that its database also holds. 23 of the 67 sites have an announced capacity of at least 20 MW or a report of AI chips, which places them at level B of the codebook.
 
 ## What the dataset adds to existing data
 
@@ -28,8 +30,8 @@ A person writes each row with the page that supports it and a passage copied fro
 
 ## Limits
 
-The 63 sites are a first sample and not a census of any market. Several reports rest on unnamed sources cited by the Wall Street Journal, the Financial Times or Bloomberg, and the firms have not confirmed them, which the dataset records in the note of each row. Filings describe their largest customers without naming them, so the names come from press reports. The estimates of Epoch AI are models and are kept apart from the capacity that firms announce.
+Outside Johor the sites are a sample and not a census. In Johor the census rests on a commercial directory, because no public register of data centres was found, and a facility at which no Chinese link was found may still have a Chinese tenant that no source names. Several reports rest on unnamed sources cited by the Wall Street Journal, the Financial Times or Bloomberg, and the firms have not confirmed them, which the dataset records in the note of each row. Filings describe their largest customers without naming them, so the names come from press reports. The estimates of Epoch AI are models and are kept apart from the capacity that firms announce.
 
 ## Next steps
 
-The next step is a census of Johor, the largest hub, that records every data centre in the state and the role of any Chinese firm in each. The study would then extend the census to the other hubs of Southeast Asia, the Gulf and Europe, add satellite imagery, permits and power allocations for the largest sites, record the rules of every host country, and publish the government data centre layer.
+The next step is to search the tenants of the 55 facilities in Johor at which no Chinese link was found and to settle the 4 reported links. The study would then repeat the census in Batam, Greater Bangkok and Singapore and in the hubs of the Gulf and Europe, add satellite imagery, permits and power allocations for the largest sites, record the rules of every host country, and publish the government data centre layer.

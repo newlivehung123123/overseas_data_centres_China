@@ -29,8 +29,10 @@ Tokyo,Japan,35.6768601,139.7638947,relation,1543125,"東京都, 日本",https://
 "Iskandar Puteri, Johor",Malaysia,1.4522711,103.6144729,relation,12337490,"Iskandar Puteri, Johor Bahru, Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Iskandar+Puteri%2C+Johor%2C+Malaysia&format=json&limit=1
 Johor,Malaysia,2.0228821,103.3114564,relation,2939653,"Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Johor%2C+Malaysia&format=json&limit=1
 Johor Bahru,Malaysia,1.4581986,103.7649059,node,254237831,"Johor Bahru, Johor, 80730, Malaysia",https://nominatim.openstreetmap.org/search?q=Johor+Bahru%2C+Malaysia&format=json&limit=1
+"Kota Tinggi, Johor",Malaysia,1.7336743,103.9006975,node,254073396,"Kota Tinggi, Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Kota+Tinggi%2C+Johor%2C+Malaysia&format=json&limit=1
 Kuala Lumpur,Malaysia,3.1516964,101.6942371,relation,2939672,"Kuala Lumpur, Malaysia",https://nominatim.openstreetmap.org/search?q=Kuala+Lumpur%2C+Malaysia&format=json&limit=1
 "Kulai, Johor",Malaysia,1.6666667,103.6000000,relation,12306919,"Kulai, Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Kulai%2C+Johor%2C+Malaysia&format=json&limit=1
+"Pasir Gudang, Johor",Malaysia,1.4953437,103.9207048,node,5317908677,"Pasir Gudang, Johor Bahru, Johor, 81700, Malaysia",https://nominatim.openstreetmap.org/search?q=Pasir+Gudang%2C+Johor%2C+Malaysia&format=json&limit=1
 "Sedenak, Johor",Malaysia,1.7126551,103.5257302,node,4486473991,"Sedenak, Kulai, Johor, 81030, Malaysia",https://nominatim.openstreetmap.org/search?q=Sedenak%2C+Johor%2C+Malaysia&format=json&limit=1
 Mexico City,Mexico,19.3207722,-99.1514678,relation,1376330,"Ciudad de México, México",https://nominatim.openstreetmap.org/search?q=Mexico+City%2C+Mexico&format=json&limit=1
 Queretaro,Mexico,20.8052225,-99.8837376,relation,2340903,"Querétaro, México",https://nominatim.openstreetmap.org/search?q=Queretaro%2C+Mexico&format=json&limit=1

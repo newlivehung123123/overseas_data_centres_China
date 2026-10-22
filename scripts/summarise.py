@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Count the checked rows of the compute layer and write the figures to data/summary.json.
 
-The figures cover the sites and their levels, the roles of firms at the sites, the cloud regions and
-the capacity that operators report by market. Only rows whose passage was found on its page are counted. The
+The figures cover the sites and their levels, the roles of firms at the sites, the cloud regions, the
+capacity that operators report by market and the census of Johor. Only rows whose passage was found on its page are counted. The
 AidData layer has its own summary in data/aiddata_summary.json.
 
     python scripts/summarise.py
@@ -67,6 +67,9 @@ def summarise() -> dict:
         "cloud_regions_by_provider": dict(Counter(r["provider"] for r in operational).most_common()),
         "operator_market_mw": {firm: {k: round(v) for k, v in fields.items()} for firm, fields in by_operator.items()},
         "rules": len(read("data/rules.csv")),
+        "johor_census_facilities": len(census := read("data/johor_census.csv")),
+        "johor_census_operators": len({c["operator"] for c in census}),
+        "johor_census_by_chinese_link": dict(Counter(c["chinese_link"] for c in census).most_common()),
     }
 
 

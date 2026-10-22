@@ -3,6 +3,7 @@
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import check_sources as c  # noqa: E402
@@ -25,6 +26,20 @@ class PassageTest(unittest.TestCase):
     def test_partly_found(self):
         share = c.share_found("ByteDance System Sdn. Bhd, will be the anchor tenant of a campus in Lahti, Finland", PAGE)
         self.assertEqual(c.verdict(share), "partly_found")
+
+
+class SecondPassageTest(unittest.TestCase):
+    def test_a_row_with_a_link_passage_has_both_checked(self):
+        pages = {"https://example.org/list": ("Bridge DC: MY06-1 Bridge Data Centres Medium Operational", "2026-10-22"),
+                 "https://example.org/my06": (PAGE, "2026-10-22")}
+        rows = [{"facility": "MY06-1", "source_url": "https://example.org/list", "source_quote": "Bridge DC: MY06-1 Bridge Data Centres",
+                 "link_source_url": "https://example.org/my06", "link_source_quote": "ByteDance System Sdn. Bhd, will be the anchor tenant"},
+                {"facility": "JDC1", "source_url": "https://example.org/list", "source_quote": "Bridge DC: MY06-1",
+                 "link_source_url": "", "link_source_quote": ""}]
+        with mock.patch.object(c, "page", lambda url, refetch: pages[url]):
+            checked = c.check(rows, False)
+        self.assertEqual([r["check_status"] for r in checked], ["found", "found"])
+        self.assertEqual([r["link_check_status"] for r in checked], ["found", ""])
 
 
 class ValidateTest(unittest.TestCase):

@@ -1,14 +1,14 @@
 {
-  "sites": 63,
+  "sites": 67,
   "site_countries": 17,
   "sites_by_status": {
-    "operational": 29,
+    "operational": 30,
     "under_construction": 8,
-    "planned": 19,
-    "unclear": 7
+    "planned": 21,
+    "unclear": 8
   },
   "sites_by_country": {
-    "Malaysia": 12,
+    "Malaysia": 16,
     "Thailand": 7,
     "Indonesia": 5,
     "Singapore": 5,
@@ -26,12 +26,13 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 85,
+  "roles": 89,
   "roles_by_role": {
-    "operator": 42,
-    "owner": 22,
+    "operator": 43,
+    "owner": 24,
     "tenant": 13,
-    "user": 8
+    "user": 8,
+    "financier": 1
   },
   "sites_by_firm": {
     "Global Switch": 17,
@@ -42,19 +43,22 @@
     "Alibaba Cloud": 4,
     "Tencent Cloud": 3,
     "Huawei Cloud": 2,
+    "Megaspeed": 2,
     "zData": 1,
     "Huanbang (Hong Kong)": 1,
     "INF Tech": 1,
-    "Megaspeed": 1,
+    "GDS": 1,
+    "Shanghai DC-Science": 1,
+    "China-ASEAN Investment Cooperation Fund II": 1,
     "Moonshot AI": 1
   },
   "sites_by_level": {
     "A": 44,
-    "B": 19
+    "B": 23
   },
-  "sites_with_capacity": 8,
+  "sites_with_capacity": 9,
   "site_capacity_mw_by_basis": {
-    "unspecified": 310,
+    "unspecified": 478,
     "it": 270,
     "power": 460
   },
@@ -74,5 +78,15 @@
       "total_mw": 4598
     }
   },
-  "rules": 16
+  "rules": 16,
+  "johor_census_facilities": 84,
+  "johor_census_operators": 34,
+  "johor_census_by_chinese_link": {
+    "none_found": 55,
+    "operator": 17,
+    "tenant": 4,
+    "unconfirmed": 4,
+    "financier": 3,
+    "owner": 1
+  }
 }

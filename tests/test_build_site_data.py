@@ -37,6 +37,10 @@ TABLES = {
     "data/epoch_timelines.csv": [{"site_id": "MYS-0001", "epoch_name": "A site", "date": "2023-05-30", "buildings_operational": "2",
                                   "it_power_mw": "61", "h100_equivalents": "20765", "construction_status": "Building 2 is operational.",
                                   "source_url": "https://example.org/csv", "retrieved": "2026-10-22"}],
+    "data/johor_census.csv": [{"facility": "MY06-1", "operator": "Bridge Data Centres", "baxtel_status": "Operational",
+                               "baxtel_page": "https://example.org/my06", "chinese_link": "tenant", "site_id": "MYS-0001", "note": "",
+                               "source_url": "https://example.org/list", "source_quote": "q", "check_status": "found",
+                               "link_source_url": "https://example.org/my06", "link_source_quote": "q", "link_check_status": "found"}],
     "data/site_capacity.csv": [{"site_id": "MYS-0001", "capacity_mw": "300", "basis": "power", "stage": "planned_total",
                                 "date": "2025-11", "note": "", "source_url": "https://example.org", "source_quote": "q",
                                 "check_status": "found"}],
@@ -74,6 +78,7 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(len(site["ai"]), 1)
         self.assertEqual(site["level"], "B")
         self.assertEqual(data["customers"][0]["share"], "0.73")
+        self.assertEqual(data["census"][0]["link"], "tenant")
 
     def test_level_b_needs_20_mw_or_a_report_of_ai_chips(self):
         self.assertEqual(b.level(["15", ""], 0), "A")

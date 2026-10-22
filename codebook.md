@@ -28,11 +28,11 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 |---|---|
 | Cloud and AI | Alibaba Cloud, Huawei Cloud, Tencent Cloud and Tencent, ByteDance (including BytePlus, Volcano Engine and Spring (SG)), Baidu AI Cloud |
 | State telecom | China Mobile International, China Telecom Global, China Unicom Global |
-| Data-centre operators | GDS, VNET, zData, ChinData, DayOne (origin in GDS), Global Switch (controlled by Jiangsu Shagang Group) |
+| Data-centre operators | GDS, VNET, zData, ChinData, DayOne (origin in GDS), Global Switch (controlled by Jiangsu Shagang Group), Shanghai DC-Science |
 | Builders and equipment | Huawei, ZTE, Inspur, Sugon |
 | Other subsidiaries of Chinese groups | Huanbang (Hong Kong), a subsidiary of Jiangsu Shagang Group |
 | AI developers and compute brokers | INF Tech, Moonshot AI, Megaspeed (origin in a Chinese gaming firm) |
-| State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA |
+| State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA, and funds that they sponsor, such as the China-ASEAN Investment Cooperation Fund II |
 
 Bridge Data Centres is not a listed firm. Bain Capital bought ChinData in 2019 and merged it with Bridge, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge is therefore not Chinese-owned and did not begin as the international arm of a Chinese firm, and `data/firm_links.csv` records its former link to ChinData. A site that Bridge operates enters the dataset only when a listed firm holds a role there, such as ByteDance as tenant.
 
@@ -127,7 +127,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | Variable | Type | Description |
 |---|---|---|
 | firm, related_firm | text | The listed firm and the Chinese firm linked to it |
-| relation | category | shareholder, parent, former parent or former group member |
+| relation | category | shareholder, parent, former parent, former group member, or sponsor for a fund whose main sponsor is a Chinese state lender |
 | share | number | Share held, from 0 to 1, empty when the source gives none |
 | as_of | date | Date of the share, empty when the source gives none |
 | source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
@@ -237,11 +237,27 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 | note | text | Limits of the source |
 | source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
 
+### data/johor_census.csv
+
+`data/johor_census.csv` has one row for each data-centre facility in Johor that Baxtel's public list named on 22 October 2026. The list is the frame of the census, and each row copies the facility, the operator and the status as the list gives them, with the passage of the list. A person coded the Chinese link of each facility from the sites of `sites.csv` and from searches of 22 October 2026, and a row with a link carries a second passage from the page that supports it. The file is written in `config/johor_census.csv` and both passages are checked by `scripts/check_sources.py`.
+
+**Table 16. Variables in johor_census.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| facility, operator, baxtel_status | text | | Facility, operator and status as Baxtel's list gives them; a facility whose name Baxtel withholds takes the short code of its page |
+| baxtel_page | text | | Baxtel's page of the facility |
+| chinese_link | category | operator, owner, tenant, financier, unconfirmed, none_found | Role of a listed firm or of a fund of a Chinese state lender at the facility; unconfirmed for a link that a source reports but another source doubts or that rests on an owner the source does not name; none_found when no source found names one |
+| site_id | text | | Site in `sites.csv` that the facility belongs to, empty when the dataset has none |
+| note | text | | Limits of the coding |
+| source_url, source_quote, check_status, share_found, retrieved | | | Baxtel's list and the passage of the facility, as in Table 5 |
+| link_source_url, link_source_quote, link_check_status, link_share_found | | | Page and passage that support the Chinese link, and the result of their check |
+
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 16. Coding values**
+**Table 17. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -253,12 +269,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 17. Variables in government_data_centres_aiddata.csv**
+**Table 18. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 16 |
+| coding | category | Value from Table 17 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |

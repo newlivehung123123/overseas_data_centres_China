@@ -8,7 +8,8 @@ passage on the page. A passage counts as found when at least 90 percent of its o
 of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the
 result for each row, and checks config/operator_markets.csv, config/firm_links.csv,
-config/rules.csv, config/ai_compute.csv, config/site_capacity.csv, config/epoch_links.csv and config/operator_customers.csv in the same way. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
+config/rules.csv, config/ai_compute.csv, config/site_capacity.csv, config/epoch_links.csv, config/operator_customers.csv and config/johor_census.csv in the same
+way. A row of the Johor census can carry a second passage, for the link of a Chinese firm, which is checked as well. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
 
     python scripts/check_sources.py              downloads pages not saved yet
     python scripts/check_sources.py --refetch    downloads every page again
@@ -40,7 +41,8 @@ OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "oper
                 (ROOT / "config" / "ai_compute.csv", ROOT / "data" / "ai_compute.csv"),
                 (ROOT / "config" / "site_capacity.csv", ROOT / "data" / "site_capacity.csv"),
                 (ROOT / "config" / "epoch_links.csv", ROOT / "data" / "epoch_links.csv"),
-                (ROOT / "config" / "operator_customers.csv", ROOT / "data" / "operator_customers.csv")]
+                (ROOT / "config" / "operator_customers.csv", ROOT / "data" / "operator_customers.csv"),
+                (ROOT / "config" / "johor_census.csv", ROOT / "data" / "johor_census.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found
@@ -91,15 +93,23 @@ def page(url: str, refetch: bool) -> tuple[str, str] | None:
 
 
 def check(rows: list[dict], refetch: bool) -> list[dict]:
+    """Check the passage of each row, and also the second passage of a row that carries one in link_source_url."""
     out = []
     for r in rows:
-        got = page(r["source_url"], refetch)
         r = dict(r)
-        if got is None:
-            r.update(check_status="not_read", share_found="", retrieved="")
-        else:
-            share = share_found(r["source_quote"], got[0])
-            r.update(check_status=verdict(share), share_found=f"{share:.2f}", retrieved=got[1])
+        for prefix in ("", "link_"):
+            if prefix and not r.get("link_source_url"):
+                if "link_source_url" in r:
+                    r.update(link_check_status="", link_share_found="")
+                continue
+            got = page(r[prefix + "source_url"], refetch)
+            if got is None:
+                r.update({prefix + "check_status": "not_read", prefix + "share_found": ""})
+            else:
+                share = share_found(r[prefix + "source_quote"], got[0])
+                r.update({prefix + "check_status": verdict(share), prefix + "share_found": f"{share:.2f}"})
+            if not prefix:
+                r["retrieved"] = got[1] if got else ""
         out.append(r)
     return out
 
@@ -141,7 +151,9 @@ def main() -> None:
         write(path, checked)
         counts = {status: sum(r["check_status"] == status for r in checked)
                   for status in ("found", "partly_found", "not_found", "not_read")}
-        print(f"{len(checked)} {name} written to {path.relative_to(ROOT)}: {counts}")
+        links = [r["link_check_status"] for r in checked if r.get("link_check_status")]
+        extra = f"; second passages {dict((x, links.count(x)) for x in sorted(set(links)))}" if links else ""
+        print(f"{len(checked)} {name} written to {path.relative_to(ROOT)}: {counts}{extra}")
 
 
 if __name__ == "__main__":

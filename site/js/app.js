@@ -198,6 +198,27 @@
     }).join("");
   }
 
+  var LINKS = { operator: "Operated by a listed firm", owner: "Owned by a listed firm", tenant: "A listed firm is tenant",
+    financier: "Financed by a Chinese state lender's fund", unconfirmed: "Chinese link reported but not confirmed", none_found: "None found" };
+
+  function drawCensus(list) {
+    var counts = {};
+    list.forEach(function (x) { counts[x.link] = (counts[x.link] || 0) + 1; });
+    var operators = unique(list.map(function (x) { return x.operator; })).length;
+    var held = list.length - (counts.none_found || 0) - (counts.unconfirmed || 0);
+    el("census-summary").textContent = "Baxtel's public list names " + list.length + " data-centre facilities in Johor run by " + operators +
+      " operators. A role of a Chinese firm or a Chinese state lender's fund is recorded at " + held + " of them, a Chinese link is reported but not confirmed at " +
+      (counts.unconfirmed || 0) + ", and none was found at " + (counts.none_found || 0) + ". A facility with none found may still have a Chinese tenant that no source names.";
+    el("census").innerHTML = list.map(function (x) {
+      return "<tr><td>" + escape(x.facility || "Unnamed facility") + (x.site ? "<span class='quote'>Site " + escape(x.site) + "</span>" : "") + "</td>" +
+        "<td>" + escape(x.operator) + "</td><td>" + escape(x.status) + "</td>" +
+        "<td>" + (LINKS[x.link] || escape(x.link)) + "<span class='quote'>" + escape(x.note) + "</span></td>" +
+        "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>List</a> (" + escape(x.check) + ")" +
+        (x.link_source ? "<span class='quote'><a href='" + escape(x.link_source) + "' rel='noopener' target='_blank'>Link</a>: “" +
+          escape(x.link_quote) + "” (" + escape(x.link_check) + ")</span>" : "") + "</td></tr>";
+    }).join("");
+  }
+
   function start(data) {
     state.records = data.records;
     state.rules = data.rules || [];
@@ -205,6 +226,7 @@
     drawRules();
     drawUnplaced(data.ai_without_site || []);
     drawCustomers(data.customers || []);
+    drawCensus(data.census || []);
     el("built").textContent = "Data built on " + data.built + ".";
     var firms = [], roles = [], countries = [];
     data.records.forEach(function (r) {
