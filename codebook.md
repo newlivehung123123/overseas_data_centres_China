@@ -35,7 +35,7 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 
 Bridge Data Centres is not a listed firm. Bain Capital bought ChinData in 2019 and merged it with Bridge, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge is therefore not Chinese-owned and did not begin as the international arm of a Chinese firm, and `data/firm_links.csv` records its former link to ChinData. A site that Bridge operates enters the dataset only when a listed firm holds a role there, such as ByteDance as tenant.
 
-Ownership can change, so each link between a firm and its Chinese owner in `data/firm_links.csv` carries the date of its source. Global Switch has been under the control of a consortium of Chinese companies including Jiangsu Shagang Group since 2018, and the most recent source found, from January 2023, still names Shagang among its owners. Global Switch stays a listed firm until a source reports a change of control.
+Ownership can change, so each link between a firm and its Chinese owner in `data/firm_links.csv` carries the date of its source. Global Switch has been under the control of a consortium of Chinese companies including Jiangsu Shagang Group since 2018. Its annual report for 2025 states that Shagang holds an indirect stake of 51.8 percent and that the directors consider Shagang to control the group. Global Switch stays a listed firm until a source reports a change of control.
 
 ## Levels
 
@@ -178,7 +178,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | site_id | text | | Site in `sites.csv` |
 | capacity_mw | number | | Capacity in MW as the source states it |
 | basis | category | it, power, unspecified | As in Table 5 |
-| stage | category | in_service, first_phase, planned_total, contracted | Stage of the site that the figure describes, with contracted for power bought under an agreement |
+| stage | category | in_service, first_phase, planned_total, contracted, leased | Stage of the site that the figure describes, with contracted for power bought under an agreement and leased for capacity that customers have taken under an agreement |
 | date | date | | Date of the statement |
 | note | text | | What the figure covers |
 | source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |

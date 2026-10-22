@@ -1,5 +1,5 @@
 {
- "built": "2026-10-21",
+ "built": "2026-10-22",
  "records": [
   {
    "layer": "site",
@@ -1093,15 +1093,15 @@
   {
    "layer": "site",
    "id": "NLD-0001",
-   "name": "Global Switch Amsterdam",
+   "name": "Global Switch Amsterdam West",
    "city": "Amsterdam",
    "country": "Netherlands",
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed as completed in the 2025 annual report; the city page places the campus in Sloter-/Overtoomseveld",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Location Ownership Completed Amsterdam West Leasehold (50 year term expiring 2045)",
    "check": "found",
    "iso3": "NLD",
    "roles": [
@@ -1109,8 +1109,16 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/amsterdam/",
+     "quote": "Located in Sloter-/Overtoomseveld, adjacent to the main Dutch communications infrastructure and close to the financial district and city centre.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Location Ownership Completed Amsterdam West Leasehold (50 year term expiring 2045)",
      "check": "found"
     }
    ],
@@ -1123,16 +1131,64 @@
   },
   {
    "layer": "site",
+   "id": "NLD-0002",
+   "name": "Global Switch Amsterdam East",
+   "city": "Amsterdam",
+   "country": "Netherlands",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed as completed in the 2025 annual report, which says that the first phase was completed in 2025",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039) Amsterdam East Leasehold (50 year term expiring 2045)",
+   "check": "found",
+   "iso3": "NLD",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/amsterdam/",
+     "quote": "Located in Sloter-/Overtoomseveld, adjacent to the main Dutch communications infrastructure and close to the financial district and city centre.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039) Amsterdam East Leasehold (50 year term expiring 2045)",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [
+    {
+     "mw": "8",
+     "basis": "unspecified",
+     "stage": "leased",
+     "date": "2025-12-31",
+     "note": "Contracted capacity that the first phase added on its completion in 2025",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf"
+    }
+   ],
+   "point": [
+    52.3731,
+    4.8925
+   ]
+  },
+  {
+   "layer": "site",
    "id": "DEU-0003",
-   "name": "Global Switch Frankfurt",
+   "name": "Global Switch Frankfurt North",
    "city": "Frankfurt",
    "country": "Germany",
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed as completed in the 2025 annual report",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Frankfurt North Freehold",
    "check": "found",
    "iso3": "DEU",
    "roles": [
@@ -1140,8 +1196,94 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/frankfurt/",
+     "quote": "Global Switch Frankfurt is a highly connected landmark campus in the city’s core, offering adaptable technical space and a full range of power densities for any workload.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Frankfurt North Freehold",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "point": [
+    50.1106,
+    8.6821
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "DEU-0004",
+   "name": "Global Switch Frankfurt South",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed as completed in the 2025 annual report",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Frankfurt South Freehold",
+   "check": "found",
+   "iso3": "DEU",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/frankfurt/",
+     "quote": "Global Switch Frankfurt is a highly connected landmark campus in the city’s core, offering adaptable technical space and a full range of power densities for any workload.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Frankfurt South Freehold",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "point": [
+    50.1106,
+    8.6821
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "DEU-0005",
+   "name": "Global Switch Frankfurt 3",
+   "city": "Frankfurt",
+   "country": "Germany",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed under development in the 2025 annual report, which does not say whether building has begun",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
+   "check": "found",
+   "iso3": "DEU",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/frankfurt/",
+     "quote": "Global Switch Frankfurt is a highly connected landmark campus in the city’s core, offering adaptable technical space and a full range of power densities for any workload.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
      "check": "found"
     }
    ],
@@ -1161,9 +1303,9 @@
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed as completed in the 2025 annual report",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Hong Kong Leasehold (35 year term expiring 2047)",
    "check": "found",
    "iso3": "HKG",
    "roles": [
@@ -1171,13 +1313,38 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/hong-kong/",
+     "quote": "Located near the Hong Kong Stock Exchange, with easy connectivity to Hong Kong’s main business districts and mainland Chinese markets.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Hong Kong Leasehold (35 year term expiring 2047)",
+     "check": "found"
+    },
+    {
+     "firm": "Huanbang (Hong Kong)",
+     "origin": "Jiangsu Shagang Group",
+     "role": "tenant",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "During 2023, Shagang Materials, , novated the service agreement to Huanbang (Hong Kong) Co. Ltd (“Huanbang”) with effect from 1 January 2023. This contract remains in full effect for the year ended 2025 with no modifications. Huanbang is an indirect wholly owned subsidiary of Jiangsu Shagang Group.",
      "check": "found"
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "15",
+     "basis": "unspecified",
+     "stage": "leased",
+     "date": "2025-12-31",
+     "note": "Capacity under a service agreement with a subsidiary of Jiangsu Shagang Group, the controlling shareholder of Global Switch, until 31 December 2027",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf"
+    }
+   ],
    "point": [
     22.2818,
     114.1583
@@ -1186,15 +1353,15 @@
   {
    "layer": "site",
    "id": "GBR-0002",
-   "name": "Global Switch London",
+   "name": "Global Switch London East",
    "city": "London",
    "country": "United Kingdom",
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed as completed in the 2025 annual report; the city page places the campus in London Docklands",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "London East Freehold",
    "check": "found",
    "iso3": "GBR",
    "roles": [
@@ -1202,8 +1369,94 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/london/",
+     "quote": "Located in London Docklands, close to the City of London and at the heart of Europe’s densest fibre network cluster.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "London East Freehold",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "point": [
+    51.5074,
+    -0.1278
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "GBR-0003",
+   "name": "Global Switch London North",
+   "city": "London",
+   "country": "United Kingdom",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed as completed in the 2025 annual report; the city page places the campus in London Docklands",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "London North Freehold",
+   "check": "found",
+   "iso3": "GBR",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/london/",
+     "quote": "Located in London Docklands, close to the City of London and at the heart of Europe’s densest fibre network cluster.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "London North Freehold",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "point": [
+    51.5074,
+    -0.1278
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "GBR-0004",
+   "name": "Global Switch London South",
+   "city": "London",
+   "country": "United Kingdom",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed under development in the 2025 annual report, which does not say whether building has begun",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
+   "check": "found",
+   "iso3": "GBR",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/london/",
+     "quote": "Located in London Docklands, close to the City of London and at the heart of Europe’s densest fibre network cluster.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
      "check": "found"
     }
    ],
@@ -1223,9 +1476,9 @@
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed as completed in the 2025 annual report",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Madrid Freehold Paris East Freehold",
    "check": "found",
    "iso3": "ESP",
    "roles": [
@@ -1233,8 +1486,55 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/madrid/",
+     "quote": "Located close to the financial district and city centre, within Madrid’s major concentration of internet and technology companies.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Madrid Freehold Paris East Freehold",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "point": [
+    40.4168,
+    -3.7035
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "ESP-0003",
+   "name": "Global Switch Madrid 2",
+   "city": "Madrid",
+   "country": "Spain",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed under development in the 2025 annual report, which does not say whether building has begun",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
+   "check": "found",
+   "iso3": "ESP",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/madrid/",
+     "quote": "Located close to the financial district and city centre, within Madrid’s major concentration of internet and technology companies.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
      "check": "found"
     }
    ],
@@ -1248,15 +1548,15 @@
   {
    "layer": "site",
    "id": "FRA-0001",
-   "name": "Global Switch Paris",
+   "name": "Global Switch Paris East",
    "city": "Paris",
    "country": "France",
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed as completed in the 2025 annual report; the city page places the campus in Clichy-Levallois, outside the city boundary of Paris",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Paris East Freehold",
    "check": "found",
    "iso3": "FRA",
    "roles": [
@@ -1264,8 +1564,55 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/paris/",
+     "quote": "Located in Clichy-Levallois, between the city’s financial district and Paris La Défense, one of Europe’s major business districts.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Paris East Freehold",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "point": [
+    48.8535,
+    2.3484
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "FRA-0002",
+   "name": "Global Switch Paris West",
+   "city": "Paris",
+   "country": "France",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed as completed in the 2025 annual report; the city page places the campus in Clichy-Levallois, outside the city boundary of Paris",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Paris West Freehold",
+   "check": "found",
+   "iso3": "FRA",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/paris/",
+     "quote": "Located in Clichy-Levallois, between the city’s financial district and Paris La Défense, one of Europe’s major business districts.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Paris West Freehold",
      "check": "found"
     }
    ],
@@ -1279,15 +1626,15 @@
   {
    "layer": "site",
    "id": "SGP-0004",
-   "name": "Global Switch Singapore",
+   "name": "Global Switch Singapore Tai Seng",
    "city": "Singapore",
    "country": "Singapore",
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed as completed in the 2025 annual report",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Singapore Tai-Seng Leasehold (30 year term expiring 2053)",
    "check": "found",
    "iso3": "SGP",
    "roles": [
@@ -1295,8 +1642,55 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/singapore/",
+     "quote": "Located close to the financial district and city centre, Tai Seng is one of Asia-Pacific’s most connected facilities and a key data hub for cloud, enterprise and network providers.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Singapore Tai-Seng Leasehold (30 year term expiring 2053)",
+     "check": "found"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "point": [
+    1.2899,
+    103.8519
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "SGP-0005",
+   "name": "Global Switch Singapore Woodlands",
+   "city": "Singapore",
+   "country": "Singapore",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Listed as completed in the 2025 annual report",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039)",
+   "check": "found",
+   "iso3": "SGP",
+   "roles": [
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "operator",
+     "source": "https://www.globalswitch.com/data-centres/singapore/",
+     "quote": "Located in Woodlands to the north of the island, with direct access to the rapidly expanding Johor data cluster.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039)",
      "check": "found"
     }
    ],
@@ -1311,14 +1705,14 @@
    "layer": "site",
    "id": "MYS-0008",
    "name": "Global Switch Johor",
-   "city": "Johor",
+   "city": "Kulai, Johor",
    "country": "Malaysia",
    "status": "planned",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded; listed as coming soon",
-   "source": "https://www.globalswitch.com/",
-   "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+   "note": "Listed under development in the 2025 annual report; the city page says that capacity will be available in 2028",
+   "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+   "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
    "check": "found",
    "iso3": "MYS",
    "roles": [
@@ -1326,16 +1720,24 @@
      "firm": "Global Switch",
      "origin": "",
      "role": "operator",
-     "source": "https://www.globalswitch.com/",
-     "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
+     "source": "https://www.globalswitch.com/data-centres/johor/",
+     "quote": "Located in Kulai, Johor, within the Johor-Singapore Special Economic Zone, the site will enable low-latency connectivity into Singapore’s major business and cloud ecosystem.",
+     "check": "found"
+    },
+    {
+     "firm": "Global Switch",
+     "origin": "",
+     "role": "owner",
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
      "check": "found"
     }
    ],
    "ai": [],
    "capacity": [],
    "point": [
-    2.0229,
-    103.3115
+    1.6667,
+    103.6
    ]
   },
   {
@@ -1347,7 +1749,7 @@
    "status": "planned",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "Global Switch lists the city; the buildings in the city are not yet recorded; listed as coming soon",
+   "note": "Listed as coming soon on the home page, which links no page for Bangkok; the property list of the 2025 annual report does not include Bangkok",
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",

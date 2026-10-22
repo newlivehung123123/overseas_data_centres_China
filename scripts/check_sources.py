@@ -3,7 +3,7 @@
 
 A person writes each site in config/sites.csv and each role of a firm at a site in
 config/site_roles.csv, with the page that supports the row and a passage copied from the page. The
-check downloads every page once, saves its text in data/raw/pages/sources, and looks for the
+check downloads every page once, reads the text of a PDF with pypdf, saves the text in data/raw/pages/sources, and looks for the
 passage on the page. A passage counts as found when at least 90 percent of its overlapping pieces
 of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the

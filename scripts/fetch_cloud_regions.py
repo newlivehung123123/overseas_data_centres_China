@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import csv
 import html
+import io
 import json
 import os
 import re
@@ -107,10 +108,19 @@ def user_agent(url: str) -> str:
     return USER_AGENT
 
 
+def pdf_text(raw: bytes) -> str:
+    """Text of every page of a PDF, such as an annual report."""
+    import pypdf
+    return " ".join(page.extract_text() or "" for page in pypdf.PdfReader(io.BytesIO(raw)).pages)
+
+
 def download(url: str) -> str:
     request = urllib.request.Request(url, headers={"User-Agent": user_agent(url), "Accept-Language": "en"})
     with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
-        return response.read().decode("utf-8", errors="replace")
+        raw = response.read()
+    if raw.startswith(b"%PDF"):
+        return pdf_text(raw)
+    return raw.decode("utf-8", errors="replace")
 
 
 def load_page(key: str, url: str, offline: bool) -> tuple[str, str] | None:

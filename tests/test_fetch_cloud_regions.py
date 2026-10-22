@@ -51,6 +51,22 @@ class ParserTest(unittest.TestCase):
     def test_page_text_drops_scripts_and_tags(self):
         self.assertEqual(f.page_text("<p>Seoul</p><script>var x = 1;</script> <b>Tokyo</b>"), "Seoul Tokyo")
 
+    def test_pdf_text_reads_the_text_of_a_pdf(self):
+        stream = b"BT /F1 12 Tf 72 720 Td (Johor Freehold) Tj ET"
+        objects = [b"<< /Type /Catalog /Pages 2 0 R >>", b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
+                   b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R "
+                   b"/Resources << /Font << /F1 5 0 R >> >> >>",
+                   b"<< /Length %d >>\nstream\n%s\nendstream" % (len(stream), stream),
+                   b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"]
+        pdf, offsets = b"%PDF-1.4\n", []
+        for number, body in enumerate(objects, 1):
+            offsets.append(len(pdf))
+            pdf += b"%d 0 obj\n%s\nendobj\n" % (number, body)
+        start = len(pdf)
+        pdf += b"xref\n0 6\n0000000000 65535 f \n" + b"".join(b"%010d 00000 n \n" % o for o in offsets)
+        pdf += b"trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n%d\n%%%%EOF\n" % start
+        self.assertIn("Johor Freehold", f.pdf_text(pdf))
+
 
 if __name__ == "__main__":
     unittest.main()
