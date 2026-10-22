@@ -140,7 +140,8 @@
   function drawRules() {
     el("rules").innerHTML = state.rules.map(function (x) {
       return "<tr><td>" + escape(x.instrument) + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td>" +
-        "<td>" + escape(x.jurisdiction) + ((x.applies_in || []).join() === "all" ? "" : "<span class='quote'>Applies in " + escape((x.applies_in || []).join(", ")) + "</span>") + "</td><td>" + (COVERS[x.covers] || escape(x.covers)) + "</td>" +
+        "<td>" + escape(x.jurisdiction) + ((x.applies_in || []).join() === "all" ? "" : "<span class='quote'>Applies in " + ((x.applies_in || []).length > 6 ? x.applies_in.length + " countries" :
+          escape((x.applies_in || []).join(", "))) + "</span>") + "</td><td>" + (COVERS[x.covers] || escape(x.covers)) + "</td>" +
         "<td>" + (RULE_STATUS[x.status] || escape(x.status)) + (x.date ? " (" + escape(x.date) + ")" : "") + "</td>" +
         "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
         escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";

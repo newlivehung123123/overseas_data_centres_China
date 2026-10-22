@@ -134,14 +134,14 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 
 ### data/rules.csv
 
-`data/rules.csv` has one row for each rule, bill or guidance that bears on the AI chips in a host country or on remote access to them, with the part of the rule that the row records. A rule with several parts, such as a permit that covers exports but not use within the country, has one row for each part. The file is written by hand in `config/rules.csv` and checked by `scripts/check_sources.py`.
+`data/rules.csv` has one row for each rule, bill or guidance that bears on the AI chips in a host country or on remote access to them, with the part of the rule that the row records. A clause of a private contract that imposes such a control, such as a lender's requirement that an operator watch how a customer uses the chips, is recorded in the same way and marked as a private contract. A rule with several parts, such as a permit that covers exports but not use within the country, has one row for each part. The file is written by hand in `config/rules.csv` and checked by `scripts/check_sources.py`.
 
 **Table 9. Variables in rules.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
-| rule_id | text | ISO 3166-1 alpha-3 code, a hyphen and four digits | Identifier of the row |
-| jurisdiction, country_iso3 | text | | Country whose rule it is |
+| rule_id | text | ISO 3166-1 alpha-3 code, a hyphen and four digits | Identifier of the row, with EUU for the European Union, which has no alpha-3 code |
+| jurisdiction, country_iso3 | text | | Country whose rule it is, or Private contract for a clause of a contract that imposes such a control, with the country where the contract applies |
 | applies_in | text | all, or ISO 3166-1 alpha-3 codes separated by semicolons | Countries where the rule applies, with all for a US export rule that follows US-origin chips everywhere |
 | instrument | text | | Name of the law, rule, bill or guidance |
 | covers | category | chip_export, chip_transit, remote_access, use_in_country, guidance | Part of the chain from shipment to use that the row records |
