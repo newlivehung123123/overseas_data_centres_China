@@ -67,6 +67,22 @@
     return escape(r.capacity_mw) + (r.capacity_basis && r.capacity_basis !== "unspecified" ? " (" + escape(r.capacity_basis) + ")" : "");
   }
 
+  function number(value) {
+    return Number(value).toLocaleString("en-GB");
+  }
+
+  function aiText(x) {
+    return "AI chips: " + (x.count ? escape(number(x.count)) + " " : "") + escape(x.chips) + ", " + escape(x.access) +
+      " by " + escape(x.firm) + ", " + escape(x.status);
+  }
+
+  function epochText(e) {
+    return "Epoch AI estimate: " + escape(number(e.mw)) + " MW of IT power and about " + escape(number(e.h100e)) +
+      " H100 equivalents" + (e.chips ? ", chips " + escape(e.chips.replace(/,/g, ", ")) : "") +
+      (e.users ? ", users " + escape(e.users) : "") + ", as " + escape(e.name) + ". <a href='" + escape(e.page) +
+      "' rel='noopener' target='_blank'>Epoch page</a>";
+  }
+
   function drawTable(rows) {
     el("rows").innerHTML = rows.map(function (r) {
       return "<tr><td><span class='tag " + r.layer + "'>" + LABELS[r.layer] + "</span> " + escape(r.name) +
@@ -76,9 +92,9 @@
             ", " + escape(x.date) + "). <a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Source</a></span>";
         }).join("") +
         (r.ai || []).map(function (x) {
-          return "<span class='quote'>AI chips: " + escape(Number(x.count).toLocaleString("en-GB")) + " " + escape(x.chips) +
-            ", " + escape(x.access) + " by " + escape(x.firm) + ", " + escape(x.status) + "</span>";
-        }).join("") + "</td>" +
+          return "<span class='quote'>" + aiText(x) + ". <a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Source</a></span>";
+        }).join("") +
+        (r.epoch ? "<span class='quote'>" + epochText(r.epoch) + "</span>" : "") + "</td>" +
         "<td>" + roleText(r) + "</td><td>" + place(r) + "</td><td>" + (STATUS[r.status] || escape(r.status)) + "</td>" +
         "<td>" + mw(r) + "</td><td><a href='" + escape(r.source) + "' rel='noopener' target='_blank'>Page</a>" +
         "<span class='quote'>“" + escape(r.quote) + "” (" + escape(r.check) + ")</span></td></tr>";
@@ -130,10 +146,42 @@
     }).join("");
   }
 
+  function drawSummary(data) {
+    var sites = data.records.filter(function (r) { return r.layer === "site"; });
+    var firms = [], ai = (data.ai_without_site || []).length;
+    sites.forEach(function (r) {
+      ai += (r.ai || []).length;
+      r.roles.forEach(function (x) { firms.push(x.firm); });
+    });
+    var tiles = [
+      ["Sites", sites.length],
+      ["Cloud regions", data.records.length - sites.length],
+      ["Countries and territories", unique(data.records.map(function (r) { return r.country; })).length],
+      ["Firms with a role at a site", unique(firms).length],
+      ["Reports of AI chips", ai],
+      ["Rules recorded", (data.rules || []).length]
+    ];
+    el("summary").innerHTML = tiles.map(function (t) {
+      return "<div class='tile'><span class='value'>" + escape(number(t[1])) + "</span><span class='label'>" + escape(t[0]) + "</span></div>";
+    }).join("");
+  }
+
+  function drawUnplaced(list) {
+    el("ai-without-site").innerHTML = list.map(function (x) {
+      return "<tr><td>" + escape(x.firm) + "</td><td>" + (x.count ? escape(number(x.count)) + " " : "") + escape(x.chips) +
+        (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td><td>" + escape(x.access) + "</td>" +
+        "<td>" + escape(x.status) + (x.date ? " (" + escape(x.date) + ")" : "") + "</td>" +
+        "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
+        escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";
+    }).join("");
+  }
+
   function start(data) {
     state.records = data.records;
     state.rules = data.rules || [];
+    drawSummary(data);
     drawRules();
+    drawUnplaced(data.ai_without_site || []);
     el("built").textContent = "Data built on " + data.built + ".";
     var firms = [], roles = [], countries = [];
     data.records.forEach(function (r) {

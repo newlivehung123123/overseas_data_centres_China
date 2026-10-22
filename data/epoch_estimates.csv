@@ -1,0 +1,5 @@
+site_id,epoch_name,it_power_mw,h100_equivalents,chip_types,owner,users,source_url,retrieved
+MYS-0001,Bridge Data Centres MY06,243,221052,"A100,H100,B200",ByteDance #likely,ByteDance #likely,https://epoch.ai/data/data_centers/data_centers.csv,2026-10-22
+MYS-0003,DayOne Nusajaya,473,583837,"H100,B300",,,https://epoch.ai/data/data_centers/data_centers.csv,2026-10-22
+MYS-0004,DayOne Kempas,422,480639,B300,,,https://epoch.ai/data/data_centers/data_centers.csv,2026-10-22
+IDN-0002,Oracle Batam,72,84386,"B200,B300",Oracle #likely,Tencent #speculative,https://epoch.ai/data/data_centers/data_centers.csv,2026-10-22

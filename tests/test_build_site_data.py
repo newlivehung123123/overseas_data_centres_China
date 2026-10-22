@@ -22,7 +22,15 @@ TABLES = {
                                 "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
     "data/ai_compute.csv": [{"site_id": "MYS-0001", "firm": "ByteDance", "chip_count": "36000", "chips": "Nvidia B200",
                              "access": "rented", "status": "planned", "date": "2026-03", "note": "",
+                             "source_url": "https://example.org", "source_quote": "q", "check_status": "found"},
+                            {"site_id": "", "firm": "Tencent", "chip_count": "100000", "chips": "AI chips",
+                             "access": "rented", "status": "unclear", "date": "2026-10", "note": "",
                              "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
+    "data/epoch_links.csv": [{"site_id": "MYS-0001", "epoch_name": "A site", "note": "", "source_url": "https://example.org/epoch",
+                              "source_quote": "q", "check_status": "found"}],
+    "data/epoch_estimates.csv": [{"site_id": "MYS-0001", "epoch_name": "A site", "it_power_mw": "243", "h100_equivalents": "221052",
+                                  "chip_types": "B200", "owner": "", "users": "", "source_url": "https://example.org/csv",
+                                  "retrieved": "2026-10-22"}],
     "data/site_capacity.csv": [{"site_id": "MYS-0001", "capacity_mw": "300", "basis": "power", "stage": "planned_total",
                                 "date": "2025-11", "note": "", "source_url": "https://example.org", "source_quote": "q",
                                 "check_status": "found"}],
@@ -53,6 +61,10 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(site["ai"][0]["count"], "36000")
         self.assertEqual(site["capacity"][0]["mw"], "300")
         self.assertEqual(region.get("ai", []), [])
+        self.assertEqual(site["epoch"]["mw"], "243")
+        self.assertIsNone(region.get("epoch"))
+        self.assertEqual([x["firm"] for x in data["ai_without_site"]], ["Tencent"])
+        self.assertEqual(len(site["ai"]), 1)
 
 
 if __name__ == "__main__":

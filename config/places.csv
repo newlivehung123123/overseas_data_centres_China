@@ -36,6 +36,7 @@ Mexico City,Mexico,19.3207722,-99.1514678,relation,1376330,"Ciudad de México, M
 Queretaro,Mexico,20.8052225,-99.8837376,relation,2340903,"Querétaro, México",https://nominatim.openstreetmap.org/search?q=Queretaro%2C+Mexico&format=json&limit=1
 ,Netherlands,52.2434979,5.6343227,relation,47796,Nederland,https://nominatim.openstreetmap.org/search?q=Netherlands&format=json&limit=1
 Amsterdam,Netherlands,52.3730796,4.8924534,relation,271110,"Amsterdam, Noord-Holland, Nederland",https://nominatim.openstreetmap.org/search?q=Amsterdam%2C+Netherlands&format=json&limit=1
+Glomfjord,Norway,66.8165693,13.9436500,node,1312806546,"Glomfjord, Meløy, Nordland, 8160, Norge",https://nominatim.openstreetmap.org/search?q=Glomfjord%2C+Mel%C3%B8y%2C+Norway&format=json&limit=3
 Hamar,Norway,61.0014937,11.1647964,relation,410882,"Hamar, Innlandet, Norge",https://nominatim.openstreetmap.org/search?q=Hamar%2C+Norway&format=json&limit=1
 Lima,Peru,-12.0459808,-77.0305912,node,4289361265,"Lima, Lima Metropolitana, Lima, 15001, Perú",https://nominatim.openstreetmap.org/search?q=Lima%2C+Peru&format=json&limit=1
 Manila,Philippines,14.5904492,120.9803621,relation,103703,"Manila, Capital District, Metro Manila, Philippines",https://nominatim.openstreetmap.org/search?q=Manila%2C+Philippines&format=json&limit=1

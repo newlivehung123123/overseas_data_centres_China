@@ -8,7 +8,7 @@ passage on the page. A passage counts as found when at least 90 percent of its o
 of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the
 result for each row, and checks config/operator_markets.csv, config/firm_links.csv,
-config/rules.csv, config/ai_compute.csv and config/site_capacity.csv in the same way. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
+config/rules.csv, config/ai_compute.csv, config/site_capacity.csv and config/epoch_links.csv in the same way. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
 
     python scripts/check_sources.py              downloads pages not saved yet
     python scripts/check_sources.py --refetch    downloads every page again
@@ -38,7 +38,8 @@ OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "oper
                 (ROOT / "config" / "firm_links.csv", ROOT / "data" / "firm_links.csv"),
                 (ROOT / "config" / "rules.csv", ROOT / "data" / "rules.csv"),
                 (ROOT / "config" / "ai_compute.csv", ROOT / "data" / "ai_compute.csv"),
-                (ROOT / "config" / "site_capacity.csv", ROOT / "data" / "site_capacity.csv")]
+                (ROOT / "config" / "site_capacity.csv", ROOT / "data" / "site_capacity.csv"),
+                (ROOT / "config" / "epoch_links.csv", ROOT / "data" / "epoch_links.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found

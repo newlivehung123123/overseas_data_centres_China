@@ -40,6 +40,12 @@ header h1 { font-size: 1.6rem; margin: 24px 0 8px; }
 }
 .controls .search { flex: 1 1 220px; }
 .controls .search input { width: 100%; }
+.summary { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.summary .tile {
+  flex: 1 1 140px; padding: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+}
+.summary .value { display: block; font-size: 1.6rem; font-weight: 600; line-height: 1.2; }
+.summary .label { display: block; color: var(--muted); font-size: 0.85rem; }
 #map { height: 460px; border: 1px solid var(--line); border-radius: 6px; }
 h2 { font-size: 1.15rem; margin: 24px 0 4px; }
 .rules p { margin: 0 0 4px; color: var(--muted); font-size: 0.9rem; }
@@ -51,6 +57,7 @@ td .quote { color: var(--muted); font-size: 0.85rem; display: block; margin-top:
 .tag.site { background: var(--site); }
 .tag.cloud_region { background: var(--region); }
 a { color: var(--region); }
+footer a, td .quote { overflow-wrap: anywhere; }
 .leaflet-popup-content { font-size: 0.85rem; max-height: 260px; overflow-y: auto; }
 @media (max-width: 720px) {
   #map { height: 340px; }

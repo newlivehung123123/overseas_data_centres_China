@@ -15,6 +15,8 @@
     <p class="counts" id="counts"></p>
   </header>
 
+  <section class="summary" id="summary" aria-label="Summary of the dataset"></section>
+
   <section class="controls" aria-label="Filters">
     <label><input type="checkbox" id="show-sites" checked> Sites</label>
     <label><input type="checkbox" id="show-regions" checked> Cloud regions</label>
@@ -38,6 +40,17 @@
     </table>
   </section>
 
+  <section aria-label="Reports of AI chips without a named site" class="rules">
+    <h2>Reports of AI chips at sites that the sources do not name</h2>
+    <p>Reports of Chinese firms that reach AI chips outside China whose sources do not name the site. Reports that name a site appear in the row of that site below.</p>
+    <table>
+      <thead>
+        <tr><th>Firm</th><th>Chips</th><th>Access</th><th>Status</th><th>Source</th></tr>
+      </thead>
+      <tbody id="ai-without-site"></tbody>
+    </table>
+  </section>
+
   <section aria-label="Records">
     <h2>Sites and cloud regions</h2>
     <table>
@@ -49,7 +62,7 @@
   </section>
 
   <footer>
-    <p>Data and code: <a href="https://github.com/newlivehung123123/overseas_data_centres_china">github.com/newlivehung123123/overseas_data_centres_china</a>. The codebook in the repository defines every role and variable. The data are under the Creative Commons Attribution 4.0 licence. Map data © OpenStreetMap contributors.</p>
+    <p>Data and code: <a href="https://github.com/newlivehung123123/overseas_data_centres_china">github.com/newlivehung123123/overseas_data_centres_china</a>. The codebook in the repository defines every role and variable. The data are under the Creative Commons Attribution 4.0 licence. Estimates marked Epoch AI come from Epoch AI, ‘AI data centers’, published online at epoch.ai under the same licence. Map data © OpenStreetMap contributors.</p>
     <p id="built"></p>
   </footer>
 

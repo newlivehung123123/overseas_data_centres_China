@@ -1,10 +1,10 @@
 {
-  "sites": 62,
+  "sites": 63,
   "site_countries": 17,
   "sites_by_status": {
-    "operational": 28,
-    "under_construction": 6,
-    "planned": 21,
+    "operational": 29,
+    "under_construction": 7,
+    "planned": 20,
     "unclear": 7
   },
   "sites_by_country": {
@@ -18,25 +18,25 @@
     "United Kingdom": 4,
     "Finland": 3,
     "Spain": 3,
+    "Norway": 2,
     "Ireland": 2,
     "Netherlands": 2,
     "France": 2,
     "Brazil": 1,
-    "Norway": 1,
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 84,
+  "roles": 85,
   "roles_by_role": {
     "operator": 42,
     "owner": 22,
-    "tenant": 12,
+    "tenant": 13,
     "user": 8
   },
   "sites_by_firm": {
     "Global Switch": 17,
     "DayOne": 16,
-    "ByteDance": 12,
+    "ByteDance": 13,
     "China Mobile International": 4,
     "China Unicom Global": 4,
     "Alibaba Cloud": 4,
@@ -48,10 +48,10 @@
     "Megaspeed": 1,
     "Moonshot AI": 1
   },
-  "sites_with_capacity": 7,
+  "sites_with_capacity": 8,
   "site_capacity_mw_by_basis": {
     "unspecified": 438,
-    "it": 100,
+    "it": 142,
     "power": 460
   },
   "cloud_regions_operational_outside_china_hk_macau": 47,

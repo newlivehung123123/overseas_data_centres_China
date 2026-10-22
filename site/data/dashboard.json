@@ -27,6 +27,18 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": {
+    "name": "Bridge Data Centres MY06",
+    "mw": "243",
+    "h100e": "221052",
+    "chips": "A100,H100,B200",
+    "owner": "ByteDance #likely",
+    "users": "ByteDance #likely",
+    "retrieved": "2026-10-22",
+    "page": "https://epoch.ai/data/ai-data-centers/directory/bridge-data-centres-my06",
+    "quote": "Bridge Data Centres MY06 Kulai, Johor, Malaysia Bridge Data Centres MY06 is an operational AI data center with AI chips likely owned and used by ByteDance.",
+    "check": "found"
+   },
    "point": [
     1.7127,
     103.5257
@@ -67,6 +79,7 @@
      "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/"
     }
    ],
+   "epoch": null,
    "point": [
     1.1031,
     104.0384
@@ -98,6 +111,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     1.4523,
     103.6145
@@ -137,6 +151,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     60.8679,
     26.7041
@@ -168,6 +183,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     60.9826,
     25.6613
@@ -207,6 +223,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     60.9826,
     25.6613
@@ -238,6 +255,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     -3.7717,
     -38.7906
@@ -269,6 +287,18 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": {
+    "name": "DayOne Nusajaya",
+    "mw": "473",
+    "h100e": "583837",
+    "chips": "H100,B300",
+    "owner": "",
+    "users": "",
+    "retrieved": "2026-10-22",
+    "page": "https://epoch.ai/data/ai-data-centers/directory/dayone-nusajaya",
+    "quote": "DayOne Nusajaya Johor Bahru, Johor, Malaysia DayOne Nusajaya is an operational AI data center with an unknown owner.",
+    "check": "found"
+   },
    "point": [
     2.0229,
     103.3115
@@ -300,6 +330,18 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": {
+    "name": "DayOne Kempas",
+    "mw": "422",
+    "h100e": "480639",
+    "chips": "B300",
+    "owner": "",
+    "users": "",
+    "retrieved": "2026-10-22",
+    "page": "https://epoch.ai/data/ai-data-centers/directory/dayone-kempas",
+    "quote": "DayOne Kempas Kempas, Johor, Malaysia DayOne Kempas is an operational AI data center with an unknown owner.",
+    "check": "found"
+   },
    "point": [
     2.0229,
     103.3115
@@ -330,7 +372,36 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "72",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2025-06-05",
+     "note": "Combined IT load of the three data centres of the campus on completion, expected by the end of 2025",
+     "source": "https://www.uob.com.sg/uobgroup/newsroom/news-releases/2025/dbs-uob-arrange-loan-for-data-centre-development-project-by-dayone.page"
+    },
+    {
+     "mw": "120",
+     "basis": "power",
+     "stage": "planned_total",
+     "date": "2025-07-11",
+     "note": "Power of the DayOne plots at Nongsa Digital Park that Oracle, which is not a Chinese firm, leases as sole tenant, according to unnamed sources of Bloomberg",
+     "source": "https://www.datacenterknowledge.com/cloud/oracle-said-to-advance-indonesia-cloud-services-plan"
+    }
+   ],
+   "epoch": {
+    "name": "Oracle Batam",
+    "mw": "72",
+    "h100e": "84386",
+    "chips": "B200,B300",
+    "owner": "Oracle #likely",
+    "users": "Tencent #speculative",
+    "retrieved": "2026-10-22",
+    "page": "https://epoch.ai/data/ai-data-centers/directory/oracle-batam",
+    "quote": "Sources DayOne discloses a partnership with \"leading global tech company\" at their Batam campus Oracle announces their Batam cloud compute region Oracle is later reported to be leasing DayOne data centers in Indonesia",
+    "check": "found"
+   },
    "point": [
     1.1031,
     104.0384
@@ -361,7 +432,17 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "20",
+     "basis": "unspecified",
+     "stage": "planned_total",
+     "date": "2026-08-18",
+     "note": "The data centre broke ground in July 2025 and is expected to operate by the first quarter of 2027",
+     "source": "https://www.ocbc.com/group/media/release/2026/dayone-secures-530-million-green-loan"
+    }
+   ],
+   "epoch": null,
    "point": [
     1.2899,
     103.8519
@@ -393,6 +474,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     3.1517,
     101.6942
@@ -424,6 +506,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     3.1517,
     101.6942
@@ -472,6 +555,7 @@
      "source": "https://www.datacenterdynamics.com/en/news/dayone-to-expand-ctp1-thailand-data-center-to-300mw-signs-mou-with-amata-for-ctp2/"
     }
    ],
+   "epoch": null,
    "point": [
     13.1857,
     101.1211
@@ -503,6 +587,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     33.2645,
     129.8808
@@ -533,7 +618,17 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "40",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2024-03-26",
+     "note": "Expected IT capacity of the two adjacent sites at Fuchu Intelligent Park",
+     "source": "https://dayonedc.com/markets/dayone-enters-japan-in-partnership-with-gaw-capital-to-build-40mw-tokyo-project/"
+    }
+   ],
+   "epoch": null,
    "point": [
     35.6694,
     139.4774
@@ -545,12 +640,12 @@
    "name": "DayOne Kodaira site",
    "city": "Kodaira, Tokyo",
    "country": "Japan",
-   "status": "planned",
-   "capacity_mw": "",
-   "capacity_basis": "",
-   "note": "A freehold site; the Tokyo sites have 60 MW of secured powered land together",
-   "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
-   "quote": "We subsequently expanded our presence in 2025 by acquiring a freehold site in Kodaira, in western Tokyo.",
+   "status": "under_construction",
+   "capacity_mw": "42",
+   "capacity_basis": "it",
+   "note": "A freehold site acquired in 2025; the first phase of 15 MW broke ground in September 2026",
+   "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/",
+   "quote": "The company recently announced it broke ground on Phase I of the DayOne Kodaira Data Center in Tokyo.",
    "check": "found",
    "iso3": "JPN",
    "roles": [
@@ -564,7 +659,25 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "15",
+     "basis": "it",
+     "stage": "first_phase",
+     "date": "2026-09-14",
+     "note": "IT capacity of the first phase, which broke ground in September 2026",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/"
+    },
+    {
+     "mw": "42",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2026-09-14",
+     "note": "Planned IT capacity of the campus",
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/"
+    }
+   ],
+   "epoch": null,
    "point": [
     35.7252,
     139.4766
@@ -596,6 +709,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     22.3037,
     114.1649
@@ -626,7 +740,17 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "300",
+     "basis": "unspecified",
+     "stage": "planned_total",
+     "date": "2026-06-10",
+     "note": "Planned capacity of the campus in Escatrón, near Zaragoza, which Ignis develops and DayOne will operate; the first phase has not been disclosed",
+     "source": "https://www.datacenterdynamics.com/en/news/ignis-to-build-dayones-300mw-data-center-in-aragon-spain/"
+    }
+   ],
+   "epoch": null,
    "point": [
     41.6916,
     -0.9101
@@ -658,9 +782,55 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     61.0015,
     11.1648
+   ]
+  },
+  {
+   "layer": "site",
+   "id": "NOR-0002",
+   "name": "Nscale Glomfjord data centre",
+   "city": "Glomfjord",
+   "country": "Norway",
+   "status": "operational",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Nscale is not a Chinese firm; ByteDance reaches the chips through its Singapore subsidiary Spring (SG)",
+   "source": "https://www.tomshardware.com/tech-industry/data-centers/filing-reveals-how-bytedance-gained-access-to-over-2-000-nvidia-b200-chips-through-nscales-norway-data-center-singaporean-subsidiary-spring-contributed-73-percent-of-uk-neoclouds-2025-revenue",
+   "quote": "This contract allowed Spring to access 2,304 Nvidia B200 chips at Nscale’s Glomfjord, Norway, data center.",
+   "check": "found",
+   "iso3": "NOR",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.tomshardware.com/tech-industry/data-centers/filing-reveals-how-bytedance-gained-access-to-over-2-000-nvidia-b200-chips-through-nscales-norway-data-center-singaporean-subsidiary-spring-contributed-73-percent-of-uk-neoclouds-2025-revenue",
+     "quote": "it was noted in a supporting document, a $105 million loan agreement with Macquarie, that Spring (SG) Pte Ltd, a Singaporean ByteDance subsidiary, was a significant customer.",
+     "check": "found"
+    }
+   ],
+   "ai": [
+    {
+     "firm": "ByteDance",
+     "chips": "Nvidia B200 (SXM) in 32 GB200 NVL72 servers",
+     "count": "2304",
+     "access": "rented",
+     "status": "operational",
+     "date": "2026-09-18",
+     "note": "Under a cloud services agreement of 15 May 2025 between an Nscale subsidiary and Spring (SG) Pte. Ltd.; the loan agreement filed with Nscale's registration statement at the SEC does not name ByteDance",
+     "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_12.htm",
+     "quote": "\" GPUs \" shall mean the 2,304 NVIDIA B200 graphics processing units (SXM model) and such other graphics processing units approved in writing by the Agent.",
+     "check": "found"
+    }
+   ],
+   "capacity": [],
+   "epoch": null,
+   "point": [
+    66.8166,
+    13.9436
    ]
   },
   {
@@ -689,6 +859,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     52.8652,
     -7.9795
@@ -720,6 +891,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     13.7525,
     100.4935
@@ -751,6 +923,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     13.6532,
     100.8183
@@ -782,6 +955,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     13.6093,
     101.5467
@@ -813,6 +987,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     1.3438,
     103.8876
@@ -844,6 +1019,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     51.5111,
     -0.5941
@@ -875,6 +1051,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     49.9705,
     8.5701
@@ -906,6 +1083,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     22.3492,
     114.1858
@@ -937,6 +1115,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     22.3088,
     114.2596
@@ -968,6 +1147,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     1.2899,
     103.8519
@@ -999,6 +1179,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     35.6769,
     139.7639
@@ -1030,6 +1211,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     50.1106,
     8.6821
@@ -1085,6 +1267,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     2.0229,
     103.3115
@@ -1124,6 +1307,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     52.3731,
     4.8925
@@ -1172,6 +1356,7 @@
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf"
     }
    ],
+   "epoch": null,
    "point": [
     52.3731,
     4.8925
@@ -1211,6 +1396,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     50.1106,
     8.6821
@@ -1250,6 +1436,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     50.1106,
     8.6821
@@ -1289,6 +1476,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     50.1106,
     8.6821
@@ -1345,6 +1533,7 @@
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf"
     }
    ],
+   "epoch": null,
    "point": [
     22.2818,
     114.1583
@@ -1384,6 +1573,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     51.5074,
     -0.1278
@@ -1423,6 +1613,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     51.5074,
     -0.1278
@@ -1462,6 +1653,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     51.5074,
     -0.1278
@@ -1501,6 +1693,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     40.4168,
     -3.7035
@@ -1540,6 +1733,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     40.4168,
     -3.7035
@@ -1579,6 +1773,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     48.8535,
     2.3484
@@ -1618,6 +1813,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     48.8535,
     2.3484
@@ -1657,6 +1853,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     1.2899,
     103.8519
@@ -1696,6 +1893,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     1.2899,
     103.8519
@@ -1735,6 +1933,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     1.6667,
     103.6
@@ -1766,6 +1965,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     13.7525,
     100.4935
@@ -1797,6 +1997,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     2.0229,
     103.3115
@@ -1828,6 +2029,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     3.1517,
     101.6942
@@ -1859,6 +2061,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     24.6389,
     46.716
@@ -1890,6 +2093,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     -26.205,
     28.0497
@@ -1921,6 +2125,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     52.8652,
     -7.9795
@@ -1957,11 +2162,15 @@
      "count": "36000",
      "access": "rented",
      "status": "planned",
+     "date": "2026-03",
+     "note": "Valued at more than US$2.5 billion; the chips stay in Malaysia and ByteDance reaches them through Aolani's cloud",
      "source": "https://www.techrepublic.com/article/news-bytedance-malaysia-ai-chip-deal/",
-     "quote": "ByteDance is set to access about 36,000 Nvidia B200 Blackwell GPUs through 500 NVL72 GB200 systems deployed in Malaysia."
+     "quote": "ByteDance is set to access about 36,000 Nvidia B200 Blackwell GPUs through 500 NVL72 GB200 systems deployed in Malaysia.",
+     "check": "found"
     }
    ],
    "capacity": [],
+   "epoch": null,
    "point": [
     4.5694,
     102.2657
@@ -1998,11 +2207,15 @@
      "count": "2304",
      "access": "rented",
      "status": "operational",
+     "date": "2025-11",
+     "note": "Indosat bought the racks from Nvidia's partner Aivres; INF Tech reaches them as a customer",
      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-ai-startup-gets-access-to-2-300-banned-blackwell-gpus-by-exploiting-cloud-loophole-rents-compute-from-indonesian-firm-with-32-nvidia-gb200-server-racks",
-     "quote": "Indonesian telecommunications company, Indosat Ooredoo Hutchison, acquired 32 Nvidia GB200 server racks from Aivres. With each rack containing 72 Blackwell chips, this amounts to 2,304 GPUs"
+     "quote": "Indonesian telecommunications company, Indosat Ooredoo Hutchison, acquired 32 Nvidia GB200 server racks from Aivres. With each rack containing 72 Blackwell chips, this amounts to 2,304 GPUs",
+     "check": "found"
     }
    ],
    "capacity": [],
+   "epoch": null,
    "point": [
     -6.1754,
     106.8272
@@ -2039,11 +2252,15 @@
      "count": "",
      "access": "owned",
      "status": "unclear",
+     "date": "2026-06",
+     "note": "Shipped to data centres in Malaysia and Indonesia that appeared to serve Chinese clients remotely; under US investigation",
      "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
-     "quote": "Megaspeed had purchased through its Malaysian subsidiary nearly US$2 billion worth of advanced Nvidia chips, which were then shipped to data centers in Malaysia and Indonesia that appeared to be remotely serving Chinese clients."
+     "quote": "Megaspeed had purchased through its Malaysian subsidiary nearly US$2 billion worth of advanced Nvidia chips, which were then shipped to data centers in Malaysia and Indonesia that appeared to be remotely serving Chinese clients.",
+     "check": "found"
     }
    ],
    "capacity": [],
+   "epoch": null,
    "point": [
     4.5694,
     102.2657
@@ -2080,11 +2297,15 @@
      "count": "",
      "access": "rented",
      "status": "unclear",
+     "date": "2026-08",
+     "note": "An accusation without public evidence",
      "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
-     "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand."
+     "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand.",
+     "check": "found"
     }
    ],
    "capacity": [],
+   "epoch": null,
    "point": [
     14.8972,
     100.8327
@@ -2116,6 +2337,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     -6.1754,
     106.8272
@@ -2147,6 +2369,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     -2.4834,
     117.8903
@@ -2178,6 +2401,7 @@
    ],
    "ai": [],
    "capacity": [],
+   "epoch": null,
    "point": [
     13.7525,
     100.4935
@@ -4005,6 +4229,32 @@
    "note": "Charges of fraud for false representations to server suppliers about end users, under general law rather than a rule on AI chips",
    "source": "https://www.malaymail.com/news/singapore/2026/04/02/singapore-charges-another-individual-in-ai-chip-fraud-tied-to-dell-servers/214819",
    "quote": "Singapore prosecutors charged one more person with fraud today ‌for making false representations to US server supplier Dell Technologies, linking her to two other individuals charged with similar offences in February last year.",
+   "check": "found"
+  }
+ ],
+ "ai_without_site": [
+  {
+   "firm": "Tencent",
+   "chips": "Advanced AI chips whose model is not disclosed",
+   "count": "100000",
+   "access": "rented",
+   "status": "unclear",
+   "date": "2026-10-05",
+   "note": "A five-year lease worth about US$7 billion at several Oracle data centres in Southeast Asia, reported by the Financial Times and not confirmed by the companies; the countries and sites are not disclosed",
+   "source": "https://www.tomshardware.com/tech-industry/data-centers/tencent-scores-100-000-offshore-ai-chip-deal-with-oracle-for-usd7-billion-despite-climbing-prices-per-hour-costs-estimated-to-be-43-percent-under-standard-h100-rental-rates",
+   "quote": "Oracle has reportedly made a deal with Tencent for a five-year lease at several Oracle data centers in Southeast Asia, covering about 100,000 advanced AI chips unavailable in China.",
+   "check": "found"
+  },
+  {
+   "firm": "Tencent",
+   "chips": "Nvidia Blackwell",
+   "count": "",
+   "access": "rented",
+   "status": "unclear",
+   "date": "2026-10-05",
+   "note": "Contracts worth more than US$1.2 billion for chips of Datasection in Japan and Australia, as the Financial Times reported in December 2025; Datasection has not confirmed that Tencent is its customer",
+   "source": "https://www.tomshardware.com/tech-industry/data-centers/tencent-scores-100-000-offshore-ai-chip-deal-with-oracle-for-usd7-billion-despite-climbing-prices-per-hour-costs-estimated-to-be-43-percent-under-standard-h100-rental-rates",
+   "quote": "Tencent previously inked a $1.2 billion-plus deal for Datasection Blackwell rentals in Japan and Australia, the FT reported in December 2025.",
    "check": "found"
   }
  ]

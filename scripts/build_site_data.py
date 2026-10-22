@@ -2,8 +2,10 @@
 """Write the data file that the dashboard in site/ reads, from the checked layers.
 
 The dashboard shows the sites with the roles of firms at each site and the cloud regions, each at
-the point of its city in config/places.csv, and the rules recorded for each country. The government data centres of the AidData layer are
-left out of the dashboard until the article pitched on them has been answered, as CONTRIBUTING.md asks.
+the point of its city in config/places.csv, and the rules recorded for each country. Each site carries its reports of AI chips,
+its statements of capacity and the estimates of Epoch AI where Epoch's database holds the site, and reports of AI chips
+whose sources name no site are listed apart. The government data centres of the AidData layer are left out of the
+dashboard until the article pitched on them has been answered, as CONTRIBUTING.md asks.
 
     python scripts/build_site_data.py    writes site/data/dashboard.json
 """
@@ -41,7 +43,15 @@ def build() -> dict:
     compute = defaultdict(list)
     for a in read("data/ai_compute.csv"):
         compute[a["site_id"]].append({"firm": a["firm"], "chips": a["chips"], "count": a["chip_count"], "access": a["access"],
-                                      "status": a["status"], "source": a["source_url"], "quote": a["source_quote"]})
+                                      "status": a["status"], "date": a["date"], "note": a["note"], "source": a["source_url"],
+                                      "quote": a["source_quote"], "check": a["check_status"]})
+    links = {link["site_id"]: link for link in read("data/epoch_links.csv")}
+    epoch = {}
+    for e in read("data/epoch_estimates.csv"):
+        link = links[e["site_id"]]
+        epoch[e["site_id"]] = {"name": e["epoch_name"], "mw": e["it_power_mw"], "h100e": e["h100_equivalents"],
+                               "chips": e["chip_types"], "owner": e["owner"], "users": e["users"], "retrieved": e["retrieved"],
+                               "page": link["source_url"], "quote": link["source_quote"], "check": link["check_status"]}
     capacity = defaultdict(list)
     for c in read("data/site_capacity.csv"):
         capacity[c["site_id"]].append({"mw": c["capacity_mw"], "basis": c["basis"], "stage": c["stage"], "date": c["date"],
@@ -53,7 +63,7 @@ def build() -> dict:
             "status": s["status"], "capacity_mw": s["capacity_mw"], "capacity_basis": s["capacity_basis"],
             "note": s["note"], "source": s["source_url"], "quote": s["source_quote"], "check": s["check_status"],
             "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "ai": compute[s["site_id"]], "capacity": capacity[s["site_id"]],
-            "point": point(places, s["city"], s["country"]),
+            "epoch": epoch.get(s["site_id"]), "point": point(places, s["city"], s["country"]),
         })
     for c in read("data/cloud_regions.csv"):
         records.append({
@@ -69,7 +79,7 @@ def build() -> dict:
               "instrument": r["instrument"], "covers": r["covers"], "status": r["status"], "date": r["date"],
               "note": r["note"], "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"]}
              for r in read("data/rules.csv")]
-    return {"built": date.today().isoformat(), "records": records, "rules": rules}
+    return {"built": date.today().isoformat(), "records": records, "rules": rules, "ai_without_site": compute[""]}
 
 
 def main() -> None:

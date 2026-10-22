@@ -26,10 +26,11 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 
 | Group | Firms |
 |---|---|
-| Cloud and AI | Alibaba Cloud, Huawei Cloud, Tencent Cloud, ByteDance (including BytePlus and Volcano Engine), Baidu AI Cloud |
+| Cloud and AI | Alibaba Cloud, Huawei Cloud, Tencent Cloud and Tencent, ByteDance (including BytePlus, Volcano Engine and Spring (SG)), Baidu AI Cloud |
 | State telecom | China Mobile International, China Telecom Global, China Unicom Global |
 | Data-centre operators | GDS, VNET, zData, ChinData, DayOne (origin in GDS), Global Switch (controlled by Jiangsu Shagang Group) |
 | Builders and equipment | Huawei, ZTE, Inspur, Sugon |
+| Other subsidiaries of Chinese groups | Huanbang (Hong Kong), a subsidiary of Jiangsu Shagang Group |
 | AI developers and compute brokers | INF Tech, Moonshot AI, Megaspeed (origin in a Chinese gaming firm) |
 | State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA |
 
@@ -151,13 +152,13 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 
 ### data/ai_compute.csv
 
-`data/ai_compute.csv` has one row for each report of AI chips at a site, which is the evidence of AI workloads that level B records. The file is written by hand in `config/ai_compute.csv` and checked by `scripts/check_sources.py`.
+`data/ai_compute.csv` has one row for each report of AI chips at a site, which is the evidence of AI workloads that level B records. A report whose source names no site, such as a lease of chips at several data centres in a region, has an empty `site_id` and gives the place in its note. The file is written by hand in `config/ai_compute.csv` and checked by `scripts/check_sources.py`.
 
 **Table 10. Variables in ai_compute.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
-| site_id | text | | Site in `sites.csv` |
+| site_id | text | | Site in `sites.csv`, empty when the source names no site |
 | firm | text | | Firm that uses the chips |
 | chips | text | | Model of the chips and of the systems that hold them, as the source names them |
 | chip_count | integer | | Number of chips the source gives |
@@ -183,11 +184,35 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | note | text | | What the figure covers |
 | source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
 
+### data/epoch_links.csv and data/epoch_estimates.csv
+
+Epoch AI publishes a database of large AI data centres, "AI data centers", that estimates the IT power and the AI compute of each one from satellite imagery, permits and company documents, under the Creative Commons Attribution 4.0 licence. `data/epoch_links.csv` has one row for each site of `sites.csv` that the database also holds, written by hand in `config/epoch_links.csv` with the passage of the Epoch page that supports the match and checked by `scripts/check_sources.py`. `scripts/fetch_epoch.py` reads the estimates for those sites from Epoch's database file into `data/epoch_estimates.csv`. The estimates are Epoch's models and not statements of the firms, so they are kept apart from `site_capacity.csv`.
+
+**Table 12. Variables in epoch_links.csv**
+
+| Variable | Type | Description |
+|---|---|---|
+| site_id | text | Site in `sites.csv` |
+| epoch_name | text | Name of the data centre in Epoch's database |
+| note | text | Why the two records describe the same site |
+| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5, for the Epoch page of the data centre |
+
+**Table 13. Variables in epoch_estimates.csv**
+
+| Variable | Type | Description |
+|---|---|---|
+| site_id, epoch_name | text | As in Table 12 |
+| it_power_mw | number | Current IT power in MW that Epoch estimates, rounded to whole megawatts |
+| h100_equivalents | number | Current AI compute that Epoch estimates, in Nvidia H100 equivalents |
+| chip_types | text | Chips that Epoch estimates the site uses |
+| owner, users | text | Owner and users of the chips that Epoch names, with its own confidence, such as #likely or #speculative |
+| source_url, retrieved | text | Epoch's database file and the date it was read |
+
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 12. Coding values**
+**Table 14. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -199,12 +224,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 13. Variables in government_data_centres_aiddata.csv**
+**Table 15. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 12 |
+| coding | category | Value from Table 14 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |
