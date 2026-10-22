@@ -144,7 +144,7 @@ The first command writes `data/government_data_centres_aiddata.csv` and `data/ai
 
 ## Tests
 
-The tests use small tables and passages written in the test files and need no download.
+The tests use small tables and passages written in the test files and need no download. The workflow in `.github/workflows/tests.yml` runs them on each push.
 
 ```bash
 .venv/bin/python -m unittest discover -s tests
