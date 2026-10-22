@@ -54,12 +54,16 @@ def build() -> dict:
                                       "status": a["status"], "date": a["date"], "note": a["note"], "source": a["source_url"],
                                       "quote": a["source_quote"], "check": a["check_status"]})
     links = {link["site_id"]: link for link in read("data/epoch_links.csv")}
+    stages = defaultdict(list)
+    for t in read("data/epoch_timelines.csv"):
+        stages[t["site_id"]].append({"date": t["date"], "mw": t["it_power_mw"], "buildings": t["buildings_operational"]})
     epoch = {}
     for e in read("data/epoch_estimates.csv"):
         link = links[e["site_id"]]
         epoch[e["site_id"]] = {"name": e["epoch_name"], "mw": e["it_power_mw"], "h100e": e["h100_equivalents"],
                                "chips": e["chip_types"], "owner": e["owner"], "users": e["users"], "retrieved": e["retrieved"],
-                               "page": link["source_url"], "quote": link["source_quote"], "check": link["check_status"]}
+                               "page": link["source_url"], "quote": link["source_quote"], "check": link["check_status"],
+                               "timeline": stages[e["site_id"]]}
     capacity = defaultdict(list)
     for c in read("data/site_capacity.csv"):
         capacity[c["site_id"]].append({"mw": c["capacity_mw"], "basis": c["basis"], "stage": c["stage"], "date": c["date"],

@@ -37,7 +37,59 @@
     "retrieved": "2026-10-22",
     "page": "https://epoch.ai/data/ai-data-centers/directory/bridge-data-centres-my06",
     "quote": "Bridge Data Centres MY06 Kulai, Johor, Malaysia Bridge Data Centres MY06 is an operational AI data center with AI chips likely owned and used by ByteDance.",
-    "check": "found"
+    "check": "found",
+    "timeline": [
+     {
+      "date": "2021-10-01",
+      "mw": "0",
+      "buildings": "0"
+     },
+     {
+      "date": "2022-12-31",
+      "mw": "19",
+      "buildings": "1"
+     },
+     {
+      "date": "2023-03-01",
+      "mw": "19",
+      "buildings": "1"
+     },
+     {
+      "date": "2023-05-30",
+      "mw": "61",
+      "buildings": "2"
+     },
+     {
+      "date": "2024-11-05",
+      "mw": "114",
+      "buildings": "4"
+     },
+     {
+      "date": "2025-02-09",
+      "mw": "114",
+      "buildings": "4"
+     },
+     {
+      "date": "2025-05-25",
+      "mw": "243",
+      "buildings": "7"
+     },
+     {
+      "date": "2025-09-23",
+      "mw": "243",
+      "buildings": "7"
+     },
+     {
+      "date": "2026-03-03",
+      "mw": "243",
+      "buildings": "7"
+     },
+     {
+      "date": "2026-09-13",
+      "mw": "243",
+      "buildings": "7"
+     }
+    ]
    },
    "point": [
     1.7127,
@@ -330,7 +382,34 @@
     "retrieved": "2026-10-22",
     "page": "https://epoch.ai/data/ai-data-centers/directory/dayone-nusajaya",
     "quote": "DayOne Nusajaya Johor Bahru, Johor, Malaysia DayOne Nusajaya is an operational AI data center with an unknown owner.",
-    "check": "found"
+    "check": "found",
+    "timeline": [
+     {
+      "date": "2023-10-01",
+      "mw": "0",
+      "buildings": "0"
+     },
+     {
+      "date": "2024-12-31",
+      "mw": "50",
+      "buildings": "2"
+     },
+     {
+      "date": "2026-01-22",
+      "mw": "240",
+      "buildings": "6"
+     },
+     {
+      "date": "2026-04-05",
+      "mw": "240",
+      "buildings": "6"
+     },
+     {
+      "date": "2026-10-02",
+      "mw": "473",
+      "buildings": "10"
+     }
+    ]
    },
    "point": [
     2.0229,
@@ -374,7 +453,44 @@
     "retrieved": "2026-10-22",
     "page": "https://epoch.ai/data/ai-data-centers/directory/dayone-kempas",
     "quote": "DayOne Kempas Kempas, Johor, Malaysia DayOne Kempas is an operational AI data center with an unknown owner.",
-    "check": "found"
+    "check": "found",
+    "timeline": [
+     {
+      "date": "2023-11-11",
+      "mw": "0",
+      "buildings": "0"
+     },
+     {
+      "date": "2025-09-15",
+      "mw": "0",
+      "buildings": "0"
+     },
+     {
+      "date": "2026-01-22",
+      "mw": "80",
+      "buildings": "2"
+     },
+     {
+      "date": "2026-06-01",
+      "mw": "223",
+      "buildings": "5"
+     },
+     {
+      "date": "2026-08-10",
+      "mw": "223",
+      "buildings": "5"
+     },
+     {
+      "date": "2026-09-01",
+      "mw": "322",
+      "buildings": "7"
+     },
+     {
+      "date": "2026-10-01",
+      "mw": "422",
+      "buildings": "9"
+     }
+    ]
    },
    "point": [
     2.0229,
@@ -435,7 +551,44 @@
     "retrieved": "2026-10-22",
     "page": "https://epoch.ai/data/ai-data-centers/directory/oracle-batam",
     "quote": "Sources DayOne discloses a partnership with \"leading global tech company\" at their Batam campus Oracle announces their Batam cloud compute region Oracle is later reported to be leasing DayOne data centers in Indonesia",
-    "check": "found"
+    "check": "found",
+    "timeline": [
+     {
+      "date": "2022-07-01",
+      "mw": "0",
+      "buildings": "0"
+     },
+     {
+      "date": "2025-05-15",
+      "mw": "33",
+      "buildings": "2"
+     },
+     {
+      "date": "2025-06-13",
+      "mw": "33",
+      "buildings": "2"
+     },
+     {
+      "date": "2025-10-01",
+      "mw": "33",
+      "buildings": "2"
+     },
+     {
+      "date": "2026-03-19",
+      "mw": "33",
+      "buildings": "2"
+     },
+     {
+      "date": "2026-04-17",
+      "mw": "72",
+      "buildings": "3"
+     },
+     {
+      "date": "2026-05-06",
+      "mw": "72",
+      "buildings": "3"
+     }
+    ]
    },
    "point": [
     1.1031,

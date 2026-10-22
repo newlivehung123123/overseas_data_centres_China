@@ -70,7 +70,7 @@ Operators seldom name their customers, but their filings show how much of their 
 
 ### Estimates of Epoch AI
 
-Epoch AI's database of AI data centres, read on 22 October 2026, holds 95 data centres, 77 of them in the United States and 5 in mainland China. 4 of the other 13 are sites in this dataset, and `data/epoch_estimates.csv` holds Epoch's estimates for them, read from Epoch's database file. Epoch estimates 473 MW of IT power at DayOne's Nusajaya Tech Park campus and 422 MW at its Kempas Tech Park campus in Johor, and names no owner or user of the chips at either. It estimates 243 MW at MY06, where it judges ByteDance the likely owner and user of the chips, and 72 MW at the campus in Batam that it names after Oracle, where it judges Oracle the likely owner of the chips and Tencent a possible user. Epoch names the Batam campus after its tenant, so the match to DayOne's Nongsa Digital Park campus rests on Epoch's own sources, which place it at DayOne's campus, and on the three buildings of 72 MW that both describe. Epoch's database does not record the role of each Chinese firm or the rules that cover a site, which this dataset adds. The estimates are Epoch's models and are kept apart from the statements of capacity in `data/site_capacity.csv`.
+Epoch AI's database of AI data centres, read on 22 October 2026, holds 95 data centres, 77 of them in the United States and 5 in mainland China. 4 of the other 13 are sites in this dataset, and `data/epoch_estimates.csv` holds Epoch's estimates for them, read from Epoch's database file. Epoch estimates 473 MW of IT power at DayOne's Nusajaya Tech Park campus and 422 MW at its Kempas Tech Park campus in Johor, and names no owner or user of the chips at either. It estimates 243 MW at MY06, where it judges ByteDance the likely owner and user of the chips, and 72 MW at the campus in Batam that it names after Oracle, where it judges Oracle the likely owner of the chips and Tencent a possible user. Epoch names the Batam campus after its tenant, so the match to DayOne's Nongsa Digital Park campus rests on Epoch's own sources, which place it at DayOne's campus, and on the three buildings of 72 MW that both describe. Epoch's database does not record the role of each Chinese firm or the rules that cover a site, which this dataset adds. The estimates are Epoch's models and are kept apart from the statements of capacity in `data/site_capacity.csv`. `data/epoch_timelines.csv` holds the 29 stages of construction that Epoch dates for the 4 sites from satellite imagery and other evidence, which are the first material for level C. At MY06 the first building was operational at the end of 2022 with 19 MW, and 7 buildings with 243 MW by May 2025, against the 110 MW of three buildings that the source of the site row gives for the first project. Epoch saw 3 more buildings structurally complete in September 2025 but no cars in their car parks in September 2026. At Kempas, land clearing began in November 2023 and Epoch judges 9 buildings with 422 MW operational by October 2026. At Nusajaya it judges 10 buildings with 473 MW operational by October 2026. At Batam, land clearing began in July 2022, 2 buildings with 33 MW were operational by May 2025, when Oracle announced its Batam region, and 3 buildings with 72 MW by April 2026.
 
 ### Rules in the host countries
 
@@ -120,7 +120,7 @@ AidData distributes the GCDF 3.0 file itself, so the file is not committed. Down
 .venv/bin/python scripts/build_aiddata_layer.py --candidates
 ```
 
-The estimates of Epoch AI need no download by hand either. The script downloads Epoch's database file, saves it in `data/raw/epoch`, and writes `data/epoch_estimates.csv` for the sites matched in `config/epoch_links.csv`.
+The estimates of Epoch AI need no download by hand either. The script downloads Epoch's database and timeline files, saves them in `data/raw/epoch`, and writes `data/epoch_estimates.csv` and `data/epoch_timelines.csv` for the sites matched in `config/epoch_links.csv`.
 
 ```bash
 .venv/bin/python scripts/fetch_epoch.py
@@ -174,6 +174,7 @@ The tests use small tables and passages written in the test files and need no do
 | `data/cloud_regions.csv` | Public cloud regions of Chinese providers outside mainland China |
 | `data/epoch_estimates.csv` | Estimates of Epoch AI for the matched sites, read from Epoch's database file |
 | `data/epoch_links.csv` | Matches to Epoch AI's database with the result of the check |
+| `data/epoch_timelines.csv` | Stages of construction that Epoch AI dates for the matched sites, read from Epoch's timeline file |
 | `data/firm_links.csv` | Ownership links with the result of the check |
 | `data/operator_customers.csv` | Customers of operators with the result of the check |
 | `data/operator_markets.csv` | Capacity by market with the result of the check |
@@ -188,7 +189,7 @@ The tests use small tables and passages written in the test files and need no do
 | `scripts/check_sources.py` | Check that each passage of the site layer is on its page |
 | `scripts/summarise.py` | Figures of the compute layer, written to `data/summary.json` |
 | `scripts/fetch_cloud_regions.py` | Download of the provider region pages and build of the cloud region layer |
-| `scripts/fetch_epoch.py` | Download of Epoch AI's database file and the estimates for the matched sites |
+| `scripts/fetch_epoch.py` | Download of Epoch AI's database and timeline files and the estimates and stages for the matched sites |
 | `site/` | Dashboard, with its data in `site/data/dashboard.json` |
 | `scripts/geocode_places.py` | Map point of each city from OpenStreetMap |
 | `tests/test_build_aiddata_layer.py` | Offline tests of the AidData build |

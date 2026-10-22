@@ -76,11 +76,19 @@
       " by " + escape(x.firm) + ", " + escape(x.status);
   }
 
+  function timelineText(stages) {
+    var shown = stages.filter(function (t, i) { return i === 0 || t.mw !== stages[i - 1].mw; });
+    if (!shown.length) return "";
+    return "<br>IT power over time, from Epoch's timeline: " + shown.map(function (t) {
+      return escape(t.date) + " " + escape(number(t.mw)) + " MW";
+    }).join(", ");
+  }
+
   function epochText(e) {
     return "Epoch AI estimate: " + escape(number(e.mw)) + " MW of IT power and about " + escape(number(e.h100e)) +
       " H100 equivalents" + (e.chips ? ", chips " + escape(e.chips.replace(/,/g, ", ")) : "") +
       (e.users ? ", users " + escape(e.users) : "") + ", as " + escape(e.name) + ". <a href='" + escape(e.page) +
-      "' rel='noopener' target='_blank'>Epoch page</a>";
+      "' rel='noopener' target='_blank'>Epoch page</a>" + timelineText(e.timeline || []);
   }
 
   function drawTable(rows) {

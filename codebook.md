@@ -186,7 +186,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 
 ### data/epoch_links.csv and data/epoch_estimates.csv
 
-Epoch AI publishes a database of large AI data centres, "AI data centers", that estimates the IT power and the AI compute of each one from satellite imagery, permits and company documents, under the Creative Commons Attribution 4.0 licence. `data/epoch_links.csv` has one row for each site of `sites.csv` that the database also holds, written by hand in `config/epoch_links.csv` with the passage of the Epoch page that supports the match and checked by `scripts/check_sources.py`. `scripts/fetch_epoch.py` reads the estimates for those sites from Epoch's database file into `data/epoch_estimates.csv`. The estimates are Epoch's models and not statements of the firms, so they are kept apart from `site_capacity.csv`.
+Epoch AI publishes a database of large AI data centres, "AI data centers", that estimates the IT power and the AI compute of each one from satellite imagery, permits and company documents, under the Creative Commons Attribution 4.0 licence. `data/epoch_links.csv` has one row for each site of `sites.csv` that the database also holds, written by hand in `config/epoch_links.csv` with the passage of the Epoch page that supports the match and checked by `scripts/check_sources.py`. `scripts/fetch_epoch.py` reads the estimates for those sites from Epoch's database file into `data/epoch_estimates.csv`, and the stages of construction that Epoch dates from satellite imagery and other evidence into `data/epoch_timelines.csv`, which is the first material for level C. The estimates are Epoch's models and not statements of the firms, so they are kept apart from `site_capacity.csv`.
 
 **Table 12. Variables in epoch_links.csv**
 
@@ -208,11 +208,22 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 | owner, users | text | Owner and users of the chips that Epoch names, with its own confidence, such as #likely or #speculative |
 | source_url, retrieved | text | Epoch's database file and the date it was read |
 
+**Table 14. Variables in epoch_timelines.csv**
+
+| Variable | Type | Description |
+|---|---|---|
+| site_id, epoch_name | text | As in Table 12 |
+| date | date | Date of the stage, from satellite imagery or another source that Epoch cites |
+| buildings_operational | number | Buildings that Epoch judges operational at that date |
+| it_power_mw, h100_equivalents | number | IT power and AI compute that Epoch estimates at that date |
+| construction_status | text | Epoch's description of the stage, with the links it gives |
+| source_url, retrieved | text | Epoch's timeline file and the date it was read |
+
 ### data/operator_customers.csv
 
 `data/operator_customers.csv` has one row for each statement of how much an operator depends on a customer that is a Chinese firm or that a source identifies as one, such as a share of the operator's revenue. Filings often describe a customer without naming it, so the description is kept as the source gives it, and a separate row records a source that names the customer. The file is written by hand in `config/operator_customers.csv` and checked by `scripts/check_sources.py`.
 
-**Table 14. Variables in operator_customers.csv**
+**Table 15. Variables in operator_customers.csv**
 
 | Variable | Type | Description |
 |---|---|---|
@@ -230,7 +241,7 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 15. Coding values**
+**Table 16. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -242,12 +253,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 16. Variables in government_data_centres_aiddata.csv**
+**Table 17. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 15 |
+| coding | category | Value from Table 16 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |
