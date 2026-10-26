@@ -18,8 +18,8 @@
     });
   }
 
-  function colour(layer) {
-    return getComputedStyle(document.documentElement).getPropertyValue(COLOURS[layer]).trim();
+  function colour(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(COLOURS[name] || "--" + name).trim();
   }
 
   function fill(select, values) {
@@ -237,8 +237,17 @@
     fill(el("role"), unique(roles));
     fill(el("country"), unique(countries));
     state.map = L.map("map", { worldCopyJump: true }).setView([20, 40], 2);
+    // The countries of Natural Earth lie under the tiles, so the map still shows land if a browser blocks the tile server.
+    state.map.createPane("outline").style.zIndex = 150;
+    fetch("data/world.geojson")
+      .then(function (response) { return response.json(); })
+      .then(function (world) {
+        L.geoJSON(world, { pane: "outline", interactive: false, style: {
+          color: colour("border"), weight: 0.6, fillColor: colour("land"), fillOpacity: 1 } }).addTo(state.map);
+      })
+      .catch(function () {});
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 12, attribution: "© OpenStreetMap contributors"
+      maxZoom: 12, attribution: "© OpenStreetMap contributors. Countries: Natural Earth"
     }).addTo(state.map);
     state.layer = L.layerGroup().addTo(state.map);
     ["show-sites", "show-regions", "firm", "role", "country"].forEach(function (id) { el(id).addEventListener("change", draw); });

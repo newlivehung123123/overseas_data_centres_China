@@ -6,6 +6,9 @@
   --site: #b3261e;
   --region: #1f5fa8;
   --panel: #ffffff;
+  --sea: #c9dbe6;
+  --land: #f2efe9;
+  --border: #b5b9be;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -16,6 +19,9 @@
     --site: #ef6b61;
     --region: #6ea8f0;
     --panel: #1d2024;
+    --sea: #1b2a36;
+    --land: #3a3f45;
+    --border: #5b626a;
   }
 }
 * { box-sizing: border-box; }
@@ -46,7 +52,7 @@ header h1 { font-size: 1.6rem; margin: 24px 0 8px; }
 }
 .summary .value { display: block; font-size: 1.6rem; font-weight: 600; line-height: 1.2; }
 .summary .label { display: block; color: var(--muted); font-size: 0.85rem; }
-#map { height: 460px; border: 1px solid var(--line); border-radius: 6px; }
+#map { height: 460px; border: 1px solid var(--line); border-radius: 6px; background: var(--sea); }
 h2 { font-size: 1.15rem; margin: 24px 0 4px; }
 .rules p { margin: 0 0 4px; color: var(--muted); font-size: 0.9rem; }
 table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.92rem; }
