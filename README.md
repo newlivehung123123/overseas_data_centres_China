@@ -1,10 +1,35 @@
 # Overseas data centres of Chinese firms
 
-This project records the data-centre capacity outside mainland China in which Chinese firms and Chinese state lenders have a role, as owner, operator, tenant, builder, equipment supplier or financier. For each site the dataset will record how much of the capacity can run large AI workloads and which country's rules cover it. US export controls govern shipments of AI chips but not the remote use of those chips, and the Remote Access Security Act, which would add remote use, passed the House on 12 January 2026 and has not passed the Senate. Capacity that Chinese firms use in third countries can therefore sit outside the rules of the United States, of China and of the host country at once, and no open dataset records that capacity site by site together with the role of each Chinese firm and the rules that cover the site. The database of AI data centres of Epoch AI estimates the IT power of 4 of the sites in this dataset, as the section on Epoch's estimates below sets out. The codebook in `codebook.md` defines the roles, the firms covered, the three levels of detail and every variable. The note in `docs/preliminary_findings.md` sets out the main findings so far.
+This project records the data-centre capacity outside mainland China in which Chinese firms and Chinese state lenders have a role, as owner, operator, tenant, builder, equipment supplier or financier. For each site the dataset will record how much of the capacity can run large AI workloads and which country's rules cover it. US export controls govern shipments of AI chips but not the remote use of those chips, and the Remote Access Security Act, which would add remote use, passed the House on 12 January 2026 and has not passed the Senate. Capacity that Chinese firms use in third countries can therefore sit outside the rules of the United States, of China and of the host country at once, and no open dataset found records that capacity site by site together with the role of each Chinese firm and the rules that cover the site, as the section on related work below shows. The codebook in `codebook.md` defines the roles, the firms covered, the three levels of detail, the three grades of evidence and every variable. The note in `docs/preliminary_findings.md` gives the main findings so far.
+
+## Related work
+
+Three open sources come closest to this dataset. Epoch AI's database of AI data centres estimates the IT power, the chips and the stages of construction of large AI data centres from satellite imagery, permits and company documents, and holds 4 of the sites in this dataset, but the database records neither the role of each Chinese firm at a site nor the rules that cover the site. The Australian Strategic Policy Institute relaunched the map of its project Mapping China's Tech Giants on 8 June 2021 with more than 3,800 entries on the overseas activities of 27 Chinese technology firms, among them data centres, but the map records neither the capacity of each data centre nor the rules that cover the data centre. Noah Tan's paper for the Carnegie Endowment for International Peace, "The Geopolitical Debates Over Controlling Cloud Compute", of 5 May 2026, analyses the options for controlling access to AI chips through a cloud service and cites cases of such access, but does not build a dataset of sites. This dataset adds the capacity of each site, the role of each Chinese firm with a grade of the evidence for the role, the dependence of operators on Chinese customers and the rules of the host countries, with a checked passage for every row.
 
 ## Status
 
-The repository holds three layers as of 22 October 2026: the government data centres financed by Chinese state lenders and agencies, the public cloud regions of Chinese providers, and the first sites in which Chinese firms hold a role, with the estimates of Epoch AI for the sites that its database also holds. Every row of the cloud region and site layers carries a passage of its source page, and a script checks the passage against the downloaded page. The rows of the AidData layer come from AidData's own dataset file.
+The repository holds three parts as of 22 October 2026: the government data centres financed by Chinese state lenders and agencies, the public cloud regions of Chinese providers, and the first sites in which Chinese firms hold a role, with the estimates of Epoch AI for the sites that Epoch's database also holds. Every row of the files of cloud regions and sites carries a passage of the source page and a grade of evidence, and a script checks the passage against the downloaded page. The rows of government data centres come from AidData's own dataset file.
+
+### Grades of evidence
+
+Every row of the files of sites, cloud regions and capacity carries a grade of the evidence for the row, which the codebook defines. A row is graded primary when the firm that the row concerns, another party to the site or the deal, or a public authority states the value in a document that the firm or the authority publishes, secondary when a third party such as a news outlet, a commercial directory or a research database states the value, and unconfirmed when the source rests on unnamed people or reports an accusation without public evidence, or when another source doubts the value or the firms have not confirmed the value. Of the 376 rows, 176 are graded primary, 185 secondary and 15 unconfirmed. The grade differs from the check of the passage: all 402 passages of the 376 rows were found on their pages, but a passage found in a news report shows only that the report states the value.
+
+| File | Rows | Primary | Secondary | Unconfirmed |
+|---|---|---|---|---|
+| `sites.csv` | 67 | 35 | 30 | 2 |
+| `site_roles.csv` | 89 | 53 | 33 | 3 |
+| `cloud_regions.csv` | 55 | 51 | 4 | 0 |
+| `operator_markets.csv` | 11 | 11 | 0 | 0 |
+| `capacity_definitions.csv` | 4 | 4 | 0 | 0 |
+| `firm_links.csv` | 7 | 2 | 5 | 0 |
+| `operator_customers.csv` | 8 | 4 | 2 | 2 |
+| `ai_compute.csv` | 10 | 1 | 2 | 7 |
+| `site_capacity.csv` | 21 | 9 | 11 | 1 |
+| `rules.csv` | 16 | 6 | 10 | 0 |
+| `epoch_links.csv` | 4 | 0 | 4 | 0 |
+| `johor_census.csv` | 84 | 0 | 84 | 0 |
+
+The 84 rows of the census are graded secondary because each cites Baxtel's commercial list, and the 26 second passages that support a Chinese link carry grades of their own: 3 primary, 19 secondary and 4 unconfirmed. 7 of the 10 reports of AI chips are graded unconfirmed, because the reports rest on unnamed sources or the firms have not confirmed them. The one report graded primary is the loan agreement that Nscale filed at the SEC, which gives the 2,304 Nvidia B200 chips that Spring (SG), a subsidiary of ByteDance, rents at Glomfjord.
 
 ### Government data centres financed by Chinese state lenders
 
@@ -29,7 +54,7 @@ The amounts cover the whole project, and in 41 of the 45 records the data centre
 
 ### Cloud regions of Chinese providers
 
-`data/cloud_regions.csv` lists 55 regions of Alibaba Cloud, Huawei Cloud, Tencent Cloud and BytePlus. The script read 51 of them from the providers' own region pages on 21 October 2026, and the other 4, three regions that Alibaba Cloud has announced for Finland, the Netherlands and Turkey and a Tencent Cloud region in Toronto that the current Tencent page does not list, come from reports in DatacenterDynamics. All 55 passages were found on their pages.
+`data/cloud_regions.csv` lists 55 regions of Alibaba Cloud, Huawei Cloud, Tencent Cloud and BytePlus. The script read 51 of them from the providers' own region pages on 22 October 2026, and the other 4, three regions that Alibaba Cloud has announced for Finland, the Netherlands and Turkey and a Tencent Cloud region in Toronto that the current Tencent page does not list, come from reports in DatacenterDynamics. All 55 passages were found on their pages.
 
 Of the 55 regions, 47 are operational outside mainland China, Hong Kong and Macau, in 22 countries. Alibaba Cloud, Huawei Cloud and Tencent Cloud account for 45 of the 47, against a count of 43 by WireScreen for the same three providers. The Tencent page lists one region, in Queretaro in Mexico, that an earlier list built from search results had missed. The BytePlus rows come from the documentation of one service and do not cover the other BytePlus services.
 
@@ -47,7 +72,7 @@ An earlier version also listed Bridge Data Centres, the operator of MY06, as a C
 
 ### Census of Johor
 
-Johor is the largest hub in the dataset, so `data/johor_census.csv` records every data-centre facility in Johor that Baxtel's public list named on 22 October 2026, 84 facilities run by 34 operators, and codes for each whether a Chinese firm or a fund of a Chinese state lender holds a role there. Each row carries the passage of the list and, where a link is coded, a second passage from the page that supports the link, and all 84 first passages and 26 second passages were found on their pages.
+Johor holds 789 MW of the 962 MW that DayOne has in service, more than any other market in the dataset, so `data/johor_census.csv` records every data-centre facility in Johor that Baxtel's public list named on 22 October 2026, 84 facilities run by 34 operators, and codes for each whether a Chinese firm or a fund of a Chinese state lender holds a role there. Each row carries the passage of the list and, where a link is coded, a second passage from the page that supports the link, and all 84 first passages and 26 second passages were found on their pages.
 
 - 17 facilities are operated, built or planned by listed firms: 14 buildings of DayOne's Nusajaya Tech Park campus and its Kempas Tech Park campus, the Johor site of Global Switch and the Johor site of zData.
 - 1 facility, the MSFusion campus in Kota Tinggi, stands on land that a subsidiary of Megaspeed agreed to buy, subject to a power allocation of 300 MW and planning approval.
@@ -58,9 +83,9 @@ Johor is the largest hub in the dataset, so `data/johor_census.csv` records ever
 
 A role of a Chinese firm or of a Chinese state lender's fund is therefore recorded at 25 of the 84 facilities. The list leaves out three sites of the dataset in Johor: the co-development of 168 MW that GDS agreed in 2022 at YTL Green Data Center Park, DayOne's land at Gerbang Nusajaya and the two data centres of Alibaba Cloud. It also cannot be matched to the clusters of Aolani and of Megaspeed in Malaysia, whose sources do not name the place. Baxtel is a commercial directory and no public register of the data centres in Johor was found, so the list is the frame of the census and not a complete register.
 
-### DayOne by market
+### Capacity that operators report by market
 
-DayOne's registration statement at the SEC, which DayOne filed for its listing in 2026, reports its capacity by market as of 20 September 2026 and not by site. `data/operator_markets.csv` records the 10 markets: 962 MW in service, 1,328 MW under construction and 2,308 MW of secured powered land, or 4,597 MW in all, in Malaysia, Indonesia, Singapore, Thailand, Japan, Hong Kong, Finland and Spain. Johor holds 789 MW of the 962 MW in service. The rows add up to 1 MW more or less than the totals in the filing, because the filing rounds each figure. The same filing states that GDS holds 19.4 percent of DayOne's shares, which `data/firm_links.csv` records together with the former link between Bridge Data Centres and ChinData, three sources on the control of Global Switch by Jiangsu Shagang Group, the latest its annual report for 2025, the origin of Megaspeed in a Chinese gaming firm, and the sponsorship of the China-ASEAN Investment Cooperation Fund II by China Eximbank. All 17 passages were found on their pages.
+DayOne's registration statement at the SEC, which DayOne filed for its listing in 2026, reports its capacity by market as of 20 September 2026 and not by site. `data/operator_markets.csv` records the 10 markets of DayOne: 962 MW in service, 1,328 MW under construction and 2,308 MW of secured powered land, or 4,597 MW in all, in Malaysia, Indonesia, Singapore, Thailand, Japan, Hong Kong, Finland and Spain. Johor holds 789 MW of the 962 MW in service. The rows add up to 1 MW more or less than the totals in the filing, because the filing rounds each figure. The same file records the 252 MW of saleable capacity that Global Switch's annual report for 2025 gives for the group, which the report does not divide by data centre. The same filing states that GDS holds 19.4 percent of DayOne's shares, which `data/firm_links.csv` records together with the former link between Bridge Data Centres and ChinData, three sources on the control of Global Switch by Jiangsu Shagang Group, the latest its annual report for 2025, the origin of Megaspeed in a Chinese gaming firm, and the sponsorship of the China-ASEAN Investment Cooperation Fund II by China Eximbank. All 18 passages of the two files were found on their pages.
 
 ### Customers of operators
 
@@ -85,13 +110,26 @@ Operators seldom name their customers, but their filings show how much of their 
 
 Epoch AI's database of AI data centres, read on 22 October 2026, holds 95 data centres, 77 of them in the United States and 5 in mainland China. 4 of the other 13 are sites in this dataset, and `data/epoch_estimates.csv` holds Epoch's estimates for them, read from Epoch's database file. Epoch estimates 473 MW of IT power at DayOne's Nusajaya Tech Park campus and 422 MW at its Kempas Tech Park campus in Johor, and names no owner or user of the chips at either. It estimates 243 MW at MY06, where it judges ByteDance the likely owner and user of the chips, and 72 MW at the campus in Batam that it names after Oracle, where it judges Oracle the likely owner of the chips and Tencent a possible user. Epoch names the Batam campus after its tenant, so the match to DayOne's Nongsa Digital Park campus rests on Epoch's own sources, which place it at DayOne's campus, and on the three buildings of 72 MW that both describe. Epoch's database does not record the role of each Chinese firm or the rules that cover a site, which this dataset adds. The estimates are Epoch's models and are kept apart from the statements of capacity in `data/site_capacity.csv`. `data/epoch_timelines.csv` holds the 29 stages of construction that Epoch dates for the 4 sites from satellite imagery and other evidence, which are the first material for level C. At MY06 the first building was operational at the end of 2022 with 19 MW, and 7 buildings with 243 MW by May 2025, against the 110 MW of three buildings that the source of the site row gives for the first project. Buildings 8 and 9 looked structurally complete in September 2025 and Building 10 had all its cooling units by March 2026, but Epoch saw no cars in the car parks of Buildings 8 to 10 in September 2026 and does not judge them in use. At Kempas, land clearing began in November 2023 and Epoch assumes 9 buildings with 422 MW operational by October 2026, partly from the state of the buildings before commissioning. At Nusajaya it judges 10 buildings with 473 MW operational by October 2026. At Batam, land clearing began in July 2022, 2 buildings with 33 MW were operational by May 2025, when Oracle announced its Batam region, and 3 buildings with 72 MW by April 2026.
 
+### Capacity estimate
+
+The script `scripts/estimate_capacity.py` adds the checked figures of capacity into one estimate with a low and a high bound, and writes each figure that the estimate counts to `data/capacity_estimate.csv` and the totals to `data/capacity_estimate.json`. The estimate counts each data centre once. Where a firm reports capacity by market or for the whole firm, the estimate takes the firm's figures and leaves out the figures of the firm's sites, and for every other site the estimate takes the largest figure that the sources give for capacity in service and for capacity under construction or planned. The low bound counts only figures graded primary, at sites where the role of a Chinese firm is not graded unconfirmed and whose status is not unclear. The high bound counts every figure and adds the IT power that Epoch AI estimates above the figure that the sources state. The codebook gives the rules in full.
+
+| Bound | In service | Under construction or planned | In all |
+|---|---|---|---|
+| Low | 1,323 MW | 4,183 MW | 5,506 MW |
+| High | 1,652 MW | 5,041 MW | 6,693 MW |
+
+In service, the low bound consists of the 961 MW that the rows of DayOne's markets add up to, the 252 MW of saleable capacity that Global Switch reports for the group and the 110 MW of MY06. The high bound adds 133 MW at MY06 and 106 MW at DayOne's two campuses in Johor, by which the estimates of Epoch AI exceed the stated figures, and 90 MW at the OSL-Hamar campus in Norway, whose figure comes from a news report. Under construction or planned, the low bound consists of the 3,637 MW that DayOne reports under construction and on secured powered land, the 510 MW of the Racks Central campus in Pasir Gudang and the 36 MW of Global Switch Madrid 2. The high bound adds 300 MW of power at Pecém, 300 MW of power for the MSFusion campus in Kota Tinggi, 168 MW at YTL Green Data Center Park, where the status of the GDS project is unclear, and 90 MW at BrightRay in Sedenak, where the Chinese link is unconfirmed.
+
+DayOne's registration statement defines capacity in service, capacity under construction and secured powered land as IT power capacity, which `data/capacity_definitions.csv` records with the passage of each definition, and Global Switch's annual report describes the capacity that the expenditure of Global Switch creates as saleable IT capacity. Of the low bound, 4,886 MW are therefore IT capacity and 620 MW have no stated basis, and of the high bound, 5,125 MW are IT capacity, 600 MW are power and 968 MW have no stated basis. Both bounds include Hong Kong, where DayOne reports 27 MW in service and 39 MW under construction or on secured powered land, and the total of Global Switch includes the Hong Kong data centre of Global Switch without separating it. 31 of the 67 sites have no figure of capacity, among them the data centres of Alibaba Cloud, Tencent Cloud, Huawei Cloud, China Mobile International and China Unicom Global and the Glomfjord data centre of Nscale, so both bounds understate the capacity of the sites recorded.
+
 ### Rules in the host countries
 
-`data/rules.csv` records 16 parts of rules, bills, guidance, reviews, prosecutions and contracts that bear on the AI chips in a host country or on remote access to them, each with its passage and the countries where it applies, and all 16 passages were found on their pages. US export rules control shipments of advanced chips but not access to the chips through a cloud service. The Remote Access Security Act, which would cover such access, passed the House by 369 votes to 22 on 12 January 2026 and has not passed the Senate. The AI Diffusion Rule, issued on 15 January 2025, was rescinded in May 2025 before it took effect, and the notice of rescission announced licensing requirements for exports of advanced chips to Malaysia and Thailand. Commerce later shelved the draft rule on Malaysia and Thailand, as reported in August 2026. BIS guidance of 31 May 2026 states that a licence is needed for advanced chips sent to any entity whose ultimate parent is in China or Macau, wherever the entity is, and in August 2026 the enforcement arm of BIS began a review that lists the countries where Chinese firms reach the chips remotely, which remains legal. Malaysia has required a permit since July 2025 for exports, transshipments and transits of US-origin AI chips, but the permit does not cover the use of the chips within Malaysia. Malaysia's trade ministry also stated in June 2025 that servers with Nvidia and other AI chips are not controlled goods in Malaysia and that data centres may decide whom to serve within Malaysian law. Singapore has acted through prosecutions for fraud on server suppliers about the end users of the servers, under general law, and no rule on AI chips in Singapore was found. A Chinese firm that rents servers in Johor and trains a model on them therefore falls under none of these rules, as the sources stand. The European Union extended its control list on exports in November 2025 to certain advanced computing integrated circuits, but the source does not say whether the entries cover the AI chips that US rules control or access to such chips through a cloud service. The one control on remote use found outside US rules is private: the loan agreement for the chips at Glomfjord requires Nscale to monitor how its customer uses them for signs of a breach of export control law and to report such signs to the lender. In the Gulf, the US approved in November 2025 exports of up to the equivalent of 35,000 Nvidia GB300 chips each to G42 in the United Arab Emirates and Humain in Saudi Arabia, on condition of security and reporting requirements that are not public, and the UAE describes a Regulated Technology Environment of audits and oversight for organisations that acquire such chips.
+`data/rules.csv` records 16 parts of rules, bills, guidance, reviews, prosecutions and contracts that bear on the AI chips in a host country or on remote access to them, each with its passage and the countries where it applies, and all 16 passages were found on their pages. US export rules control shipments of advanced chips but not access to the chips through a cloud service. The Remote Access Security Act, which would cover such access, passed the House by 369 votes to 22 on 12 January 2026 and has not passed the Senate. The AI Diffusion Rule, issued on 15 January 2025, was rescinded in May 2025 before it took effect, and the notice of rescission announced licensing requirements for exports of advanced chips to Malaysia and Thailand. Commerce later shelved the draft rule on Malaysia and Thailand, as reported in August 2026. BIS guidance of 31 May 2026 states that a licence is needed for advanced chips sent to any entity whose ultimate parent is in China or Macau, wherever the entity is, and in August 2026 BIS began an enforcement review that lists the countries where Chinese firms reach the chips remotely, which remains legal. Malaysia has required a permit since July 2025 for exports, transshipments and transits of US-origin AI chips, but the permit does not cover the use of the chips within Malaysia. Malaysia's trade ministry also stated in June 2025 that servers with Nvidia and other AI chips are not controlled goods in Malaysia and that data centres may decide whom to serve within Malaysian law. Singapore has acted through prosecutions for fraud on server suppliers about the end users of the servers, under general law, and no rule on AI chips in Singapore was found. A Chinese firm that rents servers in Johor and trains a model on them therefore falls under none of these rules, as the sources stand. The European Union extended its control list on exports in November 2025 to certain advanced computing integrated circuits, but the source does not say whether the entries cover the AI chips that US rules control or access to such chips through a cloud service. The one control on remote use found outside US rules is private: the loan agreement for the chips at Glomfjord requires Nscale to monitor how its customer uses them for signs of a breach of export control law and to report such signs to the lender. In the Gulf, the US approved in November 2025 exports of up to the equivalent of 35,000 Nvidia GB300 chips each to G42 in the United Arab Emirates and Humain in Saudi Arabia, on condition of security and reporting requirements that are not public, and the UAE describes a Regulated Technology Environment of audits and oversight for organisations that acquire such chips.
 
 ### Figures
 
-The script `scripts/summarise.py` counts the checked rows of the compute layer and writes `data/summary.json`, so that every figure in the text above can be reproduced. Of the 67 sites, 30 are operational, 8 are under construction, 21 are planned and 8 are unclear, and Malaysia holds 16 of them, more than any other country. Of the 89 roles, 43 are operator, 24 owner, 13 tenant, 8 user and 1 financier. 23 of the 67 sites are coded at level B, 18 of them for an announced capacity of at least 20 MW and 5 for a report of AI chips. DayOne's two campuses in Johor stay at level A only because DayOne reports the capacity of Johor as a whole, and Epoch AI estimates 473 MW and 422 MW of IT power for them. Only 9 sites have a capacity of their own in the sources that support them, 270 MW of IT capacity, 460 MW of power and 478 MW whose basis the sources do not give, and `data/site_capacity.csv` holds a further 21 statements of capacity at several stages, so most of the capacity recorded so far is the 4,597 MW that DayOne reports by market.
+The script `scripts/summarise.py` counts the checked rows of the files of sites, cloud regions and capacity, with the grades of evidence and the bounds of the capacity estimate, and writes `data/summary.json`, so that every figure in the text above can be reproduced. Of the 67 sites, 30 are operational, 8 are under construction, 21 are planned and 8 are unclear, and Malaysia holds 16 of them, more than any other country. Of the 89 roles, 43 are operator, 24 owner, 13 tenant, 8 user and 1 financier. 23 of the 67 sites are coded at level B, 18 of them for an announced capacity of at least 20 MW and 5 for a report of AI chips. DayOne's two campuses in Johor stay at level A only because DayOne reports the capacity of Johor as a whole, and Epoch AI estimates 473 MW and 422 MW of IT power for them. Only 9 sites have a capacity of their own in the sources that support them, 270 MW of IT capacity, 460 MW of power and 478 MW whose basis the sources do not give, and `data/site_capacity.csv` holds a further 21 statements of capacity at several stages, so most of the capacity recorded so far is the 4,597 MW that DayOne reports by market and the 252 MW that Global Switch reports for the group.
 
 ### Next steps
 
@@ -103,12 +141,13 @@ The script `scripts/summarise.py` counts the checked rows of the compute layer a
 6. Identify the Oracle data centres in Southeast Asia at which Tencent is reported to lease chips, and the sites of Datasection in Japan and Australia that serve its largest customer.
 7. Match further sites to Epoch AI's database as it grows, and compare its estimates with the statements of capacity in `data/site_capacity.csv`.
 8. Search the tenants of the 55 facilities in Johor at which no Chinese link was found, confirm or reject the 4 reported links, and repeat the census in Batam, Greater Bangkok and Singapore.
+9. Find primary sources for the 1,187 MW that only the high bound of the capacity estimate counts, and figures of capacity for the 31 sites that have none.
 
 ## Dashboard
 
-The dashboard is published at [https://newlivehung123123.github.io/overseas_data_centres_China/](https://newlivehung123123.github.io/overseas_data_centres_China/). The folder `site` holds it as a static page in HTML, CSS and JavaScript with no build step. It shows the sites and the cloud regions on a map and in a table, with filters by firm, role and country and a search box, and each row shows the cited passage and the result of its check. A row of figures above the map summarises the dataset. Sections list the rules recorded in `data/rules.csv`, the reports of AI chips whose sources name no site, the Chinese customers of operators and the census of Johor, and the point of each city lists the rules recorded for its country. Each point marks the centre of the city that the source names, from OpenStreetMap, because most sources name the city and not the building. The map draws the countries of Natural Earth, which are in the public domain, under the tiles of OpenStreetMap, so the map still shows the countries when a browser blocks the tile server. `scripts/build_world_map.py` writes them to `site/data/world.geojson` from Natural Earth's file of countries at 1:110 million. The government data centres of the AidData layer are left out of the dashboard until the article pitched on them has been answered.
+The dashboard is published at [https://newlivehung123123.github.io/overseas_data_centres_China/](https://newlivehung123123.github.io/overseas_data_centres_China/). The folder `site` holds it as a static page in HTML, CSS and JavaScript with no build step. It shows the sites and the cloud regions on a map and in a table, with filters by firm, role and country and a search box, and each row shows the cited passage and the result of its check. A row of figures above the map summarises the dataset. Sections list the rules recorded in `data/rules.csv`, the reports of AI chips whose sources name no site, the Chinese customers of operators and the census of Johor, and the point of each city lists the rules recorded for its country. Each point marks the centre of the city that the source names, from OpenStreetMap, because most sources name the city and not the building. The map draws the countries of Natural Earth, which are in the public domain, under the tiles of OpenStreetMap, so the map still shows the countries when a browser blocks the tile server. `scripts/build_world_map.py` writes them to `site/data/world.geojson` from Natural Earth's file of countries at 1:110 million. A section on the capacity estimate gives the two bounds and lists every figure counted, and the passage of each row shows the grade of its evidence. The government data centres from AidData are left out of the dashboard until the article pitched on them has been answered.
 
-The dashboard reads `site/data/dashboard.json`, which `scripts/build_site_data.py` writes from the checked layers and `config/places.csv`. The script `scripts/geocode_places.py` finds the point of each new city from the Nominatim service of OpenStreetMap, at most one request a second, and records the OpenStreetMap object behind each point.
+The dashboard reads `site/data/dashboard.json`, which `scripts/build_site_data.py` writes from the checked files, the capacity estimate and `config/places.csv`. The script `scripts/geocode_places.py` finds the point of each new city from the Nominatim service of OpenStreetMap, at most one request a second, and records the OpenStreetMap object behind each point.
 
 ```bash
 .venv/bin/python scripts/geocode_places.py
@@ -127,7 +166,7 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 ```
 
-AidData distributes the GCDF 3.0 file itself, so the file is not committed. Download it from AidData, place the Excel file in `data/raw`, and build the layer.
+AidData distributes the GCDF 3.0 file itself, so the file is not committed. Download it from AidData, place the Excel file in `data/raw`, and build the file of government data centres.
 
 ```bash
 .venv/bin/python scripts/build_aiddata_layer.py
@@ -140,19 +179,26 @@ The estimates of Epoch AI need no download by hand either. The script downloads 
 .venv/bin/python scripts/fetch_epoch.py
 ```
 
-The cloud region layer needs no download by hand. The script downloads each provider page, saves the page with its text in `data/raw/pages`, which is not committed, and writes `data/cloud_regions.csv`. The option `--offline` reads the saved pages instead.
+The file of cloud regions needs no download by hand. The script downloads each provider page, saves the page with its text in `data/raw/pages`, which is not committed, and writes `data/cloud_regions.csv`. The option `--offline` reads the saved pages instead.
 
 ```bash
 .venv/bin/python scripts/fetch_cloud_regions.py
 ```
 
-The site layer is written by hand in `config/sites.csv` and `config/site_roles.csv`, and the check downloads each cited page, reads the text of PDF files such as annual reports with pypdf, saves the text in `data/raw/pages/sources` and writes `data/sites.csv` and `data/site_roles.csv` with the result for each row.
+The sites, the roles and the other checked files are written by hand in `config`, such as `config/sites.csv` and `config/site_roles.csv`. The check downloads each cited page, reads the text of PDF files such as annual reports with pypdf, saves the text in `data/raw/pages/sources` and writes each file to `data`, such as `data/sites.csv` and `data/site_roles.csv`, with the result for each row.
 
 ```bash
 SEC_CONTACT_EMAIL=you@example.org .venv/bin/python scripts/check_sources.py
 ```
 
 The SEC accepts automated requests only with a contact email, so the check reads one from `SEC_CONTACT_EMAIL` and refuses pages on sec.gov without it. The email is sent only to the SEC and is not stored in the repository.
+
+The capacity estimate and the figures read the checked files, so both run after the check.
+
+```bash
+.venv/bin/python scripts/estimate_capacity.py
+.venv/bin/python scripts/summarise.py
+```
 
 The first command writes `data/government_data_centres_aiddata.csv` and `data/aiddata_summary.json` and prints the figures above. The option `--candidates` also writes `data/aiddata_candidates.csv`, the records that match a search term and are not coded yet. The option `--gcdf` gives another path to the Excel file.
 
@@ -179,6 +225,7 @@ The tests use small tables and passages written in the test files and need no do
 | `config/sites.csv` | Sites, each with its page and passage |
 | `config/ai_compute.csv` | Reports of AI chips at sites, each with its page and passage |
 | `config/site_capacity.csv` | Statements of capacity at sites, each with its page and passage |
+| `config/capacity_definitions.csv` | Definitions of capacity that operators give in the sources of their figures, each with its page and passage |
 | `config/operator_customers.csv` | Statements of how much operators depend on Chinese customers, each with its page and passage |
 | `config/johor_census.csv` | Facilities in Johor from Baxtel's list, with the Chinese link of each and the passages that support it |
 | `config/epoch_links.csv` | Sites that Epoch AI's database also holds, each with the passage of the Epoch page that supports the match |
@@ -186,7 +233,7 @@ The tests use small tables and passages written in the test files and need no do
 | `config/aiddata_coding.csv` | Coding of each AidData record read, with a note on the data centre or the reason for exclusion |
 | `data/ai_compute.csv` | Reports of AI chips with the result of the check |
 | `data/aiddata_candidates.csv` | AidData records that match a related term and are not coded yet |
-| `data/aiddata_summary.json` | Figures of the government data centre layer |
+| `data/aiddata_summary.json` | Figures of the government data centres from AidData |
 | `data/cloud_regions.csv` | Public cloud regions of Chinese providers outside mainland China |
 | `data/epoch_estimates.csv` | Estimates of Epoch AI for the matched sites, read from Epoch's database file |
 | `data/epoch_links.csv` | Matches to Epoch AI's database with the result of the check |
@@ -196,16 +243,20 @@ The tests use small tables and passages written in the test files and need no do
 | `data/operator_customers.csv` | Customers of operators with the result of the check |
 | `data/operator_markets.csv` | Capacity by market with the result of the check |
 | `data/rules.csv` | Rules with the result of the check |
-| `data/summary.json` | Figures of the compute layer |
+| `data/summary.json` | Figures of the sites, cloud regions and capacity, with the grades of evidence and the capacity estimate |
 | `data/site_capacity.csv` | Statements of capacity with the result of the check |
+| `data/capacity_definitions.csv` | Definitions of capacity with the result of the check |
+| `data/capacity_estimate.csv` | Each figure that the capacity estimate counts, with its grade of evidence and the bound that counts it |
+| `data/capacity_estimate.json` | Low and high bounds of the capacity estimate |
 | `data/site_roles.csv` | Roles with the result of the check |
 | `data/sites.csv` | Sites with the result of the check |
 | `data/government_data_centres_aiddata.csv` | AidData records coded as data centres or computing centres |
-| `scripts/build_aiddata_layer.py` | Build of the government data centre layer from the AidData file and the coding |
-| `scripts/build_site_data.py` | Build of the dashboard data from the checked layers |
-| `scripts/check_sources.py` | Check that each passage of the site layer is on its page |
-| `scripts/summarise.py` | Figures of the compute layer, written to `data/summary.json` |
-| `scripts/fetch_cloud_regions.py` | Download of the provider region pages and build of the cloud region layer |
+| `scripts/build_aiddata_layer.py` | Build of the file of government data centres from the AidData file and the coding |
+| `scripts/build_site_data.py` | Build of the dashboard data from the checked files |
+| `scripts/check_sources.py` | Check that each passage of the files written by hand is on its page, and that each row carries a known grade of evidence |
+| `scripts/summarise.py` | Figures of the sites, cloud regions and capacity, written to `data/summary.json` |
+| `scripts/estimate_capacity.py` | Low and high bounds of the capacity of the sites, written to `data/capacity_estimate.csv` and `data/capacity_estimate.json` |
+| `scripts/fetch_cloud_regions.py` | Download of the provider region pages and build of the file of cloud regions |
 | `scripts/fetch_epoch.py` | Download of Epoch AI's database and timeline files and the estimates and stages for the matched sites |
 | `site/` | Dashboard, with its data in `site/data/dashboard.json` |
 | `scripts/geocode_places.py` | Map point of each city from OpenStreetMap |
@@ -215,10 +266,11 @@ The tests use small tables and passages written in the test files and need no do
 | `tests/test_fetch_cloud_regions.py` | Offline tests of the region parsers and of the reading of PDF files |
 | `tests/test_fetch_epoch.py` | Offline tests of the reading of Epoch AI's database file |
 | `tests/test_build_site_data.py` | Offline tests of the dashboard data |
+| `tests/test_estimate_capacity.py` | Offline tests of the capacity estimate |
 
 ## Licence and attribution
 
-The code is under the MIT licence in `LICENSE`. The data files are under the Creative Commons Attribution 4.0 licence. The government data centre layer is derived from AidData's Global Chinese Development Finance Dataset, Version 3.0, which AidData publishes under the Open Data Commons Attribution License. AidData asks that the dataset be cited as both of the works below.
+The code is under the MIT licence in `LICENSE`. The data files are under the Creative Commons Attribution 4.0 licence. The file of government data centres is derived from AidData's Global Chinese Development Finance Dataset, Version 3.0, which AidData publishes under the Open Data Commons Attribution License. AidData asks that the dataset be cited as both of the works below.
 
 Custer, S., Dreher, A., Elston, T.B., Escobar, B., Fedorochko, R., Fuchs, A., Ghose, S., Lin, J., Malik, A., Parks, B.C., Solomon, K., Strange, A., Tierney, M.J., Vlasto, L., Walsh, K., Wang, F., Zaleski, L., and Zhang, S. 2023. Tracking Chinese Development Finance: An Application of AidData's TUFF 3.0 Methodology. Williamsburg, VA: AidData at William & Mary.
 

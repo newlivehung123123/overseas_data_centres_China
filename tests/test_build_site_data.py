@@ -15,8 +15,11 @@ TABLES = {
     "data/sites.csv": [{"site_id": "MYS-0001", "site_name": "A site", "city": "Johor", "country": "Malaysia",
                         "country_iso3": "MYS", "status": "operational", "capacity_mw": "110", "capacity_basis": "it",
                         "note": "", "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
-    "data/site_roles.csv": [{"site_id": "MYS-0001", "firm": "ByteDance", "firm_origin": "", "role": "tenant",
+    "data/site_roles.csv": [{"site_id": "MYS-0001", "firm": "ByteDance", "firm_origin": "", "role": "tenant", "evidence": "primary",
                              "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
+    "data/capacity_estimate.csv": [{"component": "A site", "firm": "ByteDance", "site_id": "MYS-0001", "stage": "in_service",
+                                    "mw": "110", "basis": "it", "evidence": "primary", "counted_in": "both",
+                                    "source_table": "sites", "note": ""}],
     "data/cloud_regions.csv": [{"provider": "Tencent Cloud", "region_label": "Seoul", "region_id": "ap-seoul", "city": "Seoul",
                                 "country": "South Korea", "country_iso3": "KOR", "status": "operational", "launch_year": "",
                                 "source_url": "https://example.org", "source_quote": "q", "check_status": "found"}],
@@ -60,6 +63,7 @@ class BuildTest(unittest.TestCase):
                     writer = csv.DictWriter(f, fieldnames=list(rows[0]))
                     writer.writeheader()
                     writer.writerows(rows)
+            (root / "data" / "capacity_estimate.json").write_text('{"low": {"in_service_mw": 110}, "high": {"in_service_mw": 243}}')
             with mock.patch.object(b, "ROOT", root):
                 data = b.build()
         site, region = data["records"]
@@ -79,6 +83,9 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(site["level"], "B")
         self.assertEqual(data["customers"][0]["share"], "0.73")
         self.assertEqual(data["census"][0]["link"], "tenant")
+        self.assertEqual(site["roles"][0]["evidence"], "primary")
+        self.assertEqual(data["estimate"]["totals"]["high"]["in_service_mw"], 243)
+        self.assertEqual(data["estimate"]["rows"][0]["counted_in"], "both")
 
     def test_level_b_needs_20_mw_or_a_report_of_ai_chips(self):
         self.assertEqual(b.level(["15", ""], 0), "A")

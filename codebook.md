@@ -1,6 +1,6 @@
 # Codebook
 
-The dataset records data-centre capacity outside mainland China in which a Chinese firm or a Chinese state lender has a role. A Chinese firm is a firm whose controlling owner is in mainland China, or a firm that began as the international arm of such a firm, such as DayOne, which began as the international arm of GDS. Hong Kong and Macau are recorded but marked, so that a user can include or exclude them.
+The dataset records data-centre capacity outside mainland China in which a Chinese firm or a Chinese state lender has a role. A Chinese firm is a firm whose controlling owner is in mainland China, or a firm that began as the international business of such a firm, such as DayOne, which began as the international business of GDS. Hong Kong and Macau are recorded but marked, so that a user can include or exclude them.
 
 ## Roles
 
@@ -34,21 +34,37 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 | AI developers and compute brokers | INF Tech, Moonshot AI, Megaspeed (origin in a Chinese gaming firm) |
 | State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA, and funds that they sponsor, such as the China-ASEAN Investment Cooperation Fund II |
 
-Bridge Data Centres is not a listed firm. Bain Capital bought ChinData in 2019 and merged it with Bridge, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge is therefore not Chinese-owned and did not begin as the international arm of a Chinese firm, and `data/firm_links.csv` records its former link to ChinData. A site that Bridge operates enters the dataset only when a listed firm holds a role there, such as ByteDance as tenant.
+Bridge Data Centres is not a listed firm. Bain Capital bought ChinData in 2019 and merged it with Bridge, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge is therefore not Chinese-owned and did not begin as the international business of a Chinese firm, and `data/firm_links.csv` records its former link to ChinData. A site that Bridge operates enters the dataset only when a listed firm holds a role there, such as ByteDance as tenant.
 
 Ownership can change, so each link between a firm and its Chinese owner in `data/firm_links.csv` carries the date of its source. Global Switch has been under the control of a consortium of Chinese companies including Jiangsu Shagang Group since 2018. Its annual report for 2025 states that Shagang holds an indirect stake of 51.8 percent and that the directors consider Shagang to control the group. Global Switch stays a listed firm until a source reports a change of control.
 
 ## Levels
 
-Every record is coded at level A. Records with announced capacity of at least 20 MW, or with announced AI chips, are also coded at level B, and the largest level B sites in each hub are checked at level C. The scripts code level B from the checked rows: a site is at level B when its row in `sites.csv` or a row of `site_capacity.csv` gives at least 20 MW, or when `ai_compute.csv` holds a report of AI chips at the site. The estimates of Epoch AI do not count, because no firm has announced them, and a capacity that an operator reports for a whole market does not count for any one site in it.
+Every record is coded at level A. Records with announced capacity of at least 20 MW, or with announced AI chips, are also coded at level B, and the level B sites with the largest capacity are checked at level C. The scripts code level B from the checked rows: a site is at level B when its row in `sites.csv` or a row of `site_capacity.csv` gives at least 20 MW, or when `ai_compute.csv` holds a report of AI chips at the site. The estimates of Epoch AI do not count, because no firm has announced them, and a capacity that an operator reports for a whole market does not count for any one site in it.
 
 **Table 3. Levels**
 
 | Level | Coverage | Variables added |
 |---|---|---|
-| A | Every record | Firm, role, country, city, status, year, source of each value |
+| A | Every record | Firm, role, country, city, status, the source of each value and the grade of evidence of each row |
 | B | Capacity of at least 20 MW or announced AI chips | Capacity in MW with a low and a high estimate, chips, power density, cooling, evidence of AI workloads, the rules that cover the site |
-| C | Largest level B sites in each hub | Satellite imagery, permits and power allocations |
+| C | Level B sites with the largest capacity | Satellite imagery, permits and power allocations |
+
+Power density and cooling are not recorded for any site yet. The low and the high estimate of capacity come from `scripts/estimate_capacity.py`, which the section on `data/capacity_estimate.csv` below describes.
+
+## Evidence
+
+Every row of the files written by hand in `config`, and every row of `cloud_regions.csv`, carries a grade of the evidence for the row in the variable `evidence`, with one of the three values in Table 4. The grade records who states the value in the source that the row cites, while `check_status` records only whether the passage is on the page. A news report of a filing is therefore graded secondary, because the row cites the report and not the filing. A row of the census of Johor carries a second grade, `link_evidence`, for the page that supports the Chinese link.
+
+**Table 4. Grades of evidence**
+
+| Grade | Definition |
+|---|---|
+| primary | The firm that the row concerns, another party to the site or the deal, such as the builder or the lender, or a public authority states the value in a document that the firm or the authority publishes, such as a filing at the SEC, an annual report, a press release, a website or a notice of a government or a legislature |
+| secondary | A third party states the value, such as a news outlet, a commercial directory, an industry body or a research database, and no source found doubts the value |
+| unconfirmed | The source rests on people whom the source does not name or reports an accusation without public evidence, or another source doubts the value, or the firms concerned have not confirmed the value |
+
+The low bound of the capacity estimate counts only figures graded primary, as rule 3 of the section on `data/capacity_estimate.csv` states.
 
 ## Files
 
@@ -56,7 +72,7 @@ Every record is coded at level A. Records with announced capacity of at least 20
 
 One row for each public cloud region that a Chinese provider lists outside mainland China. A region is a service area and can span several buildings, so a region is linked to its buildings at level B. The script `scripts/fetch_cloud_regions.py` reads the operational regions from each provider's own region page and keeps the passage of the page that supports each row. Regions that the provider pages do not list, such as announced regions, come from `config/cloud_regions_manual.csv`, and the script checks each of those rows against the page it cites.
 
-**Table 4. Variables in cloud_regions.csv**
+**Table 5. Variables in cloud_regions.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
@@ -70,6 +86,7 @@ One row for each public cloud region that a Chinese provider lists outside mainl
 | launch_year | integer | | Year the page gives for the launch, empty when the page gives none |
 | availability_zones | integer | | Number of zones the page gives, empty when it gives none |
 | hong_kong_macau | category | yes, no | yes for Hong Kong and Macau |
+| evidence | category | primary, secondary, unconfirmed | Grade of the evidence for the row, as in Table 4: primary for a region read from the provider's own page, and the grade written in `config/cloud_regions_manual.csv` for the other regions |
 | source_url | text | | Page that supports the row |
 | source_quote | text | | Passage of the page that supports the row |
 | check_status | category | found, not_found, not_read | found when the passage is on the downloaded page, not_found when the page was read and the passage is not on it, not_read when the page could not be downloaded |
@@ -79,7 +96,7 @@ One row for each public cloud region that a Chinese provider lists outside mainl
 
 `data/sites.csv` has one row for each site, which is a building or a campus, and `data/site_roles.csv` has one row for each role that a listed firm holds at a site. A person writes both files in `config/sites.csv` and `config/site_roles.csv`, with the page that supports each row and a passage copied from the page. The script `scripts/check_sources.py` downloads each page and adds the result of the check. A site enters the file only when at least one row of `site_roles.csv` gives a listed firm a role at the site.
 
-**Table 5. Variables in sites.csv**
+**Table 6. Variables in sites.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
@@ -91,12 +108,13 @@ One row for each public cloud region that a Chinese provider lists outside mainl
 | capacity_mw | number | | Capacity in megawatts that the source gives, empty when it gives none |
 | capacity_basis | category | it, power, unspecified | it for IT capacity, power for the installed power or the power contracted, unspecified when the source does not say |
 | note | text | | Limits of the source, such as a capacity that covers several phases |
+| evidence | category | primary, secondary, unconfirmed | Grade of the evidence for the row, as in Table 4 |
 | source_url, source_quote | text | | Page that supports the row and the passage copied from it |
 | check_status | category | found, partly_found, not_found, not_read | Result of the check, as defined below |
 | share_found | number | 0 to 1 | Share of the passage's pieces found on the page |
 | retrieved | date | YYYY-MM-DD | Date the page was downloaded |
 
-**Table 6. Variables in site_roles.csv**
+**Table 7. Variables in site_roles.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
@@ -104,25 +122,25 @@ One row for each public cloud region that a Chinese provider lists outside mainl
 | firm | text | | Firm as Table 2 names it |
 | firm_origin | text | | Chinese firm from which the firm began, such as GDS for DayOne, empty when the firm is itself Chinese |
 | role | category | Table 1 | Role of the firm at the site |
-| source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | | As in Table 6 |
 
 A passage counts as found when at least 90 percent of its overlapping pieces of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as partly found from 50 percent. A role recorded as owner can rest on an investment in the project whose share is not disclosed, and the passage then says so.
 
 ### data/operator_markets.csv and data/firm_links.csv
 
-`data/operator_markets.csv` has one row for each market in which an operator in Table 2 reports its capacity, for operators that report by market and not by site. `data/firm_links.csv` has one row for each ownership link between a listed firm and a Chinese firm, such as the share of DayOne that GDS holds. Both files are written by hand in `config` and checked by `scripts/check_sources.py` in the same way as the site layer.
+`data/operator_markets.csv` has one row for each market in which an operator in Table 2 reports its capacity, for operators that report by market or for the whole firm and not by site. Global Switch reports one figure for the group, so the row of Global Switch has the market All markets and records in `in_service_mw` the 252 MW of saleable capacity that the annual report for 2025 gives. The report does not say whether saleable capacity includes the data centres under development, and the row records the figure as capacity in service. The basis of each figure comes from the definitions of the operator in `data/capacity_definitions.csv`, which Table 18 describes. `data/firm_links.csv` has one row for each ownership link between a listed firm and a Chinese firm, such as the share of DayOne that GDS holds. Both files are written by hand in `config` and checked by `scripts/check_sources.py` in the same way as `config/sites.csv`.
 
-**Table 7. Variables in operator_markets.csv**
+**Table 8. Variables in operator_markets.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | firm, firm_origin | text | Operator and the Chinese firm from which it began |
 | market, country, country_iso3, hong_kong_macau | text | Market as the operator names it, with its country |
-| in_service_mw, under_construction_mw, secured_powered_land_mw, total_mw | number | Capacity in MW as the operator reports it, with 0 where the source shows a dash |
+| in_service_mw, under_construction_mw, secured_powered_land_mw, total_mw | number | Capacity in MW as the operator reports it, with 0 where the source shows a dash and empty where the source gives no figure |
 | as_of | date | Date of the figures |
-| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | As in Table 6 |
 
-**Table 8. Variables in firm_links.csv**
+**Table 9. Variables in firm_links.csv**
 
 | Variable | Type | Description |
 |---|---|---|
@@ -130,13 +148,13 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | relation | category | shareholder, parent, former parent, former group member, or sponsor for a fund whose main sponsor is a Chinese state lender |
 | share | number | Share held, from 0 to 1, empty when the source gives none |
 | as_of | date | Date of the share, empty when the source gives none |
-| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | As in Table 6 |
 
 ### data/rules.csv
 
 `data/rules.csv` has one row for each rule, bill or guidance that bears on the AI chips in a host country or on remote access to them, with the part of the rule that the row records. A clause of a private contract that imposes such a control, such as a lender's requirement that an operator watch how a customer uses the chips, is recorded in the same way and marked as a private contract. A rule with several parts, such as a permit that covers exports but not use within the country, has one row for each part. The file is written by hand in `config/rules.csv` and checked by `scripts/check_sources.py`.
 
-**Table 9. Variables in rules.csv**
+**Table 10. Variables in rules.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
@@ -148,13 +166,13 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | status | category | in_force, pending, rescinded, announced, enforcement | in_force for a rule or guidance that applies, pending for a bill not yet passed, rescinded for a rule or draft withdrawn, announced for a measure whose taking effect the source does not confirm, enforcement for a prosecution or investigation under general law |
 | date | date | | Date of the vote, notice or announcement |
 | note | text | | What the row records, in one sentence |
-| source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | | As in Table 6 |
 
 ### data/ai_compute.csv
 
 `data/ai_compute.csv` has one row for each report of AI chips at a site, which is the evidence of AI workloads that level B records. A report whose source names no site, such as a lease of chips at several data centres in a region, has an empty `site_id` and gives the place in its note. The file is written by hand in `config/ai_compute.csv` and checked by `scripts/check_sources.py`.
 
-**Table 10. Variables in ai_compute.csv**
+**Table 11. Variables in ai_compute.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
@@ -166,53 +184,53 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | status | category | operational, planned, unclear | Stage of the deployment at the date of the source |
 | date | date | | Date of the source |
 | note | text | | Limits of the source |
-| source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | | As in Table 6 |
 
 ### data/site_capacity.csv
 
 `data/site_capacity.csv` has one row for each statement of capacity at a site, because sources give a site's capacity at several stages and on several bases, such as the grid capacity of a first phase and the planned total of the campus. The `capacity_mw` of `sites.csv` keeps the figure of the source that supports the site. The file is written by hand in `config/site_capacity.csv` and checked by `scripts/check_sources.py`.
 
-**Table 11. Variables in site_capacity.csv**
+**Table 12. Variables in site_capacity.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
 | site_id | text | | Site in `sites.csv` |
 | capacity_mw | number | | Capacity in MW as the source states it |
-| basis | category | it, power, unspecified | As in Table 5 |
+| basis | category | it, power, unspecified | As in Table 6 |
 | stage | category | in_service, first_phase, planned_total, contracted, leased | Stage of the site that the figure describes, with contracted for power bought under an agreement and leased for capacity that customers have taken under an agreement |
 | date | date | | Date of the statement |
 | note | text | | What the figure covers |
-| source_url, source_quote, check_status, share_found, retrieved | | | As in Table 5 |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | | As in Table 6 |
 
 ### data/epoch_links.csv and data/epoch_estimates.csv
 
 Epoch AI publishes a database of large AI data centres, "AI data centers", that estimates the IT power and the AI compute of each one from satellite imagery, permits and company documents, under the Creative Commons Attribution 4.0 licence. `data/epoch_links.csv` has one row for each site of `sites.csv` that the database also holds, written by hand in `config/epoch_links.csv` with the passage of the Epoch page that supports the match and checked by `scripts/check_sources.py`. `scripts/fetch_epoch.py` reads the estimates for those sites from Epoch's database file into `data/epoch_estimates.csv`, and the stages of construction that Epoch dates from satellite imagery and other evidence into `data/epoch_timelines.csv`, which is the first material for level C. The estimates are Epoch's models and not statements of the firms, so they are kept apart from `site_capacity.csv`.
 
-**Table 12. Variables in epoch_links.csv**
+**Table 13. Variables in epoch_links.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | site_id | text | Site in `sites.csv` |
 | epoch_name | text | Name of the data centre in Epoch's database |
 | note | text | Why the two records describe the same site |
-| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5, for the Epoch page of the data centre |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | As in Table 6, for the Epoch page of the data centre |
 
-**Table 13. Variables in epoch_estimates.csv**
+**Table 14. Variables in epoch_estimates.csv**
 
 | Variable | Type | Description |
 |---|---|---|
-| site_id, epoch_name | text | As in Table 12 |
+| site_id, epoch_name | text | As in Table 13 |
 | it_power_mw | number | Current IT power in MW that Epoch estimates, rounded to whole megawatts |
 | h100_equivalents | number | Current AI compute that Epoch estimates, in Nvidia H100 equivalents |
 | chip_types | text | Chips that Epoch estimates the site uses |
 | owner, users | text | Owner and users of the chips that Epoch names, with its own confidence, such as #likely or #speculative |
 | source_url, retrieved | text | Epoch's database file and the date it was read |
 
-**Table 14. Variables in epoch_timelines.csv**
+**Table 15. Variables in epoch_timelines.csv**
 
 | Variable | Type | Description |
 |---|---|---|
-| site_id, epoch_name | text | As in Table 12 |
+| site_id, epoch_name | text | As in Table 13 |
 | date | date | Date of the stage, from satellite imagery or another source that Epoch cites |
 | buildings_operational | number | Buildings that Epoch judges operational at that date |
 | it_power_mw, h100_equivalents | number | IT power and AI compute that Epoch estimates at that date |
@@ -221,9 +239,9 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 
 ### data/operator_customers.csv
 
-`data/operator_customers.csv` has one row for each statement of how much an operator depends on a customer that is a Chinese firm or that a source identifies as one, such as a share of the operator's revenue. Filings often describe a customer without naming it, so the description is kept as the source gives it, and a separate row records a source that names the customer. The file is written by hand in `config/operator_customers.csv` and checked by `scripts/check_sources.py`.
+`data/operator_customers.csv` has one row for each statement of how much an operator depends on a customer that is a Chinese firm or that a source identifies as one, such as a share of the operator's revenue. Filings often describe a customer without naming it, so the description is kept as the source gives it, and another row records the source that names the customer. The file is written by hand in `config/operator_customers.csv` and checked by `scripts/check_sources.py`.
 
-**Table 15. Variables in operator_customers.csv**
+**Table 16. Variables in operator_customers.csv**
 
 | Variable | Type | Description |
 |---|---|---|
@@ -235,13 +253,13 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 | revenue | text | Revenue from the customer as the source gives it |
 | period | text | Period or date of the statement |
 | note | text | Limits of the source |
-| source_url, source_quote, check_status, share_found, retrieved | | As in Table 5 |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | As in Table 6 |
 
 ### data/johor_census.csv
 
 `data/johor_census.csv` has one row for each data-centre facility in Johor that Baxtel's public list named on 22 October 2026. The list is the frame of the census, and each row copies the facility, the operator and the status as the list gives them, with the passage of the list. A person coded the Chinese link of each facility from the sites of `sites.csv` and from searches of 22 October 2026, and a row with a link carries a second passage from the page that supports it. The file is written in `config/johor_census.csv` and both passages are checked by `scripts/check_sources.py`.
 
-**Table 16. Variables in johor_census.csv**
+**Table 17. Variables in johor_census.csv**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
@@ -250,14 +268,55 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 | chinese_link | category | operator, owner, tenant, financier, unconfirmed, none_found | Role of a listed firm or of a fund of a Chinese state lender at the facility; unconfirmed for a link that a source reports but another source doubts or that rests on an owner the source does not name; none_found when no source found names one |
 | site_id | text | | Site in `sites.csv` that the facility belongs to, empty when the dataset has none |
 | note | text | | Limits of the coding |
-| source_url, source_quote, check_status, share_found, retrieved | | | Baxtel's list and the passage of the facility, as in Table 5 |
-| link_source_url, link_source_quote, link_check_status, link_share_found | | | Page and passage that support the Chinese link, and the result of their check |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | | Baxtel's list and the passage of the facility, as in Table 6 |
+| link_source_url, link_source_quote, link_evidence, link_check_status, link_share_found | | | Page and passage that support the Chinese link, the grade of their evidence as in Table 4, and the result of their check |
+
+### data/capacity_definitions.csv, data/capacity_estimate.csv and data/capacity_estimate.json
+
+The script `scripts/estimate_capacity.py` estimates the capacity of the sites in which a Chinese firm holds a role, with a low and a high bound, from the checked rows of `sites.csv`, `site_roles.csv`, `operator_markets.csv`, `site_capacity.csv`, `epoch_estimates.csv` and `capacity_definitions.csv`. `data/capacity_definitions.csv` has one row for each definition of capacity that an operator in `operator_markets.csv` gives in the source of its figures, so that the basis of each figure that a firm reports rests on a passage of the source. DayOne's registration statement defines capacity in service, capacity under construction and secured powered land as IT power capacity, and Global Switch's annual report for 2025 describes the capacity that the expenditure of Global Switch creates as saleable IT capacity. The file is written by hand in `config/capacity_definitions.csv` and checked by `scripts/check_sources.py`.
+
+**Table 18. Variables in capacity_definitions.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| firm | text | | Operator in `operator_markets.csv` |
+| measure | text | | Measure of capacity as the source names it, such as Capacity In Service |
+| column | text | in_service_mw, under_construction_mw, secured_powered_land_mw | Variable of `operator_markets.csv` that holds the measure |
+| basis | category | it, power, unspecified | As in Table 6 |
+| note | text | | How the passage supports the basis, where the passage does not define the measure itself |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | | As in Table 6 |
+
+The estimate counts each data centre once and follows four rules.
+
+1. Where a firm reports capacity by market or for the whole firm, the estimate takes the firm's figures and leaves out the figures of the firm's sites for each stage that the firm reports. DayOne reports capacity in service, under construction and on secured powered land, so no figure of a DayOne site is counted. Global Switch reports only capacity in service, so the capacity of the planned sites of Global Switch comes from the sites.
+2. For every other site, the estimate takes the largest figure that the sources give for each of two stages: capacity in service, and capacity under construction or planned. A figure of a first phase counts as in service when the site is operational and as under construction or planned otherwise, and a figure of leased capacity counts only when the site is operational.
+3. The low bound counts only figures graded primary, at sites where at least one role of a Chinese firm is not graded unconfirmed and whose status is not unclear. The high bound counts every figure.
+4. The high bound also counts the IT power that Epoch AI estimates above the figure that the sources state for a site, and, for a market whose total a firm reports, above the firm's figure for the market.
+
+Figures of IT capacity, of power and of an unspecified basis are added as the sources state them, so each bound can mix the three bases, and `data/capacity_estimate.json` gives the megawatts of each basis. A site counts as having a figure when `sites.csv` or `site_capacity.csv` gives one, or when the firm reports the capacity of the stage of the site, and both bounds leave out every site without a figure.
+
+**Table 19. Variables in capacity_estimate.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| component | text | | Firm and market, or site, that the row describes |
+| firm | text | | Firm that reports the figure, or the firms with a role at the site, separated by semicolons |
+| site_id | text | | Site in `sites.csv`, empty for a figure that a firm reports by market or for the whole firm |
+| stage | category | in_service, pipeline | in_service for capacity in service, pipeline for capacity under construction, planned or on secured powered land |
+| mw | number | | Megawatts that the row adds, rounded to whole megawatts |
+| basis | category | it, power, unspecified | As in Table 6 |
+| evidence | category | primary, secondary, unconfirmed | Grade of the evidence for the figure, as in Table 4, with secondary for an estimate of Epoch AI |
+| counted_in | category | both, low, high | Bound that counts the row: both bounds, the low bound alone or the high bound alone |
+| source_table | text | operator_markets, sites, site_capacity, epoch_estimates | File that gives the figure |
+| note | text | | Why the row counts in one bound only, or the two figures whose difference an estimate of Epoch AI adds |
+
+`data/capacity_estimate.json` gives, for each bound, the megawatts in service, under construction or planned, and in all, and the megawatts of each basis, together with the number of sites and the number of sites without a figure.
 
 ### data/government_data_centres_aiddata.csv
 
 One row for each record in AidData's Global Chinese Development Finance Dataset, Version 3.0, that paid for a data centre or a computing centre. A person read each record and wrote the coding in `config/aiddata_coding.csv`. AidData counts loans and grants, not buildings, and one project financed in phases has one row for each phase.
 
-**Table 17. Coding values**
+**Table 20. Coding values**
 
 | Coding | Meaning |
 |---|---|
@@ -269,12 +328,12 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | unspecified | An e-government or network project whose record does not say whether it built a data centre |
 | excluded | The record matched a search term by chance, with the reason, and is left out of the file |
 
-**Table 18. Variables in government_data_centres_aiddata.csv**
+**Table 21. Variables in government_data_centres_aiddata.csv**
 
 | Variable | Type | Description |
 |---|---|---|
 | aiddata_id | integer | AidData record ID |
-| coding | category | Value from Table 17 |
+| coding | category | Value from Table 20 |
 | note | text | The data centre that the record describes |
 | country, country_iso3, region | text | Recipient as AidData records it |
 | commitment_year | integer | Year the loan or grant was signed |

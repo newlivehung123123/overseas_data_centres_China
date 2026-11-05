@@ -83,7 +83,7 @@ PLACES = {
 TENCENT_MAINLAND = re.compile(r"^ap-(beijing|shanghai|nanjing|guangzhou|chengdu|chongqing|zhongwei|shenzhen)|-fsi")
 
 FIELDS = ["provider", "region_label", "region_id", "city", "country", "country_iso3", "status", "launch_year",
-          "availability_zones", "hong_kong_macau", "source_url", "source_quote", "check_status", "retrieved"]
+          "availability_zones", "hong_kong_macau", "evidence", "source_url", "source_quote", "check_status", "retrieved"]
 
 
 def fold(text: str) -> str:
@@ -156,7 +156,7 @@ def row(provider, label, region_id, where, url, passage, retrieved, zones="", ye
     city, country, iso3 = where
     return {"provider": provider, "region_label": label, "region_id": region_id, "city": city, "country": country,
             "country_iso3": iso3, "status": status, "launch_year": year, "availability_zones": zones,
-            "hong_kong_macau": "yes" if iso3 in ("HKG", "MAC") else "no", "source_url": url,
+            "hong_kong_macau": "yes" if iso3 in ("HKG", "MAC") else "no", "evidence": "primary", "source_url": url,
             "source_quote": passage, "check_status": "found", "retrieved": retrieved}
 
 

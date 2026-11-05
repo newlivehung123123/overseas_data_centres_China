@@ -1,0 +1,23 @@
+{
+  "low": {
+    "in_service_mw": 1323,
+    "pipeline_mw": 4183,
+    "total_mw": 5506,
+    "mw_by_basis": {
+      "it": 4886,
+      "unspecified": 620
+    }
+  },
+  "high": {
+    "in_service_mw": 1652,
+    "pipeline_mw": 5041,
+    "total_mw": 6693,
+    "mw_by_basis": {
+      "it": 5125,
+      "power": 600,
+      "unspecified": 968
+    }
+  },
+  "sites": 67,
+  "sites_without_a_figure": 31
+}

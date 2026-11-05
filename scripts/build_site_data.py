@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Write the data file that the dashboard in site/ reads, from the checked layers.
+"""Write the data file that the dashboard in site/ reads, from the checked files.
 
 The dashboard shows the sites with the roles of firms at each site and the cloud regions, each at
 the point of its city in config/places.csv, and the rules recorded for each country. Each site carries its reports of AI chips,
 its statements of capacity and the estimates of Epoch AI where Epoch's database holds the site. Reports of AI chips
-whose sources name no site, and the statements of how much operators depend on Chinese customers, are listed apart. The government data centres of the AidData layer are left out of the
-dashboard until the article pitched on them has been answered, as CONTRIBUTING.md asks.
+whose sources name no site, and the statements of how much operators depend on Chinese customers, are listed apart, and
+every row carries the grade of its evidence. The capacity estimate comes from data/capacity_estimate.csv and
+data/capacity_estimate.json, which scripts/estimate_capacity.py writes. The government data centres from AidData are left out
+of the dashboard until the article pitched on them has been answered, as CONTRIBUTING.md asks.
 
     python scripts/build_site_data.py    writes site/data/dashboard.json
 """
@@ -20,7 +22,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "site" / "data" / "dashboard.json"
-LEVEL_B_MW = 20    # announced capacity from which a site is coded at level B, as the codebook sets out
+LEVEL_B_MW = 20    # announced capacity from which a site is coded at level B, as the codebook defines
 
 
 def level(figures: list[str], ai_reports: int) -> str:
@@ -47,12 +49,13 @@ def build() -> dict:
     roles = defaultdict(list)
     for r in read("data/site_roles.csv"):
         roles[r["site_id"]].append({"firm": r["firm"], "origin": r["firm_origin"], "role": r["role"],
-                                    "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"]})
+                                    "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"],
+                                    "evidence": r.get("evidence", "")})
     compute = defaultdict(list)
     for a in read("data/ai_compute.csv"):
         compute[a["site_id"]].append({"firm": a["firm"], "chips": a["chips"], "count": a["chip_count"], "access": a["access"],
                                       "status": a["status"], "date": a["date"], "note": a["note"], "source": a["source_url"],
-                                      "quote": a["source_quote"], "check": a["check_status"]})
+                                      "quote": a["source_quote"], "check": a["check_status"], "evidence": a.get("evidence", "")})
     links = {link["site_id"]: link for link in read("data/epoch_links.csv")}
     stages = defaultdict(list)
     for t in read("data/epoch_timelines.csv"):
@@ -67,14 +70,14 @@ def build() -> dict:
     capacity = defaultdict(list)
     for c in read("data/site_capacity.csv"):
         capacity[c["site_id"]].append({"mw": c["capacity_mw"], "basis": c["basis"], "stage": c["stage"], "date": c["date"],
-                                       "note": c["note"], "source": c["source_url"]})
+                                       "note": c["note"], "source": c["source_url"], "evidence": c.get("evidence", "")})
     records = []
     for s in read("data/sites.csv"):
         records.append({
             "layer": "site", "id": s["site_id"], "name": s["site_name"], "city": s["city"], "country": s["country"],
             "status": s["status"], "capacity_mw": s["capacity_mw"], "capacity_basis": s["capacity_basis"],
             "note": s["note"], "source": s["source_url"], "quote": s["source_quote"], "check": s["check_status"],
-            "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "ai": compute[s["site_id"]], "capacity": capacity[s["site_id"]],
+            "evidence": s.get("evidence", ""), "iso3": s["country_iso3"], "roles": roles[s["site_id"]], "ai": compute[s["site_id"]], "capacity": capacity[s["site_id"]],
             "epoch": epoch.get(s["site_id"]), "point": point(places, s["city"], s["country"]),
             "level": level([s["capacity_mw"]] + [c["mw"] for c in capacity[s["site_id"]]], len(compute[s["site_id"]])),
         })
@@ -83,25 +86,35 @@ def build() -> dict:
             "layer": "cloud_region", "id": c["region_id"] or c["region_label"], "name": f"{c['provider']} {c['region_label']}".strip(),
             "city": c["city"], "country": c["country"], "status": c["status"], "capacity_mw": "", "capacity_basis": "",
             "note": f"Launched {c['launch_year']}" if c["launch_year"] else "", "source": c["source_url"],
-            "quote": c["source_quote"], "check": c["check_status"],
+            "quote": c["source_quote"], "check": c["check_status"], "evidence": c.get("evidence", ""),
             "roles": [{"firm": c["provider"], "origin": "", "role": "operator", "source": c["source_url"],
-                       "quote": c["source_quote"], "check": c["check_status"]}],
+                       "quote": c["source_quote"], "check": c["check_status"], "evidence": c.get("evidence", "")}],
             "iso3": c["country_iso3"], "point": point(places, c["city"], c["country"]),
         })
     rules = [{"id": r["rule_id"], "jurisdiction": r["jurisdiction"], "iso3": r["country_iso3"], "applies_in": r["applies_in"].split(";"),
               "instrument": r["instrument"], "covers": r["covers"], "status": r["status"], "date": r["date"],
-              "note": r["note"], "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"]}
+              "note": r["note"], "source": r["source_url"], "quote": r["source_quote"], "check": r["check_status"],
+              "evidence": r.get("evidence", "")}
              for r in read("data/rules.csv")]
     customers = [{"firm": c["firm"], "customer": c["customer"], "description": c["customer_description"],
                   "identified_as": c["identified_as"], "share": c["share_of_revenue"], "revenue": c["revenue"],
                   "period": c["period"], "note": c["note"], "source": c["source_url"], "quote": c["source_quote"],
-                  "check": c["check_status"]} for c in read("data/operator_customers.csv")]
+                  "check": c["check_status"], "evidence": c.get("evidence", "")} for c in read("data/operator_customers.csv")]
     census = [{"facility": c["facility"], "operator": c["operator"], "status": c["baxtel_status"], "page": c["baxtel_page"],
                "link": c["chinese_link"], "site": c["site_id"], "note": c["note"], "source": c["source_url"],
                "quote": c["source_quote"], "check": c["check_status"], "link_source": c["link_source_url"],
-               "link_quote": c["link_source_quote"], "link_check": c["link_check_status"]} for c in read("data/johor_census.csv")]
+               "link_quote": c["link_source_quote"], "link_check": c["link_check_status"],
+               "evidence": c.get("evidence", ""), "link_evidence": c.get("link_evidence", "")} for c in read("data/johor_census.csv")]
     return {"built": date.today().isoformat(), "records": records, "rules": rules, "ai_without_site": compute[""],
-            "customers": customers, "census": census}
+            "customers": customers, "census": census, "estimate": capacity_estimate()}
+
+
+def capacity_estimate() -> dict | None:
+    """Totals and rows of the capacity estimate, or None when scripts/estimate_capacity.py has not been run."""
+    totals, rows = ROOT / "data" / "capacity_estimate.json", ROOT / "data" / "capacity_estimate.csv"
+    if not totals.exists() or not rows.exists():
+        return None
+    return {"totals": json.loads(totals.read_text()), "rows": read("data/capacity_estimate.csv")}
 
 
 def main() -> None:

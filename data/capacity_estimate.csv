@@ -1,0 +1,32 @@
+component,firm,site_id,stage,mw,basis,evidence,counted_in,source_table,note
+"DayOne, Johor",DayOne,,in_service,789,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Johor",DayOne,,pipeline,824,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Batam",DayOne,,in_service,72,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Batam",DayOne,,pipeline,360,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Singapore",DayOne,,in_service,0,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Singapore",DayOne,,pipeline,20,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Kuala Lumpur",DayOne,,in_service,0,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Kuala Lumpur",DayOne,,pipeline,1448,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Greater Bangkok",DayOne,,in_service,73,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Greater Bangkok",DayOne,,pipeline,141,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Kyushu",DayOne,,in_service,0,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Kyushu",DayOne,,pipeline,160,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Tokyo",DayOne,,in_service,0,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Tokyo",DayOne,,pipeline,60,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Hong Kong",DayOne,,in_service,27,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Hong Kong",DayOne,,pipeline,39,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Greater Helsinki",DayOne,,in_service,0,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Greater Helsinki",DayOne,,pipeline,281,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"DayOne, Zaragoza",DayOne,,in_service,0,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Zaragoza",DayOne,,pipeline,304,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
+"Global Switch, All markets",Global Switch,,in_service,252,it,primary,both,operator_markets,Total that the firm reports
+"DayOne, Johor",DayOne,,in_service,106,it,secondary,high,epoch_estimates,"Epoch AI estimates 895 MW of IT power at the sites of the market, against 789 MW that the firm reports in service"
+Data Center Pecém,ByteDance,BRA-0001,pipeline,300,power,secondary,high,sites,"High bound only, because the figure is not from a primary source"
+Global Switch Madrid 2,Global Switch,ESP-0003,pipeline,36,it,primary,both,site_capacity,
+Bridge Data Centres MY06,ByteDance,MYS-0001,in_service,110,unspecified,primary,both,sites,
+Bridge Data Centres MY06,ByteDance,MYS-0001,in_service,133,it,secondary,high,epoch_estimates,"Epoch AI estimates 243 MW of IT power, against 110 MW stated"
+MSFusion Johor campus,Megaspeed,MYS-0013,pipeline,300,power,secondary,high,site_capacity,"High bound only, because the figure is not from a primary source"
+GDS data centres at YTL Green Data Center Park,GDS,MYS-0014,pipeline,168,unspecified,primary,high,sites,"High bound only, because the status of the site is unclear"
+"BrightRay DC campus, Sedenak",Shanghai DC-Science,MYS-0015,pipeline,90,unspecified,secondary,high,site_capacity,"High bound only, because the role of the Chinese firm is unconfirmed"
+Racks Central Johor AI Campus,China-ASEAN Investment Cooperation Fund II,MYS-0016,pipeline,510,unspecified,primary,both,site_capacity,
+Green Mountain OSL-Hamar campus,ByteDance,NOR-0001,in_service,90,unspecified,secondary,high,sites,"High bound only, because the figure is not from a primary source"

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Count the checked rows of the compute layer and write the figures to data/summary.json.
+"""Count the checked rows of the files of sites, cloud regions and capacity, and write the figures to data/summary.json.
 
 The figures cover the sites and their levels, the roles of firms at the sites, the cloud regions, the
-capacity that operators report by market and the census of Johor. Only rows whose passage was found on its page are counted. The
-AidData layer has its own summary in data/aiddata_summary.json.
+capacity that operators report by market, the census of Johor, the grades of evidence of each file and the low
+and high bounds of the capacity estimate. Only rows whose passage was found on the page are counted. The file of
+government data centres from AidData has its own summary in data/aiddata_summary.json.
 
     python scripts/summarise.py
 """
@@ -18,9 +19,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_site_data import level  # noqa: E402
+from estimate_capacity import estimate  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "summary.json"
+GRADED = ["sites", "site_roles", "cloud_regions", "operator_markets", "capacity_definitions", "firm_links",
+          "operator_customers", "ai_compute", "site_capacity", "rules", "epoch_links", "johor_census"]
 
 
 def read(name: str) -> list[dict]:
@@ -70,6 +74,9 @@ def summarise() -> dict:
         "johor_census_facilities": len(census := read("data/johor_census.csv")),
         "johor_census_operators": len({c["operator"] for c in census}),
         "johor_census_by_chinese_link": dict(Counter(c["chinese_link"] for c in census).most_common()),
+        "evidence_by_file": {name: dict(Counter(r["evidence"] for r in read(f"data/{name}.csv")))
+                             for name in GRADED},
+        "capacity_estimate_mw": estimate()[1],
     }
 
 

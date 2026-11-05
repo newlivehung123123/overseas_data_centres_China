@@ -1,4 +1,4 @@
-// Dashboard of the site and cloud region layers, read from data/dashboard.json.
+// Dashboard of the sites and cloud regions, read from data/dashboard.json.
 (function () {
   "use strict";
 
@@ -8,6 +8,11 @@
   var RULE_STATUS = { in_force: "In force", pending: "Pending", rescinded: "Rescinded", announced: "Announced", enforcement: "Enforcement" };
   var COVERS = { chip_export: "Export of chips", chip_transit: "Export, transshipment and transit of chips",
     remote_access: "Remote access through the cloud", use_in_country: "Use of chips in the country", guidance: "Guidance" };
+
+  var EVIDENCE = { primary: "primary source", secondary: "secondary source", unconfirmed: "unconfirmed" };
+  var STAGES = { in_service: "In service", pipeline: "Under construction or planned" };
+  var BOUNDS = { both: "Both bounds", low: "Low bound only", high: "High bound only" };
+  var BASIS = { it: "IT capacity", power: "Power", unspecified: "Basis not stated" };
 
   var state = { records: [], rules: [], map: null, layer: null };
   var el = function (id) { return document.getElementById(id); };
@@ -71,6 +76,11 @@
     return Number(value).toLocaleString("en-GB");
   }
 
+  // Result of the check of a passage, with the grade of the evidence of the row.
+  function checked(check, evidence) {
+    return " (" + escape(check) + (evidence ? ", " + (EVIDENCE[evidence] || escape(evidence)) : "") + ")";
+  }
+
   function aiText(x) {
     return "AI chips: " + (x.count ? escape(number(x.count)) + " " : "") + escape(x.chips) + ", " + escape(x.access) +
       " by " + escape(x.firm) + ", " + escape(x.status);
@@ -98,15 +108,17 @@
         (r.note ? "<span class='quote'>" + escape(r.note) + "</span>" : "") +
         (r.capacity || []).map(function (x) {
           return "<span class='quote'>Capacity: " + escape(x.mw) + " MW (" + escape(x.basis) + ", " + escape(x.stage.replace(/_/g, " ")) +
-            ", " + escape(x.date) + "). <a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Source</a></span>";
+            ", " + escape(x.date) + "). <a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Source</a>" +
+            (x.evidence ? ", " + (EVIDENCE[x.evidence] || escape(x.evidence)) : "") + "</span>";
         }).join("") +
         (r.ai || []).map(function (x) {
-          return "<span class='quote'>" + aiText(x) + ". <a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Source</a></span>";
+          return "<span class='quote'>" + aiText(x) + ". <a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Source</a>" +
+            (x.evidence ? ", " + (EVIDENCE[x.evidence] || escape(x.evidence)) : "") + "</span>";
         }).join("") +
         (r.epoch ? "<span class='quote'>" + epochText(r.epoch) + "</span>" : "") + "</td>" +
         "<td>" + roleText(r) + "</td><td>" + place(r) + "</td><td>" + (STATUS[r.status] || escape(r.status)) + "</td>" +
         "<td>" + mw(r) + "</td><td><a href='" + escape(r.source) + "' rel='noopener' target='_blank'>Page</a>" +
-        "<span class='quote'>“" + escape(r.quote) + "” (" + escape(r.check) + ")</span></td></tr>";
+        "<span class='quote'>“" + escape(r.quote) + "”" + checked(r.check, r.evidence) + "</span></td></tr>";
     }).join("");
   }
 
@@ -152,8 +164,12 @@
           escape((x.applies_in || []).join(", "))) + "</span>") + "</td><td>" + (COVERS[x.covers] || escape(x.covers)) + "</td>" +
         "<td>" + (RULE_STATUS[x.status] || escape(x.status)) + (x.date ? " (" + escape(x.date) + ")" : "") + "</td>" +
         "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
-        escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";
+        escape(x.quote) + "”" + checked(x.check, x.evidence) + "</span></td></tr>";
     }).join("");
+  }
+
+  function range(totals, key) {
+    return number(totals.low[key]) + " to " + number(totals.high[key]);
   }
 
   function drawSummary(data) {
@@ -170,9 +186,27 @@
       ["Firms with a role at a site", unique(firms).length],
       ["Reports of AI chips", ai],
       ["Rules recorded", (data.rules || []).length]
-    ];
+    ].map(function (t) { return [t[0], number(t[1])]; });
+    if (data.estimate) {
+      tiles.push(["MW in service, low to high bound", range(data.estimate.totals, "in_service_mw")]);
+      tiles.push(["MW under construction or planned, low to high bound", range(data.estimate.totals, "pipeline_mw")]);
+    }
     el("summary").innerHTML = tiles.map(function (t) {
-      return "<div class='tile'><span class='value'>" + escape(number(t[1])) + "</span><span class='label'>" + escape(t[0]) + "</span></div>";
+      return "<div class='tile'><span class='value'>" + escape(t[1]) + "</span><span class='label'>" + escape(t[0]) + "</span></div>";
+    }).join("");
+  }
+
+  function drawEstimate(estimate) {
+    if (!estimate) return;
+    var t = estimate.totals;
+    el("estimate-summary").textContent = "The low bound is " + number(t.low.in_service_mw) + " MW in service and " +
+      number(t.low.pipeline_mw) + " MW under construction or planned, and the high bound is " + number(t.high.in_service_mw) +
+      " MW in service and " + number(t.high.pipeline_mw) + " MW under construction or planned. " + t.sites_without_a_figure +
+      " of the " + t.sites + " sites have no figure of capacity and are left out of both bounds.";
+    el("estimate").innerHTML = estimate.rows.filter(function (x) { return Number(x.mw) > 0; }).map(function (x) {
+      return "<tr><td>" + escape(x.component) + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td>" +
+        "<td>" + (STAGES[x.stage] || escape(x.stage)) + "</td><td>" + escape(number(x.mw)) + " MW</td><td>" + (BASIS[x.basis] || escape(x.basis)) + "</td>" +
+        "<td>" + (EVIDENCE[x.evidence] || escape(x.evidence)) + "</td><td>" + (BOUNDS[x.counted_in] || escape(x.counted_in)) + "</td></tr>";
     }).join("");
   }
 
@@ -182,7 +216,7 @@
         (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td><td>" + escape(x.access) + "</td>" +
         "<td>" + escape(x.status) + (x.date ? " (" + escape(x.date) + ")" : "") + "</td>" +
         "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
-        escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";
+        escape(x.quote) + "”" + checked(x.check, x.evidence) + "</span></td></tr>";
     }).join("");
   }
 
@@ -194,7 +228,7 @@
         (x.identified_as ? "<span class='quote'>Identified as " + escape(x.identified_as) + "</span>" : "") + "</td>" +
         "<td>" + amount + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td><td>" + escape(x.period) + "</td>" +
         "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>Page</a><span class='quote'>“" +
-        escape(x.quote) + "” (" + escape(x.check) + ")</span></td></tr>";
+        escape(x.quote) + "”" + checked(x.check, x.evidence) + "</span></td></tr>";
     }).join("");
   }
 
@@ -213,9 +247,9 @@
       return "<tr><td>" + escape(x.facility || "Unnamed facility") + (x.site ? "<span class='quote'>Site " + escape(x.site) + "</span>" : "") + "</td>" +
         "<td>" + escape(x.operator) + "</td><td>" + escape(x.status) + "</td>" +
         "<td>" + (LINKS[x.link] || escape(x.link)) + "<span class='quote'>" + escape(x.note) + "</span></td>" +
-        "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>List</a> (" + escape(x.check) + ")" +
+        "<td><a href='" + escape(x.source) + "' rel='noopener' target='_blank'>List</a>" + checked(x.check, x.evidence) +
         (x.link_source ? "<span class='quote'><a href='" + escape(x.link_source) + "' rel='noopener' target='_blank'>Link</a>: “" +
-          escape(x.link_quote) + "” (" + escape(x.link_check) + ")</span>" : "") + "</td></tr>";
+          escape(x.link_quote) + "”" + checked(x.link_check, x.link_evidence) + "</span>" : "") + "</td></tr>";
     }).join("");
   }
 
@@ -227,6 +261,7 @@
     drawUnplaced(data.ai_without_site || []);
     drawCustomers(data.customers || []);
     drawCensus(data.census || []);
+    drawEstimate(data.estimate);
     el("built").textContent = "Data built on " + data.built + ".";
     var firms = [], roles = [], countries = [];
     data.records.forEach(function (r) {

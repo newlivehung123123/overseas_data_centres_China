@@ -42,6 +42,21 @@ class SecondPassageTest(unittest.TestCase):
         self.assertEqual([r["link_check_status"] for r in checked], ["found", ""])
 
 
+class EvidenceTest(unittest.TestCase):
+    def test_known_grades_pass(self):
+        c.validate_evidence("sites", [{"evidence": "primary"}, {"evidence": "unconfirmed", "link_source_url": "",
+                                                                   "link_evidence": ""}])
+
+    def test_unknown_grade_is_an_error(self):
+        with self.assertRaises(ValueError):
+            c.validate_evidence("sites", [{"evidence": "likely"}])
+
+    def test_second_passage_needs_a_grade(self):
+        with self.assertRaises(ValueError):
+            c.validate_evidence("johor_census", [{"evidence": "secondary", "link_source_url": "https://example.org",
+                                                  "link_evidence": ""}])
+
+
 class ValidateTest(unittest.TestCase):
     def site(self, **values):
         row = {"site_id": "MYS-0001", "status": "operational"}

@@ -1,5 +1,5 @@
 {
- "built": "2026-10-22",
+ "built": "2026-11-05",
  "records": [
   {
    "layer": "site",
@@ -14,6 +14,7 @@
    "source": "https://www.mida.gov.my/media-release/bridge-data-centres-and-bytedance-celebrate-grand-opening-of-the-first-phase-hyperscale-data-centre-my06-in-johor-malaysia/",
    "quote": "Phase 1 covers the first of the three buildings in the 110MW hyperscale data centre project which spans across 38 acres of land area.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -22,7 +23,8 @@
      "role": "tenant",
      "source": "https://www.mida.gov.my/media-release/bridge-data-centres-and-bytedance-celebrate-grand-opening-of-the-first-phase-hyperscale-data-centre-my06-in-johor-malaysia/",
      "quote": "ByteDance System Sdn. Bhd, will be the anchor tenant of BDC’s hyperscale data centre with long-term investment commitment in the country.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -110,6 +112,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/",
    "quote": "The company signed a 450MW PPA with state-run utility PLN Batam to power its under-development data center campus in Kabil, Batam.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "IDN",
    "roles": [
     {
@@ -118,7 +121,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/",
      "quote": "DayOne is currently developing a data center at the Kabil Industrial Tech Park (KITP) in Batam, Indonesia.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -129,7 +133,8 @@
      "stage": "contracted",
      "date": "2025",
      "note": "Power contracted from PLN Batam, delivered in phases between 2026 and 2027",
-     "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/"
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-inks-450mw-ppa-with-pln-batam-to-power-planned-data-center-in-batam-indonesia/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -152,6 +157,7 @@
    "source": "https://baxtel.com/news/dayone-to-acquire-65-acre-johor-land-parcel-from-malaysia-s-paragon-globe",
    "quote": "Paragon Globe has agreed to sell a 65-acre site in Iskandar Puteri, Johor, to DayOne Data Centers for RM398 million ($96 million) under a conditional agreement disclosed to Bursa Malaysia.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "MYS",
    "roles": [
     {
@@ -160,7 +166,8 @@
      "role": "owner",
      "source": "https://baxtel.com/news/dayone-to-acquire-65-acre-johor-land-parcel-from-malaysia-s-paragon-globe",
      "quote": "Paragon Globe has agreed to sell a 65-acre site in Iskandar Puteri, Johor, to DayOne Data Centers",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -185,6 +192,7 @@
    "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
    "quote": "That campus will be developed by Hyperco, and is projected to have an initial IT capacity of 100MW.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "FIN",
    "roles": [
     {
@@ -193,7 +201,8 @@
      "role": "user",
      "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
      "quote": "DayOne disclosed that it had invested in Hyperco's Kouvola data center project, which is being used by TikTok.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     },
     {
      "firm": "DayOne",
@@ -201,7 +210,8 @@
      "role": "owner",
      "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
      "quote": "DayOne disclosed that it had invested in Hyperco's Kouvola data center project",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -226,6 +236,7 @@
    "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
    "quote": "The second data center project is set to be located in the Kiveriö district of Lahti, Finland",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "FIN",
    "roles": [
     {
@@ -234,7 +245,8 @@
      "role": "user",
      "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
      "quote": "The second data center project is set to be located in the Kiveriö district of Lahti, Finland",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -259,6 +271,7 @@
    "source": "https://www.srv.fi/en/srv-as-a-company/newsroom/press-release/dayone-data-center-construction-to-start-in-lahti-srv-strengthens-its-position-in-the-growing-market-for-data-center-construction/",
    "quote": "SRV is launching a data center construction project in Kiveriö, Lahti, for the Singapore-based DayOne. Construction work will begin immediately, and the data center is scheduled to start operations during 2027.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "FIN",
    "roles": [
     {
@@ -267,7 +280,8 @@
      "role": "operator",
      "source": "https://datacenterdynamics.com/en/news/tiktok-to-invest-1bn-in-second-finnish-data-center/",
      "quote": "data center company DayOne is known to be developing a 128MW campus in Lahti.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     },
     {
      "firm": "DayOne",
@@ -275,7 +289,8 @@
      "role": "owner",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "we entered the Greater Helsinki market by investing in data center campuses in Kouvola and Lahti, Finland",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -286,7 +301,8 @@
      "stage": "first_phase",
      "date": "2025-08-14",
      "note": "First building, scheduled to be ready for service in 2027; DayOne had no tenant agreement at the date of the source",
-     "source": "https://www.datacenterdynamics.com/en/news/dayone-targets-128mw-data-center-campus-in-finland/"
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-targets-128mw-data-center-campus-in-finland/",
+     "evidence": "secondary"
     },
     {
      "mw": "128",
@@ -294,7 +310,8 @@
      "stage": "planned_total",
      "date": "2025-08-14",
      "note": "IT load of the campus at full build-out",
-     "source": "https://www.datacenterdynamics.com/en/news/dayone-targets-128mw-data-center-campus-in-finland/"
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-targets-128mw-data-center-campus-in-finland/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -317,6 +334,7 @@
    "source": "https://www.poder360.com.br/poder-infra/mpf-vai-a-justica-contra-data-center-do-tiktok-no-ceara/",
    "quote": "O data center projeta potência instalada de 300 MW, 120 geradores a diesel, subestação elétrica e captação de água subterrânea para resfriamento.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "BRA",
    "roles": [
     {
@@ -325,7 +343,8 @@
      "role": "tenant",
      "source": "https://www.poder360.com.br/poder-infra/mpf-vai-a-justica-contra-data-center-do-tiktok-no-ceara/",
      "quote": "A estrutura será alugada e equipada pela empresa chinesa e receberá mais de R$ 200 bilhões em investimentos nos próximos 10 anos.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -336,7 +355,8 @@
      "stage": "planned_total",
      "date": "2026-07-02",
      "note": "Planned capacity reported by Bloomberg, which the source says could rise to almost 1 GW; the data centre will have 20 halls and is expected to operate by late 2027",
-     "source": "https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/"
+     "source": "https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -359,6 +379,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -367,7 +388,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -430,6 +452,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -438,7 +461,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -511,6 +535,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "our Batam campuses at Nongsa Digital Park and Kabil Industrial Tech Park are among the first large-scale AI sites in Indonesia",
    "check": "found",
+   "evidence": "primary",
    "iso3": "IDN",
    "roles": [
     {
@@ -519,7 +544,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "our Batam campuses at Nongsa Digital Park and Kabil Industrial Tech Park are among the first large-scale AI sites in Indonesia",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -530,7 +556,8 @@
      "stage": "planned_total",
      "date": "2025-06-05",
      "note": "Combined IT load of the three data centres of the campus on completion, expected by the end of 2025",
-     "source": "https://www.uob.com.sg/uobgroup/newsroom/news-releases/2025/dbs-uob-arrange-loan-for-data-centre-development-project-by-dayone.page"
+     "source": "https://www.uob.com.sg/uobgroup/newsroom/news-releases/2025/dbs-uob-arrange-loan-for-data-centre-development-project-by-dayone.page",
+     "evidence": "primary"
     },
     {
      "mw": "120",
@@ -538,7 +565,8 @@
      "stage": "planned_total",
      "date": "2025-07-11",
      "note": "Power of the DayOne plots at Nongsa Digital Park that Oracle, which is not a Chinese firm, leases as sole tenant, according to unnamed sources of Bloomberg",
-     "source": "https://www.datacenterknowledge.com/cloud/oracle-said-to-advance-indonesia-cloud-services-plan"
+     "source": "https://www.datacenterknowledge.com/cloud/oracle-said-to-advance-indonesia-cloud-services-plan",
+     "evidence": "unconfirmed"
     }
    ],
    "epoch": {
@@ -609,6 +637,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "our presence in Singapore, where our campus is currently under development, anchors a tri-node deployment strategy for the SIJORI market.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "SGP",
    "roles": [
     {
@@ -617,7 +646,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "our presence in Singapore, where our campus is currently under development, anchors a tri-node deployment strategy for the SIJORI market.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -628,7 +658,8 @@
      "stage": "planned_total",
      "date": "2026-08-18",
      "note": "The data centre broke ground in July 2025 and is expected to operate by the first quarter of 2027",
-     "source": "https://www.ocbc.com/group/media/release/2026/dayone-secures-530-million-green-loan"
+     "source": "https://www.ocbc.com/group/media/release/2026/dayone-secures-530-million-green-loan",
+     "evidence": "primary"
     }
    ],
    "epoch": null,
@@ -651,6 +682,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -659,7 +691,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -684,6 +717,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -692,7 +726,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "in 2026 we started to expand into Kuala Lumpur through scalable data center campuses in Klang Valley Tech Park (KVTP) and Banting Tech Park (BTP).",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -717,6 +752,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "The hyperscale customer anchored the campus, Chonburi Tech Park (CTP), with a 73MW order, which was later upsized to 110MW",
    "check": "found",
+   "evidence": "primary",
    "iso3": "THA",
    "roles": [
     {
@@ -725,7 +761,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "The hyperscale customer anchored the campus, Chonburi Tech Park (CTP), with a 73MW order, which was later upsized to 110MW",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -736,7 +773,8 @@
      "stage": "first_phase",
      "date": "2025-03",
      "note": "Grid capacity of the first facility at groundbreaking",
-     "source": "https://www.datacenterdynamics.com/en/news/dayone-to-expand-ctp1-thailand-data-center-to-300mw-signs-mou-with-amata-for-ctp2/"
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-to-expand-ctp1-thailand-data-center-to-300mw-signs-mou-with-amata-for-ctp2/",
+     "evidence": "secondary"
     },
     {
      "mw": "300",
@@ -744,7 +782,8 @@
      "stage": "planned_total",
      "date": "2025-11",
      "note": "Capacity of CTP1 after the expansion onto 16.3 acres of adjacent land",
-     "source": "https://www.datacenterdynamics.com/en/news/dayone-to-expand-ctp1-thailand-data-center-to-300mw-signs-mou-with-amata-for-ctp2/"
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-to-expand-ctp1-thailand-data-center-to-300mw-signs-mou-with-amata-for-ctp2/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -767,6 +806,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "In 2026, we entered Kyushu through Imari Tech Park (ITP) in Imari, a city in the northwest corner of the island of Kyushu. The site provides approximately 160MW of Secured Powered Land.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "JPN",
    "roles": [
     {
@@ -775,7 +815,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "In 2026, we entered Kyushu through Imari Tech Park (ITP) in Imari, a city in the northwest corner of the island of Kyushu. The site provides approximately 160MW of Secured Powered Land.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -800,6 +841,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "we established a foothold in Tokyo to develop our first Japan data center project by entering into a long-term build-to-suit lease for a powered shell. The project, Fuchu Intelligent Park (FIP), is located in Fuchu City",
    "check": "found",
+   "evidence": "primary",
    "iso3": "JPN",
    "roles": [
     {
@@ -808,7 +850,8 @@
      "role": "tenant",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "we established a foothold in Tokyo to develop our first Japan data center project by entering into a long-term build-to-suit lease for a powered shell. The project, Fuchu Intelligent Park (FIP), is located in Fuchu City",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -819,7 +862,8 @@
      "stage": "planned_total",
      "date": "2024-03-26",
      "note": "Expected IT capacity of the two adjacent sites at Fuchu Intelligent Park",
-     "source": "https://dayonedc.com/markets/dayone-enters-japan-in-partnership-with-gaw-capital-to-build-40mw-tokyo-project/"
+     "source": "https://dayonedc.com/markets/dayone-enters-japan-in-partnership-with-gaw-capital-to-build-40mw-tokyo-project/",
+     "evidence": "primary"
     }
    ],
    "epoch": null,
@@ -842,6 +886,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/",
    "quote": "The company recently announced it broke ground on Phase I of the DayOne Kodaira Data Center in Tokyo.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "JPN",
    "roles": [
     {
@@ -850,7 +895,8 @@
      "role": "owner",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "We subsequently expanded our presence in 2025 by acquiring a freehold site in Kodaira, in western Tokyo.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -861,7 +907,8 @@
      "stage": "first_phase",
      "date": "2026-09-14",
      "note": "IT capacity of the first phase, which broke ground in September 2026",
-     "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/"
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/",
+     "evidence": "secondary"
     },
     {
      "mw": "42",
@@ -869,7 +916,8 @@
      "stage": "planned_total",
      "date": "2026-09-14",
      "note": "Planned IT capacity of the campus",
-     "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/"
+     "source": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -892,6 +940,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "Our Hong Kong sites are strategically located in West Kowloon. We have a closely clustered “virtual campus” across four adjacent buildings",
    "check": "found",
+   "evidence": "primary",
    "iso3": "HKG",
    "roles": [
     {
@@ -900,7 +949,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "Our Hong Kong sites are strategically located in West Kowloon. We have a closely clustered “virtual campus” across four adjacent buildings",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -925,6 +975,7 @@
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "entered Europe with sites in Greater Helsinki, Finland and Zaragoza, Spain.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "ESP",
    "roles": [
     {
@@ -933,7 +984,8 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "entered Europe with sites in Greater Helsinki, Finland and Zaragoza, Spain.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -944,7 +996,8 @@
      "stage": "planned_total",
      "date": "2026-06-10",
      "note": "Planned capacity of the campus in Escatrón, near Zaragoza, which Ignis develops and DayOne will operate; the first phase has not been disclosed",
-     "source": "https://www.datacenterdynamics.com/en/news/ignis-to-build-dayones-300mw-data-center-in-aragon-spain/"
+     "source": "https://www.datacenterdynamics.com/en/news/ignis-to-build-dayones-300mw-data-center-in-aragon-spain/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -967,6 +1020,7 @@
    "source": "https://btw.media/all/news/tiktok-data-centre-at-osl-hamar-powered-by-norway-green-energy",
    "quote": "now houses three operational buildings, each with 30 MW capacity, fully leased to TikTok under its European data sovereignty scheme, Project Clover.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "NOR",
    "roles": [
     {
@@ -975,7 +1029,8 @@
      "role": "tenant",
      "source": "https://btw.media/all/news/tiktok-data-centre-at-osl-hamar-powered-by-norway-green-energy",
      "quote": "three operational buildings, each with 30 MW capacity, fully leased to TikTok",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1000,6 +1055,7 @@
    "source": "https://www.tomshardware.com/tech-industry/data-centers/filing-reveals-how-bytedance-gained-access-to-over-2-000-nvidia-b200-chips-through-nscales-norway-data-center-singaporean-subsidiary-spring-contributed-73-percent-of-uk-neoclouds-2025-revenue",
    "quote": "This contract allowed Spring to access 2,304 Nvidia B200 chips at Nscale’s Glomfjord, Norway, data center.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "NOR",
    "roles": [
     {
@@ -1008,7 +1064,8 @@
      "role": "tenant",
      "source": "https://www.tomshardware.com/tech-industry/data-centers/filing-reveals-how-bytedance-gained-access-to-over-2-000-nvidia-b200-chips-through-nscales-norway-data-center-singaporean-subsidiary-spring-contributed-73-percent-of-uk-neoclouds-2025-revenue",
      "quote": "it was noted in a supporting document, a $105 million loan agreement with Macquarie, that Spring (SG) Pte Ltd, a Singaporean ByteDance subsidiary, was a significant customer.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [
@@ -1022,7 +1079,8 @@
      "note": "Under a cloud services agreement of 15 May 2025 between an Nscale subsidiary and Spring (SG) Pte. Ltd.; the loan agreement filed with Nscale's registration statement at the SEC does not name ByteDance",
      "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_12.htm",
      "quote": "\" GPUs \" shall mean the 2,304 NVIDIA B200 graphics processing units (SXM model) and such other graphics processing units approved in writing by the Agent.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "capacity": [],
@@ -1046,6 +1104,7 @@
    "source": "https://newsroom.tiktok.com/en-eu/tiktok-sets-new-standards-for-security-and-sustainability-through-12-bn-project-clover-programme",
    "quote": "one of the data centres in Ireland is operational already and began storing user data earlier this year",
    "check": "found",
+   "evidence": "primary",
    "iso3": "IRL",
    "roles": [
     {
@@ -1054,7 +1113,8 @@
      "role": "user",
      "source": "https://newsroom.tiktok.com/en-eu/tiktok-sets-new-standards-for-security-and-sustainability-through-12-bn-project-clover-programme",
      "quote": "the operations of the Norway data centre and our two other data centres in Ireland, which will collectively be home to European user data",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1079,6 +1139,7 @@
    "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
    "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "THA",
    "roles": [
     {
@@ -1087,7 +1148,8 @@
      "role": "user",
      "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
      "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1112,6 +1174,7 @@
    "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
    "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "THA",
    "roles": [
     {
@@ -1120,7 +1183,8 @@
      "role": "user",
      "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
      "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1145,6 +1209,7 @@
    "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
    "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "THA",
    "roles": [
     {
@@ -1153,7 +1218,8 @@
      "role": "user",
      "source": "https://technode.com/2026/05/07/tiktok-wins-approval-for-25-billion-thailand-data-center-expansion/",
      "quote": "TikTok System (Thailand) Co., Ltd., which plans to invest around 842 billion baht (around $25 billion) to expand its digital infrastructure footprint across Bangkok, Samut Prakan and Chachoengsao provinces.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1178,6 +1244,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/china-mobile-international-launches-singapore-dc/",
    "quote": "The six-story data center is located at Tai Seng Industrial Park in the eastern part of Singapore, and houses more than 2,100 racks with a gross area of 17,490 sq m (188,300 sq ft).",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "SGP",
    "roles": [
     {
@@ -1186,7 +1253,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/china-mobile-international-launches-singapore-dc/",
      "quote": "China Mobile International's data center in Singapore",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1211,6 +1279,7 @@
    "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
    "quote": "United Kingdom 1 Data Centre, Phase 1 London Slough, Slough, United Kingdom",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "GBR",
    "roles": [
     {
@@ -1219,7 +1288,8 @@
      "role": "operator",
      "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
      "quote": "Client: China Mobile International",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1244,6 +1314,7 @@
    "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
    "quote": "Germany 1 Data Center (DE1) Mörfelden, Germany",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "DEU",
    "roles": [
     {
@@ -1252,7 +1323,8 @@
      "role": "operator",
      "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
      "quote": "Client: China Mobile International",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1277,6 +1349,7 @@
    "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
    "quote": "Global Network Center Hong Kong, Phase 2 Hong Kong, Hong Kong",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "HKG",
    "roles": [
     {
@@ -1285,7 +1358,8 @@
      "role": "operator",
      "source": "https://uptimeinstitute.com/uptime-institute-awards/client/china-mobile-international/479",
      "quote": "Client: China Mobile International",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1310,6 +1384,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "The 37,000-square-metre Intelligent Cloud Data Center, which launched in 2016, reaches more than 60 countries and regions via 15 submarine cables",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "HKG",
    "roles": [
     {
@@ -1318,7 +1393,8 @@
      "role": "operator",
      "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
      "quote": "China Unicom Global, for one, has been taking big strides to power the next phases of growth by optimising the capabilities of its Тier-IV-ready data centre in the Tseung Kwan O area of Hong Kong",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1343,6 +1419,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "SGP",
    "roles": [
     {
@@ -1351,7 +1428,8 @@
      "role": "operator",
      "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
      "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1376,6 +1454,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "JPN",
    "roles": [
     {
@@ -1384,7 +1463,8 @@
      "role": "operator",
      "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
      "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1409,6 +1489,7 @@
    "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
    "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "DEU",
    "roles": [
     {
@@ -1417,7 +1498,8 @@
      "role": "operator",
      "source": "https://capacityglobal.com/news/an-intelligent-cloud-to-carry-the-data-centre-to-new-heights/",
      "quote": "China Unicom Global is deploying other integrated data centres globally, with facilities being rolled out in Singapore, Tokyo and Frankfurt.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1442,6 +1524,7 @@
    "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
    "quote": "Zdata’s Malaysian unit, Computility Technology (Malaysia) Sdn Bhd, bought 38 acres of land last year from developer Tropicana Corporation Bhd. to build the Johor facility.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "MYS",
    "roles": [
     {
@@ -1450,7 +1533,8 @@
      "role": "owner",
      "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
      "quote": "Zdata’s Malaysian unit, Computility Technology (Malaysia) Sdn Bhd, bought 38 acres of land last year from developer Tropicana Corporation Bhd. to build the Johor facility.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     },
     {
      "firm": "Alibaba Cloud",
@@ -1458,7 +1542,8 @@
      "role": "tenant",
      "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
      "quote": "The financing would support the buildout of a data centre in Johor, serving major clients including Alibaba, ByteDance and Tencent",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     },
     {
      "firm": "ByteDance",
@@ -1466,7 +1551,8 @@
      "role": "tenant",
      "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
      "quote": "The financing would support the buildout of a data centre in Johor, serving major clients including Alibaba, ByteDance and Tencent",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     },
     {
      "firm": "Tencent Cloud",
@@ -1474,7 +1560,8 @@
      "role": "tenant",
      "source": "https://www.malaymail.com/news/money/2025/09/12/chinas-zdata-eyes-rm21b-funding-to-expand-johor-data-centre-amid-ai-boom/190857",
      "quote": "The financing would support the buildout of a data centre in Johor, serving major clients including Alibaba, ByteDance and Tencent",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -1499,6 +1586,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Location Ownership Completed Amsterdam West Leasehold (50 year term expiring 2045)",
    "check": "found",
+   "evidence": "primary",
    "iso3": "NLD",
    "roles": [
     {
@@ -1507,7 +1595,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/amsterdam/",
      "quote": "Located in Sloter-/Overtoomseveld, adjacent to the main Dutch communications infrastructure and close to the financial district and city centre.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1515,7 +1604,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Location Ownership Completed Amsterdam West Leasehold (50 year term expiring 2045)",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1540,6 +1630,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039) Amsterdam East Leasehold (50 year term expiring 2045)",
    "check": "found",
+   "evidence": "primary",
    "iso3": "NLD",
    "roles": [
     {
@@ -1548,7 +1639,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/amsterdam/",
      "quote": "Located in Sloter-/Overtoomseveld, adjacent to the main Dutch communications infrastructure and close to the financial district and city centre.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1556,7 +1648,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039) Amsterdam East Leasehold (50 year term expiring 2045)",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1567,7 +1660,8 @@
      "stage": "leased",
      "date": "2025-12-31",
      "note": "Contracted capacity that the first phase added on its completion in 2025",
-     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf"
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "evidence": "primary"
     },
     {
      "mw": "8",
@@ -1575,7 +1669,8 @@
      "stage": "first_phase",
      "date": "2024-03-29",
      "note": "Saleable IT power of the first phase, of which about 5 MW was pre-committed; the same report plans a further 24 MW in phases 2 to 4",
-     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/01/06115528/Global-Switch-Holdings-Limited-Annual-Report-and-Financial-Statements-for-the-year-ended-31-December-2023.pdf"
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/01/06115528/Global-Switch-Holdings-Limited-Annual-Report-and-Financial-Statements-for-the-year-ended-31-December-2023.pdf",
+     "evidence": "primary"
     }
    ],
    "epoch": null,
@@ -1598,6 +1693,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Frankfurt North Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "DEU",
    "roles": [
     {
@@ -1606,7 +1702,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/frankfurt/",
      "quote": "Global Switch Frankfurt is a highly connected landmark campus in the city’s core, offering adaptable technical space and a full range of power densities for any workload.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1614,7 +1711,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Frankfurt North Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1639,6 +1737,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Frankfurt South Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "DEU",
    "roles": [
     {
@@ -1647,7 +1746,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/frankfurt/",
      "quote": "Global Switch Frankfurt is a highly connected landmark campus in the city’s core, offering adaptable technical space and a full range of power densities for any workload.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1655,7 +1755,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Frankfurt South Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1680,6 +1781,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "DEU",
    "roles": [
     {
@@ -1688,7 +1790,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/frankfurt/",
      "quote": "Global Switch Frankfurt is a highly connected landmark campus in the city’s core, offering adaptable technical space and a full range of power densities for any workload.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1696,7 +1799,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1721,6 +1825,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Hong Kong Leasehold (35 year term expiring 2047)",
    "check": "found",
+   "evidence": "primary",
    "iso3": "HKG",
    "roles": [
     {
@@ -1729,7 +1834,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/hong-kong/",
      "quote": "Located near the Hong Kong Stock Exchange, with easy connectivity to Hong Kong’s main business districts and mainland Chinese markets.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1737,7 +1843,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Hong Kong Leasehold (35 year term expiring 2047)",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Huanbang (Hong Kong)",
@@ -1745,7 +1852,8 @@
      "role": "tenant",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "During 2023, Shagang Materials, , novated the service agreement to Huanbang (Hong Kong) Co. Ltd (“Huanbang”) with effect from 1 January 2023. This contract remains in full effect for the year ended 2025 with no modifications. Huanbang is an indirect wholly owned subsidiary of Jiangsu Shagang Group.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1756,7 +1864,8 @@
      "stage": "leased",
      "date": "2025-12-31",
      "note": "Capacity under a service agreement with a subsidiary of Jiangsu Shagang Group, the controlling shareholder of Global Switch, until 31 December 2027",
-     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf"
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
+     "evidence": "primary"
     }
    ],
    "epoch": null,
@@ -1779,6 +1888,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "London East Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "GBR",
    "roles": [
     {
@@ -1787,7 +1897,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/london/",
      "quote": "Located in London Docklands, close to the City of London and at the heart of Europe’s densest fibre network cluster.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1795,7 +1906,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "London East Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1820,6 +1932,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "London North Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "GBR",
    "roles": [
     {
@@ -1828,7 +1941,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/london/",
      "quote": "Located in London Docklands, close to the City of London and at the heart of Europe’s densest fibre network cluster.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1836,7 +1950,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "London North Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1861,6 +1976,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "GBR",
    "roles": [
     {
@@ -1869,7 +1985,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/london/",
      "quote": "Located in London Docklands, close to the City of London and at the heart of Europe’s densest fibre network cluster.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1877,7 +1994,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1902,6 +2020,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Madrid Freehold Paris East Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "ESP",
    "roles": [
     {
@@ -1910,7 +2029,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/madrid/",
      "quote": "Located close to the financial district and city centre, within Madrid’s major concentration of internet and technology companies.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1918,7 +2038,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Madrid Freehold Paris East Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1943,6 +2064,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "ESP",
    "roles": [
     {
@@ -1951,7 +2073,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/madrid/",
      "quote": "Located close to the financial district and city centre, within Madrid’s major concentration of internet and technology companies.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -1959,7 +2082,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -1970,7 +2094,8 @@
      "stage": "planned_total",
      "date": "2024-03-29",
      "note": "IT capacity of the new data centre of 24,000 square metres beside the existing Madrid data centre, in the annual report for 2023",
-     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/01/06115528/Global-Switch-Holdings-Limited-Annual-Report-and-Financial-Statements-for-the-year-ended-31-December-2023.pdf"
+     "source": "https://gswitch-cdn.com/wp-content/uploads/2026/01/06115528/Global-Switch-Holdings-Limited-Annual-Report-and-Financial-Statements-for-the-year-ended-31-December-2023.pdf",
+     "evidence": "primary"
     }
    ],
    "epoch": null,
@@ -1993,6 +2118,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Paris East Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "FRA",
    "roles": [
     {
@@ -2001,7 +2127,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/paris/",
      "quote": "Located in Clichy-Levallois, between the city’s financial district and Paris La Défense, one of Europe’s major business districts.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -2009,7 +2136,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Paris East Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2034,6 +2162,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Paris West Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "FRA",
    "roles": [
     {
@@ -2042,7 +2171,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/paris/",
      "quote": "Located in Clichy-Levallois, between the city’s financial district and Paris La Défense, one of Europe’s major business districts.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -2050,7 +2180,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Paris West Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2075,6 +2206,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Singapore Tai-Seng Leasehold (30 year term expiring 2053)",
    "check": "found",
+   "evidence": "primary",
    "iso3": "SGP",
    "roles": [
     {
@@ -2083,7 +2215,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/singapore/",
      "quote": "Located close to the financial district and city centre, Tai Seng is one of Asia-Pacific’s most connected facilities and a key data hub for cloud, enterprise and network providers.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -2091,7 +2224,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Singapore Tai-Seng Leasehold (30 year term expiring 2053)",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2116,6 +2250,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039)",
    "check": "found",
+   "evidence": "primary",
    "iso3": "SGP",
    "roles": [
     {
@@ -2124,7 +2259,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/singapore/",
      "quote": "Located in Woodlands to the north of the island, with direct access to the rapidly expanding Johor data cluster.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -2132,7 +2268,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Singapore Woodlands Leasehold (30 year term expiring 2039)",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2157,6 +2294,7 @@
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2165,7 +2303,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/data-centres/johor/",
      "quote": "Located in Kulai, Johor, within the Johor-Singapore Special Economic Zone, the site will enable low-latency connectivity into Singapore’s major business and cloud ecosystem.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     },
     {
      "firm": "Global Switch",
@@ -2173,7 +2312,8 @@
      "role": "owner",
      "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
      "quote": "Development Frankfurt 3 Freehold London South Freehold Madrid 2 Freehold Johor Freehold",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2198,6 +2338,7 @@
    "source": "https://www.globalswitch.com/",
    "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
    "check": "found",
+   "evidence": "primary",
    "iso3": "THA",
    "roles": [
     {
@@ -2206,7 +2347,8 @@
      "role": "operator",
      "source": "https://www.globalswitch.com/",
      "quote": "Data Centres All Amsterdam Frankfurt Hong Kong London Madrid Paris Singapore Johor – Coming Soon Bangkok – Coming Soon",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2231,6 +2373,7 @@
    "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
    "quote": "The launch of Johor region brings Alibaba Cloud’s total data centre footprint in Malaysia to five facilities",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2239,7 +2382,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
      "quote": "The launch of Johor region brings Alibaba Cloud’s total data centre footprint in Malaysia to five facilities",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2264,6 +2408,7 @@
    "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
    "quote": "Since 2017, Alibaba Cloud has been among the earliest global cloud providers to invest in Malaysia, including establishing its first twin data centre presence and adding third facility last year in the country.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2272,7 +2417,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/press-room/alibaba-cloud-amplifies-malaysia-infrastructure?_p_lc=1",
      "quote": "Since 2017, Alibaba Cloud has been among the earliest global cloud providers to invest in Malaysia, including establishing its first twin data centre presence and adding third facility last year in the country.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2297,6 +2443,7 @@
    "source": "https://telecomreview.com/editorial-topics/wholesale-and-capacity/6164-new-data-centers-address-cloud-service-demand-in-saudi-arabia/",
    "quote": "SCCC unveiled the opening of two data centers in Riyadh as part of the sixteen centers throughout the administrative regions of the Kingdom.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "SAU",
    "roles": [
     {
@@ -2305,7 +2452,8 @@
      "role": "owner",
      "source": "https://telecomreview.com/editorial-topics/wholesale-and-capacity/6164-new-data-centers-address-cloud-service-demand-in-saudi-arabia/",
      "quote": "Saudi Cloud Computing Company (SCCC), a new joint venture formed by Alibaba Cloud, stc Group, eWTP Arabia Capital, the Saudi Company for Artificial Intelligence (SCAI), and the Saudi Information Technology Company (SITE)",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -2330,6 +2478,7 @@
    "source": "https://businesstech.co.za/news/cloud-hosting/303386/huawei-cloud-now-available-in-south-africa/",
    "quote": "it is leasing a data centre in Johannesburg from a partner from where it is deploying localised public cloud services",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "ZAF",
    "roles": [
     {
@@ -2338,7 +2487,8 @@
      "role": "tenant",
      "source": "https://businesstech.co.za/news/cloud-hosting/303386/huawei-cloud-now-available-in-south-africa/",
      "quote": "it is leasing a data centre in Johannesburg from a partner from where it is deploying localised public cloud services",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -2363,6 +2513,7 @@
    "source": "https://www.bisnow.com/news/dublin/data-center/tiktok-announces-plans-to-build-second-data-centre-in-ireland-117712",
    "quote": "TikTok is finalising plans for a second data centre in Ireland with a third-party service, in addition to a site it announced last year.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "IRL",
    "roles": [
     {
@@ -2371,7 +2522,8 @@
      "role": "user",
      "source": "https://www.bisnow.com/news/dublin/data-center/tiktok-announces-plans-to-build-second-data-centre-in-ireland-117712",
      "quote": "TikTok is finalising plans for a second data centre in Ireland with a third-party service, in addition to a site it announced last year.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -2396,6 +2548,7 @@
    "source": "https://w.media/bytedance-deploys-36000-nvidea-b200-chips-worth-us-2-5-billion-in-malaysia/",
    "quote": "ByteDance, is said to be working with Southeast Asian firm Aolani Cloud to deploy some 500 Nvidea Blackwell GPUs in Malaysia for AI research and development",
    "check": "found",
+   "evidence": "unconfirmed",
    "iso3": "MYS",
    "roles": [
     {
@@ -2404,7 +2557,8 @@
      "role": "tenant",
      "source": "https://www.techrepublic.com/article/news-bytedance-malaysia-ai-chip-deal/",
      "quote": "The company is working with Malaysian cloud operator Aolani to access a large Nvidia Blackwell cluster in Malaysia",
-     "check": "found"
+     "check": "found",
+     "evidence": "unconfirmed"
     }
    ],
    "ai": [
@@ -2418,7 +2572,8 @@
      "note": "Valued at more than US$2.5 billion; the chips stay in Malaysia and ByteDance reaches them through Aolani's cloud",
      "source": "https://www.techrepublic.com/article/news-bytedance-malaysia-ai-chip-deal/",
      "quote": "ByteDance is set to access about 36,000 Nvidia B200 Blackwell GPUs through 500 NVL72 GB200 systems deployed in Malaysia.",
-     "check": "found"
+     "check": "found",
+     "evidence": "unconfirmed"
     }
    ],
    "capacity": [],
@@ -2442,6 +2597,7 @@
    "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-ai-startup-gets-access-to-2-300-banned-blackwell-gpus-by-exploiting-cloud-loophole-rents-compute-from-indonesian-firm-with-32-nvidia-gb200-server-racks",
    "quote": "Indonesian telecommunications company, Indosat Ooredoo Hutchison, acquired 32 Nvidia GB200 server racks from Aivres. With each rack containing 72 Blackwell chips, this amounts to 2,304 GPUs",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "IDN",
    "roles": [
     {
@@ -2450,7 +2606,8 @@
      "role": "tenant",
      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-ai-startup-gets-access-to-2-300-banned-blackwell-gpus-by-exploiting-cloud-loophole-rents-compute-from-indonesian-firm-with-32-nvidia-gb200-server-racks",
      "quote": "INF Tech, a Shanghai-based startup developing AI for finance and health applications, gained access to 2,300 banned Nvidia AI GPUs operated by a company in Jakarta, Indonesia.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [
@@ -2464,7 +2621,8 @@
      "note": "Indosat bought the racks from Nvidia's partner Aivres; INF Tech reaches them as a customer",
      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-ai-startup-gets-access-to-2-300-banned-blackwell-gpus-by-exploiting-cloud-loophole-rents-compute-from-indonesian-firm-with-32-nvidia-gb200-server-racks",
      "quote": "Indonesian telecommunications company, Indosat Ooredoo Hutchison, acquired 32 Nvidia GB200 server racks from Aivres. With each rack containing 72 Blackwell chips, this amounts to 2,304 GPUs",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "capacity": [],
@@ -2488,6 +2646,7 @@
    "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
    "quote": "In April this year, Bain Capital’s Bridge Data Centers removed Megaspeed from their Malaysian computing hub.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2496,7 +2655,8 @@
      "role": "tenant",
      "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
      "quote": "In April this year, Bain Capital’s Bridge Data Centers removed Megaspeed from their Malaysian computing hub.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [
@@ -2510,7 +2670,8 @@
      "note": "Shipped to data centres in Malaysia and Indonesia that appeared to serve Chinese clients remotely; under US investigation",
      "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
      "quote": "Megaspeed had purchased through its Malaysian subsidiary nearly US$2 billion worth of advanced Nvidia chips, which were then shipped to data centers in Malaysia and Indonesia that appeared to be remotely serving Chinese clients.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "capacity": [],
@@ -2534,6 +2695,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/malaysias-crescendo-corp-sells-land-in-johor-for-data-center/",
    "quote": "Crescendo said its wholly-owned subsidiary, Crescendo Development Sdn. Bhd. last week entered into a conditional Sale and Purchase Agreement with MSFusion Sdn. Bhd (MSB) to sell just over 52 acres of land for RM 263.2m ($62.2m).",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2542,7 +2704,8 @@
      "role": "owner",
      "source": "https://www.datacenterdynamics.com/en/news/malaysias-crescendo-corp-sells-land-in-johor-for-data-center/",
      "quote": "MSB is a subsidiary of Megaspeed International Pte. Ltd., a company incorporated in Singapore.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -2553,7 +2716,8 @@
      "stage": "planned_total",
      "date": "2025-09-03",
      "note": "Power allocation from TNB on which the closing of the land purchase depends",
-     "source": "https://www.datacenterdynamics.com/en/news/malaysias-crescendo-corp-sells-land-in-johor-for-data-center/"
+     "source": "https://www.datacenterdynamics.com/en/news/malaysias-crescendo-corp-sells-land-in-johor-for-data-center/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -2576,6 +2740,7 @@
    "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0428/2022042800019.pdf",
    "quote": "today signed a partnership to co-develop 168MW of data center capacity, across 8 individual data center facilities, at the upcoming YTL Green Data Center Park in Johor, Malaysia.",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2584,7 +2749,8 @@
      "role": "operator",
      "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0428/2022042800019.pdf",
      "quote": "GDS Holdings Limited (“GDS”), a leading developer and operator of high-performance data centers in China, today signed a partnership to co-develop 168MW of data center capacity",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2609,6 +2775,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/brightray-launches-data-center-in-johor-malaysia/",
    "quote": "Located in the Sedenak Tech Park (SteP), MY-01 is the first of three facilities planned for the campus, with two more data centers already scheduled for deployment.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2617,7 +2784,8 @@
      "role": "owner",
      "source": "https://www.datacenterdynamics.com/en/news/shanghai-dc-science-seeks-600m-for-malaysian-data-center/",
      "quote": "Chinese data center developer and operator Shanghai DC-Science Co. is seeking a private debt of between $600 million and $700 million for a data center project in Johor, Malaysia.",
-     "check": "found"
+     "check": "found",
+     "evidence": "unconfirmed"
     }
    ],
    "ai": [],
@@ -2628,7 +2796,8 @@
      "stage": "planned_total",
      "date": "2025-05-28",
      "note": "Capacity of the three buildings of the campus at full build-out",
-     "source": "https://www.datacenterdynamics.com/en/news/brightray-launches-data-center-in-johor-malaysia/"
+     "source": "https://www.datacenterdynamics.com/en/news/brightray-launches-data-center-in-johor-malaysia/",
+     "evidence": "secondary"
     }
    ],
    "epoch": null,
@@ -2651,6 +2820,7 @@
    "source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
    "quote": "Artist’s impression of the Racks Central Johor AI Campus in Pasir Gudang, Malaysia. The first phase (RCJM 1, 90 MW) is targeted for ready-for-service by Q1 2027, with the campus scaling to a combined capacity of up to 510 MW",
    "check": "found",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
@@ -2659,7 +2829,8 @@
      "role": "financier",
      "source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
      "quote": "The investment will support Racks Central’s overseas expansion, starting with Johor, Malaysia, building on its established colocation operations in Singapore.",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "ai": [],
@@ -2670,7 +2841,8 @@
      "stage": "first_phase",
      "date": "2026-06-15",
      "note": "First phase, RCJM 1, targeted for service by the first quarter of 2027",
-     "source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/"
+     "source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
+     "evidence": "primary"
     },
     {
      "mw": "510",
@@ -2678,7 +2850,8 @@
      "stage": "planned_total",
      "date": "2026-06-15",
      "note": "Combined capacity of the four developments of the campus",
-     "source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/"
+     "source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
+     "evidence": "primary"
     }
    ],
    "epoch": null,
@@ -2701,6 +2874,7 @@
    "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
    "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand.",
    "check": "found",
+   "evidence": "unconfirmed",
    "iso3": "THA",
    "roles": [
     {
@@ -2709,7 +2883,8 @@
      "role": "user",
      "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
      "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand.",
-     "check": "found"
+     "check": "found",
+     "evidence": "unconfirmed"
     }
    ],
    "ai": [
@@ -2723,7 +2898,8 @@
      "note": "An accusation without public evidence",
      "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
      "quote": "A top White House official then accused Moonshot of illegally obtaining Nvidia’s best hardware and reaching those same chips remotely through an unnamed party in Thailand.",
-     "check": "found"
+     "check": "found",
+     "evidence": "unconfirmed"
     }
    ],
    "capacity": [],
@@ -2747,6 +2923,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
    "quote": "Tencent currently has two data centers in Indonesia, both located in Jakarta.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "IDN",
    "roles": [
     {
@@ -2755,7 +2932,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
      "quote": "Tencent currently has two data centers in Indonesia, both located in Jakarta.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -2780,6 +2958,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
    "quote": "Tencent Holdings is set to invest $500 million as part of plans to develop a third data center in Indonesia.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "IDN",
    "roles": [
     {
@@ -2788,7 +2967,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/tencent-to-invest-500m-for-data-center-development-in-indonesia",
      "quote": "Tencent Holdings is set to invest $500 million as part of plans to develop a third data center in Indonesia.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -2813,6 +2993,7 @@
    "source": "https://datacentremagazine.com/automation/huawei-invest-dollar23mn-third-thai-data-centre",
    "quote": "Huawei announced plans to invest a further $23mn into the construction of a new data centre in the Thai capital of Bangkok.",
    "check": "found",
+   "evidence": "secondary",
    "iso3": "THA",
    "roles": [
     {
@@ -2821,7 +3002,8 @@
      "role": "operator",
      "source": "https://datacentremagazine.com/automation/huawei-invest-dollar23mn-third-thai-data-centre",
      "quote": "will be the company’s third data centre in the country.",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "ai": [],
@@ -2846,6 +3028,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Brazil (São Paulo) Availability Zone: 2 Released in 2026",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -2853,7 +3036,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Brazil (São Paulo) Availability Zone: 2 Released in 2026",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "BRA",
@@ -2875,6 +3059,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "France (Paris) Availability Zone: 2 Released in 2026",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -2882,7 +3067,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "France (Paris) Availability Zone: 2 Released in 2026",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "FRA",
@@ -2904,6 +3090,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Germany (Frankfurt) Availability Zone: 3 Released in 2016",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -2911,7 +3098,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Germany (Frankfurt) Availability Zone: 3 Released in 2016",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "DEU",
@@ -2933,6 +3121,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "China (Hong Kong) Availability Zone: 3 Released in 2014",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -2940,7 +3129,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "China (Hong Kong) Availability Zone: 3 Released in 2014",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "HKG",
@@ -2962,6 +3152,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Indonesia (Jakarta) Availability Zone: 3 Released in 2018",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -2969,7 +3160,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Indonesia (Jakarta) Availability Zone: 3 Released in 2018",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "IDN",
@@ -2991,6 +3183,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Japan (Tokyo) Availability Zone: 5 Released in 2016",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -2998,7 +3191,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Japan (Tokyo) Availability Zone: 5 Released in 2016",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "JPN",
@@ -3020,6 +3214,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Malaysia (Johor) Availability Zone: 3 Released in 2026",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3027,7 +3222,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Malaysia (Johor) Availability Zone: 3 Released in 2026",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MYS",
@@ -3049,6 +3245,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Malaysia (Kuala Lumpur) Availability Zone: 3 Released in 2017",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3056,7 +3253,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Malaysia (Kuala Lumpur) Availability Zone: 3 Released in 2017",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MYS",
@@ -3078,6 +3276,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Mexico (Querétaro) Availability Zone: 2 Released in 2025",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3085,7 +3284,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Mexico (Querétaro) Availability Zone: 2 Released in 2025",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MEX",
@@ -3107,6 +3307,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Philippines (Manila) Availability Zone: 2 Released in 2021",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3114,7 +3315,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Philippines (Manila) Availability Zone: 2 Released in 2021",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "PHL",
@@ -3136,6 +3338,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "SAU (Riyadh - Partner Region) Availability Zone: 2 Released in 2022",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3143,7 +3346,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "SAU (Riyadh - Partner Region) Availability Zone: 2 Released in 2022",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "SAU",
@@ -3165,6 +3369,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Singapore Availability Zone: 4 Released in 2015",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3172,7 +3377,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Singapore Availability Zone: 4 Released in 2015",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "SGP",
@@ -3194,6 +3400,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "South Korea (Seoul) Availability Zone: 3 Released in 2022",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3201,7 +3408,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "South Korea (Seoul) Availability Zone: 3 Released in 2022",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "KOR",
@@ -3223,6 +3431,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "Thailand (Bangkok) Availability Zone: 2 Released in 2022",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3230,7 +3439,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "Thailand (Bangkok) Availability Zone: 2 Released in 2022",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "THA",
@@ -3252,6 +3462,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "UAE (Dubai) Availability Zone: 2 Released in 2016",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3259,7 +3470,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "UAE (Dubai) Availability Zone: 2 Released in 2016",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "ARE",
@@ -3281,6 +3493,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "UK (London) Availability Zone: 2 Released in 2018",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3288,7 +3501,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "UK (London) Availability Zone: 2 Released in 2018",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "GBR",
@@ -3310,6 +3524,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "US (Silicon Valley) Availability Zone: 2 Released in 2014",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3317,7 +3532,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "US (Silicon Valley) Availability Zone: 2 Released in 2014",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "USA",
@@ -3339,6 +3555,7 @@
    "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
    "quote": "US (Virginia) Availability Zone: 2 Released in 2015",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3346,7 +3563,8 @@
      "role": "operator",
      "source": "https://www.alibabacloud.com/en/global-locations?_p_lc=1",
      "quote": "US (Virginia) Availability Zone: 2 Released in 2015",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "USA",
@@ -3368,6 +3586,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
    "quote": "Finland, the Netherlands - DCD Search Channels",
    "check": "found",
+   "evidence": "secondary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3375,7 +3594,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
      "quote": "Finland, the Netherlands - DCD Search Channels",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "iso3": "FIN",
@@ -3397,6 +3617,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
    "quote": "Netherlands - DCD Search Channels Recommended for y",
    "check": "found",
+   "evidence": "secondary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3404,7 +3625,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
      "quote": "Netherlands - DCD Search Channels Recommended for y",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "iso3": "NLD",
@@ -3426,6 +3648,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
    "quote": "Turkey, Finland, the Netherlands - DCD Search",
    "check": "found",
+   "evidence": "secondary",
    "roles": [
     {
      "firm": "Alibaba Cloud",
@@ -3433,7 +3656,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/alibaba-cloud-plans-new-cloud-regions-in-turkey-finland-the-netherlands/",
      "quote": "Turkey, Finland, the Netherlands - DCD Search",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "iso3": "TUR",
@@ -3455,6 +3679,7 @@
    "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
    "quote": "Hong Kong 150.5.146.60, 150.5.168.25 Southeast Asia (Johor) 10",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "BytePlus",
@@ -3462,7 +3687,8 @@
      "role": "operator",
      "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
      "quote": "Hong Kong 150.5.146.60, 150.5.168.25 Southeast Asia (Johor) 10",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "HKG",
@@ -3484,6 +3710,7 @@
    "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
    "quote": "Southeast Asia (Jakarta) 163.7.17.61, 163.7.18.196 Last updated: December 30",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "BytePlus",
@@ -3491,7 +3718,8 @@
      "role": "operator",
      "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
      "quote": "Southeast Asia (Jakarta) 163.7.17.61, 163.7.18.196 Last updated: December 30",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "IDN",
@@ -3513,6 +3741,7 @@
    "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
    "quote": "Southeast Asia (Johor) 101.47.140.89, 101.47.11.124 Southeast Asia (Jakarta)",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "BytePlus",
@@ -3520,7 +3749,8 @@
      "role": "operator",
      "source": "https://docs.byteplus.com/api/docs/bytehouse/docs-supported-regions-and-providers",
      "quote": "Southeast Asia (Johor) 101.47.140.89, 101.47.11.124 Southeast Asia (Jakarta)",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MYS",
@@ -3542,6 +3772,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "LA-Buenos Aires, and LA-Lima. Parent topic: Service Sco",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3549,7 +3780,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "LA-Buenos Aires, and LA-Lima. Parent topic: Service Sco",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "ARG",
@@ -3571,6 +3803,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "LA-Sao Paulo, LA-Santiago, LA-Buenos Aires, and LA-L",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3578,7 +3811,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "LA-Sao Paulo, LA-Santiago, LA-Buenos Aires, and LA-L",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "BRA",
@@ -3600,6 +3834,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "LA-Santiago, LA-Buenos Aires, and LA-Lima. Parent t",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3607,7 +3842,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "LA-Santiago, LA-Buenos Aires, and LA-Lima. Parent t",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "CHL",
@@ -3629,6 +3865,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "AF-Cairo, AF-Johannesburg, TR-Istanbul, LA-Mexic",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3636,7 +3873,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "AF-Cairo, AF-Johannesburg, TR-Istanbul, LA-Mexic",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "EGY",
@@ -3658,6 +3896,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "CN-Hong Kong, AP-Bangkok, AP-Singapore, AP-Jakarta,",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3665,7 +3904,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "CN-Hong Kong, AP-Bangkok, AP-Singapore, AP-Jakarta,",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "HKG",
@@ -3687,6 +3927,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "AP-Jakarta, AP-Kuala Lumpur, AP-Manila, ME-Riyadh,",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3694,7 +3935,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "AP-Jakarta, AP-Kuala Lumpur, AP-Manila, ME-Riyadh,",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "IDN",
@@ -3716,6 +3958,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/productdesc-cc/cc_01_0003.html",
    "quote": "EU-Dublin Parent Topic: Region Availability Previ",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3723,7 +3966,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/productdesc-cc/cc_01_0003.html",
      "quote": "EU-Dublin Parent Topic: Region Availability Previ",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "IRL",
@@ -3745,6 +3989,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "AP-Kuala Lumpur, AP-Manila, ME-Riyadh, AF-Cairo, AF-Joh",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3752,7 +3997,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "AP-Kuala Lumpur, AP-Manila, ME-Riyadh, AF-Cairo, AF-Joh",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MYS",
@@ -3774,6 +4020,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "LA-Mexico City, LA-Sao Paulo, LA-Santiago, LA-Buenos A",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3781,7 +4028,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "LA-Mexico City, LA-Sao Paulo, LA-Santiago, LA-Buenos A",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MEX",
@@ -3803,6 +4051,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "LA-Lima. Parent topic: Service Scope What is yo",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3810,7 +4059,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "LA-Lima. Parent topic: Service Scope What is yo",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "PER",
@@ -3832,6 +4082,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "AP-Manila, ME-Riyadh, AF-Cairo, AF-Johannesburg,",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3839,7 +4090,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "AP-Manila, ME-Riyadh, AF-Cairo, AF-Johannesburg,",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "PHL",
@@ -3861,6 +4113,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "ME-Riyadh, AF-Cairo, AF-Johannesburg, TR-Istanbul",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3868,7 +4121,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "ME-Riyadh, AF-Cairo, AF-Johannesburg, TR-Istanbul",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "SAU",
@@ -3890,6 +4144,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "AP-Singapore, AP-Jakarta, AP-Kuala Lumpur, AP-Manila",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3897,7 +4152,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "AP-Singapore, AP-Jakarta, AP-Kuala Lumpur, AP-Manila",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "SGP",
@@ -3919,6 +4175,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "AF-Johannesburg, TR-Istanbul, LA-Mexico City, LA-Sao Pa",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3926,7 +4183,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "AF-Johannesburg, TR-Istanbul, LA-Mexico City, LA-Sao Pa",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "ZAF",
@@ -3948,6 +4206,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "AP-Bangkok, AP-Singapore, AP-Jakarta, AP-Kuala Lum",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3955,7 +4214,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "AP-Bangkok, AP-Singapore, AP-Jakarta, AP-Kuala Lum",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "THA",
@@ -3977,6 +4237,7 @@
    "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
    "quote": "TR-Istanbul, LA-Mexico City, LA-Sao Paulo, LA-Santi",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Huawei Cloud",
@@ -3984,7 +4245,8 @@
      "role": "operator",
      "source": "https://support.huaweicloud.com/intl/en-us/intl_faq/en-us_topic_0115884695.html",
      "quote": "TR-Istanbul, LA-Mexico City, LA-Sao Paulo, LA-Santi",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "TUR",
@@ -4006,6 +4268,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(São Paulo) Coverage: South America sa-saopaulo 1",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4013,7 +4276,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(São Paulo) Coverage: South America sa-saopaulo 1",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "BRA",
@@ -4035,6 +4299,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Frankfurt) Coverage: Europe eu-frankfurt 3",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4042,7 +4307,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Frankfurt) Coverage: Europe eu-frankfurt 3",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "DEU",
@@ -4064,6 +4330,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(China) ap-hongkong 3",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4071,7 +4338,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(China) ap-hongkong 3",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "HKG",
@@ -4093,6 +4361,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Jakarta) Coverage: Southeast Asia ap-jakarta 3",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4100,7 +4369,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Jakarta) Coverage: Southeast Asia ap-jakarta 3",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "IDN",
@@ -4122,6 +4392,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Osaka) Coverage: Northeast Asia ap-osaka 1",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4129,7 +4400,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Osaka) Coverage: Northeast Asia ap-osaka 1",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "JPN",
@@ -4151,6 +4423,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Tokyo) Coverage: Northeast Asia ap-tokyo 2",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4158,7 +4431,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Tokyo) Coverage: Northeast Asia ap-tokyo 2",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "JPN",
@@ -4180,6 +4454,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Johor Bahru) Coverage: Southeast Asia ap-johorbahru 2",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4187,7 +4462,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Johor Bahru) Coverage: Southeast Asia ap-johorbahru 2",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MYS",
@@ -4209,6 +4485,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Queretaro) Coverage: North America na-queretaro 1",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4216,7 +4493,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Queretaro) Coverage: North America na-queretaro 1",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "MEX",
@@ -4238,6 +4516,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Saudi Arabia) Coverage: Middle East me-saudi-arabia 2",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4245,7 +4524,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Saudi Arabia) Coverage: Middle East me-saudi-arabia 2",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "SAU",
@@ -4267,6 +4547,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Singapore) Coverage: Southeast Asia ap-singapore 4",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4274,7 +4555,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Singapore) Coverage: Southeast Asia ap-singapore 4",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "SGP",
@@ -4296,6 +4578,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Seoul) Coverage: Northeast Asia ap-seoul 2",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4303,7 +4586,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Seoul) Coverage: Northeast Asia ap-seoul 2",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "KOR",
@@ -4325,6 +4609,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Bangkok) Coverage: Southeast Asia ap-bangkok 3",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4332,7 +4617,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Bangkok) Coverage: Southeast Asia ap-bangkok 3",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "THA",
@@ -4354,6 +4640,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Silicon Valley) Coverage: Western United States na-siliconvalley 2",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4361,7 +4648,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Silicon Valley) Coverage: Western United States na-siliconvalley 2",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "USA",
@@ -4383,6 +4671,7 @@
    "source": "https://intl.cloud.tencent.com/document/product/213/6091",
    "quote": "(Virginia) Coverage: Eastern United States na-ashburn 2",
    "check": "found",
+   "evidence": "primary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4390,7 +4679,8 @@
      "role": "operator",
      "source": "https://intl.cloud.tencent.com/document/product/213/6091",
      "quote": "(Virginia) Coverage: Eastern United States na-ashburn 2",
-     "check": "found"
+     "check": "found",
+     "evidence": "primary"
     }
    ],
    "iso3": "USA",
@@ -4412,6 +4702,7 @@
    "source": "https://www.datacenterdynamics.com/en/news/tencent-cloud-launches-availability-zone-in-franfurt-germany/",
    "quote": "Toronto), Europe (Frankfurt), and South America",
    "check": "found",
+   "evidence": "secondary",
    "roles": [
     {
      "firm": "Tencent Cloud",
@@ -4419,7 +4710,8 @@
      "role": "operator",
      "source": "https://www.datacenterdynamics.com/en/news/tencent-cloud-launches-availability-zone-in-franfurt-germany/",
      "quote": "Toronto), Europe (Frankfurt), and South America",
-     "check": "found"
+     "check": "found",
+     "evidence": "secondary"
     }
    ],
    "iso3": "CAN",
@@ -4444,7 +4736,8 @@
    "note": "Exports of advanced chips are controlled, but access to the chips through a cloud service is not, as of the source date",
    "source": "https://www.asiafinancial.com/china-using-microsoft-amazon-cloud-to-beat-ai-chip-sanctions",
    "quote": "Providing access to advanced chips — like that of Nvidia — or advanced AI models through the cloud is not a violation of US regulations since only exports or transfers of a commodity, software or technology are regulated.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "USA-0002",
@@ -4460,7 +4753,8 @@
    "note": "Passed the House by 369 votes to 22 on 12 January 2026; not passed by the Senate as of October 2026",
    "source": "https://clerk.house.gov/evs/2026/roll013",
    "quote": "H R 2683 2/3 YEA-AND-NAY 12-Jan-2026 6:56 PM QUESTION: On Motion to Suspend the Rules and Pass, as Amended BILL TITLE: Remote Access Security Act",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "id": "USA-0003",
@@ -4476,7 +4770,8 @@
    "note": "Issued on 15 January 2025 and rescinded before its compliance date of 15 May 2025",
    "source": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens",
    "quote": "Today, the Department of Commerce (DOC) announced a rescission of the Biden Administration’s AI Diffusion Rule, while rolling out additional steps to strengthen export controls on semiconductors worldwide.",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "id": "USA-0004",
@@ -4493,7 +4788,8 @@
    "note": "Announced with the rescission; the source does not confirm that the requirement took effect",
    "source": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens",
    "quote": "Imposing additional export licensing requirements for exports of SI chips to Malaysia and Thailand, due to known instances of diversion.",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "id": "USA-0005",
@@ -4509,7 +4805,8 @@
    "note": "Guidance, not a rule",
    "source": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens",
    "quote": "Issuing guidance warning the public about the potential consequences of allowing U.S. SI chips to be used for training and inference of Chinese SI models.",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "id": "MYS-0001",
@@ -4525,7 +4822,8 @@
    "note": "Covers exports, transshipments and transits of US-origin high-performance AI chips",
    "source": "https://www.scmp.com/week-asia/economics/article/3318099/malaysia-imposes-trade-permits-us-linked-ai-chip-shipments",
    "quote": "all exports, transshipments and transits of high-performance AI chips of US origin would need to come with a Strategic Trade Permit “effective immediately”.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "MYS-0002",
@@ -4541,7 +4839,8 @@
    "note": "The permit does not cover the use of the chips within Malaysia",
    "source": "https://techwireasia.com/2025/09/malaysia-tightens-oversight-of-data-centres-amid-ai-chip-controls/",
    "quote": "The rule does not completely cut off access — chips can still be used within Malaysia — but it puts projects with Chinese investors under closer watch.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "USA-0006",
@@ -4558,7 +4857,8 @@
    "note": "Up to the equivalent of 35,000 Nvidia GB300 chips for each company, on condition of security and reporting requirements that are not public",
    "source": "https://www.ajot.com/news/statement-on-uae-and-saudi-chip-exports",
    "quote": "The approvals are conditioned on both companies meeting rigorous security and reporting requirements.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "ARE-0001",
@@ -4574,7 +4874,8 @@
    "note": "Described by the UAE ambassador to the United States; the terms are not public",
    "source": "https://www.uae-embassy.org/news/statement-ambassador-yousef-al-otaiba-us-uae-ai-acceleration-partnership",
    "quote": "approved UAE organizations acquiring regulated U.S. technologies will adhere to extensive physical and cybersecurity protocols. These involve regular audits, third-party validations, and active oversight by both nations’ governments.",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "id": "USA-0007",
@@ -4590,7 +4891,8 @@
    "note": "Requires a licence for advanced chips for any entity whose ultimate parent is in China or Macau, wherever the entity is, a rule that BIS says has applied since November 2023",
    "source": "https://asiatimes.com/2026/06/nvidia-gpu-crackdown-hits-china-linked-southeast-asia-data-centers/",
    "quote": "issued guidance on May 31 clarifying that export licenses are required for advanced computing chips destined for any entity whose ultimate parent company is headquartered in China or Macau, regardless of where that entity is situated.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "USA-0008",
@@ -4606,7 +4908,8 @@
    "note": "A review reported by Bloomberg that lists countries where Chinese firms reach chips remotely; it is not a rule, and remote access remains legal",
    "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
    "quote": "The review builds two lists. One names countries running black markets that move restricted Nvidia chips physically into China, which sits squarely in enforcement’s remit. The other names countries where Chinese firms tap the chips remotely.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "USA-0009",
@@ -4623,7 +4926,8 @@
    "note": "Reported as shelved, so the requirement announced in May 2025 did not become a rule",
    "source": "https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access",
    "quote": "Commerce shelved its own draft rules, including one curbing sales to Malaysia and Thailand over diversion fears.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "MYS-0003",
@@ -4639,7 +4943,8 @@
    "note": "Servers with Nvidia and other AI chips are not controlled goods in Malaysia, and data centres may decide whom to serve within Malaysian law",
    "source": "https://w.media/pipeline-data-center-projects-unaffected-by-alleged-chinese-ai-training-in-malaysia-analysts/",
    "quote": "Miti said that servers using Nvidia and AI chips are not classified as controlled goods in Malaysia, and businesses — including data centres — operating in Malaysia are free to make their own commercial decisions as long as they comply with Malaysian laws and regulations.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "SGP-0001",
@@ -4655,7 +4960,8 @@
    "note": "Charges of fraud for false representations to server suppliers about end users, under general law rather than a rule on AI chips",
    "source": "https://www.malaymail.com/news/singapore/2026/04/02/singapore-charges-another-individual-in-ai-chip-fraud-tied-to-dell-servers/214819",
    "quote": "Singapore prosecutors charged one more person with fraud today ‌for making false representations to US server supplier Dell Technologies, linking her to two other individuals charged with similar offences in February last year.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "EUU-0001",
@@ -4697,7 +5003,8 @@
    "note": "Extends the EU control list on exports to certain advanced computing integrated circuits, in effect from 15 November 2025; the source does not say whether the entries cover the AI chips that US rules control",
    "source": "https://www.cooley.com/news/insight/2025/2025-12-05-eu--issues-2025-update-to-dual-use-control-list",
    "quote": "Controls on high-performance integrated circuits now expressly capture certain advanced computing devices, such as Field Programmable Logic Devices.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "id": "NOR-0001",
@@ -4713,7 +5020,8 @@
    "note": "A private contract and not a rule of Norway: the lender requires Nscale to monitor how its customer uses the GPUs at Glomfjord for signs of a breach of export control law and to report them",
    "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_12.htm",
    "quote": "routinely assess Customer use of the GPU Assets by monitoring for compute anomalies or suspicious configurations indicative of a contravention of Export Control Law and promptly inform the Agent of such anomalies or configurations in writing",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   }
  ],
  "ai_without_site": [
@@ -4727,7 +5035,8 @@
    "note": "A five-year lease worth about US$7 billion at several Oracle data centres in Southeast Asia, reported by the Financial Times and not confirmed by the companies; the countries and sites are not disclosed",
    "source": "https://www.tomshardware.com/tech-industry/data-centers/tencent-scores-100-000-offshore-ai-chip-deal-with-oracle-for-usd7-billion-despite-climbing-prices-per-hour-costs-estimated-to-be-43-percent-under-standard-h100-rental-rates",
    "quote": "Oracle has reportedly made a deal with Tencent for a five-year lease at several Oracle data centers in Southeast Asia, covering about 100,000 advanced AI chips unavailable in China.",
-   "check": "found"
+   "check": "found",
+   "evidence": "unconfirmed"
   },
   {
    "firm": "Tencent",
@@ -4739,7 +5048,8 @@
    "note": "Contracts worth more than US$1.2 billion for chips of Datasection in Japan and Australia, as the Financial Times reported in December 2025; Datasection has not confirmed that Tencent is its customer",
    "source": "https://www.tomshardware.com/tech-industry/data-centers/tencent-scores-100-000-offshore-ai-chip-deal-with-oracle-for-usd7-billion-despite-climbing-prices-per-hour-costs-estimated-to-be-43-percent-under-standard-h100-rental-rates",
    "quote": "Tencent previously inked a $1.2 billion-plus deal for Datasection Blackwell rentals in Japan and Australia, the FT reported in December 2025.",
-   "check": "found"
+   "check": "found",
+   "evidence": "unconfirmed"
   },
   {
    "firm": "Alibaba",
@@ -4751,7 +5061,8 @@
    "note": "Training of large language models in Southeast Asian data centres that non-Chinese firms own and operate, as the Financial Times reported from two people with direct knowledge; Reuters could not verify the report",
    "source": "https://finance.yahoo.com/news/chinas-tech-giants-move-ai-052307498.html",
    "quote": "Alibaba and ByteDance are among the tech firms training their newest large language models in Southeast Asian data centres, the report said, citing two people with direct knowledge of the matter.",
-   "check": "found"
+   "check": "found",
+   "evidence": "unconfirmed"
   },
   {
    "firm": "ByteDance",
@@ -4763,7 +5074,8 @@
    "note": "Training of large language models in Southeast Asian data centres that non-Chinese firms own and operate, as the Financial Times reported from two people with direct knowledge; Reuters could not verify the report",
    "source": "https://finance.yahoo.com/news/chinas-tech-giants-move-ai-052307498.html",
    "quote": "Alibaba and ByteDance are among the tech firms training their newest large language models in Southeast Asian data centres, the report said, citing two people with direct knowledge of the matter.",
-   "check": "found"
+   "check": "found",
+   "evidence": "unconfirmed"
   },
   {
    "firm": "Unnamed Chinese firm",
@@ -4775,7 +5087,8 @@
    "note": "Engineers travelled to Malaysia in March 2025 with hard drives of training data, as the Wall Street Journal reported; the source names neither the firm nor the data centre",
    "source": "https://w.media/pipeline-data-center-projects-unaffected-by-alleged-chinese-ai-training-in-malaysia-analysts/",
    "quote": "The Wall Street Journal recently reported that Chinese engineers had in March travelled to Malaysia with suitcases of hard drives to train AI models at data centres using Nvidia chips in an effort to circumvent US restrictions on China’s access to advanced chips for AI.",
-   "check": "found"
+   "check": "found",
+   "evidence": "unconfirmed"
   }
  ],
  "customers": [
@@ -4790,7 +5103,8 @@
    "note": "The registration statement does not name the customer",
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "In 2025 and the six months ended June 30, 2026, our largest customer, a global technology company with a leading short-form video platform serving a worldwide audience, accounted for 69.4% and 69.2%, respectively, of our revenue",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "firm": "DayOne",
@@ -4803,7 +5117,8 @@
    "note": "The registration statement does not name the customer",
    "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
    "quote": "In 2025 and the six months ended June 30, 2026, our largest customer, a global technology company with a leading short-form video platform serving a worldwide audience, accounted for 69.4% and 69.2%, respectively, of our revenue",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "firm": "DayOne",
@@ -4816,7 +5131,8 @@
    "note": "Reported by Bloomberg from unnamed sources",
    "source": "https://www.datacenterknowledge.com/cloud/oracle-said-to-advance-indonesia-cloud-services-plan",
    "quote": "boosting its partnership with a key regional operator that counts TikTok owner ByteDance as its largest customer.",
-   "check": "found"
+   "check": "found",
+   "evidence": "unconfirmed"
   },
   {
    "firm": "Nscale",
@@ -4829,7 +5145,8 @@
    "note": "The registration statement does not name the customer",
    "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
    "quote": "For the year ended December 31, 2025, our largest customer accounted for 73% of our revenue.",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "firm": "Nscale",
@@ -4842,7 +5159,8 @@
    "note": "Reported by Tom's Hardware, citing the Financial Times",
    "source": "https://www.tomshardware.com/tech-industry/data-centers/filing-reveals-how-bytedance-gained-access-to-over-2-000-nvidia-b200-chips-through-nscales-norway-data-center-singaporean-subsidiary-spring-contributed-73-percent-of-uk-neoclouds-2025-revenue",
    "quote": "UK-based “neocloud” Nscale built its business on a major deal with a ByteDance subsidiary named Spring, which accounted for $24 million of its $33 million annual revenue in 2025.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "firm": "Global Switch",
@@ -4855,7 +5173,8 @@
    "note": "Revenue under the 15 MW service agreement in the Hong Kong data centre; Shagang also controls Global Switch",
    "source": "https://gswitch-cdn.com/wp-content/uploads/2026/10/21143434/Global-Switch-Annual-Report-31-December-2025.pdf",
    "quote": "Revenue totalling £28.4 million was recognised in relation to transactions under the service agreement with Huanbang.",
-   "check": "found"
+   "check": "found",
+   "evidence": "primary"
   },
   {
    "firm": "Datasection",
@@ -4868,7 +5187,8 @@
    "note": "Datasection does not name the end customer, citing confidentiality obligations",
    "source": "https://w.media/japans-datasection-bets-on-dominance-with-gpu-supercluster-ambitions/",
    "quote": "NauNau Japan, a Tokyo-based business alliance partner named in the company’s formal financial results as the major customer accounting for JPY 30.5 billion – essentially the entirety of AI infrastructure revenue – in FY03/26.",
-   "check": "found"
+   "check": "found",
+   "evidence": "secondary"
   },
   {
    "firm": "Datasection",
@@ -4881,7 +5201,8 @@
    "note": "Reported by media outlets including the Financial Times; Datasection has neither confirmed nor denied it",
    "source": "https://w.media/japans-datasection-bets-on-dominance-with-gpu-supercluster-ambitions/",
    "quote": "Media outlets including the UK’s Financial Times have reported that Datasection’s biggest customer is Tencent, the Hong Kong-listed technology group, although Datasection has not confirmed or denied this.",
-   "check": "found"
+   "check": "found",
+   "evidence": "unconfirmed"
   }
  ],
  "census": [
@@ -4898,7 +5219,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Equinix Johor JH1",
@@ -4913,7 +5236,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Equinix: JH2",
@@ -4928,7 +5253,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Stack: JHB01A",
@@ -4943,7 +5270,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Stack: JHB01B",
@@ -4958,7 +5287,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Global Switch: Johor",
@@ -4973,7 +5304,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Vantage: JHB11",
@@ -4988,7 +5321,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Vantage: JHB12",
@@ -5003,7 +5338,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Vantage: JHB13",
@@ -5018,7 +5355,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Keppel DC: Johor Sedenak 1",
@@ -5033,7 +5372,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "",
@@ -5048,7 +5389,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "",
@@ -5063,7 +5406,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "STT Johor Campus",
@@ -5078,7 +5423,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Racks Central: Pasir Gudang RCJM1",
@@ -5093,7 +5440,9 @@
    "check": "found",
    "link_source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
    "link_quote": "The investment will support Racks Central’s overseas expansion, starting with Johor, Malaysia, building on its established colocation operations in Singapore.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "primary"
   },
   {
    "facility": "Racks Central: RCJM2A",
@@ -5108,7 +5457,9 @@
    "check": "found",
    "link_source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
    "link_quote": "The investment will support Racks Central’s overseas expansion, starting with Johor, Malaysia, building on its established colocation operations in Singapore.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "primary"
   },
   {
    "facility": "Racks Central: RCJM2B",
@@ -5123,7 +5474,9 @@
    "check": "found",
    "link_source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
    "link_quote": "The investment will support Racks Central’s overseas expansion, starting with Johor, Malaysia, building on its established colocation operations in Singapore.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "primary"
   },
   {
    "facility": "AirTrunk Johor Bahru JHB1",
@@ -5138,7 +5491,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "AirTrunk: Johor JHB2",
@@ -5153,7 +5508,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "AirTrunk: Johor JHB3",
@@ -5168,7 +5525,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "AirTrunk: Johor JHB4",
@@ -5183,7 +5542,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Hub Max",
@@ -5198,7 +5559,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Ridge Two",
@@ -5213,7 +5576,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Prime Station",
@@ -5228,7 +5593,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Station Gamma",
@@ -5243,7 +5610,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "CSF: Johor CX3",
@@ -5258,7 +5627,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Bridge DC: MY06-1",
@@ -5273,7 +5644,9 @@
    "check": "found",
    "link_source": "https://baxtel.com/data-center/bridge-dc-my06-1",
    "link_quote": "TikTok owner ByteDance is the anchor tenant.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Bridge DC: MY06-2",
@@ -5288,7 +5661,9 @@
    "check": "found",
    "link_source": "https://baxtel.com/data-center/bridge-dc-my06-2",
    "link_quote": "TikTok owner ByteDance is the anchor tenant.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Bridge: Plentong",
@@ -5303,7 +5678,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Bridge DC: MY07 Phase 1",
@@ -5318,7 +5695,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Bridge DC: MY06-3",
@@ -5333,7 +5712,9 @@
    "check": "found",
    "link_source": "https://baxtel.com/data-center/bridge-dc-my06-3",
    "link_quote": "Built for anchor tenant ByteDance.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Bridge DC: MY06-4",
@@ -5348,7 +5729,9 @@
    "check": "found",
    "link_source": "https://baxtel.com/data-center/bridge-dc-my06-4",
    "link_quote": "Built for anchor tenant ByteDance.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Bridge DC: MY06 Expansion",
@@ -5363,7 +5746,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Bridge DC: MY07 Phase 2",
@@ -5378,7 +5763,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Bridge DC: MY07 Expansion",
@@ -5393,7 +5780,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Empyrion: Nusajaya Campus MY1",
@@ -5408,7 +5797,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "NTT: Gelang Patah",
@@ -5423,7 +5814,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "K2: Kulai JHR01-03",
@@ -5438,7 +5831,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "K2: Kulai JHR04",
@@ -5453,7 +5848,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "K2: Kulai Expansion",
@@ -5468,7 +5865,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Princeton PDG: JH1 Bldg-1",
@@ -5483,7 +5882,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Princeton PDG: JH2",
@@ -5498,7 +5899,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Princeton PDG: JH1 Bldg-2",
@@ -5513,7 +5916,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Princeton PDG: JH1 Bldg-3",
@@ -5528,7 +5933,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Princeton PDG: JH1 Bldg-4",
@@ -5543,7 +5950,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Open DC JB2",
@@ -5558,7 +5967,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Open DC JB1",
@@ -5573,7 +5984,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Digital Edge: Johor Campus",
@@ -5588,7 +6001,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Digital Edge: Kota Tinggi, Johor",
@@ -5603,7 +6018,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "EC33 Johor",
@@ -5618,7 +6035,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "YTL: JDC1",
@@ -5633,7 +6052,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "YTL: JDC2",
@@ -5648,7 +6069,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "YTL: JDC3",
@@ -5663,7 +6086,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "YTL: JDC6",
@@ -5678,7 +6103,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Edgnex: Johor",
@@ -5693,7 +6120,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Equalbase: Johor",
@@ -5708,7 +6137,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "GDC SDN: Johor SDK1",
@@ -5723,7 +6154,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Epoch Digital: Johor",
@@ -5738,7 +6171,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "ESR-Logos: Johor",
@@ -5753,7 +6188,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "ZData: Johor",
@@ -5768,7 +6205,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Digital Hyperspace: Johor",
@@ -5783,7 +6222,9 @@
    "check": "found",
    "link_source": "https://www.datacenterdynamics.com/en/news/malaysias-ame-elite-sells-35-acres-of-land-in-johor-to-data-center-firm/",
    "link_quote": "DHM is a wholly-owned subsidiary of Quantum DC (HK) Limited.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "unconfirmed"
   },
   {
    "facility": "TM Nxera: Johor",
@@ -5798,7 +6239,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Digital Halo: Johor",
@@ -5813,7 +6256,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Nusajaya Tech Park Building A",
@@ -5822,13 +6267,15 @@
    "page": "https://baxtel.com/data-center/j2i9or",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/j2i9or",
    "link_quote": "GDS Nusajaya Tech Park Data Center Campus, also known as GDS NTP Data Center Campus, is the first data center that GDS has launched in Southeast Asia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "DayOne: Kempas Tech Park",
@@ -5837,13 +6284,15 @@
    "page": "https://baxtel.com/data-center/dayone-kempas-tech-park",
    "link": "operator",
    "site": "MYS-0004",
-   "note": "DayOne began as the international arm of GDS",
+   "note": "DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "DayOne: Kempas Tech Park DayOne Large Construction Carrier-Neutral",
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Nusajaya Tech Park Building B",
@@ -5852,13 +6301,15 @@
    "page": "https://baxtel.com/data-center/8biejz",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/8biejz",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building C",
@@ -5867,13 +6318,15 @@
    "page": "https://baxtel.com/data-center/weidzo",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/weidzo",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building D",
@@ -5882,13 +6335,15 @@
    "page": "https://baxtel.com/data-center/vmimev",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/vmimev",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building E",
@@ -5897,13 +6352,15 @@
    "page": "https://baxtel.com/data-center/qzie58",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/qzie58",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building F",
@@ -5912,13 +6369,15 @@
    "page": "https://baxtel.com/data-center/m1i4n9",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Large Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/m1i4n9",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building G",
@@ -5927,13 +6386,15 @@
    "page": "https://baxtel.com/data-center/e6iln2",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/e6iln2",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building H",
@@ -5942,13 +6403,15 @@
    "page": "https://baxtel.com/data-center/emiw7z",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/emiw7z",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building I",
@@ -5957,13 +6420,15 @@
    "page": "https://baxtel.com/data-center/omikqq",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Small Planned Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/omikqq",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building J",
@@ -5972,13 +6437,15 @@
    "page": "https://baxtel.com/data-center/ovimpw",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Small Planned Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/ovimpw",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building K",
@@ -5987,13 +6454,15 @@
    "page": "https://baxtel.com/data-center/pqi8lv",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Construction Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/pqi8lv",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building L",
@@ -6002,13 +6471,15 @@
    "page": "https://baxtel.com/data-center/yoi5rg",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Small Construction Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/yoi5rg",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building M",
@@ -6017,13 +6488,15 @@
    "page": "https://baxtel.com/data-center/7li46o",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Medium Operational Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/7li46o",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "Nusajaya Tech Park Building N",
@@ -6032,13 +6505,15 @@
    "page": "https://baxtel.com/data-center/zqirpa",
    "link": "operator",
    "site": "MYS-0003",
-   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international arm of GDS",
+   "note": "Baxtel withholds the name of the building, and its page places it in the Nusajaya Tech Park campus; DayOne began as the international business of GDS",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Carrier-Neutral Data Center Interested in this information? Contact us DayOne Small Planned Carrier-Neutral",
    "check": "found",
    "link_source": "https://baxtel.com/data-center/zqirpa",
    "link_quote": "This data center building is part of Carrier-Neutral Operator Interested in this information? Contact us 's Nusajaya Tech Park Campus in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   },
   {
    "facility": "CURRENC: Johor",
@@ -6053,7 +6528,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "BrightRay: Johor MY-01",
@@ -6068,7 +6545,9 @@
    "check": "found",
    "link_source": "https://www.datacenterdynamics.com/en/news/shanghai-dc-science-seeks-600m-for-malaysian-data-center/",
    "link_quote": "Chinese data center developer and operator Shanghai DC-Science Co. is seeking a private debt of between $600 million and $700 million for a data center project in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "unconfirmed"
   },
   {
    "facility": "BrightRay: MY-02",
@@ -6083,7 +6562,9 @@
    "check": "found",
    "link_source": "https://www.datacenterdynamics.com/en/news/shanghai-dc-science-seeks-600m-for-malaysian-data-center/",
    "link_quote": "Chinese data center developer and operator Shanghai DC-Science Co. is seeking a private debt of between $600 million and $700 million for a data center project in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "unconfirmed"
   },
   {
    "facility": "BrightRay: MY-03",
@@ -6098,7 +6579,9 @@
    "check": "found",
    "link_source": "https://www.datacenterdynamics.com/en/news/shanghai-dc-science-seeks-600m-for-malaysian-data-center/",
    "link_quote": "Chinese data center developer and operator Shanghai DC-Science Co. is seeking a private debt of between $600 million and $700 million for a data center project in Johor, Malaysia.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "unconfirmed"
   },
   {
    "facility": "Telekom Malaysia: IPDC 1",
@@ -6113,7 +6596,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "Telekom Malaysia: IPDC 2",
@@ -6128,7 +6613,9 @@
    "check": "found",
    "link_source": "",
    "link_quote": "",
-   "link_check": ""
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
   },
   {
    "facility": "MSFusion Johor Campus",
@@ -6143,7 +6630,408 @@
    "check": "found",
    "link_source": "https://www.datacenterdynamics.com/en/news/malaysias-crescendo-corp-sells-land-in-johor-for-data-center/",
    "link_quote": "MSB is a subsidiary of Megaspeed International Pte. Ltd., a company incorporated in Singapore.",
-   "link_check": "found"
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
   }
- ]
+ ],
+ "estimate": {
+  "totals": {
+   "low": {
+    "in_service_mw": 1323,
+    "pipeline_mw": 4183,
+    "total_mw": 5506,
+    "mw_by_basis": {
+     "it": 4886,
+     "unspecified": 620
+    }
+   },
+   "high": {
+    "in_service_mw": 1652,
+    "pipeline_mw": 5041,
+    "total_mw": 6693,
+    "mw_by_basis": {
+     "it": 5125,
+     "power": 600,
+     "unspecified": 968
+    }
+   },
+   "sites": 67,
+   "sites_without_a_figure": 31
+  },
+  "rows": [
+   {
+    "component": "DayOne, Johor",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "789",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Johor",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "824",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Batam",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "72",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Batam",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "360",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Singapore",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "0",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Singapore",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "20",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Kuala Lumpur",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "0",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Kuala Lumpur",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "1448",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Greater Bangkok",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "73",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Greater Bangkok",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "141",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Kyushu",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "0",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Kyushu",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "160",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Tokyo",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "0",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Tokyo",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "60",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Hong Kong",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "27",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Hong Kong",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "39",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Greater Helsinki",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "0",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Greater Helsinki",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "281",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "DayOne, Zaragoza",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "0",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Zaragoza",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "pipeline",
+    "mw": "304",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Capacity under construction and on secured powered land that the firm reports"
+   },
+   {
+    "component": "Global Switch, All markets",
+    "firm": "Global Switch",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "252",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "operator_markets",
+    "note": "Total that the firm reports"
+   },
+   {
+    "component": "DayOne, Johor",
+    "firm": "DayOne",
+    "site_id": "",
+    "stage": "in_service",
+    "mw": "106",
+    "basis": "it",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "epoch_estimates",
+    "note": "Epoch AI estimates 895 MW of IT power at the sites of the market, against 789 MW that the firm reports in service"
+   },
+   {
+    "component": "Data Center Pecém",
+    "firm": "ByteDance",
+    "site_id": "BRA-0001",
+    "stage": "pipeline",
+    "mw": "300",
+    "basis": "power",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "sites",
+    "note": "High bound only, because the figure is not from a primary source"
+   },
+   {
+    "component": "Global Switch Madrid 2",
+    "firm": "Global Switch",
+    "site_id": "ESP-0003",
+    "stage": "pipeline",
+    "mw": "36",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Bridge Data Centres MY06",
+    "firm": "ByteDance",
+    "site_id": "MYS-0001",
+    "stage": "in_service",
+    "mw": "110",
+    "basis": "unspecified",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "sites",
+    "note": ""
+   },
+   {
+    "component": "Bridge Data Centres MY06",
+    "firm": "ByteDance",
+    "site_id": "MYS-0001",
+    "stage": "in_service",
+    "mw": "133",
+    "basis": "it",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "epoch_estimates",
+    "note": "Epoch AI estimates 243 MW of IT power, against 110 MW stated"
+   },
+   {
+    "component": "MSFusion Johor campus",
+    "firm": "Megaspeed",
+    "site_id": "MYS-0013",
+    "stage": "pipeline",
+    "mw": "300",
+    "basis": "power",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "High bound only, because the figure is not from a primary source"
+   },
+   {
+    "component": "GDS data centres at YTL Green Data Center Park",
+    "firm": "GDS",
+    "site_id": "MYS-0014",
+    "stage": "pipeline",
+    "mw": "168",
+    "basis": "unspecified",
+    "evidence": "primary",
+    "counted_in": "high",
+    "source_table": "sites",
+    "note": "High bound only, because the status of the site is unclear"
+   },
+   {
+    "component": "BrightRay DC campus, Sedenak",
+    "firm": "Shanghai DC-Science",
+    "site_id": "MYS-0015",
+    "stage": "pipeline",
+    "mw": "90",
+    "basis": "unspecified",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "High bound only, because the role of the Chinese firm is unconfirmed"
+   },
+   {
+    "component": "Racks Central Johor AI Campus",
+    "firm": "China-ASEAN Investment Cooperation Fund II",
+    "site_id": "MYS-0016",
+    "stage": "pipeline",
+    "mw": "510",
+    "basis": "unspecified",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Green Mountain OSL-Hamar campus",
+    "firm": "ByteDance",
+    "site_id": "NOR-0001",
+    "stage": "in_service",
+    "mw": "90",
+    "basis": "unspecified",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "sites",
+    "note": "High bound only, because the figure is not from a primary source"
+   }
+  ]
+ }
 }

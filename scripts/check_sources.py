@@ -8,8 +8,8 @@ passage on the page. A passage counts as found when at least 90 percent of its o
 of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the
 result for each row, and checks config/operator_markets.csv, config/firm_links.csv,
-config/rules.csv, config/ai_compute.csv, config/site_capacity.csv, config/epoch_links.csv, config/operator_customers.csv and config/johor_census.csv in the same
-way. A row of the Johor census can carry a second passage, for the link of a Chinese firm, which is checked as well. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
+config/rules.csv, config/ai_compute.csv, config/site_capacity.csv, config/epoch_links.csv, config/operator_customers.csv, config/johor_census.csv and
+config/capacity_definitions.csv in the same way. A row of the Johor census can carry a second passage, for the link of a Chinese firm, which is checked as well. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
 
     python scripts/check_sources.py              downloads pages not saved yet
     python scripts/check_sources.py --refetch    downloads every page again
@@ -42,13 +42,15 @@ OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "oper
                 (ROOT / "config" / "site_capacity.csv", ROOT / "data" / "site_capacity.csv"),
                 (ROOT / "config" / "epoch_links.csv", ROOT / "data" / "epoch_links.csv"),
                 (ROOT / "config" / "operator_customers.csv", ROOT / "data" / "operator_customers.csv"),
-                (ROOT / "config" / "johor_census.csv", ROOT / "data" / "johor_census.csv")]
+                (ROOT / "config" / "johor_census.csv", ROOT / "data" / "johor_census.csv"),
+                (ROOT / "config" / "capacity_definitions.csv", ROOT / "data" / "capacity_definitions.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found
 PARTLY_FOUND = 0.5
 ROLES = {"owner", "operator", "tenant", "user", "builder", "equipment supplier", "financier"}
 STATUSES = {"operational", "under_construction", "planned", "unclear"}
+EVIDENCE = {"primary", "secondary", "unconfirmed"}
 
 
 def squash(text: str) -> str:
@@ -124,6 +126,16 @@ def validate(sites: list[dict], roles: list[dict]) -> None:
         raise ValueError("; ".join(problems))
 
 
+def validate_evidence(name: str, rows: list[dict]) -> None:
+    """Every row carries one of the three grades of evidence, and a second passage carries a grade of its own."""
+    problems = [f"{name} row {i + 2}: unknown evidence {r.get('evidence')!r}"
+                for i, r in enumerate(rows) if r.get("evidence") not in EVIDENCE]
+    problems += [f"{name} row {i + 2}: unknown link_evidence {r.get('link_evidence')!r}"
+                 for i, r in enumerate(rows) if r.get("link_source_url") and r.get("link_evidence") not in EVIDENCE]
+    if problems:
+        raise ValueError("; ".join(problems))
+
+
 def read(path: Path) -> list[dict]:
     with path.open(newline="") as f:
         return list(csv.DictReader(f))
@@ -146,6 +158,8 @@ def main() -> None:
     validate(sites, roles)
     tables = [("sites", sites, SITES_OUT), ("roles", roles, ROLES_OUT)]
     tables += [(src.stem, read(src), out) for src, out in OTHER_TABLES if src.exists()]
+    for name, rows, _ in tables:
+        validate_evidence(name, rows)
     for name, rows, path in tables:
         checked = check(rows, args.refetch)
         write(path, checked)

@@ -76,6 +76,12 @@
       "under_construction_mw": 1329,
       "secured_powered_land_mw": 2308,
       "total_mw": 4598
+    },
+    "Global Switch": {
+      "in_service_mw": 252,
+      "under_construction_mw": 0,
+      "secured_powered_land_mw": 0,
+      "total_mw": 0
     }
   },
   "rules": 16,
@@ -88,5 +94,79 @@
     "unconfirmed": 4,
     "financier": 3,
     "owner": 1
+  },
+  "evidence_by_file": {
+    "sites": {
+      "primary": 35,
+      "secondary": 30,
+      "unconfirmed": 2
+    },
+    "site_roles": {
+      "primary": 53,
+      "secondary": 33,
+      "unconfirmed": 3
+    },
+    "cloud_regions": {
+      "primary": 51,
+      "secondary": 4
+    },
+    "operator_markets": {
+      "primary": 11
+    },
+    "capacity_definitions": {
+      "primary": 4
+    },
+    "firm_links": {
+      "primary": 2,
+      "secondary": 5
+    },
+    "operator_customers": {
+      "primary": 4,
+      "unconfirmed": 2,
+      "secondary": 2
+    },
+    "ai_compute": {
+      "unconfirmed": 7,
+      "secondary": 2,
+      "primary": 1
+    },
+    "site_capacity": {
+      "secondary": 11,
+      "primary": 9,
+      "unconfirmed": 1
+    },
+    "rules": {
+      "secondary": 10,
+      "primary": 6
+    },
+    "epoch_links": {
+      "secondary": 4
+    },
+    "johor_census": {
+      "secondary": 84
+    }
+  },
+  "capacity_estimate_mw": {
+    "low": {
+      "in_service_mw": 1323,
+      "pipeline_mw": 4183,
+      "total_mw": 5506,
+      "mw_by_basis": {
+        "it": 4886,
+        "unspecified": 620
+      }
+    },
+    "high": {
+      "in_service_mw": 1652,
+      "pipeline_mw": 5041,
+      "total_mw": 6693,
+      "mw_by_basis": {
+        "it": 5125,
+        "power": 600,
+        "unspecified": 968
+      }
+    },
+    "sites": 67,
+    "sites_without_a_figure": 31
   }
 }
