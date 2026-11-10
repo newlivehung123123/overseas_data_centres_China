@@ -1,6 +1,6 @@
 # Overseas data centres of Chinese firms
 
-This project records the data-centre capacity outside mainland China in which Chinese firms and Chinese state lenders have a role, as owner, operator, tenant, builder, equipment supplier or financier. For each site the dataset will record how much of the capacity can run large AI workloads and which country's rules cover it. US export controls govern shipments of AI chips but not the remote use of those chips, and the Remote Access Security Act, which would add remote use, passed the House on 12 January 2026 and has not passed the Senate. Capacity that Chinese firms use in third countries can therefore sit outside the rules of the United States, of China and of the host country at once, and no open dataset found records that capacity site by site together with the role of each Chinese firm and the rules that cover the site, as the section on related work below shows. The codebook in `codebook.md` defines the roles, the firms covered, the three levels of detail, the three grades of evidence and every variable. The note in `docs/preliminary_findings.md` gives the main findings so far.
+This project records the data-centre capacity outside mainland China in which Chinese firms and Chinese state lenders have a role, as owner, operator, tenant, builder, equipment supplier or financier. For each site the dataset will record how much of the capacity can run large AI workloads and which country's rules cover it. US export controls govern shipments of AI chips but not the remote use of those chips, and the Remote Access Security Act, which would add remote use, passed the House on 12 January 2026 and has not passed the Senate. Capacity that Chinese firms use in third countries can therefore sit outside the rules of the United States, of China and of the host country at once, and no open dataset found records that capacity site by site together with the role of each Chinese firm and the rules that cover the site, as the section on related work below shows. The codebook in `codebook.md` defines the roles, the firms covered, the three levels of detail, the three grades of evidence and every variable. The note in `docs/preliminary_findings.md` gives the main findings so far. A public post on the findings, "Where Chinese AI firms rent the chips they cannot buy", is published on [AI in Society](https://aiinsocietyhub.com/articles/where-chinese-ai-firms-rent-the-chips-they-cannot-buy) and on the [EA Forum](https://forum.effectivealtruism.org/posts/MwC6pXAwo2DbygEKA/where-chinese-ai-firms-rent-the-chips-they-cannot-buy), and `scripts/build_post_figures.py` draws the four figures of the post from the checked files.
 
 ## Related work
 
@@ -200,6 +200,12 @@ The capacity estimate and the figures read the checked files, so both run after 
 .venv/bin/python scripts/summarise.py
 ```
 
+The figures of the public post are drawn from the same files and from Epoch AI's database file, which `scripts/fetch_epoch.py` saves in `data/raw/epoch`. The script writes the four figures to `docs/figures` as SVG files and stops if Figure 3 and `data/rules.csv` do not hold the same rows.
+
+```bash
+.venv/bin/python scripts/build_post_figures.py
+```
+
 The first command writes `data/government_data_centres_aiddata.csv` and `data/aiddata_summary.json` and prints the figures above. The option `--candidates` also writes `data/aiddata_candidates.csv`, the records that match a search term and are not coded yet. The option `--gcdf` gives another path to the Excel file.
 
 ## Tests
@@ -217,6 +223,7 @@ The tests use small tables and passages written in the test files and need no do
 | `CONTRIBUTING.md` | Purpose of the project, data rules and writing rules for anyone who works on the repository |
 | `codebook.md` | Roles, firms, levels and variables |
 | `docs/preliminary_findings.md` | Main findings so far, with the figures from the checked rows |
+| `docs/figures/` | The four figures of the public post, as SVG files |
 | `config/firm_links.csv` | Ownership links between listed firms and Chinese firms, each with its page and passage |
 | `config/operator_markets.csv` | Capacity that operators report by market, each with its page and passage |
 | `config/places.csv` | Map point of each city, with the OpenStreetMap object it comes from |
@@ -261,6 +268,7 @@ The tests use small tables and passages written in the test files and need no do
 | `site/` | Dashboard, with its data in `site/data/dashboard.json` |
 | `scripts/geocode_places.py` | Map point of each city from OpenStreetMap |
 | `scripts/build_world_map.py` | Outline of the countries under the map tiles, from Natural Earth |
+| `scripts/build_post_figures.py` | The four figures of the public post, drawn from the checked files and Epoch AI's database file |
 | `tests/test_build_aiddata_layer.py` | Offline tests of the AidData build |
 | `tests/test_check_sources.py` | Offline tests of the passage check |
 | `tests/test_fetch_cloud_regions.py` | Offline tests of the region parsers and of the reading of PDF files |
