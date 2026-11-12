@@ -1,5 +1,5 @@
 {
- "built": "2026-11-05",
+ "built": "2026-11-12",
  "records": [
   {
    "layer": "site",
@@ -567,6 +567,15 @@
      "note": "Power of the DayOne plots at Nongsa Digital Park that Oracle, which is not a Chinese firm, leases as sole tenant, according to unnamed sources of Bloomberg",
      "source": "https://www.datacenterknowledge.com/cloud/oracle-said-to-advance-indonesia-cloud-services-plan",
      "evidence": "unconfirmed"
+    },
+    {
+     "mw": "28",
+     "basis": "it",
+     "stage": "first_phase",
+     "date": "2021-11-15",
+     "note": "Plan of two buildings that GDS announced when it agreed to buy the land at Nongsa Digital Park",
+     "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2021/1115/2021111501239.pdf",
+     "evidence": "primary"
     }
    ],
    "epoch": {
@@ -3016,6 +3025,76 @@
    "level": "A"
   },
   {
+   "layer": "site",
+   "id": "IDN-0006",
+   "name": "RangeIDC Batam AI data centre campus",
+   "city": "Batam",
+   "country": "Indonesia",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "A campus on 30 hectares in Nongsa valued at US$5 billion, developed by PT Equator Gate System Batam; the sources give no capacity in megawatts",
+   "source": "https://w.media/china-firm-to-invest-us-5-billion-in-ai-data-center-in-batam/",
+   "quote": "China-based Range Intelligent Computing Technology Company Limited (RangeIDC) is set to invest US$ 5 billion in an artificial intelligence (AI) data center project in Batam, Riau Islands province, in Indonesia.",
+   "check": "found",
+   "evidence": "secondary",
+   "iso3": "IDN",
+   "roles": [
+    {
+     "firm": "RangeIDC",
+     "origin": "",
+     "role": "owner",
+     "source": "https://en.antaranews.com/news/416917/bp-batam-oversees-us5-billion-investment-in-ai-data-center",
+     "quote": "PT EGSB is a developer of an AI data center backed by RangeIDC, one of the largest data center companies in China, listed on the Shenzhen Stock Exchange.",
+     "check": "found",
+     "evidence": "secondary"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "epoch": null,
+   "point": [
+    1.1031,
+    104.0384
+   ],
+   "level": "A"
+  },
+  {
+   "layer": "site",
+   "id": "IDN-0007",
+   "name": "Aesler Greenix Mark 1 data centre",
+   "city": "Batam",
+   "country": "Indonesia",
+   "status": "unclear",
+   "capacity_mw": "16",
+   "capacity_basis": "unspecified",
+   "note": "Announced in January 2022 as the first of three facilities of about 88 MW in all; no later source found confirms that the facility opened, and Baxtel's list of Batam does not name it",
+   "source": "https://www.datacenterdynamics.com/en/news/huawei-to-develop-16mw-data-center-for-aesler-in-batam-indonesia/",
+   "quote": "The first facility will total 16MW and 2,500 racks with a Power Usage Efficiency (PUE) of 1.4.",
+   "check": "found",
+   "evidence": "secondary",
+   "iso3": "IDN",
+   "roles": [
+    {
+     "firm": "Huawei",
+     "origin": "",
+     "role": "equipment supplier",
+     "source": "https://www.datacenterdynamics.com/en/news/huawei-to-develop-16mw-data-center-for-aesler-in-batam-indonesia/",
+     "quote": "Huawei will provide the Indonesian Stock Exchange-listed company with prefabricated data center modules to build the facilities.",
+     "check": "found",
+     "evidence": "secondary"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "epoch": null,
+   "point": [
+    1.1031,
+    104.0384
+   ],
+   "level": "A"
+  },
+  {
    "layer": "cloud_region",
    "id": "Brazil (São Paulo)",
    "name": "Alibaba Cloud Brazil (São Paulo)",
@@ -5203,10 +5282,385 @@
    "quote": "Media outlets including the UK’s Financial Times have reported that Datasection’s biggest customer is Tencent, the Hong Kong-listed technology group, although Datasection has not confirmed or denied this.",
    "check": "found",
    "evidence": "unconfirmed"
+  },
+  {
+   "firm": "GDS",
+   "customer": "major Chinese cloud service provider",
+   "description": "a major Chinese cloud service provider",
+   "identified_as": "",
+   "share": "",
+   "revenue": "",
+   "period": "as of 15 November 2021",
+   "note": "Stated when GDS, then the parent of the business that is now DayOne, announced its site at Nongsa Digital Park in Batam; the customer agreed to give GDS priority as its data-centre provider in Southeast Asia, and GDS does not name the customer",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2021/1115/2021111501239.pdf",
+   "quote": "The Company has recently entered into a strategic cooperation agreement with a major Chinese cloud service provider to support its international expansion, pursuant to which GDS will be prioritized as its data center provider in the region.",
+   "check": "found",
+   "evidence": "primary"
   }
  ],
  "census": [
   {
+   "market": "Batam",
+   "facility": "Racks Central: Batam Campus",
+   "operator": "Racks Central",
+   "status": "Land Bank, Planned",
+   "page": "https://baxtel.com/data-center/racks-central-batam-campus",
+   "link": "financier",
+   "site": "",
+   "note": "Racks Central is a Singapore firm; the China-ASEAN Investment Cooperation Fund II, whose main anchor sponsor is China Eximbank, invested in Racks Central in June 2026, and the announcement ties the investment to the corridor of Singapore, Johor and Batam without naming the Batam campus",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Racks Central: Batam Campus Racks Central Large Land Bank, Planned Carrier-Neutral",
+   "check": "found",
+   "link_source": "https://fe.esr.com/news/cafii-invests-in-racks-central-malaysia/",
+   "link_quote": "Investment supports the expansion of next‑generation, energy‑efficient data centres across the Singapore–Johor–Batam corridor to meet AI and hyperscale demand",
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "primary"
+  },
+  {
+   "market": "Batam",
+   "facility": "IDC Indonesia Batam",
+   "operator": "IDC Indonesia",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/idc-indonesia-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "IDC Indonesia Batam IDC Indonesia Extra Small Operational Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Nusantara NDC Moratel Batam",
+   "operator": "NDC Nusantara Data Center",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/nusantara-ndc-moratel-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Nusantara NDC Moratel Batam NDC Nusantara Data Center Extra Small Operational Carrier",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Princeton PDG BT1 Batam",
+   "operator": "Princeton Digital Group",
+   "status": "Construction, Planned",
+   "page": "https://baxtel.com/data-center/princeton-pdg-bt1-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Princeton PDG BT1 Batam Princeton Digital Group Large Construction, Planned Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "neuCentrIX Batam",
+   "operator": "neuCentrIX",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/neucentrix-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "neuCentrIX Batam neuCentrIX Operational Carrier-Neutral (Telco-Owned)",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "GDC SDN: Batam BTM1 Campus",
+   "operator": "Global Data Centre SDN. BHD. (GDC)",
+   "status": "Planned",
+   "page": "https://baxtel.com/data-center/gdc-sdn-batam-btm1-campus",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "GDC SDN: Batam BTM1 Campus Global Data Centre SDN. BHD. (GDC) Extra Large Planned Real Estate",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "BW Digital: Nongsa Digital Park",
+   "operator": "BW Digital",
+   "status": "Construction, Operational, Planned",
+   "page": "https://baxtel.com/data-center/bw-digital-nongsa-digital-park",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "BW Digital: Nongsa Digital Park BW Digital Extra Large Construction, Operational, Planned Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Golden Digital Gateway Data Center",
+   "operator": "Gaw Capital Partners",
+   "status": "Construction, Operational",
+   "page": "https://baxtel.com/data-center/golden-digital-gateway-data-center",
+   "link": "none_found",
+   "site": "",
+   "note": "Gaw Capital Partners is a private equity firm in Hong Kong, which the codebook does not count as a firm of mainland China; no source found in the searches of 12 November 2026 names a Chinese tenant",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Golden Digital Gateway Data Center Gaw Capital Partners Medium Construction, Operational Private Equity",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Seax: Batam",
+   "operator": "Seax Global",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/seax-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Seax: Batam Seax Global Small Operational Carrier",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Omni DC: Batam",
+   "operator": "Omni DC",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/omni-dc-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Omni DC: Batam Omni DC Extra Small Operational Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "NeutraDC: Batam",
+   "operator": "NeutraDC",
+   "status": "Construction, Planned",
+   "page": "https://baxtel.com/data-center/neutradc-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "NeutraDC: Batam NeutraDC Large Construction, Planned Colo Reseller",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Neuviz: Batam",
+   "operator": "Neuviz",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/neuviz-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Neuviz: Batam Neuviz Extra Small Operational Carrier",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Nxera: Batam",
+   "operator": "Nxera",
+   "status": "Construction, Planned",
+   "page": "https://baxtel.com/data-center/nxera-batam",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Nxera: Batam Nxera Large Construction, Planned Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "DayOne: Nongsa Bldg1",
+   "operator": "DayOne",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/dayone-nongsa-bldg1",
+   "link": "operator",
+   "site": "IDN-0002",
+   "note": "A building of DayOne's Nongsa Digital Park campus; DayOne was a subsidiary of GDS until 31 December 2024",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "DayOne: Nongsa Bldg1 DayOne Medium Operational Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "DayOne: Nongsa Bldg2",
+   "operator": "DayOne",
+   "status": "Operational",
+   "page": "https://baxtel.com/data-center/dayone-nongsa-bldg2",
+   "link": "operator",
+   "site": "IDN-0002",
+   "note": "A building of DayOne's Nongsa Digital Park campus; DayOne was a subsidiary of GDS until 31 December 2024",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "DayOne: Nongsa Bldg2 DayOne Medium Operational Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "DayOne: Nongsa Bldg3",
+   "operator": "DayOne",
+   "status": "Construction",
+   "page": "https://baxtel.com/data-center/dayone-nongsa-bldg3",
+   "link": "operator",
+   "site": "IDN-0002",
+   "note": "A building of DayOne's Nongsa Digital Park campus; DayOne was a subsidiary of GDS until 31 December 2024",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "DayOne: Nongsa Bldg3 DayOne Large Construction Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "DayOne: Kabil Industrial Tech Park",
+   "operator": "DayOne",
+   "status": "Construction, Planned",
+   "page": "https://baxtel.com/data-center/dayone-kabil-industrial-tech-park",
+   "link": "operator",
+   "site": "IDN-0001",
+   "note": "DayOne's second campus in Batam; DayOne was a subsidiary of GDS until 31 December 2024",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "DayOne: Kabil Industrial Tech Park DayOne Extra Large Construction, Planned Carrier-Neutral",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "",
+   "operator": "Ministry of Comm. and Digital Affairs (KOMDIGI)",
+   "status": "Construction, Planned",
+   "page": "https://baxtel.com/data-center/jaid8g",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Government Data Center Interested in this information? Contact us Ministry of Comm. and Digital Affairs (KOMDIGI) Large Construction, Planned Government",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Quantum AI Data Center",
+   "operator": "WorldVuer iByond",
+   "status": "Planned",
+   "page": "https://baxtel.com/data-center/quantum-ai-data-center",
+   "link": "none_found",
+   "site": "",
+   "note": "No source found in the searches of 12 November 2026, and no passage of the facility's page on Baxtel, reports a role of a Chinese firm at this facility",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Quantum AI Data Center WorldVuer iByond Large Planned Enterprise",
+   "check": "found",
+   "link_source": "",
+   "link_quote": "",
+   "link_check": "",
+   "evidence": "secondary",
+   "link_evidence": ""
+  },
+  {
+   "market": "Batam",
+   "facility": "Range IDC: Batam AI Factory",
+   "operator": "Range IDC",
+   "status": "Land Bank, Planned, Prospective Expansion",
+   "page": "https://baxtel.com/data-center/range-idc-batam-ai-factory",
+   "link": "owner",
+   "site": "IDN-0006",
+   "note": "PT Equator Gate System Batam develops the campus and Range Intelligent Computing Technology (RangeIDC), a data-centre firm listed in Shenzhen, backs the developer; the share of RangeIDC is not disclosed",
+   "source": "https://baxtel.com/data-center/batam",
+   "quote": "Range IDC: Batam AI Factory Range IDC Extra Large Land Bank, Planned, Prospective Expansion Carrier-Neutral",
+   "check": "found",
+   "link_source": "https://en.antaranews.com/news/416917/bp-batam-oversees-us5-billion-investment-in-ai-data-center",
+   "link_quote": "PT EGSB is a developer of an AI data center backed by RangeIDC, one of the largest data center companies in China, listed on the Shenzhen Stock Exchange.",
+   "link_check": "found",
+   "evidence": "secondary",
+   "link_evidence": "secondary"
+  },
+  {
+   "market": "Johor",
    "facility": "EdgeConneX: Johor",
    "operator": "EdgeConneX",
    "status": "Construction, Planned",
@@ -5224,6 +5678,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Equinix Johor JH1",
    "operator": "Equinix",
    "status": "Operational",
@@ -5241,6 +5696,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Equinix: JH2",
    "operator": "Equinix",
    "status": "Construction",
@@ -5258,6 +5714,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Stack: JHB01A",
    "operator": "STACK INFRASTRUCTURE",
    "status": "Construction, Planned",
@@ -5275,6 +5732,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Stack: JHB01B",
    "operator": "STACK INFRASTRUCTURE",
    "status": "Planned",
@@ -5292,6 +5750,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Global Switch: Johor",
    "operator": "Global Switch",
    "status": "Planned",
@@ -5309,6 +5768,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Vantage: JHB11",
    "operator": "Vantage Data Centers",
    "status": "Operational",
@@ -5326,6 +5786,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Vantage: JHB12",
    "operator": "Vantage Data Centers",
    "status": "Planned",
@@ -5343,6 +5804,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Vantage: JHB13",
    "operator": "Vantage Data Centers",
    "status": "Planned",
@@ -5360,6 +5822,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Keppel DC: Johor Sedenak 1",
    "operator": "Keppel Data Center REIT",
    "status": "Operational",
@@ -5377,6 +5840,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "",
    "operator": "Keppel Data Center REIT",
    "status": "Construction, Planned",
@@ -5394,6 +5858,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "",
    "operator": "Keppel Data Center REIT",
    "status": "Construction, Planned",
@@ -5411,6 +5876,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "STT Johor Campus",
    "operator": "ST Telemedia Global Data Centres (STT GDC)",
    "status": "Construction",
@@ -5428,6 +5894,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Racks Central: Pasir Gudang RCJM1",
    "operator": "Racks Central",
    "status": "Construction, Planned",
@@ -5445,6 +5912,7 @@
    "link_evidence": "primary"
   },
   {
+   "market": "Johor",
    "facility": "Racks Central: RCJM2A",
    "operator": "Racks Central",
    "status": "Land Bank, Planned",
@@ -5462,6 +5930,7 @@
    "link_evidence": "primary"
   },
   {
+   "market": "Johor",
    "facility": "Racks Central: RCJM2B",
    "operator": "Racks Central",
    "status": "Land Bank, Planned",
@@ -5479,6 +5948,7 @@
    "link_evidence": "primary"
   },
   {
+   "market": "Johor",
    "facility": "AirTrunk Johor Bahru JHB1",
    "operator": "AirTrunk",
    "status": "Operational, Planned",
@@ -5496,6 +5966,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "AirTrunk: Johor JHB2",
    "operator": "AirTrunk",
    "status": "Planned",
@@ -5513,6 +5984,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "AirTrunk: Johor JHB3",
    "operator": "AirTrunk",
    "status": "Planned",
@@ -5530,6 +6002,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "AirTrunk: Johor JHB4",
    "operator": "AirTrunk",
    "status": "Planned",
@@ -5547,6 +6020,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Hub Max",
    "operator": "Microsoft Azure",
    "status": "Operational",
@@ -5564,6 +6038,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Ridge Two",
    "operator": "Microsoft Azure",
    "status": "Land Bank",
@@ -5581,6 +6056,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Prime Station",
    "operator": "Microsoft Azure",
    "status": "Land Bank",
@@ -5598,6 +6074,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Station Gamma",
    "operator": "Microsoft Azure",
    "status": "Land Bank",
@@ -5615,6 +6092,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "CSF: Johor CX3",
    "operator": "CSF Group",
    "status": "Operational",
@@ -5632,6 +6110,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY06-1",
    "operator": "Bridge Data Centres",
    "status": "Operational",
@@ -5649,6 +6128,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY06-2",
    "operator": "Bridge Data Centres",
    "status": "Operational",
@@ -5666,6 +6146,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Bridge: Plentong",
    "operator": "Bridge Data Centres",
    "status": "Decommissioned",
@@ -5683,6 +6164,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY07 Phase 1",
    "operator": "Bridge Data Centres",
    "status": "Operational",
@@ -5700,6 +6182,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY06-3",
    "operator": "Bridge Data Centres",
    "status": "Operational",
@@ -5717,6 +6200,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY06-4",
    "operator": "Bridge Data Centres",
    "status": "Operational",
@@ -5734,6 +6218,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY06 Expansion",
    "operator": "Bridge Data Centres",
    "status": "Prospective Expansion",
@@ -5751,6 +6236,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY07 Phase 2",
    "operator": "Bridge Data Centres",
    "status": "Construction",
@@ -5768,6 +6254,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Bridge DC: MY07 Expansion",
    "operator": "Bridge Data Centres",
    "status": "Planned",
@@ -5785,6 +6272,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Empyrion: Nusajaya Campus MY1",
    "operator": "Empyrion Digital",
    "status": "Construction, Planned",
@@ -5802,6 +6290,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "NTT: Gelang Patah",
    "operator": "NTT MSC Sdn. Bhd",
    "status": "Construction, Planned",
@@ -5819,6 +6308,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "K2: Kulai JHR01-03",
    "operator": "K2 Data Centres",
    "status": "Operational",
@@ -5836,6 +6326,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "K2: Kulai JHR04",
    "operator": "K2 Data Centres",
    "status": "Operational",
@@ -5853,6 +6344,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "K2: Kulai Expansion",
    "operator": "K2 Data Centres",
    "status": "Construction, Planned",
@@ -5870,6 +6362,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Princeton PDG: JH1 Bldg-1",
    "operator": "Princeton Digital Group",
    "status": "Operational",
@@ -5887,6 +6380,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Princeton PDG: JH2",
    "operator": "Princeton Digital Group",
    "status": "Planned",
@@ -5904,6 +6398,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Princeton PDG: JH1 Bldg-2",
    "operator": "Princeton Digital Group",
    "status": "Operational",
@@ -5921,6 +6416,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Princeton PDG: JH1 Bldg-3",
    "operator": "Princeton Digital Group",
    "status": "Operational",
@@ -5938,6 +6434,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Princeton PDG: JH1 Bldg-4",
    "operator": "Princeton Digital Group",
    "status": "Construction",
@@ -5955,6 +6452,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Open DC JB2",
    "operator": "Open DC",
    "status": "Operational",
@@ -5972,6 +6470,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Open DC JB1",
    "operator": "Open DC",
    "status": "Operational, Prospective Expansion",
@@ -5989,6 +6488,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Digital Edge: Johor Campus",
    "operator": "Digital Edge DC",
    "status": "Construction, Land Bank",
@@ -6006,6 +6506,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Digital Edge: Kota Tinggi, Johor",
    "operator": "Digital Edge DC",
    "status": "Land Bank",
@@ -6023,6 +6524,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "EC33 Johor",
    "operator": "Edge Centres",
    "status": "Operational",
@@ -6040,6 +6542,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "YTL: JDC1",
    "operator": "YTL Data Centers",
    "status": "Operational, Planned",
@@ -6057,6 +6560,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "YTL: JDC2",
    "operator": "YTL Data Centers",
    "status": "Operational",
@@ -6074,6 +6578,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "YTL: JDC3",
    "operator": "YTL Data Centers",
    "status": "Operational",
@@ -6091,6 +6596,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "YTL: JDC6",
    "operator": "YTL Data Centers",
    "status": "Construction, Operational",
@@ -6108,6 +6614,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Edgnex: Johor",
    "operator": "DAMAC Digital",
    "status": "Land Bank",
@@ -6125,6 +6632,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Equalbase: Johor",
    "operator": "Equalbase",
    "status": "Land Bank",
@@ -6142,6 +6650,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "GDC SDN: Johor SDK1",
    "operator": "Global Data Centre SDN. BHD. (GDC)",
    "status": "Planned",
@@ -6159,6 +6668,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Epoch Digital: Johor",
    "operator": "Epoch Digital",
    "status": "Construction, Planned",
@@ -6176,6 +6686,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "ESR-Logos: Johor",
    "operator": "ESR Group",
    "status": "Withdrawn",
@@ -6193,6 +6704,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "ZData: Johor",
    "operator": "ZData Technologies Co Ltd",
    "status": "Land Bank",
@@ -6210,6 +6722,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Digital Hyperspace: Johor",
    "operator": "Digital Hyperspace Malaysia SDN BHD",
    "status": "Land Bank",
@@ -6227,6 +6740,7 @@
    "link_evidence": "unconfirmed"
   },
   {
+   "market": "Johor",
    "facility": "TM Nxera: Johor",
    "operator": "Nxera",
    "status": "Construction, Operational, Planned",
@@ -6244,6 +6758,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Digital Halo: Johor",
    "operator": "Digital Halo",
    "status": "Construction, Planned",
@@ -6261,6 +6776,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building A",
    "operator": "DayOne",
    "status": "Operational",
@@ -6278,6 +6794,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "DayOne: Kempas Tech Park",
    "operator": "DayOne",
    "status": "Construction",
@@ -6295,6 +6812,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building B",
    "operator": "DayOne",
    "status": "Operational",
@@ -6312,6 +6830,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building C",
    "operator": "DayOne",
    "status": "Operational",
@@ -6329,6 +6848,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building D",
    "operator": "DayOne",
    "status": "Operational",
@@ -6346,6 +6866,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building E",
    "operator": "DayOne",
    "status": "Operational",
@@ -6363,6 +6884,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building F",
    "operator": "DayOne",
    "status": "Operational",
@@ -6380,6 +6902,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building G",
    "operator": "DayOne",
    "status": "Operational",
@@ -6397,6 +6920,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building H",
    "operator": "DayOne",
    "status": "Operational",
@@ -6414,6 +6938,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building I",
    "operator": "DayOne",
    "status": "Planned",
@@ -6431,6 +6956,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building J",
    "operator": "DayOne",
    "status": "Planned",
@@ -6448,6 +6974,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building K",
    "operator": "DayOne",
    "status": "Construction",
@@ -6465,6 +6992,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building L",
    "operator": "DayOne",
    "status": "Construction",
@@ -6482,6 +7010,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building M",
    "operator": "DayOne",
    "status": "Operational",
@@ -6499,6 +7028,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "Nusajaya Tech Park Building N",
    "operator": "DayOne",
    "status": "Planned",
@@ -6516,6 +7046,7 @@
    "link_evidence": "secondary"
   },
   {
+   "market": "Johor",
    "facility": "CURRENC: Johor",
    "operator": "CURRENC Group Inc.",
    "status": "Construction, Planned",
@@ -6533,6 +7064,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "BrightRay: Johor MY-01",
    "operator": "BrightRay DC",
    "status": "Operational",
@@ -6550,6 +7082,7 @@
    "link_evidence": "unconfirmed"
   },
   {
+   "market": "Johor",
    "facility": "BrightRay: MY-02",
    "operator": "BrightRay DC",
    "status": "Construction",
@@ -6567,6 +7100,7 @@
    "link_evidence": "unconfirmed"
   },
   {
+   "market": "Johor",
    "facility": "BrightRay: MY-03",
    "operator": "BrightRay DC",
    "status": "Planned",
@@ -6584,6 +7118,7 @@
    "link_evidence": "unconfirmed"
   },
   {
+   "market": "Johor",
    "facility": "Telekom Malaysia: IPDC 1",
    "operator": "Telekom Malaysia",
    "status": "Operational",
@@ -6601,6 +7136,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "Telekom Malaysia: IPDC 2",
    "operator": "Telekom Malaysia",
    "status": "Operational",
@@ -6618,6 +7154,7 @@
    "link_evidence": ""
   },
   {
+   "market": "Johor",
    "facility": "MSFusion Johor Campus",
    "operator": "Megaspeed AI",
    "status": "Construction, Planned",
@@ -6656,8 +7193,9 @@
      "unspecified": 968
     }
    },
-   "sites": 67,
-   "sites_without_a_figure": 31
+   "sites": 68,
+   "sites_without_a_figure": 32,
+   "sites_with_supply_roles_only": 1
   },
   "rows": [
    {

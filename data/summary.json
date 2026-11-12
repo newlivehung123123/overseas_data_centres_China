@@ -1,16 +1,16 @@
 {
-  "sites": 67,
+  "sites": 69,
   "site_countries": 17,
   "sites_by_status": {
     "operational": 30,
     "under_construction": 8,
-    "planned": 21,
-    "unclear": 8
+    "planned": 22,
+    "unclear": 9
   },
   "sites_by_country": {
     "Malaysia": 16,
+    "Indonesia": 7,
     "Thailand": 7,
-    "Indonesia": 5,
     "Singapore": 5,
     "Germany": 5,
     "Japan": 4,
@@ -26,13 +26,14 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 89,
+  "roles": 91,
   "roles_by_role": {
     "operator": 43,
-    "owner": 24,
+    "owner": 25,
     "tenant": 13,
     "user": 8,
-    "financier": 1
+    "financier": 1,
+    "equipment supplier": 1
   },
   "sites_by_firm": {
     "Global Switch": 17,
@@ -50,15 +51,17 @@
     "GDS": 1,
     "Shanghai DC-Science": 1,
     "China-ASEAN Investment Cooperation Fund II": 1,
-    "Moonshot AI": 1
+    "Moonshot AI": 1,
+    "RangeIDC": 1,
+    "Huawei": 1
   },
   "sites_by_level": {
-    "A": 44,
+    "A": 46,
     "B": 23
   },
-  "sites_with_capacity": 9,
+  "sites_with_capacity": 10,
   "site_capacity_mw_by_basis": {
-    "unspecified": 478,
+    "unspecified": 494,
     "it": 270,
     "power": 460
   },
@@ -85,25 +88,39 @@
     }
   },
   "rules": 16,
-  "johor_census_facilities": 84,
-  "johor_census_operators": 34,
-  "johor_census_by_chinese_link": {
-    "none_found": 55,
-    "operator": 17,
-    "tenant": 4,
-    "unconfirmed": 4,
-    "financier": 3,
-    "owner": 1
+  "census": {
+    "Batam": {
+      "facilities": 20,
+      "operators": 17,
+      "by_chinese_link": {
+        "none_found": 14,
+        "operator": 4,
+        "financier": 1,
+        "owner": 1
+      }
+    },
+    "Johor": {
+      "facilities": 84,
+      "operators": 34,
+      "by_chinese_link": {
+        "none_found": 55,
+        "operator": 17,
+        "tenant": 4,
+        "unconfirmed": 4,
+        "financier": 3,
+        "owner": 1
+      }
+    }
   },
   "evidence_by_file": {
     "sites": {
       "primary": 35,
-      "secondary": 30,
+      "secondary": 32,
       "unconfirmed": 2
     },
     "site_roles": {
       "primary": 53,
-      "secondary": 33,
+      "secondary": 35,
       "unconfirmed": 3
     },
     "cloud_regions": {
@@ -121,7 +138,7 @@
       "secondary": 5
     },
     "operator_customers": {
-      "primary": 4,
+      "primary": 5,
       "unconfirmed": 2,
       "secondary": 2
     },
@@ -132,7 +149,7 @@
     },
     "site_capacity": {
       "secondary": 11,
-      "primary": 9,
+      "primary": 10,
       "unconfirmed": 1
     },
     "rules": {
@@ -141,6 +158,9 @@
     },
     "epoch_links": {
       "secondary": 4
+    },
+    "batam_census": {
+      "secondary": 20
     },
     "johor_census": {
       "secondary": 84
@@ -166,7 +186,8 @@
         "unspecified": 968
       }
     },
-    "sites": 67,
-    "sites_without_a_figure": 31
+    "sites": 68,
+    "sites_without_a_figure": 32,
+    "sites_with_supply_roles_only": 1
   }
 }

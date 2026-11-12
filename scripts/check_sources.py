@@ -8,8 +8,9 @@ passage on the page. A passage counts as found when at least 90 percent of its o
 of eight characters appear on the page, with spacing, punctuation, accents and case ignored, and as
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the
 result for each row, and checks config/operator_markets.csv, config/firm_links.csv,
-config/rules.csv, config/ai_compute.csv, config/site_capacity.csv, config/epoch_links.csv, config/operator_customers.csv, config/johor_census.csv and
-config/capacity_definitions.csv in the same way. A row of the Johor census can carry a second passage, for the link of a Chinese firm, which is checked as well. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
+config/rules.csv, config/ai_compute.csv, config/site_capacity.csv, config/epoch_links.csv, config/operator_customers.csv,
+config/capacity_definitions.csv and the census of each market, such as config/johor_census.csv, in the same way. A row of
+a census can carry a second passage, for the link of a Chinese firm, which is checked as well. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
 
     python scripts/check_sources.py              downloads pages not saved yet
     python scripts/check_sources.py --refetch    downloads every page again
@@ -42,7 +43,6 @@ OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "oper
                 (ROOT / "config" / "site_capacity.csv", ROOT / "data" / "site_capacity.csv"),
                 (ROOT / "config" / "epoch_links.csv", ROOT / "data" / "epoch_links.csv"),
                 (ROOT / "config" / "operator_customers.csv", ROOT / "data" / "operator_customers.csv"),
-                (ROOT / "config" / "johor_census.csv", ROOT / "data" / "johor_census.csv"),
                 (ROOT / "config" / "capacity_definitions.csv", ROOT / "data" / "capacity_definitions.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
@@ -51,6 +51,11 @@ PARTLY_FOUND = 0.5
 ROLES = {"owner", "operator", "tenant", "user", "builder", "equipment supplier", "financier"}
 STATUSES = {"operational", "under_construction", "planned", "unclear"}
 EVIDENCE = {"primary", "secondary", "unconfirmed"}
+
+
+def census_tables() -> list[tuple[Path, Path]]:
+    """The census of each market that config holds, such as config/johor_census.csv, with the file that the check writes."""
+    return [(src, ROOT / "data" / src.name) for src in sorted((ROOT / "config").glob("*_census.csv"))]
 
 
 def squash(text: str) -> str:
@@ -157,7 +162,7 @@ def main() -> None:
     sites, roles = read(SITES_IN), read(ROLES_IN)
     validate(sites, roles)
     tables = [("sites", sites, SITES_OUT), ("roles", roles, ROLES_OUT)]
-    tables += [(src.stem, read(src), out) for src, out in OTHER_TABLES if src.exists()]
+    tables += [(src.stem, read(src), out) for src, out in OTHER_TABLES + census_tables() if src.exists()]
     for name, rows, _ in tables:
         validate_evidence(name, rows)
     for name, rows, path in tables:

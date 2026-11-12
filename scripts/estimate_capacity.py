@@ -12,7 +12,9 @@ where the role of a Chinese firm is not graded "unconfirmed" and the status of t
 counts every figure, and uses the estimate of Epoch AI where Epoch's figure of IT power in service is larger than the
 figure that the sources state. Figures of IT capacity, of power and of an unspecified basis are added as the sources
 state them, so each bound can mix the three bases, and the output gives the megawatts of each basis. The basis of the
-figures that a firm reports comes from the firm's own definitions in data/capacity_definitions.csv.
+figures that a firm reports comes from the firm's own definitions in data/capacity_definitions.csv. A builder or a
+supplier of equipment does not hold or use the capacity of a site, so the estimate leaves out a site at which Chinese
+firms hold only those two roles.
 
     python scripts/estimate_capacity.py    writes data/capacity_estimate.csv and data/capacity_estimate.json
 """
@@ -29,6 +31,7 @@ OUT_CSV = ROOT / "data" / "capacity_estimate.csv"
 OUT_JSON = ROOT / "data" / "capacity_estimate.json"
 FIELDS = ["component", "firm", "site_id", "stage", "mw", "basis", "evidence", "counted_in", "source_table", "note"]
 PIPELINE_COLUMNS = ("under_construction_mw", "secured_powered_land_mw")
+SUPPLY_ROLES = {"builder", "equipment supplier"}
 IN_SERVICE_STAGES = {"in_service"}
 PIPELINE_STAGES = {"first_phase", "planned_total", "contracted"}
 
@@ -71,7 +74,8 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
     site = {s["site_id"]: s for s in sites}
     roles_at = defaultdict(list)
     for r in roles:
-        roles_at[r["site_id"]].append(r)
+        if r.get("role") not in SUPPLY_ROLES:
+            roles_at[r["site_id"]].append(r)
     covered = {sid for sid, rs in roles_at.items() if any(r["firm"] in covered_firms for r in rs)}
     covered_pipeline = {sid for sid, rs in roles_at.items() if any(r["firm"] in reports_pipeline for r in rs)}
 
@@ -111,7 +115,7 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
     epoch_mw = {e["site_id"]: number(e["it_power_mw"]) for e in epoch}
 
     for sid in sorted(figures):
-        if sid not in site or (sid in covered and sid in covered_pipeline):
+        if sid not in site or not roles_at[sid] or (sid in covered and sid in covered_pipeline):
             continue
         s = site[sid]
         confirmed = any(r["evidence"] != "unconfirmed" for r in roles_at[sid])
@@ -183,7 +187,10 @@ def estimate() -> tuple[list[dict], dict]:
     markets, capacity = read("data/operator_markets.csv"), read("data/site_capacity.csv")
     epoch, definitions = read("data/epoch_estimates.csv"), read("data/capacity_definitions.csv")
     rows = components(sites, roles, markets, capacity, epoch, definitions)
-    return rows, totals(rows, sites, with_a_figure(sites, roles, markets, capacity))
+    held = {r["site_id"] for r in roles if r["role"] not in SUPPLY_ROLES}
+    summary = totals(rows, [s for s in sites if s["site_id"] in held], with_a_figure(sites, roles, markets, capacity))
+    summary["sites_with_supply_roles_only"] = len(sites) - summary["sites"]
+    return rows, summary
 
 
 def main() -> None:
@@ -197,7 +204,8 @@ def main() -> None:
         s = summary[bound]
         print(f"{bound}: {s['in_service_mw']} MW in service, {s['pipeline_mw']} MW under construction or planned, "
               f"{s['total_mw']} MW in all; by basis {s['mw_by_basis']}")
-    print(f"{summary['sites_without_a_figure']} of {summary['sites']} sites have no figure of capacity")
+    print(f"{summary['sites_without_a_figure']} of {summary['sites']} sites have no figure of capacity; "
+          f"{summary['sites_with_supply_roles_only']} further sites, where Chinese firms only build or supply equipment, are left out")
 
 
 if __name__ == "__main__":

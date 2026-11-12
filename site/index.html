@@ -77,14 +77,16 @@
     </table>
   </section>
 
-  <section aria-label="Census of Johor" class="rules">
-    <h2>Census of Johor</h2>
-    <p id="census-summary"></p>
+  <section aria-label="Censuses of data-centre facilities" class="rules">
+    <h2>Censuses of data-centre facilities</h2>
+    <p>For each market below, every data-centre facility that Baxtel's public list names is coded for whether a Chinese firm or a fund of a Chinese state lender holds a role there. A facility with none found may still have a Chinese tenant that no source names.</p>
+    <ul id="census-summary"></ul>
     <details>
       <summary>Show every facility</summary>
+      <p><label>Market <select id="census-market"><option value="">All markets</option></select></label></p>
       <table>
         <thead>
-          <tr><th>Facility</th><th>Operator</th><th>Status</th><th>Chinese link</th><th>Source</th></tr>
+          <tr><th>Market</th><th>Facility</th><th>Operator</th><th>Status</th><th>Chinese link</th><th>Source</th></tr>
         </thead>
         <tbody id="census"></tbody>
       </table>

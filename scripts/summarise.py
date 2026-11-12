@@ -2,7 +2,7 @@
 """Count the checked rows of the files of sites, cloud regions and capacity, and write the figures to data/summary.json.
 
 The figures cover the sites and their levels, the roles of firms at the sites, the cloud regions, the
-capacity that operators report by market, the census of Johor, the grades of evidence of each file and the low
+capacity that operators report by market, the census of each market, the grades of evidence of each file and the low
 and high bounds of the capacity estimate. Only rows whose passage was found on the page are counted. The file of
 government data centres from AidData has its own summary in data/aiddata_summary.json.
 
@@ -24,12 +24,17 @@ from estimate_capacity import estimate  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "summary.json"
 GRADED = ["sites", "site_roles", "cloud_regions", "operator_markets", "capacity_definitions", "firm_links",
-          "operator_customers", "ai_compute", "site_capacity", "rules", "epoch_links", "johor_census"]
+          "operator_customers", "ai_compute", "site_capacity", "rules", "epoch_links"]
 
 
 def read(name: str) -> list[dict]:
     with (ROOT / name).open(newline="") as f:
         return [r for r in csv.DictReader(f) if r.get("check_status", "found") == "found"]
+
+
+def censuses() -> list[str]:
+    """Names of the census files in data, one for each market, such as johor_census."""
+    return sorted(path.stem for path in (ROOT / "data").glob("*_census.csv"))
 
 
 def number(value: str) -> float:
@@ -71,11 +76,11 @@ def summarise() -> dict:
         "cloud_regions_by_provider": dict(Counter(r["provider"] for r in operational).most_common()),
         "operator_market_mw": {firm: {k: round(v) for k, v in fields.items()} for firm, fields in by_operator.items()},
         "rules": len(read("data/rules.csv")),
-        "johor_census_facilities": len(census := read("data/johor_census.csv")),
-        "johor_census_operators": len({c["operator"] for c in census}),
-        "johor_census_by_chinese_link": dict(Counter(c["chinese_link"] for c in census).most_common()),
+        "census": {rows[0]["market"]: {"facilities": len(rows), "operators": len({c["operator"] for c in rows}),
+                                       "by_chinese_link": dict(Counter(c["chinese_link"] for c in rows).most_common())}
+                   for rows in (read(f"data/{name}.csv") for name in censuses()) if rows},
         "evidence_by_file": {name: dict(Counter(r["evidence"] for r in read(f"data/{name}.csv")))
-                             for name in GRADED},
+                             for name in GRADED + censuses()},
         "capacity_estimate_mw": estimate()[1],
     }
 

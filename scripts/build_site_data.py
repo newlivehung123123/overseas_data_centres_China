@@ -100,11 +100,13 @@ def build() -> dict:
                   "identified_as": c["identified_as"], "share": c["share_of_revenue"], "revenue": c["revenue"],
                   "period": c["period"], "note": c["note"], "source": c["source_url"], "quote": c["source_quote"],
                   "check": c["check_status"], "evidence": c.get("evidence", "")} for c in read("data/operator_customers.csv")]
-    census = [{"facility": c["facility"], "operator": c["operator"], "status": c["baxtel_status"], "page": c["baxtel_page"],
+    census = [{"market": c.get("market", ""), "facility": c["facility"], "operator": c["operator"], "status": c["baxtel_status"],
+               "page": c["baxtel_page"],
                "link": c["chinese_link"], "site": c["site_id"], "note": c["note"], "source": c["source_url"],
                "quote": c["source_quote"], "check": c["check_status"], "link_source": c["link_source_url"],
                "link_quote": c["link_source_quote"], "link_check": c["link_check_status"],
-               "evidence": c.get("evidence", ""), "link_evidence": c.get("link_evidence", "")} for c in read("data/johor_census.csv")]
+               "evidence": c.get("evidence", ""), "link_evidence": c.get("link_evidence", "")}
+              for path in sorted((ROOT / "data").glob("*_census.csv")) for c in read(f"data/{path.name}")]
     return {"built": date.today().isoformat(), "records": records, "rules": rules, "ai_without_site": compute[""],
             "customers": customers, "census": census, "estimate": capacity_estimate()}
 

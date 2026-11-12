@@ -13,8 +13,8 @@ def site(sid, status, mw="", basis="", evidence="primary", name="A site", city="
             "capacity_basis": basis, "evidence": evidence}
 
 
-def role(sid, firm, evidence="primary"):
-    return {"site_id": sid, "firm": firm, "evidence": evidence}
+def role(sid, firm, evidence="primary", kind="tenant"):
+    return {"site_id": sid, "firm": firm, "evidence": evidence, "role": kind}
 
 
 MARKETS = [{"firm": "DayOne", "market": "Johor", "in_service_mw": "100", "under_construction_mw": "50",
@@ -54,6 +54,12 @@ class EstimateTest(unittest.TestCase):
         dayone = {r["stage"]: r["basis"] for r in self.rows if r["firm"] == "DayOne" and r["source_table"] == "operator_markets"}
         # The definitions give the basis of the capacity under construction but not of the secured powered land.
         self.assertEqual(dayone, {"in_service": "it", "pipeline": "unspecified"})
+
+    def test_a_site_where_chinese_firms_only_supply_equipment_is_left_out(self):
+        sites = SITES + [site("IDN-0007", "operational", "16", evidence="primary")]
+        roles = ROLES + [role("IDN-0007", "Huawei", kind="equipment supplier")]
+        rows = e.components(sites, roles, MARKETS, CAPACITY, EPOCH, DEFINITIONS)
+        self.assertFalse(any(r["site_id"] == "IDN-0007" for r in rows))
 
     def test_a_planned_site_of_a_firm_that_reports_only_capacity_in_service_has_no_figure(self):
         self.assertEqual(self.total["sites_without_a_figure"], 0)

@@ -74,3 +74,4 @@ footer a, td .quote { overflow-wrap: anywhere; }
   tr { border-bottom: 1px solid var(--line); padding: 6px 0; }
   td { border: none; padding: 2px 0; }
 }
+.rules ul { margin: 4px 0 6px; padding-left: 20px; color: var(--muted); font-size: 0.9rem; }

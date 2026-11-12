@@ -18,6 +18,7 @@
       "unspecified": 968
     }
   },
-  "sites": 67,
-  "sites_without_a_figure": 31
+  "sites": 68,
+  "sites_without_a_figure": 32,
+  "sites_with_supply_roles_only": 1
 }
