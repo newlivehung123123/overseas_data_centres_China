@@ -74,8 +74,11 @@ def scan(rows: list[dict]) -> list[dict]:
             continue
         own = description(got[0])
         found = terms_in(own)
+        # The passage shows a term that the name of the facility or of the operator does not already hold, where there is one.
+        named = f"{r['facility']} {r['operator']}"
+        fresh_terms = [p for term, p in found if term not in named] or [p for _, p in found]
         out.append({**base, "terms_found": "; ".join(term for term, _ in found),
-                    "passage": passage(own, min(p for _, p in found)) if found else "", "retrieved": got[1]})
+                    "passage": passage(own, min(fresh_terms)) if found else "", "retrieved": got[1]})
     return out
 
 

@@ -53,6 +53,7 @@ Zaragoza,Spain,41.6915847,-0.9101268,relation,345740,"Zaragoza, Aragón, España
 Bangkok,Thailand,13.7524938,100.4935089,relation,92277,"กรุงเทพมหานคร, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Bangkok%2C+Thailand&format=json&limit=1
 Chachoengsao,Thailand,13.6093192,101.5467201,relation,1908767,"จังหวัดฉะเชิงเทรา, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Chachoengsao%2C+Thailand&format=json&limit=1
 Chonburi,Thailand,13.1857117,101.1210777,relation,1908773,"จังหวัดชลบุรี, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Chonburi%2C+Thailand&format=json&limit=1
+Rayong,Thailand,12.7943716,101.3705344,relation,1908812,"จังหวัดระยอง, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Rayong%2C+Thailand&format=json&limit=1
 Samut Prakan,Thailand,13.6531651,100.8182578,relation,1908815,"จังหวัดสมุทรปราการ, ประเทศไทย",https://nominatim.openstreetmap.org/search?q=Samut+Prakan%2C+Thailand&format=json&limit=1
 ,Turkey,39.2940760,35.2316631,relation,174737,Türkiye,https://nominatim.openstreetmap.org/search?q=Turkey&format=json&limit=1
 Istanbul,Turkey,41.0063810,28.9758715,node,1882099475,"İstanbul, Fatih, İstanbul, Marmara Bölgesi, 34122, Türkiye",https://nominatim.openstreetmap.org/search?q=Istanbul%2C+Turkey&format=json&limit=1

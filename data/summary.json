@@ -1,16 +1,16 @@
 {
-  "sites": 69,
+  "sites": 73,
   "site_countries": 17,
   "sites_by_status": {
-    "operational": 30,
+    "operational": 31,
     "under_construction": 8,
-    "planned": 22,
+    "planned": 25,
     "unclear": 9
   },
   "sites_by_country": {
     "Malaysia": 16,
+    "Thailand": 11,
     "Indonesia": 7,
-    "Thailand": 7,
     "Singapore": 5,
     "Germany": 5,
     "Japan": 4,
@@ -26,10 +26,10 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 91,
+  "roles": 95,
   "roles_by_role": {
-    "operator": 43,
-    "owner": 25,
+    "operator": 44,
+    "owner": 28,
     "tenant": 13,
     "user": 8,
     "financier": 1,
@@ -39,13 +39,13 @@
     "Global Switch": 17,
     "DayOne": 16,
     "ByteDance": 13,
-    "China Mobile International": 4,
+    "China Mobile International": 5,
     "China Unicom Global": 4,
     "Alibaba Cloud": 4,
     "Tencent Cloud": 3,
+    "zData": 2,
     "Huawei Cloud": 2,
     "Megaspeed": 2,
-    "zData": 1,
     "Huanbang (Hong Kong)": 1,
     "INF Tech": 1,
     "GDS": 1,
@@ -53,16 +53,18 @@
     "China-ASEAN Investment Cooperation Fund II": 1,
     "Moonshot AI": 1,
     "RangeIDC": 1,
-    "Huawei": 1
+    "Huawei": 1,
+    "Beijing Haoyang": 1,
+    "Galaxy Data Center": 1
   },
   "sites_by_level": {
-    "A": 46,
-    "B": 23
+    "A": 47,
+    "B": 26
   },
-  "sites_with_capacity": 10,
+  "sites_with_capacity": 13,
   "site_capacity_mw_by_basis": {
     "unspecified": 494,
-    "it": 270,
+    "it": 923,
     "power": 460
   },
   "cloud_regions_operational_outside_china_hk_macau": 47,
@@ -89,6 +91,14 @@
   },
   "rules": 16,
   "census": {
+    "Greater Bangkok": {
+      "facilities": 88,
+      "operators": 39,
+      "by_chinese_link": {
+        "none_found": 82,
+        "operator": 6
+      }
+    },
     "Batam": {
       "facilities": 20,
       "operators": 17,
@@ -114,13 +124,13 @@
   },
   "evidence_by_file": {
     "sites": {
-      "primary": 35,
-      "secondary": 32,
+      "primary": 40,
+      "secondary": 31,
       "unconfirmed": 2
     },
     "site_roles": {
-      "primary": 53,
-      "secondary": 35,
+      "primary": 58,
+      "secondary": 34,
       "unconfirmed": 3
     },
     "cloud_regions": {
@@ -135,7 +145,7 @@
     },
     "firm_links": {
       "primary": 2,
-      "secondary": 5
+      "secondary": 6
     },
     "operator_customers": {
       "primary": 5,
@@ -159,6 +169,9 @@
     "epoch_links": {
       "secondary": 4
     },
+    "bangkok_census": {
+      "secondary": 88
+    },
     "batam_census": {
       "secondary": 20
     },
@@ -169,25 +182,25 @@
   "capacity_estimate_mw": {
     "low": {
       "in_service_mw": 1323,
-      "pipeline_mw": 4183,
-      "total_mw": 5506,
+      "pipeline_mw": 4686,
+      "total_mw": 6009,
       "mw_by_basis": {
-        "it": 4886,
+        "it": 5389,
         "unspecified": 620
       }
     },
     "high": {
       "in_service_mw": 1652,
-      "pipeline_mw": 5041,
-      "total_mw": 6693,
+      "pipeline_mw": 5694,
+      "total_mw": 7346,
       "mw_by_basis": {
-        "it": 5125,
+        "it": 5778,
         "power": 600,
         "unspecified": 968
       }
     },
-    "sites": 68,
-    "sites_without_a_figure": 32,
+    "sites": 72,
+    "sites_without_a_figure": 33,
     "sites_with_supply_roles_only": 1
   }
 }
