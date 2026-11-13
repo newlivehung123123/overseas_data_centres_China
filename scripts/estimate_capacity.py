@@ -102,7 +102,7 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
         if s["capacity_mw"]:
             stage = "in_service" if s["status"] == "operational" else "pipeline"
             figures[s["site_id"]].append((stage, number(s["capacity_mw"]), s["capacity_basis"] or "unspecified",
-                                          s["evidence"], "sites"))
+                                          s["evidence"], "sites", False))
     for c in capacity:
         status = site[c["site_id"]]["status"] if c["site_id"] in site else ""
         if c["stage"] in IN_SERVICE_STAGES or (c["stage"] in ("leased", "first_phase") and status == "operational"):
@@ -111,7 +111,9 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
             stage = "pipeline"
         else:
             continue
-        figures[c["site_id"]].append((stage, number(c["capacity_mw"]), c["basis"], c["evidence"], "site_capacity"))
+        # A planned total describes the whole site, so the estimate counts only the part that is not yet in service.
+        whole = c["stage"] == "planned_total"
+        figures[c["site_id"]].append((stage, number(c["capacity_mw"]), c["basis"], c["evidence"], "site_capacity", whole))
     epoch_mw = {e["site_id"]: number(e["it_power_mw"]) for e in epoch}
 
     for sid in sorted(figures):
@@ -121,29 +123,45 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
         confirmed = any(r["evidence"] != "unconfirmed" for r in roles_at[sid])
         known = s["status"] != "unclear"
         firms = "; ".join(sorted({r["firm"] for r in roles_at[sid]}))
+        in_service = [f for f in figures[sid] if f[0] == "in_service"] if sid not in covered else []
+        in_low = max([f[1] for f in in_service if f[3] == "primary" and confirmed and known], default=0.0)
+        in_high = max([f[1] for f in in_service] + [epoch_mw.get(sid, 0.0) if sid not in covered else 0.0], default=0.0)
+
+        def remainder(f, counted):
+            """Megawatts of a figure that a bound counts: all of it, or a planned total less the capacity in service."""
+            return max(0.0, f[1] - counted) if f[5] else f[1]
+
         for stage in ("in_service", "pipeline"):
             if sid in covered and stage == "in_service":
                 continue
             options = [f for f in figures[sid] if f[0] == stage]
+            if sid in covered and s["status"] == "operational":
+                options = [f for f in options if not f[5]]     # the firm's total already holds the part in service
             if not options:
                 continue
             low = [f for f in options if f[3] == "primary" and confirmed and known]
-            best = max(options, key=lambda f: f[1])
+            best = max(options, key=lambda f: remainder(f, in_high))
+            high_mw = remainder(best, in_high)
+
+            def row(f, mw, counted_in, note):
+                if f[5] and mw < f[1]:
+                    note = (note + "; " if note else "") + f"Planned total of {f[1]:.0f} MW less {f[1] - mw:.0f} MW in service"
+                return {"component": s["site_name"], "firm": firms, "site_id": sid, "stage": stage, "mw": mw, "basis": f[2],
+                        "evidence": f[3], "counted_in": counted_in, "source_table": f[4], "note": note}
+
             if low:
-                pick = max(low, key=lambda f: f[1])
-                rows.append({"component": s["site_name"], "firm": firms, "site_id": sid, "stage": stage, "mw": pick[1],
-                             "basis": pick[2], "evidence": pick[3], "counted_in": "both" if pick == best else "low",
-                             "source_table": pick[4], "note": ""})
-                if pick != best:
-                    rows.append({"component": s["site_name"], "firm": firms, "site_id": sid, "stage": stage,
-                                 "mw": best[1], "basis": best[2], "evidence": best[3], "counted_in": "high",
-                                 "source_table": best[4], "note": "Larger figure from a source below the low bound"})
-            else:
+                pick = max(low, key=lambda f: remainder(f, in_low))
+                low_mw = remainder(pick, in_low)
+                same = pick == best and low_mw == high_mw
+                if low_mw:
+                    rows.append(row(pick, low_mw, "both" if same else "low", ""))
+                if not same and high_mw:
+                    rows.append(row(best, high_mw, "high", "Larger figure from a source below the low bound" if pick != best
+                                    else "The high bound counts more capacity in service at the site"))
+            elif high_mw:
                 reason = "the role of the Chinese firm is unconfirmed" if not confirmed else (
                     "the status of the site is unclear" if not known else "the figure is not from a primary source")
-                rows.append({"component": s["site_name"], "firm": firms, "site_id": sid, "stage": stage, "mw": best[1],
-                             "basis": best[2], "evidence": best[3], "counted_in": "high", "source_table": best[4],
-                             "note": f"High bound only, because {reason}"})
+                rows.append(row(best, high_mw, "high", f"High bound only, because {reason}"))
         if sid in epoch_mw and sid not in covered:
             stated = max([f[1] for f in figures[sid] if f[0] == "in_service"], default=0.0)
             if epoch_mw[sid] > stated:

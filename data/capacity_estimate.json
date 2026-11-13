@@ -1,21 +1,21 @@
 {
   "low": {
-    "in_service_mw": 1323,
-    "pipeline_mw": 4686,
-    "total_mw": 6009,
+    "in_service_mw": 1413,
+    "pipeline_mw": 4746,
+    "total_mw": 6159,
     "mw_by_basis": {
-      "it": 5389,
+      "it": 5539,
       "unspecified": 620
     }
   },
   "high": {
     "in_service_mw": 1652,
-    "pipeline_mw": 5781,
-    "total_mw": 7433,
+    "pipeline_mw": 5841,
+    "total_mw": 7493,
     "mw_by_basis": {
-      "it": 5778,
+      "it": 5928,
       "power": 600,
-      "unspecified": 1055
+      "unspecified": 965
     }
   },
   "sites": 76,

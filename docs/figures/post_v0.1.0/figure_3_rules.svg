@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="616" viewBox="0 0 760 616" font-family="'Liberation Sans', Arial, Helvetica, sans-serif">
+<rect width="760" height="616" fill="#ffffff"/>
+<defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<rect width="5" height="5" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="5" stroke="#1a1a1a" stroke-width="1"/></pattern></defs>
+<rect x="658.0" y="10" width="86.0" height="526.0" fill="#efefef"/>
+<line x1="16.0" y1="10.0" x2="744.0" y2="10.0" stroke="#1a1a1a" stroke-width="1.4"/>
+<text x="443.0" y="28.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >Export or</text>
+<text x="443.0" y="42.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >re-export</text>
+<text x="529.0" y="28.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >Transit or</text>
+<text x="529.0" y="42.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >transshipment</text>
+<text x="615.0" y="28.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >Use in the</text>
+<text x="615.0" y="42.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >host country</text>
+<text x="701.0" y="28.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >Remote access</text>
+<text x="701.0" y="42.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >from China</text>
+<text x="16.0" y="42.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Instrument</text>
+<line x1="16.0" y1="50.0" x2="744.0" y2="50.0" stroke="#1a1a1a" stroke-width="0.8"/>
+<text x="16.0" y="66.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >United States</text>
+<text x="30.0" y="88.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Export Administration Regulations</text>
+<rect x="437.5" y="78.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+
+
+<line x1="696.0" y1="79.0" x2="706.0" y2="89.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="696.0" y1="89.0" x2="706.0" y2="79.0" stroke="#1a1a1a" stroke-width="1.6"/>
+<text x="30.0" y="110.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >AI Diffusion Rule, January 2025</text>
+<rect x="437.5" y="100.5" width="11.0" height="11.0" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.9"/>
+
+
+
+<text x="30.0" y="132.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Licences for Malaysia and Thailand, announced May 2025</text>
+<rect x="437.5" y="122.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+
+
+
+<text x="30.0" y="154.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Draft rule on Malaysia and Thailand, shelved August 2026</text>
+<rect x="437.5" y="144.5" width="11.0" height="11.0" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.9"/>
+
+
+
+<text x="30.0" y="176.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Guidance on training Chinese models with US chips, May 2025</text>
+
+
+
+<rect x="695.5" y="166.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+<text x="30.0" y="198.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Approvals of exports to G42 and Humain, November 2025</text>
+<rect x="437.5" y="188.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+
+
+
+<text x="30.0" y="220.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Licences for entities with a parent in China, May 2026</text>
+<rect x="437.5" y="210.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+
+
+
+<text x="30.0" y="242.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Remote Access Security Act, passed the House January 2026</text>
+
+
+
+<rect x="695.5" y="232.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+<text x="30.0" y="264.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >BIS enforcement review of remote access, August 2026</text>
+
+
+
+<rect x="695.5" y="254.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+<text x="16.0" y="290.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Malaysia</text>
+<text x="30.0" y="312.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Strategic Trade Act permit, July 2025</text>
+
+<rect x="523.5" y="302.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+<line x1="610.0" y1="303.0" x2="620.0" y2="313.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="610.0" y1="313.0" x2="620.0" y2="303.0" stroke="#1a1a1a" stroke-width="1.6"/>
+
+<text x="30.0" y="334.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Trade ministry statement on AI servers, June 2025</text>
+
+
+<line x1="610.0" y1="325.0" x2="620.0" y2="335.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="610.0" y1="335.0" x2="620.0" y2="325.0" stroke="#1a1a1a" stroke-width="1.6"/>
+
+<text x="16.0" y="360.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Singapore</text>
+<text x="30.0" y="382.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Prosecutions for fraud on server suppliers</text>
+
+<rect x="523.5" y="372.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/>
+
+
+<text x="16.0" y="408.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >European Union</text>
+<text x="30.0" y="430.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Update of the Dual-Use Regulation, November 2025</text>
+<rect x="437.5" y="420.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+
+
+
+<text x="16.0" y="456.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >United Arab Emirates</text>
+<text x="30.0" y="478.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Regulated Technology Environment, May 2025</text>
+
+
+<rect x="609.5" y="468.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+
+<text x="16.0" y="504.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Private contract</text>
+<text x="30.0" y="526.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Nscale's loan agreement with Macquarie, September 2025</text>
+
+
+
+<rect x="695.5" y="516.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="16.0" y1="536.0" x2="744.0" y2="536.0" stroke="#1a1a1a" stroke-width="1.4"/>
+<rect x="16.5" y="552.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/><text x="34.0" y="562.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >In force, controls the link</text>
+<rect x="346.5" y="552.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/><text x="364.0" y="562.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Not binding: bill, announcement, review or guidance</text>
+<rect x="16.5" y="570.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/><text x="34.0" y="580.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Binds named parties only</text>
+<rect x="346.5" y="570.5" width="11.0" height="11.0" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.9"/><text x="364.0" y="580.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Rescinded or shelved</text>
+<line x1="17.0" y1="589.0" x2="27.0" y2="599.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="17.0" y1="599.0" x2="27.0" y2="589.0" stroke="#1a1a1a" stroke-width="1.6"/><text x="34.0" y="598.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Source states that the link is not controlled</text>
+</svg>

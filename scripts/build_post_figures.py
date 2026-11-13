@@ -4,9 +4,10 @@
 
 The figures are in black, white and grey and carry no titles, because the post gives each figure a caption with its
 source and a note. Figure 1 reads Epoch AI's database file in data/raw/epoch, which scripts/fetch_epoch.py downloads.
-Figure 3 codes the 16 rows of data/rules.csv by hand against four links, from the export of a chip to its use from
+Figure 3 codes the rows of data/rules.csv by hand against four links, from the export of a chip to its use from
 China, and the script stops if a row of data/rules.csv is missing from the figure or the figure names a row that the
-file does not hold.
+file does not hold. The folder docs/figures/post_v0.1.0 keeps the figures as the post published them, drawn from
+version 0.1.0 of the dataset, and the script draws the same figures from the current files.
 
     python scripts/build_post_figures.py    writes docs/figures/figure_1_epoch.svg to docs/figures/figure_4_capacity.svg
 """
@@ -123,7 +124,7 @@ def figure_4():
                     seg[part(r)] += float(r["mw"])
             bars.append((name, "Low estimate" if bound == "low" else "High estimate", seg))
     left, right, top, bh = 110, W - 70, 34, 24
-    scale = (right - left) / 5500
+    scale = (right - left) / 6600
     ys = [top, top + 32, top + 104, top + 136]
     base = ys[-1] + bh + 12
     svg = [line(left, 8, left, base)]
@@ -143,7 +144,7 @@ def figure_4():
                 svg.append(text(x + w / 2, y + 16.5, f"{mw:,.0f}", 11, WHITE if i == 0 else BLACK, anchor="middle"))
             x += w
         svg.append(text(x + 6, y + 16.5, f"{sum(seg):,.0f}", 12, weight=700))
-    svg += x_axis(left, right, base, range(0, 5001, 1000), scale, "Capacity (MW)")
+    svg += x_axis(left, right, base, range(0, 6001, 1000), scale, "Capacity (MW)")
     ly = base + 58
     lx = 24
     for name, fill in parts:
@@ -169,12 +170,16 @@ def figure_3():
         ("USA-0007", "", "Licences for entities with a parent in China, May 2026", "F", "", "", ""),
         ("USA-0002", "", "Remote Access Security Act, passed the House January 2026", "", "", "", "N"),
         ("USA-0008", "", "BIS enforcement review of remote access, August 2026", "", "", "", "N"),
+        ("USA-0010", "", "Draft rule on renting chips to Chinese firms abroad, reported August 2026", "", "", "", "N"),
         ("MYS-0001;MYS-0002", "Malaysia", "Strategic Trade Act permit, July 2025", "", "F", "X", ""),
         ("MYS-0003", "", "Trade ministry statement on AI servers, June 2025", "", "", "X", ""),
         ("SGP-0001", "Singapore", "Prosecutions for fraud on server suppliers", "", "P", "", ""),
+        ("SGP-0002", "", "Advisory on export controls on advanced chips, April 2025", "N", "", "", ""),
         ("EUU-0001", "European Union", "Update of the Dual-Use Regulation, November 2025", "F", "", "", ""),
         ("ARE-0001", "United Arab Emirates", "Regulated Technology Environment, May 2025", "", "", "N", ""),
-        ("NOR-0001", "Private contract", "Nscale's loan agreement with Macquarie, September 2025", "", "", "", "P"),
+        ("NOR-0001", "Private contract or requirement", "Nscale's loan agreement with Macquarie, September 2025", "", "", "", "P"),
+        ("USA-0011", "", "Nvidia's monitoring requirement for new cloud partners, November 2026", "", "", "P", ""),
+        ("USA-0012", "", "Nvidia's 51 percent instruction to cloud partners, November 2026", "", "", "", "N"),
     ]
     shown = [i for c in coded for i in c[0].split(";")]
     recorded = [r["rule_id"] for r in rows("data/rules.csv")]

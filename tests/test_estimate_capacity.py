@@ -55,6 +55,18 @@ class EstimateTest(unittest.TestCase):
         # The definitions give the basis of the capacity under construction but not of the secured powered land.
         self.assertEqual(dayone, {"in_service": "it", "pipeline": "unspecified"})
 
+    def test_a_planned_total_counts_only_the_part_not_yet_in_service(self):
+        sites = [site("NOR-0001", "operational", "90", "it")]
+        roles = [role("NOR-0001", "ByteDance")]
+        capacity = [{"site_id": "NOR-0001", "capacity_mw": "150", "basis": "it", "stage": "planned_total", "evidence": "primary"}]
+        rows = e.components(sites, roles, [], capacity, [])
+        planned = [r for r in rows if r["stage"] == "pipeline"]
+        self.assertEqual([(r["mw"], r["counted_in"]) for r in planned], [(60.0, "both")])
+        # Epoch AI's larger estimate of the capacity in service leaves less of the planned total for the high bound.
+        rows = e.components(sites, roles, [], capacity, [{"site_id": "NOR-0001", "it_power_mw": "120"}])
+        planned = {r["counted_in"]: r["mw"] for r in rows if r["stage"] == "pipeline"}
+        self.assertEqual(planned, {"low": 60.0, "high": 30.0})
+
     def test_a_site_where_chinese_firms_only_supply_equipment_is_left_out(self):
         sites = SITES + [site("IDN-0007", "operational", "16", evidence="primary")]
         roles = ROLES + [role("IDN-0007", "Huawei", kind="equipment supplier")]

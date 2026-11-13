@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="616" viewBox="0 0 760 616" font-family="'Liberation Sans', Arial, Helvetica, sans-serif">
-<rect width="760" height="616" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="704" viewBox="0 0 760 704" font-family="'Liberation Sans', Arial, Helvetica, sans-serif">
+<rect width="760" height="704" fill="#ffffff"/>
 <defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
 <rect width="5" height="5" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="5" stroke="#1a1a1a" stroke-width="1"/></pattern></defs>
-<rect x="658.0" y="10" width="86.0" height="526.0" fill="#efefef"/>
+<rect x="658.0" y="10" width="86.0" height="614.0" fill="#efefef"/>
 <line x1="16.0" y1="10.0" x2="744.0" y2="10.0" stroke="#1a1a1a" stroke-width="1.4"/>
 <text x="443.0" y="28.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >Export or</text>
 <text x="443.0" y="42.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="middle" >re-export</text>
@@ -60,45 +60,65 @@
 
 
 <rect x="695.5" y="254.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
-<text x="16.0" y="290.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Malaysia</text>
-<text x="30.0" y="312.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Strategic Trade Act permit, July 2025</text>
-
-<rect x="523.5" y="302.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
-<line x1="610.0" y1="303.0" x2="620.0" y2="313.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="610.0" y1="313.0" x2="620.0" y2="303.0" stroke="#1a1a1a" stroke-width="1.6"/>
-
-<text x="30.0" y="334.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Trade ministry statement on AI servers, June 2025</text>
+<text x="30.0" y="286.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Draft rule on renting chips to Chinese firms abroad, reported August 2026</text>
 
 
+
+<rect x="695.5" y="276.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+<text x="16.0" y="312.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Malaysia</text>
+<text x="30.0" y="334.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Strategic Trade Act permit, July 2025</text>
+
+<rect x="523.5" y="324.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
 <line x1="610.0" y1="325.0" x2="620.0" y2="335.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="610.0" y1="335.0" x2="620.0" y2="325.0" stroke="#1a1a1a" stroke-width="1.6"/>
 
-<text x="16.0" y="360.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Singapore</text>
-<text x="30.0" y="382.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Prosecutions for fraud on server suppliers</text>
-
-<rect x="523.5" y="372.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="30.0" y="356.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Trade ministry statement on AI servers, June 2025</text>
 
 
-<text x="16.0" y="408.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >European Union</text>
-<text x="30.0" y="430.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Update of the Dual-Use Regulation, November 2025</text>
-<rect x="437.5" y="420.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+<line x1="610.0" y1="347.0" x2="620.0" y2="357.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="610.0" y1="357.0" x2="620.0" y2="347.0" stroke="#1a1a1a" stroke-width="1.6"/>
+
+<text x="16.0" y="382.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Singapore</text>
+<text x="30.0" y="404.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Prosecutions for fraud on server suppliers</text>
+
+<rect x="523.5" y="394.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/>
 
 
-
-<text x="16.0" y="456.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >United Arab Emirates</text>
-<text x="30.0" y="478.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Regulated Technology Environment, May 2025</text>
-
-
-<rect x="609.5" y="468.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
-
-<text x="16.0" y="504.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Private contract</text>
-<text x="30.0" y="526.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Nscale's loan agreement with Macquarie, September 2025</text>
+<text x="30.0" y="426.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Advisory on export controls on advanced chips, April 2025</text>
+<rect x="437.5" y="416.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
 
 
 
-<rect x="695.5" y="516.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/>
-<line x1="16.0" y1="536.0" x2="744.0" y2="536.0" stroke="#1a1a1a" stroke-width="1.4"/>
-<rect x="16.5" y="552.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/><text x="34.0" y="562.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >In force, controls the link</text>
-<rect x="346.5" y="552.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/><text x="364.0" y="562.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Not binding: bill, announcement, review or guidance</text>
-<rect x="16.5" y="570.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/><text x="34.0" y="580.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Binds named parties only</text>
-<rect x="346.5" y="570.5" width="11.0" height="11.0" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.9"/><text x="364.0" y="580.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Rescinded or shelved</text>
-<line x1="17.0" y1="589.0" x2="27.0" y2="599.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="17.0" y1="599.0" x2="27.0" y2="589.0" stroke="#1a1a1a" stroke-width="1.6"/><text x="34.0" y="598.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Source states that the link is not controlled</text>
+<text x="16.0" y="452.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >European Union</text>
+<text x="30.0" y="474.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Update of the Dual-Use Regulation, November 2025</text>
+<rect x="437.5" y="464.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+
+
+
+<text x="16.0" y="500.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >United Arab Emirates</text>
+<text x="30.0" y="522.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Regulated Technology Environment, May 2025</text>
+
+
+<rect x="609.5" y="512.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+
+<text x="16.0" y="548.0" font-size="11.5" fill="#1a1a1a" font-weight="700" text-anchor="start" >Private contract or requirement</text>
+<text x="30.0" y="570.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Nscale's loan agreement with Macquarie, September 2025</text>
+
+
+
+<rect x="695.5" y="560.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="30.0" y="592.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Nvidia's monitoring requirement for new cloud partners, November 2026</text>
+
+
+<rect x="609.5" y="582.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/>
+
+<text x="30.0" y="614.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Nvidia's 51 percent instruction to cloud partners, November 2026</text>
+
+
+
+<rect x="695.5" y="604.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/>
+<line x1="16.0" y1="624.0" x2="744.0" y2="624.0" stroke="#1a1a1a" stroke-width="1.4"/>
+<rect x="16.5" y="640.5" width="11.0" height="11.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/><text x="34.0" y="650.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >In force, controls the link</text>
+<rect x="346.5" y="640.5" width="11.0" height="11.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.8"/><text x="364.0" y="650.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Not binding: bill, announcement, review or guidance</text>
+<rect x="16.5" y="658.5" width="11.0" height="11.0" fill="url(#hatch)" stroke="#1a1a1a" stroke-width="0.9"/><text x="34.0" y="668.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Binds named parties only</text>
+<rect x="346.5" y="658.5" width="11.0" height="11.0" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.9"/><text x="364.0" y="668.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Rescinded or shelved</text>
+<line x1="17.0" y1="677.0" x2="27.0" y2="687.0" stroke="#1a1a1a" stroke-width="1.6"/><line x1="17.0" y1="687.0" x2="27.0" y2="677.0" stroke="#1a1a1a" stroke-width="1.6"/><text x="34.0" y="686.0" font-size="11" fill="#1a1a1a" font-weight="400" text-anchor="start" >Source states that the link is not controlled</text>
 </svg>

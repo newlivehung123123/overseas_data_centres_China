@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="378" viewBox="0 0 760 378" font-family="'Liberation Sans', Arial, Helvetica, sans-serif">
+<rect width="760" height="378" fill="#ffffff"/>
+<defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<rect width="5" height="5" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="5" stroke="#1a1a1a" stroke-width="1"/></pattern></defs>
+<line x1="290.0" y1="14.0" x2="290.0" y2="326.0" stroke="#1a1a1a" stroke-width="1"/>
+<text x="282.0" y="36.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >DayOne Nusajaya, Malaysia</text>
+<rect x="290.0" y="25.0" width="406.8" height="17.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="701.8" y="38.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >473</text>
+<text x="282.0" y="66.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >DayOne Kempas, Malaysia</text>
+<rect x="290.0" y="55.0" width="362.7" height="17.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="657.7" y="68.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >422</text>
+<text x="282.0" y="96.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >Bridge Data Centres MY06, Malaysia</text>
+<rect x="290.0" y="85.0" width="209.0" height="17.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="504.0" y="98.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >243</text>
+<text x="282.0" y="126.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >Google Waltham Cross, United Kingdom</text>
+<rect x="290.0" y="115.0" width="75.7" height="17.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.6"/>
+<text x="370.7" y="128.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >88</text>
+<text x="282.0" y="156.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >Nebius Mantsala, Finland</text>
+<rect x="290.0" y="145.0" width="64.5" height="17.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.6"/>
+<text x="359.5" y="158.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >75</text>
+<text x="282.0" y="186.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >Oracle Batam, Indonesia</text>
+<rect x="290.0" y="175.0" width="61.9" height="17.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.6"/>
+<text x="356.9" y="188.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >72</text>
+<text x="282.0" y="216.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >CoreWeave Norway, Norway</text>
+<rect x="290.0" y="205.0" width="36.1" height="17.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.6"/>
+<text x="331.1" y="218.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >42</text>
+<text x="282.0" y="246.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >Southgate Melbourne, Australia</text>
+<rect x="290.0" y="235.0" width="35.3" height="17.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.6"/>
+<text x="330.3" y="248.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >41</text>
+<text x="282.0" y="276.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >Start Campus Sines Data Campus, Portugal</text>
+<rect x="290.0" y="265.0" width="28.4" height="17.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.6"/>
+<text x="323.4" y="278.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >33</text>
+<text x="282.0" y="306.0" font-size="12" fill="#1a1a1a" font-weight="400" text-anchor="end" >Nscale Keflavik, Iceland</text>
+<rect x="290.0" y="295.0" width="4.4" height="17.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.6"/>
+<text x="299.4" y="308.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >5</text>
+<line x1="290.0" y1="326.0" x2="720.0" y2="326.0" stroke="#1a1a1a" stroke-width="1"/>
+<line x1="290.0" y1="326.0" x2="290.0" y2="331.0" stroke="#1a1a1a" stroke-width="1"/>
+<text x="290.0" y="345.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="middle" >0</text>
+<line x1="376.0" y1="326.0" x2="376.0" y2="331.0" stroke="#1a1a1a" stroke-width="1"/>
+<text x="376.0" y="345.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="middle" >100</text>
+<line x1="462.0" y1="326.0" x2="462.0" y2="331.0" stroke="#1a1a1a" stroke-width="1"/>
+<text x="462.0" y="345.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="middle" >200</text>
+<line x1="548.0" y1="326.0" x2="548.0" y2="331.0" stroke="#1a1a1a" stroke-width="1"/>
+<text x="548.0" y="345.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="middle" >300</text>
+<line x1="634.0" y1="326.0" x2="634.0" y2="331.0" stroke="#1a1a1a" stroke-width="1"/>
+<text x="634.0" y="345.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="middle" >400</text>
+<line x1="720.0" y1="326.0" x2="720.0" y2="331.0" stroke="#1a1a1a" stroke-width="1"/>
+<text x="720.0" y="345.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="middle" >500</text>
+<text x="505.0" y="366.0" font-size="12.5" fill="#1a1a1a" font-weight="400" text-anchor="middle" >IT power in service, October 2026 (MW)</text>
+<rect x="470.0" y="210.0" width="250.0" height="50.0" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.6"/>
+<rect x="480.0" y="220.0" width="14.0" height="10.0" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.6"/><text x="502.0" y="229.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Site where a Chinese firm holds a role</text>
+<rect x="480.0" y="240.0" width="14.0" height="10.0" fill="#bdbdbd" stroke="#555555" stroke-width="0.6"/><text x="502.0" y="249.0" font-size="11.5" fill="#1a1a1a" font-weight="400" text-anchor="start" >Other data centre</text>
+</svg>

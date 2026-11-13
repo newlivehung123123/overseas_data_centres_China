@@ -1024,26 +1024,36 @@
    "country": "Norway",
    "status": "operational",
    "capacity_mw": "90",
-   "capacity_basis": "unspecified",
-   "note": "Three buildings of 30 MW each, all leased to TikTok; the developer, Green Mountain, is not a Chinese firm",
-   "source": "https://btw.media/all/news/tiktok-data-centre-at-osl-hamar-powered-by-norway-green-energy",
-   "quote": "now houses three operational buildings, each with 30 MW capacity, fully leased to TikTok under its European data sovereignty scheme, Project Clover.",
+   "capacity_basis": "it",
+   "note": "Three buildings of 30 MW each, all under contract to TikTok, which holds an option to expand to 150 MW, the total IT capacity that the developer gives for the campus; the developer, Green Mountain, is not a Chinese firm",
+   "source": "https://greenmountain.no/data-center/osl-hamar/",
+   "quote": "We are pleased to confirm that TikTok , our customer, has secured a contract for these three buildings, effectively utilizing the entire 90 MW capacity.",
    "check": "found",
-   "evidence": "secondary",
+   "evidence": "primary",
    "iso3": "NOR",
    "roles": [
     {
      "firm": "ByteDance",
      "origin": "",
      "role": "tenant",
-     "source": "https://btw.media/all/news/tiktok-data-centre-at-osl-hamar-powered-by-norway-green-energy",
-     "quote": "three operational buildings, each with 30 MW capacity, fully leased to TikTok",
+     "source": "https://greenmountain.no/data-center/osl-hamar/",
+     "quote": "OSL-Hamar supports single tenant TikTok with their increasing data storage needs in Europe",
      "check": "found",
-     "evidence": "secondary"
+     "evidence": "primary"
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "150",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2026-11-13",
+     "note": "Total IT capacity of the five buildings planned, to which TikTok holds an option to expand",
+     "source": "https://greenmountain.no/data-center/osl-hamar/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     61.0015,
@@ -2700,7 +2710,7 @@
    "status": "planned",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "MSFusion is a subsidiary of Megaspeed International; the purchase of 52 acres in the Bandar Cemerlang Industrial Park depends on a power allocation and planning approval and was set to complete by the third quarter of 2026, and no source found reports its completion",
+   "note": "MSFusion is a subsidiary of Megaspeed International; the purchase of 52 acres in the Bandar Cemerlang Industrial Park became unconditional on 27 April 2026, and the seller received the balance of the price on 9 September 2026, after a notice of default in August",
    "source": "https://www.datacenterdynamics.com/en/news/malaysias-crescendo-corp-sells-land-in-johor-for-data-center/",
    "quote": "Crescendo said its wholly-owned subsidiary, Crescendo Development Sdn. Bhd. last week entered into a conditional Sale and Purchase Agreement with MSFusion Sdn. Bhd (MSB) to sell just over 52 acres of land for RM 263.2m ($62.2m).",
    "check": "found",
@@ -2726,6 +2736,15 @@
      "date": "2025-09-03",
      "note": "Power allocation from TNB on which the closing of the land purchase depends",
      "source": "https://www.datacenterdynamics.com/en/news/malaysias-crescendo-corp-sells-land-in-johor-for-data-center/",
+     "evidence": "secondary"
+    },
+    {
+     "mw": "300",
+     "basis": "power",
+     "stage": "planned_total",
+     "date": "2026-09-09",
+     "note": "Written confirmation of the power allocation from Tenaga Nasional was a condition of the land sale, which became unconditional on 27 April 2026; the seller received the balance of the price on 9 September 2026",
+     "source": "https://www.edgeprop.my/content/1917373/crescendo-receives-balance-payment-rm263m-johor-data-centre-land-sale",
      "evidence": "secondary"
     }
    ],
@@ -5404,6 +5423,95 @@
    "quote": "routinely assess Customer use of the GPU Assets by monitoring for compute anomalies or suspicious configurations indicative of a contravention of Export Control Law and promptly inform the Agent of such anomalies or configurations in writing",
    "check": "found",
    "evidence": "primary"
+  },
+  {
+   "id": "USA-0010",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "applies_in": [
+    "THA",
+    "SGP"
+   ],
+   "instrument": "Draft rule on the renting of AI chips to Chinese firms through servers abroad",
+   "covers": "remote_access",
+   "status": "announced",
+   "date": "2026-08",
+   "note": "Reported from a draft that the Department of Commerce has not published; the report names Thailand and Singapore, and lawyers quoted in the report doubt that the Department can enforce such a rule before the Remote Access Security Act passes",
+   "source": "https://www.techtimes.com/articles/325957/20260829/commerce-drafts-ai-chip-rule-loophole-it-created-rescinding-biden-know-your-customer.htm",
+   "quote": "The Trump administration is preparing a rule that would make it illegal to rent Nvidia GPU computing time to Chinese AI companies through servers in Thailand and Singapore",
+   "check": "found",
+   "evidence": "unconfirmed"
+  },
+  {
+   "id": "SGP-0002",
+   "jurisdiction": "Singapore",
+   "iso3": "SGP",
+   "applies_in": [
+    "SGP"
+   ],
+   "instrument": "Joint advisory of Singapore Customs and the Ministry of Trade and Industry on export controls on advanced semiconductor and AI technologies",
+   "covers": "guidance",
+   "status": "in_force",
+   "date": "2025-04",
+   "note": "Guidance and not a new rule: the advisory restates Singapore's export control law and warns against the use of Singapore to evade the export controls of other countries",
+   "source": "https://www.rajahtannasia.com/viewpoints/singapore-issues-advisory-on-export-controls-on-advanced-semiconductor-and-ai-technologies/",
+   "quote": "The Advisory highlights that the Singapore Government does not condone businesses deliberately using their association with Singapore to circumvent the export controls of other countries, and that action will be taken against those engaged in dishonest practices to evade applicable export controls.",
+   "check": "found",
+   "evidence": "secondary"
+  },
+  {
+   "id": "USA-0011",
+   "jurisdiction": "Private contract",
+   "iso3": "USA",
+   "applies_in": [
+    "BRN",
+    "KHM",
+    "IDN",
+    "LAO",
+    "MYS",
+    "MMR",
+    "PHL",
+    "SGP",
+    "THA",
+    "TLS",
+    "VNM"
+   ],
+   "instrument": "Nvidia's requirement that new cloud partners in Southeast Asia enrol in its Fleet Intelligence monitoring system",
+   "covers": "use_in_country",
+   "status": "announced",
+   "date": "2026-11-06",
+   "note": "A condition of Nvidia's partner programme and not a rule of a state, reported by Bloomberg from people familiar with the policy; the source names Southeast Asia and no country, and Nvidia has not said whether existing partners must enrol",
+   "source": "https://www.techrepublic.com/article/news-nvidia-ai-chip-tracking-apac-singapore-china/",
+   "quote": "companies seeking official Nvidia Cloud Partner status in the region must now enroll in its Fleet Intelligence monitoring system",
+   "check": "found",
+   "evidence": "unconfirmed"
+  },
+  {
+   "id": "USA-0012",
+   "jurisdiction": "Private contract",
+   "iso3": "USA",
+   "applies_in": [
+    "BRN",
+    "KHM",
+    "IDN",
+    "LAO",
+    "MYS",
+    "MMR",
+    "PHL",
+    "SGP",
+    "THA",
+    "TLS",
+    "VNM"
+   ],
+   "instrument": "Nvidia's instruction that cloud and data-centre partners sell at least 51 percent of their services to non-Chinese customers",
+   "covers": "remote_access",
+   "status": "announced",
+   "date": "2026-11-06",
+   "note": "An instruction of a supplier and not a rule of a state, reported by the Financial Times; the report applies it to future contracts, and The Information reports that Nvidia has not enforced it as a mandatory rule; the countries are those of the report on Southeast Asia",
+   "source": "https://www.techrepublic.com/article/news-nvidia-ai-chip-tracking-apac-singapore-china/",
+   "quote": "Nvidia has also reportedly instructed cloud and data center partners to ensure that at least 51% of their services go to non-Chinese customers, according to the Financial Times",
+   "check": "found",
+   "evidence": "unconfirmed"
   }
  ],
  "ai_without_site": [
@@ -9074,7 +9182,7 @@
    "page": "https://baxtel.com/data-center/msfusion-johor-campus",
    "link": "owner",
    "site": "MYS-0013",
-   "note": "MSFusion is a subsidiary of Megaspeed International, which was spun off from a Chinese gaming firm",
+   "note": "MSFusion is a subsidiary of Megaspeed International, which was spun off from a Chinese gaming firm; MSFusion completed the purchase of the land in September 2026",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "MSFusion Johor Campus Megaspeed AI Extra Large Construction, Planned Carrier-Neutral",
    "check": "found",
@@ -11068,22 +11176,22 @@
  "estimate": {
   "totals": {
    "low": {
-    "in_service_mw": 1323,
-    "pipeline_mw": 4686,
-    "total_mw": 6009,
+    "in_service_mw": 1413,
+    "pipeline_mw": 4746,
+    "total_mw": 6159,
     "mw_by_basis": {
-     "it": 5389,
+     "it": 5539,
      "unspecified": 620
     }
    },
    "high": {
     "in_service_mw": 1652,
-    "pipeline_mw": 5781,
-    "total_mw": 7433,
+    "pipeline_mw": 5841,
+    "total_mw": 7493,
     "mw_by_basis": {
-     "it": 5778,
+     "it": 5928,
      "power": 600,
-     "unspecified": 1055
+     "unspecified": 965
     }
    },
    "sites": 76,
@@ -11469,11 +11577,23 @@
     "site_id": "NOR-0001",
     "stage": "in_service",
     "mw": "90",
-    "basis": "unspecified",
-    "evidence": "secondary",
-    "counted_in": "high",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
     "source_table": "sites",
-    "note": "High bound only, because the figure is not from a primary source"
+    "note": ""
+   },
+   {
+    "component": "Green Mountain OSL-Hamar campus",
+    "firm": "ByteDance",
+    "site_id": "NOR-0001",
+    "stage": "pipeline",
+    "mw": "60",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": "Planned total of 150 MW less 90 MW in service"
    },
    {
     "component": "Beijing Haoyang Rayong data centre",
