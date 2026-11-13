@@ -42,6 +42,15 @@ class SecondPassageTest(unittest.TestCase):
         self.assertEqual([r["link_check_status"] for r in checked], ["found", ""])
 
 
+class CensusTest(unittest.TestCase):
+    def test_a_facility_needs_a_market_and_a_known_code_of_the_chinese_link(self):
+        c.validate_census("batam_census", [{"market": "Batam", "chinese_link": "none_found"}])
+        with self.assertRaises(ValueError):
+            c.validate_census("batam_census", [{"market": "Batam", "chinese_link": ""}])
+        with self.assertRaises(ValueError):
+            c.validate_census("batam_census", [{"market": "", "chinese_link": "operator"}])
+
+
 class EvidenceTest(unittest.TestCase):
     def test_known_grades_pass(self):
         c.validate_evidence("sites", [{"evidence": "primary"}, {"evidence": "unconfirmed", "link_source_url": "",

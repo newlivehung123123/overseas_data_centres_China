@@ -1,17 +1,17 @@
 {
-  "sites": 73,
+  "sites": 77,
   "site_countries": 17,
   "sites_by_status": {
-    "operational": 31,
+    "operational": 33,
     "under_construction": 8,
-    "planned": 25,
+    "planned": 27,
     "unclear": 9
   },
   "sites_by_country": {
-    "Malaysia": 16,
+    "Malaysia": 17,
     "Thailand": 11,
+    "Singapore": 8,
     "Indonesia": 7,
-    "Singapore": 5,
     "Germany": 5,
     "Japan": 4,
     "Hong Kong": 4,
@@ -26,26 +26,27 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 95,
+  "roles": 100,
   "roles_by_role": {
-    "operator": 44,
-    "owner": 28,
-    "tenant": 13,
-    "user": 8,
+    "operator": 45,
+    "owner": 29,
+    "tenant": 15,
+    "user": 9,
     "financier": 1,
     "equipment supplier": 1
   },
   "sites_by_firm": {
     "Global Switch": 17,
     "DayOne": 16,
-    "ByteDance": 13,
+    "ByteDance": 15,
     "China Mobile International": 5,
+    "Alibaba Cloud": 5,
     "China Unicom Global": 4,
-    "Alibaba Cloud": 4,
     "Tencent Cloud": 3,
     "zData": 2,
     "Huawei Cloud": 2,
     "Megaspeed": 2,
+    "Bitdeer": 2,
     "Huanbang (Hong Kong)": 1,
     "INF Tech": 1,
     "GDS": 1,
@@ -58,12 +59,12 @@
     "Galaxy Data Center": 1
   },
   "sites_by_level": {
-    "A": 47,
-    "B": 26
+    "A": 50,
+    "B": 27
   },
-  "sites_with_capacity": 13,
+  "sites_with_capacity": 14,
   "site_capacity_mw_by_basis": {
-    "unspecified": 494,
+    "unspecified": 581,
     "it": 923,
     "power": 460
   },
@@ -120,18 +121,29 @@
         "financier": 3,
         "owner": 1
       }
+    },
+    "Singapore": {
+      "facilities": 110,
+      "operators": 49,
+      "by_chinese_link": {
+        "none_found": 97,
+        "operator": 5,
+        "owner": 5,
+        "unconfirmed": 2,
+        "financier": 1
+      }
     }
   },
   "evidence_by_file": {
     "sites": {
-      "primary": 40,
-      "secondary": 31,
+      "primary": 41,
+      "secondary": 34,
       "unconfirmed": 2
     },
     "site_roles": {
       "primary": 58,
-      "secondary": 34,
-      "unconfirmed": 3
+      "secondary": 37,
+      "unconfirmed": 5
     },
     "cloud_regions": {
       "primary": 51,
@@ -145,7 +157,7 @@
     },
     "firm_links": {
       "primary": 2,
-      "secondary": 6
+      "secondary": 7
     },
     "operator_customers": {
       "primary": 5,
@@ -154,8 +166,8 @@
     },
     "ai_compute": {
       "unconfirmed": 7,
-      "secondary": 2,
-      "primary": 1
+      "secondary": 3,
+      "primary": 3
     },
     "site_capacity": {
       "secondary": 11,
@@ -177,6 +189,9 @@
     },
     "johor_census": {
       "secondary": 84
+    },
+    "singapore_census": {
+      "secondary": 110
     }
   },
   "capacity_estimate_mw": {
@@ -191,16 +206,16 @@
     },
     "high": {
       "in_service_mw": 1652,
-      "pipeline_mw": 5694,
-      "total_mw": 7346,
+      "pipeline_mw": 5781,
+      "total_mw": 7433,
       "mw_by_basis": {
         "it": 5778,
         "power": 600,
-        "unspecified": 968
+        "unspecified": 1055
       }
     },
-    "sites": 72,
-    "sites_without_a_figure": 33,
+    "sites": 76,
+    "sites_without_a_figure": 36,
     "sites_with_supply_roles_only": 1
   }
 }

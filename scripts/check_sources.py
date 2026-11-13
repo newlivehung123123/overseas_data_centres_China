@@ -51,6 +51,7 @@ PARTLY_FOUND = 0.5
 ROLES = {"owner", "operator", "tenant", "user", "builder", "equipment supplier", "financier"}
 STATUSES = {"operational", "under_construction", "planned", "unclear"}
 EVIDENCE = {"primary", "secondary", "unconfirmed"}
+CENSUS_LINKS = {"operator", "owner", "tenant", "financier", "unconfirmed", "none_found"}
 
 
 def census_tables() -> list[tuple[Path, Path]]:
@@ -141,6 +142,15 @@ def validate_evidence(name: str, rows: list[dict]) -> None:
         raise ValueError("; ".join(problems))
 
 
+def validate_census(name: str, rows: list[dict]) -> None:
+    """Every facility of a census names its market and carries one of the codes of the Chinese link."""
+    problems = [f"{name} row {i + 2}: unknown chinese_link {r.get('chinese_link')!r}"
+                for i, r in enumerate(rows) if r.get("chinese_link") not in CENSUS_LINKS]
+    problems += [f"{name} row {i + 2}: no market" for i, r in enumerate(rows) if not r.get("market")]
+    if problems:
+        raise ValueError("; ".join(problems))
+
+
 def read(path: Path) -> list[dict]:
     with path.open(newline="") as f:
         return list(csv.DictReader(f))
@@ -165,6 +175,8 @@ def main() -> None:
     tables += [(src.stem, read(src), out) for src, out in OTHER_TABLES + census_tables() if src.exists()]
     for name, rows, _ in tables:
         validate_evidence(name, rows)
+        if name.endswith("_census"):
+            validate_census(name, rows)
     for name, rows, path in tables:
         checked = check(rows, args.refetch)
         write(path, checked)

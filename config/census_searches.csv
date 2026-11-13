@@ -1,0 +1,48 @@
+market,date,query,result
+Batam,2026-11-12,"""Range IDC"" Batam AI Factory data center","RangeIDC, a data-centre firm listed in Shenzhen, backs the developer PT Equator Gate System Batam"
+Batam,2026-11-12,Golden Digital Gateway data center Batam Gaw Capital Sinar Primera tenant customer,No tenant named; Gaw Capital Partners is a firm of Hong Kong
+Batam,2026-11-12,Princeton Digital Group BT1 Batam data centre customer tenant Chinese hyperscaler,No Chinese firm named
+Batam,2026-11-12,"""Global Data Centre"" GDC Batam BTM1 campus data center",No Chinese firm named; the operator is a Malaysian firm
+Batam,2026-11-12,Batam data centre Chinese firms ByteDance Tencent Alibaba Huawei tenant Nongsa Kabil 2026,"RangeIDC; Huawei supplies modules to Aesler; DayOne; no tenancy of ByteDance, Tencent or Alibaba in Batam reported"
+Batam,2026-11-12,WorldVuer iByond Quantum AI data center Batam,No Chinese firm named
+Batam,2026-11-12,NeutraDC Nxera Batam data centre Medco anchor customer,No customer named
+Batam,2026-11-12,BW Digital Nongsa Digital Park data centre Batam customers investors,No Chinese firm named
+Batam,2026-11-12,Huawei to develop 16MW data center for Aesler in Batam Mark 1,Huawei supplies prefabricated modules to Aesler; the facility is not on Baxtel's list
+Batam,2026-11-12,Pusat Data Nasional Batam KOMDIGI government data center financing contractor Nongsa,A loan from South Korea; no Chinese firm named
+Batam,2026-11-12,Racks Central Batam campus data centre Nongsa Digital Park,No further source on the financing of the campus
+Batam,2026-11-12,"Batam data center ""IDC Indonesia"" OR ""Moratelindo"" OR ""neuCentrIX"" OR ""Omni DC"" OR ""Neuviz"" OR ""Seax"" Chinese partner Huawei Alibaba Tencent",No Chinese firm named at these operators
+Batam,2026-11-12,"GDS Holdings press release November 2021 ""Nongsa Digital Park"" Batam ""major Chinese cloud service provider"" globenewswire",GDS's announcement of 15 November 2021 at the Hong Kong exchange
+Greater Bangkok,2026-11-12,China Mobile International acquisition SUPERNAP Thailand Chonburi data center completed March 2025,China Mobile completed the purchase on 18 March 2025
+Greater Bangkok,2026-11-12,Beijing Haoyang Cloud & Data Technology Rayong data center BOI 72.7 billion baht MW WHA,Approved by the Board of Investment with an IT load of 300 MW
+Greater Bangkok,2026-11-12,Galaxy Data Center GDC Hoyinn Technologies Rayong Silicon Tech Park $2 billion data center,Galaxy Data Center is the international business of Hoyinn Technologies of Beijing
+Greater Bangkok,2026-11-12,Stratus Technology ZData Technologies Rayong CPGC Industrial Estate BOI data center 23.7 billion baht,Approved by the Board of Investment with an IT load of about 203 MW; an affiliate of zData
+Greater Bangkok,2026-11-12,Bridge Data Centres Chonburi hyperscale campus Thailand anchor tenant TikTok ByteDance,No tenant of the Chonburi campus named
+Greater Bangkok,2026-11-12,TikTok System Thailand data center 842 billion baht which data centres operator Samut Prakan Chachoengsao Bangkok,The approvals name the three provinces and no facility
+Greater Bangkok,2026-11-12,Doma Infrastructure Group Silicon Tech Park data center parks Thailand EEC who owns Doma,No owner of Doma named; the firm is based in Singapore
+Greater Bangkok,2026-11-12,Rayong data center construction site raid Chinese-run migrant workers arrested August 2026,A report suggests the site may be that of Galaxy Data Center; the owner is not confirmed
+Greater Bangkok,2026-11-13,"BOI press release 17 March 2025 ""Beijing Haoyang"" 300 MW data center 72.7 billion baht Rayong boi.go.th",The Board of Investment's release No. 41/2568
+Greater Bangkok,2026-11-13,Chinese data center operators investing in Thailand 2025 2026 list Haoyang ZData Galaxy GDS TikTok Alibaba Huawei BOI approved,No further Chinese operator named beyond those already recorded
+Greater Bangkok,2026-11-13,"Alibaba Cloud Thailand data center second location hosted partner True IDC OR ""data center"" Bangkok 2025",Alibaba Cloud does not disclose the buildings of its Thai data centres
+Greater Bangkok,2026-11-13,Tencent Cloud Bangkok data center third availability zone colocation provider location,Tencent Cloud names no building
+Greater Bangkok,2026-11-13,Huawei Cloud Thailand three data centers location Bangkok Chonburi availability zones hosted facility,Sources differ on the places and name no building
+Greater Bangkok,2026-11-13,BOI January 2025 TikTok 126 billion baht data hosting approval press release location province,The Board of Investment's release No. 14/2568 names no facility
+Greater Bangkok,2026-11-13,"""China Mobile International"" Thailand data centre Chonburi SUPERNAP acquisition announcement",China Mobile International lists the facility as its own at PeeringDB
+Greater Bangkok,2026-11-13,True IDC ownership True Corporation Ascend China Mobile shareholder stake data center,"China Mobile holds 7.8 percent of True Corporation, the parent of True IDC"
+Greater Bangkok,2026-11-13,DAMAC Edgnex Skyline data center Chachoengsao Thailand tenant TikTok ByteDance anchor customer,No Chinese tenant named
+Greater Bangkok,2026-11-13,"Thailand data center anchor tenant Chinese hyperscaler ""STT GDC"" OR ""Digital Edge"" OR ""GSA Data Center"" OR ""Evolution Data Centres"" OR ""Empyrion"" Bangkok ByteDance Alibaba Tencent",No Chinese tenant named at these operators
+Greater Bangkok,2026-11-13,"Thailand data center built by Huawei OR ZTE OR Inspur contractor prefabricated modular ""data center"" Thai operator NT OR AIS OR INET OR ""TCC Technology""",No facility on the list named; Huawei supplied a modular data centre to PlanetComm
+Greater Bangkok,2026-11-13,Freyr Technology AI Thailand data center Gorilla Technology owner investors Chinese,No Chinese owner named
+Greater Bangkok,2026-11-13,"Bangkok colocation data centre Chinese cloud provider tenant ""NTT"" OR ""Telehouse"" OR ""Equinix"" OR ""Etix"" OR ""AIMS"" OR ""OneAsia"" Thailand China Telecom China Unicom point of presence",No Chinese tenant named at these operators
+Singapore,2026-11-13,IMDA EDB DC-CFA awardees AirTrunk ByteDance consortium Equinix GDS Microsoft 80MW July 2023 press release,"The Economic Development Board's release names the consortium of AirTrunk and ByteDance, and GDS"
+Singapore,2026-11-13,"ByteDance TikTok Singapore data centre lease operator colocation MW Loyang OR ""Tai Seng"" OR Jurong",ByteDance is a partner of AirTrunk in the second campus; no lease named
+Singapore,2026-11-13,Alibaba Cloud Singapore data centre location hosted colocation operator availability zones building,Alibaba Cloud names no building; a fire of September 2024 affected zone C
+Singapore,2026-11-13,Tencent Cloud Singapore data center colocation provider location Huawei Cloud Singapore data centre hosted,Neither firm names a building
+Singapore,2026-11-13,"China Telecom OR ""China Unicom"" Singapore data centre opened own facility 2024 2025 2026",China Telecom Global is a partner of Global Switch at Woodlands; no facility of China Unicom found
+Singapore,2026-11-13,Singapore second data centre call for application DC-CFA2 awardees 2026 results Chinese,The four awardees of August 2026 include no Chinese firm
+Singapore,2026-11-13,"Singapore data centre Chinese tenant customer ""Keppel DC"" OR ""Digital Realty"" OR ""STT GDC"" OR ""Equinix"" OR ""Princeton Digital"" Alibaba Tencent ByteDance Huawei anchor",No Chinese tenant named by these operators
+Singapore,2026-11-13,Digital Realty SIN11 Loyang fire September 2024 Alibaba Cloud ByteDance Lark outage data center Singapore,Reports name Digital Realty's SIN11 as the facility of Alibaba Cloud's zone C; ByteDance and Lazada reported as disrupted
+Singapore,2026-11-13,"Tencent Cloud ""third parties"" data center infrastructure providers list Singapore region sub-processors colocation",Tencent Cloud lists its own subsidiaries and no operator of a building
+Singapore,2026-11-13,Bitdeer spun off from Bitmain 2021 Jihan Wu Singapore headquarters origin,Bitdeer was spun off from Bitmain in 2021 and has its headquarters in Singapore
+Singapore,2026-11-13,Bitdeer AI cloud Singapore data center Nvidia DGX SuperPOD H100 launched Tier 3,Bitdeer deployed an Nvidia DGX H100 SuperPOD in March 2024
+Singapore,2026-11-13,"Singapore data centre Chinese-owned OR ""Chinese firm"" operator OR tenant ""Princeton Digital"" OR ""BDx"" OR ""Empyrion"" OR ""YTL"" OR ""Mapletree"" OR ""CapitaLand"" Alibaba Tencent Huawei ByteDance lease",No lease of a Chinese firm named at these operators
+Singapore,2026-11-13,Bitdeer AI 10-year data center services agreement 65.1MW A202 Johor Bahru GB300 NVL72 A201 21.7MW September 2026,Bitdeer AI holds agreements for 86.8 MW on a campus in Johor
