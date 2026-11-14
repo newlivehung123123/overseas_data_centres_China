@@ -23,15 +23,19 @@ component,firm,site_id,stage,mw,basis,evidence,counted_in,source_table,note
 "DayOne, Johor",DayOne,,in_service,106,it,secondary,high,epoch_estimates,"Epoch AI estimates 895 MW of IT power at the sites of the market, against 789 MW that the firm reports in service"
 Data Center Pecém,ByteDance,BRA-0001,pipeline,300,power,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
 Global Switch Madrid 2,Global Switch,ESP-0003,pipeline,36,it,primary,both,site_capacity,
+China Mobile International United Kingdom 1 Data Centre,China Mobile International,GBR-0001,in_service,10,unspecified,secondary,high,site_capacity,"High estimate only, because the status of the site is unclear"
+Global Switch London South,Global Switch,GBR-0004,pipeline,40,it,primary,both,site_capacity,
 NexAI MettaDC Cikarang data centre,Megaspeed,IDN-0008,pipeline,36,unspecified,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
 NexAI Batang data centre,Megaspeed,IDN-0009,pipeline,60,unspecified,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
 Bridge Data Centres MY06,Bridge Data Centres; ByteDance,MYS-0001,in_service,110,unspecified,primary,both,sites,
 Bridge Data Centres MY06,Bridge Data Centres; ByteDance,MYS-0001,pipeline,398,it,primary,low,site_capacity,Planned total of 508 MW less 110 MW in service
 Bridge Data Centres MY06,Bridge Data Centres; ByteDance,MYS-0001,pipeline,265,it,primary,high,site_capacity,The high estimate counts more capacity in service at the site; Planned total of 508 MW less 243 MW in service
 Bridge Data Centres MY06,Bridge Data Centres; ByteDance,MYS-0001,in_service,133,it,secondary,high,epoch_estimates,"Epoch AI estimates 243 MW of IT power, against 110 MW stated"
+zData Johor data centre,Alibaba Cloud; ByteDance; Tencent Cloud; zData,MYS-0007,pipeline,300,unspecified,secondary,high,site_capacity,"High estimate only, because the figure is not from a primary source"
 MSFusion Johor campus,Megaspeed,MYS-0013,pipeline,300,power,secondary,high,site_capacity,"High estimate only, because the figure is not from a primary source"
 GDS data centres at YTL Green Data Center Park,GDS,MYS-0014,pipeline,168,unspecified,primary,high,sites,"High estimate only, because the status of the site is unclear"
-"BrightRay DC campus, Sedenak",Shanghai DC-Science,MYS-0015,pipeline,90,unspecified,secondary,high,site_capacity,"High estimate only, because the role of the Chinese firm is unconfirmed"
+"BrightRay DC campus, Sedenak",Shanghai DC-Science,MYS-0015,in_service,70,unspecified,primary,high,site_capacity,"High estimate only, because the role of the Chinese firm is unconfirmed"
+"BrightRay DC campus, Sedenak",Shanghai DC-Science,MYS-0015,pipeline,50,unspecified,primary,high,site_capacity,"High estimate only, because the role of the Chinese firm is unconfirmed; Planned total of 120 MW less 70 MW in service"
 Racks Central Johor AI Campus,China-ASEAN Investment Cooperation Fund II,MYS-0016,pipeline,510,unspecified,primary,both,site_capacity,
 Bitdeer AI Johor campus,Bitdeer,MYS-0017,pipeline,87,it,primary,both,sites,
 Bitdeer AI Cyberjaya campus,Bitdeer,MYS-0020,in_service,2,it,primary,both,site_capacity,
@@ -41,6 +45,11 @@ Bridge Data Centres Cyberjaya MY02,Bridge Data Centres,MYS-0023,pipeline,98,it,p
 Bridge Data Centres MY03,Bridge Data Centres,MYS-0024,pipeline,48,it,primary,both,site_capacity,
 Green Mountain OSL-Hamar campus,ByteDance,NOR-0001,in_service,90,it,primary,both,sites,
 Green Mountain OSL-Hamar campus,ByteDance,NOR-0001,pipeline,60,it,primary,both,site_capacity,Planned total of 150 MW less 90 MW in service
+Nscale Glomfjord data centre,ByteDance,NOR-0002,in_service,30,power,primary,both,site_capacity,
+Nscale Glomfjord data centre,ByteDance,NOR-0002,pipeline,30,power,primary,both,site_capacity,Planned total of 60 MW less 30 MW in service
+AirTrunk SGP2 campus,ByteDance,SGP-0006,pipeline,70,unspecified,primary,both,site_capacity,
+Digital Realty SIN11 Digital Loyang 1,Alibaba Cloud; ByteDance,SGP-0007,in_service,13,it,secondary,high,site_capacity,"High estimate only, because the role of the Chinese firm is unconfirmed"
+China Mobile International Chonburi data centre,China Mobile International,THA-0008,in_service,20,power,secondary,high,site_capacity,"High estimate only, because the figure is not from a primary source"
 Beijing Haoyang Rayong data centre,Beijing Haoyang,THA-0009,pipeline,300,it,primary,both,sites,
 Stratus Technology Rayong data centre,zData,THA-0010,pipeline,203,it,primary,both,sites,
 Galaxy Data Center Rayong campus,Galaxy Data Center,THA-0011,pipeline,150,it,primary,both,sites,

@@ -1121,7 +1121,26 @@
      "evidence": "primary"
     }
    ],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "30",
+     "basis": "power",
+     "stage": "in_service",
+     "date": "2026-11-14",
+     "note": "Power capacity in operation at Glomfjord, as Nscale's page states",
+     "source": "https://nscale.com/product/glomfjord",
+     "evidence": "primary"
+    },
+    {
+     "mw": "60",
+     "basis": "power",
+     "stage": "planned_total",
+     "date": "2026-11-14",
+     "note": "Power capacity to which Nscale states Glomfjord can be expanded",
+     "source": "https://nscale.com/product/glomfjord",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     66.8166,
@@ -1331,7 +1350,17 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "10",
+     "basis": "unspecified",
+     "stage": "in_service",
+     "date": "2019-12-20",
+     "note": "Capacity of the data centre in Slough at its opening",
+     "source": "https://www.datacenterdynamics.com/en/news/china-mobile-international-opens-uk-data-center-link-east-and-west/",
+     "evidence": "secondary"
+    }
+   ],
    "epoch": null,
    "point": [
     51.5111,
@@ -1603,13 +1632,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "300",
+     "basis": "unspecified",
+     "stage": "planned_total",
+     "date": "2026-03-11",
+     "note": "Planned capacity of the GP3 site in Gelang Patah, as the director of zData's Malaysian subsidiary stated",
+     "source": "https://w.media/zdata-tops-green-ranking-a-first-for-data-center-in-malaysia/",
+     "evidence": "secondary"
+    }
+   ],
    "epoch": null,
    "point": [
     2.0229,
     103.3115
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -2037,13 +2076,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "40",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2024-02-22",
+     "note": "IT power capacity of London South, as Global Switch's announcement of its planning approval states",
+     "source": "https://www.globalswitch.com/announcement/global-switch-receives-full-planning-approval-for-its-third-london-data-centre/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     51.5074,
     -0.1278
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -2827,7 +2876,7 @@
    "status": "operational",
    "capacity_mw": "",
    "capacity_basis": "",
-   "note": "The first of three buildings, MY-01, was commissioned in May 2025; Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, but DCD wrote in 2025 that it is unclear whether DC-Science is involved",
+   "note": "The first of three buildings, MY-01, was commissioned in May 2025; Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, but DCD wrote in 2025 that it is unclear whether DC-Science is involved; BUUU's annual report of October 2026 states that the site is developed by Brightray Science Sdn. Bhd., in which Wang Bin has an indirect interest, and that the BrightRay trade marks are registered to Shanghai DC Science, a company in mainland China affiliated with Wang Bin, but the report does not say that Shanghai DC-Science owns the site",
    "source": "https://www.datacenterdynamics.com/en/news/brightray-launches-data-center-in-johor-malaysia/",
    "quote": "Located in the Sedenak Tech Park (SteP), MY-01 is the first of three facilities planned for the campus, with two more data centers already scheduled for deployment.",
    "check": "found",
@@ -2854,6 +2903,24 @@
      "note": "Capacity of the three buildings of the campus at full build-out",
      "source": "https://www.datacenterdynamics.com/en/news/brightray-launches-data-center-in-johor-malaysia/",
      "evidence": "secondary"
+    },
+    {
+     "mw": "70",
+     "basis": "unspecified",
+     "stage": "in_service",
+     "date": "2026-10-30",
+     "note": "Capacity in operation at the Sedenak site, as BUUU's annual report states; BUUU is buying 60 percent of Brightray Science Inc., which supplied the prefabricated modules",
+     "source": "https://www.sec.gov/Archives/edgar/data/2047273/000121390026114422/ea0309667-20f_buuugroup.htm",
+     "evidence": "primary"
+    },
+    {
+     "mw": "120",
+     "basis": "unspecified",
+     "stage": "planned_total",
+     "date": "2026-10-30",
+     "note": "Planned capacity of the Sedenak site, as BUUU's annual report states",
+     "source": "https://www.sec.gov/Archives/edgar/data/2047273/000121390026114422/ea0309667-20f_buuugroup.htm",
+     "evidence": "primary"
     }
    ],
    "epoch": null,
@@ -3168,13 +3235,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "20",
+     "basis": "power",
+     "stage": "in_service",
+     "date": "2017",
+     "note": "Power of the data centre in Chonburi at its opening by SUPERNAP International, before China Mobile bought it",
+     "source": "https://datacenternews.asia/story/supernap-opens-new-data-center-step-towards-thailand-40-vision",
+     "evidence": "secondary"
+    }
+   ],
    "epoch": null,
    "point": [
     13.1857,
     101.1211
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -3308,13 +3385,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "70",
+     "basis": "unspecified",
+     "stage": "planned_total",
+     "date": "2026-11-14",
+     "note": "Total capacity of SGP2, as AirTrunk's page states; the page gives more than 70 MW",
+     "source": "https://airtrunk.com/location/sgp2-singapore/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     1.2899,
     103.8519
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -3352,7 +3439,17 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "13.2",
+     "basis": "it",
+     "stage": "in_service",
+     "date": "2026-11-14",
+     "note": "IT power of SIN11, which DCD compares with the 50 MW of IT power of SIN12",
+     "source": "https://www.datacenterdynamics.com/en/news/digital-realty-announces-50mw-data-center-singapore/",
+     "evidence": "secondary"
+    }
+   ],
    "epoch": null,
    "point": [
     1.2899,
@@ -11501,7 +11598,7 @@
    "page": "https://baxtel.com/data-center/brightray-johor-my-01",
    "link": "unconfirmed",
    "site": "MYS-0015",
-   "note": "Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, and DCD wrote in 2025 that it is unclear whether DC-Science is involved",
+   "note": "Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, and DCD wrote in 2025 that it is unclear whether DC-Science is involved; BUUU's annual report of October 2026 states that the site is developed by Brightray Science Sdn. Bhd., in which Wang Bin has an indirect interest, and that the BrightRay trade marks are registered to Shanghai DC Science, a company in mainland China affiliated with Wang Bin, but the report does not say that Shanghai DC-Science owns the site",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "BrightRay: Johor MY-01 BrightRay DC Large Operational Carrier-Neutral",
    "check": "found",
@@ -11519,7 +11616,7 @@
    "page": "https://baxtel.com/data-center/brightray-my-02",
    "link": "unconfirmed",
    "site": "MYS-0015",
-   "note": "Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, and DCD wrote in 2025 that it is unclear whether DC-Science is involved",
+   "note": "Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, and DCD wrote in 2025 that it is unclear whether DC-Science is involved; BUUU's annual report of October 2026 states that the site is developed by Brightray Science Sdn. Bhd., in which Wang Bin has an indirect interest, and that the BrightRay trade marks are registered to Shanghai DC Science, a company in mainland China affiliated with Wang Bin, but the report does not say that Shanghai DC-Science owns the site",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "BrightRay: MY-02 BrightRay DC Large Construction Carrier-Neutral",
    "check": "found",
@@ -11537,7 +11634,7 @@
    "page": "https://baxtel.com/data-center/brightray-my-03",
    "link": "unconfirmed",
    "site": "MYS-0015",
-   "note": "Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, and DCD wrote in 2025 that it is unclear whether DC-Science is involved",
+   "note": "Bloomberg reported in 2024 that Shanghai DC-Science was raising a loan for the project, and DCD wrote in 2025 that it is unclear whether DC-Science is involved; BUUU's annual report of October 2026 states that the site is developed by Brightray Science Sdn. Bhd., in which Wang Bin has an indirect interest, and that the BrightRay trade marks are registered to Shanghai DC Science, a company in mainland China affiliated with Wang Bin, but the report does not say that Shanghai DC-Science owns the site",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "BrightRay: MY-03 BrightRay DC Small Planned Carrier-Neutral",
    "check": "found",
@@ -17779,49 +17876,51 @@
  "estimate": {
   "totals": {
    "low": {
-    "in_service_mw": 1416,
-    "pipeline_mw": 6163,
-    "total_mw": 7578,
+    "in_service_mw": 1446,
+    "pipeline_mw": 6303,
+    "total_mw": 7748,
     "mw_by_basis": {
-     "it": 6958,
-     "unspecified": 620
+     "it": 6998,
+     "power": 60,
+     "unspecified": 690
     }
    },
    "high": {
-    "in_service_mw": 1655,
-    "pipeline_mw": 6984,
-    "total_mw": 8638,
+    "in_service_mw": 1798,
+    "pipeline_mw": 7384,
+    "total_mw": 9182,
     "mw_by_basis": {
-     "it": 7064,
-     "power": 600,
-     "unspecified": 974
+     "it": 7118,
+     "power": 680,
+     "unspecified": 1384
     }
    },
    "sites": 88,
-   "sites_without_a_figure": 38,
+   "sites_without_a_figure": 31,
    "sites_with_supply_roles_only": 1,
    "without_origin_only": {
     "low": {
-     "in_service_mw": 452,
-     "pipeline_mw": 1657,
-     "total_mw": 2109,
+     "in_service_mw": 482,
+     "pipeline_mw": 1797,
+     "total_mw": 2279,
      "mw_by_basis": {
-      "it": 1489,
-      "unspecified": 620
+      "it": 1529,
+      "power": 60,
+      "unspecified": 690
      }
     },
     "high": {
-     "in_service_mw": 585,
-     "pipeline_mw": 2182,
-     "total_mw": 2767,
+     "in_service_mw": 728,
+     "pipeline_mw": 2582,
+     "total_mw": 3310,
      "mw_by_basis": {
-      "it": 1589,
-      "power": 300,
-      "unspecified": 878
+      "it": 1642,
+      "power": 380,
+      "unspecified": 1288
      }
     },
     "sites": 57,
-    "sites_without_a_figure": 34,
+    "sites_without_a_figure": 27,
     "firms_left_out": [
      "Bitdeer",
      "Bridge Data Centres",
@@ -18120,6 +18219,30 @@
     "note": ""
    },
    {
+    "component": "China Mobile International United Kingdom 1 Data Centre",
+    "firm": "China Mobile International",
+    "site_id": "GBR-0001",
+    "stage": "in_service",
+    "mw": "10",
+    "basis": "unspecified",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "High estimate only, because the status of the site is unclear"
+   },
+   {
+    "component": "Global Switch London South",
+    "firm": "Global Switch",
+    "site_id": "GBR-0004",
+    "stage": "pipeline",
+    "mw": "40",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
     "component": "NexAI MettaDC Cikarang data centre",
     "firm": "Megaspeed",
     "site_id": "IDN-0008",
@@ -18192,6 +18315,18 @@
     "note": "Epoch AI estimates 243 MW of IT power, against 110 MW stated"
    },
    {
+    "component": "zData Johor data centre",
+    "firm": "Alibaba Cloud; ByteDance; Tencent Cloud; zData",
+    "site_id": "MYS-0007",
+    "stage": "pipeline",
+    "mw": "300",
+    "basis": "unspecified",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "High estimate only, because the figure is not from a primary source"
+   },
+   {
     "component": "MSFusion Johor campus",
     "firm": "Megaspeed",
     "site_id": "MYS-0013",
@@ -18219,13 +18354,25 @@
     "component": "BrightRay DC campus, Sedenak",
     "firm": "Shanghai DC-Science",
     "site_id": "MYS-0015",
-    "stage": "pipeline",
-    "mw": "90",
+    "stage": "in_service",
+    "mw": "70",
     "basis": "unspecified",
-    "evidence": "secondary",
+    "evidence": "primary",
     "counted_in": "high",
     "source_table": "site_capacity",
     "note": "High estimate only, because the role of the Chinese firm is unconfirmed"
+   },
+   {
+    "component": "BrightRay DC campus, Sedenak",
+    "firm": "Shanghai DC-Science",
+    "site_id": "MYS-0015",
+    "stage": "pipeline",
+    "mw": "50",
+    "basis": "unspecified",
+    "evidence": "primary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "High estimate only, because the role of the Chinese firm is unconfirmed; Planned total of 120 MW less 70 MW in service"
    },
    {
     "component": "Racks Central Johor AI Campus",
@@ -18334,6 +18481,66 @@
     "counted_in": "both",
     "source_table": "site_capacity",
     "note": "Planned total of 150 MW less 90 MW in service"
+   },
+   {
+    "component": "Nscale Glomfjord data centre",
+    "firm": "ByteDance",
+    "site_id": "NOR-0002",
+    "stage": "in_service",
+    "mw": "30",
+    "basis": "power",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Nscale Glomfjord data centre",
+    "firm": "ByteDance",
+    "site_id": "NOR-0002",
+    "stage": "pipeline",
+    "mw": "30",
+    "basis": "power",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": "Planned total of 60 MW less 30 MW in service"
+   },
+   {
+    "component": "AirTrunk SGP2 campus",
+    "firm": "ByteDance",
+    "site_id": "SGP-0006",
+    "stage": "pipeline",
+    "mw": "70",
+    "basis": "unspecified",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Digital Realty SIN11 Digital Loyang 1",
+    "firm": "Alibaba Cloud; ByteDance",
+    "site_id": "SGP-0007",
+    "stage": "in_service",
+    "mw": "13",
+    "basis": "it",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "High estimate only, because the role of the Chinese firm is unconfirmed"
+   },
+   {
+    "component": "China Mobile International Chonburi data centre",
+    "firm": "China Mobile International",
+    "site_id": "THA-0008",
+    "stage": "in_service",
+    "mw": "20",
+    "basis": "power",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "High estimate only, because the figure is not from a primary source"
    },
    {
     "component": "Beijing Haoyang Rayong data centre",
