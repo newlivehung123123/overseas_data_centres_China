@@ -38,4 +38,4 @@ Green Mountain OSL-Hamar campus,ByteDance,NOR-0001,in_service,90,it,primary,both
 Green Mountain OSL-Hamar campus,ByteDance,NOR-0001,pipeline,60,it,primary,both,site_capacity,Planned total of 150 MW less 90 MW in service
 Beijing Haoyang Rayong data centre,Beijing Haoyang,THA-0009,pipeline,300,it,primary,both,sites,
 Stratus Technology Rayong data centre,zData,THA-0010,pipeline,203,it,primary,both,sites,
-Galaxy Data Center Rayong campus,Galaxy Data Center,THA-0011,pipeline,150,it,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
+Galaxy Data Center Rayong campus,Galaxy Data Center,THA-0011,pipeline,150,it,primary,both,sites,

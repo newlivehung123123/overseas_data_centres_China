@@ -4,7 +4,7 @@ This file lists the versions of the dataset and the changes between them. Each v
 
 ## Version 0.2.0, 14 November 2026
 
-Version 0.2.0 holds 836 graded rows, of which 200 rest on a primary source, 614 on a secondary source and 22 are unconfirmed, against 376 rows in version 0.1.0, of which 176 were primary, 185 secondary and 15 unconfirmed. Most of the 460 new rows belong to the censuses of five further markets.
+Version 0.2.0 holds 836 graded rows, of which 202 rest on a primary source, 612 on a secondary source and 22 are unconfirmed, against 376 rows in version 0.1.0, of which 176 were primary, 185 secondary and 15 unconfirmed. Most of the 460 new rows belong to the censuses of five further markets.
 
 ### Additions
 
@@ -14,7 +14,7 @@ Version 0.2.0 holds 836 graded rows, of which 200 rest on a primary source, 614 
 4. 4 new rules, which raise the count from 16 to 20: the draft US rule on renting Nvidia chips to Chinese AI firms through servers in Thailand and Singapore, as reported in August 2026, Singapore's advisory of April 2025, and two reported requirements of Nvidia for its cloud partners in Southeast Asia.
 5. 3 new reports of AI chips, all of Bitdeer, which raise the count from 10 to 13.
 6. A row on the share of revenue that GDS received from its largest customer in 2021, from the firm's filing at the Hong Kong Stock Exchange.
-7. Primary sources from Thailand's Board of Investment for 5 sites in Thailand from Green Mountain for the data centre at Hamar in Norway, and from Bitdeer's update filed at the SEC for its site in Johor, which raise the grade of those rows from secondary to primary.
+7. Primary sources from Thailand's Board of Investment for 6 sites in Thailand from Green Mountain for the data centre at Hamar in Norway, and from Bitdeer's update filed at the SEC for its site in Johor, which raise the grade of those rows from secondary to primary.
 8. `CHANGELOG.md` and the section on versions in `README.md`.
 
 ### Corrections
@@ -26,7 +26,7 @@ Version 0.2.0 holds 836 graded rows, of which 200 rest on a primary source, 614 
 
 ### Effect on the capacity estimate
 
-The low estimate of capacity in service rose from 1,323 MW in version 0.1.0 to 1,416 MW, and the high estimate rose from 1,652 MW to 1,654 MW. The capacity under construction or planned rose from between 4,183 MW and 5,041 MW to between 4,902 MW and 6,006 MW, mainly because of the data centres in Rayong that Thailand's Board of Investment approved, Bitdeer AI's site in Cyberjaya and the two data centres of NexAI in Indonesia. The public post of November 2026, "Where Chinese AI firms rent the chips they cannot buy", gives the figures of version 0.1.0.
+The low estimate of capacity in service rose from 1,323 MW in version 0.1.0 to 1,416 MW, and the high estimate rose from 1,652 MW to 1,654 MW. The capacity under construction or planned rose from between 4,183 MW and 5,041 MW to between 5,052 MW and 6,006 MW, mainly because of the data centres in Rayong that Thailand's Board of Investment approved, Bitdeer AI's site in Cyberjaya and the two data centres of NexAI in Indonesia. The public post of November 2026, "Where Chinese AI firms rent the chips they cannot buy", gives the figures of version 0.1.0.
 
 ## Version 0.1.0, 10 November 2026
 

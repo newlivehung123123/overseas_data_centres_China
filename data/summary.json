@@ -154,13 +154,13 @@
   },
   "evidence_by_file": {
     "sites": {
-      "primary": 44,
-      "secondary": 35,
+      "primary": 45,
+      "secondary": 34,
       "unconfirmed": 3
     },
     "site_roles": {
-      "primary": 61,
-      "secondary": 38,
+      "primary": 62,
+      "secondary": 37,
       "unconfirmed": 6
     },
     "cloud_regions": {
@@ -222,10 +222,10 @@
   "capacity_estimate_mw": {
     "low": {
       "in_service_mw": 1416,
-      "pipeline_mw": 4902,
-      "total_mw": 6317,
+      "pipeline_mw": 5052,
+      "total_mw": 6467,
       "mw_by_basis": {
-        "it": 5697,
+        "it": 5847,
         "unspecified": 620
       }
     },
