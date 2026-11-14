@@ -3,7 +3,7 @@
 
 The figures cover the sites and their levels, the roles of firms at the sites, the cloud regions, the
 capacity that operators report by market, the census of each market, the grades of evidence of each file and the low
-and high bounds of the capacity estimate. Only rows whose passage was found on the page are counted. The file of
+and high capacity estimates. Only rows whose passage was found on the page are counted. The file of
 government data centres from AidData has its own summary in data/aiddata_summary.json.
 
     python scripts/summarise.py

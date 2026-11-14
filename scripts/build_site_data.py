@@ -3,8 +3,8 @@
 
 The dashboard shows the sites with the roles of firms at each site and the cloud regions, each at
 the point of its city in config/places.csv, and the rules recorded for each country. Each site carries its reports of AI chips,
-its statements of capacity and the estimates of Epoch AI where Epoch's database holds the site. Reports of AI chips
-whose sources name no site, and the statements of how much operators depend on Chinese customers, are listed apart, and
+its figures of capacity and the estimates of Epoch AI where Epoch's database holds the site. Reports of AI chips
+whose sources name no site, and the figures of how much operators depend on Chinese customers, are listed apart, and
 every row carries the grade of its evidence. The capacity estimate comes from data/capacity_estimate.csv and
 data/capacity_estimate.json, which scripts/estimate_capacity.py writes. The government data centres from AidData are left out
 of the dashboard until the article pitched on them has been answered, as CONTRIBUTING.md asks.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Estimate the capacity of the sites outside mainland China in which a Chinese firm holds a role, with a low and a high bound.
+"""Estimate the capacity of the sites outside mainland China in which a Chinese firm holds a role, as a low and a high estimate.
 
 The estimate counts each data centre once. Where a firm reports its capacity by market or as one total for the firm,
 as DayOne and Global Switch do in data/operator_markets.csv, the estimate takes the firm's own figures and leaves out
@@ -7,11 +7,11 @@ the figures of the sites of that firm for each stage that the firm reports. Glob
 service, so the planned capacity of its sites is still taken from the sites. For every other site, the estimate takes the largest figure that the sources
 give for each stage: capacity in service, and capacity under construction or planned.
 
-The low bound counts only figures stated by the firm itself or by a public authority (evidence "primary"), at sites
-where the role of a Chinese firm is not graded "unconfirmed" and the status of the site is known. The high bound
+The low estimate counts only figures stated by the firm itself or by a public authority (evidence "primary"), at sites
+where the role of a Chinese firm is not graded "unconfirmed" and the status of the site is known. The high estimate
 counts every figure, and uses the estimate of Epoch AI where Epoch's figure of IT power in service is larger than the
 figure that the sources state. Figures of IT capacity, of power and of an unspecified basis are added as the sources
-state them, so each bound can mix the three bases, and the output gives the megawatts of each basis. The basis of the
+state them, so each estimate can mix the three bases, and the output gives the megawatts of each basis. The basis of the
 figures that a firm reports comes from the firm's own definitions in data/capacity_definitions.csv. A builder or a
 supplier of equipment does not hold or use the capacity of a site, so the estimate leaves out a site at which Chinese
 firms hold only those two roles.
@@ -79,7 +79,7 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
     covered = {sid for sid, rs in roles_at.items() if any(r["firm"] in covered_firms for r in rs)}
     covered_pipeline = {sid for sid, rs in roles_at.items() if any(r["firm"] in reports_pipeline for r in rs)}
 
-    # A covered site adds to the high bound only where Epoch AI estimates more IT power in service than the firm reports.
+    # A covered site adds to the high estimate only where Epoch AI estimates more IT power in service than the firm reports.
     by_market = defaultdict(float)
     for e in epoch:
         s = site.get(e["site_id"])
@@ -128,7 +128,7 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
         in_high = max([f[1] for f in in_service] + [epoch_mw.get(sid, 0.0) if sid not in covered else 0.0], default=0.0)
 
         def remainder(f, counted):
-            """Megawatts of a figure that a bound counts: all of it, or a planned total less the capacity in service."""
+            """Megawatts of a figure that an estimate counts: all of it, or a planned total less the capacity in service."""
             return max(0.0, f[1] - counted) if f[5] else f[1]
 
         for stage in ("in_service", "pipeline"):
@@ -156,12 +156,12 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
                 if low_mw:
                     rows.append(row(pick, low_mw, "both" if same else "low", ""))
                 if not same and high_mw:
-                    rows.append(row(best, high_mw, "high", "Larger figure from a source below the low bound" if pick != best
-                                    else "The high bound counts more capacity in service at the site"))
+                    rows.append(row(best, high_mw, "high", "Larger figure from a source below the grade that the low estimate requires" if pick != best
+                                    else "The high estimate counts more capacity in service at the site"))
             elif high_mw:
                 reason = "the role of the Chinese firm is unconfirmed" if not confirmed else (
                     "the status of the site is unclear" if not known else "the figure is not from a primary source")
-                rows.append(row(best, high_mw, "high", f"High bound only, because {reason}"))
+                rows.append(row(best, high_mw, "high", f"High estimate only, because {reason}"))
         if sid in epoch_mw and sid not in covered:
             stated = max([f[1] for f in figures[sid] if f[0] == "in_service"], default=0.0)
             if epoch_mw[sid] > stated:
@@ -173,7 +173,7 @@ def components(sites, roles, markets, capacity, epoch, definitions=()) -> list[d
 
 
 def totals(rows: list[dict], sites: list[dict], with_figure: set[str]) -> dict:
-    """The low bound adds the rows counted in both bounds and in the low bound alone, the high bound those in both and in the high bound alone."""
+    """The low estimate adds the rows counted in both estimates and in the low estimate alone, the high estimate those in both and in the high estimate alone."""
     out = {}
     for bound in ("low", "high"):
         stages, basis = defaultdict(float), defaultdict(float)

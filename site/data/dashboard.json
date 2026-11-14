@@ -1,5 +1,5 @@
 {
- "built": "2026-11-13",
+ "built": "2026-11-14",
  "records": [
   {
    "layer": "site",
@@ -11473,7 +11473,7 @@
     "evidence": "secondary",
     "counted_in": "high",
     "source_table": "sites",
-    "note": "High bound only, because the figure is not from a primary source"
+    "note": "High estimate only, because the figure is not from a primary source"
    },
    {
     "component": "Global Switch Madrid 2",
@@ -11521,7 +11521,7 @@
     "evidence": "secondary",
     "counted_in": "high",
     "source_table": "site_capacity",
-    "note": "High bound only, because the figure is not from a primary source"
+    "note": "High estimate only, because the figure is not from a primary source"
    },
    {
     "component": "GDS data centres at YTL Green Data Center Park",
@@ -11533,7 +11533,7 @@
     "evidence": "primary",
     "counted_in": "high",
     "source_table": "sites",
-    "note": "High bound only, because the status of the site is unclear"
+    "note": "High estimate only, because the status of the site is unclear"
    },
    {
     "component": "BrightRay DC campus, Sedenak",
@@ -11545,7 +11545,7 @@
     "evidence": "secondary",
     "counted_in": "high",
     "source_table": "site_capacity",
-    "note": "High bound only, because the role of the Chinese firm is unconfirmed"
+    "note": "High estimate only, because the role of the Chinese firm is unconfirmed"
    },
    {
     "component": "Racks Central Johor AI Campus",
@@ -11569,7 +11569,7 @@
     "evidence": "secondary",
     "counted_in": "high",
     "source_table": "sites",
-    "note": "High bound only, because the figure is not from a primary source"
+    "note": "High estimate only, because the figure is not from a primary source"
    },
    {
     "component": "Green Mountain OSL-Hamar campus",
@@ -11629,7 +11629,7 @@
     "evidence": "secondary",
     "counted_in": "high",
     "source_table": "sites",
-    "note": "High bound only, because the figure is not from a primary source"
+    "note": "High estimate only, because the figure is not from a primary source"
    }
   ]
  }

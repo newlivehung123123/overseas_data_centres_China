@@ -11,7 +11,7 @@
 
   var EVIDENCE = { primary: "primary source", secondary: "secondary source", unconfirmed: "unconfirmed" };
   var STAGES = { in_service: "In service", pipeline: "Under construction or planned" };
-  var BOUNDS = { both: "Both bounds", low: "Low bound only", high: "High bound only" };
+  var BOUNDS = { both: "Both estimates", low: "Low estimate only", high: "High estimate only" };
   var BASIS = { it: "IT capacity", power: "Power", unspecified: "Basis not stated" };
 
   var state = { records: [], rules: [], map: null, layer: null };
@@ -188,8 +188,8 @@
       ["Rules recorded", (data.rules || []).length]
     ].map(function (t) { return [t[0], number(t[1])]; });
     if (data.estimate) {
-      tiles.push(["MW in service, low to high bound", range(data.estimate.totals, "in_service_mw")]);
-      tiles.push(["MW under construction or planned, low to high bound", range(data.estimate.totals, "pipeline_mw")]);
+      tiles.push(["MW in service, low to high estimate", range(data.estimate.totals, "in_service_mw")]);
+      tiles.push(["MW under construction or planned, low to high estimate", range(data.estimate.totals, "pipeline_mw")]);
     }
     el("summary").innerHTML = tiles.map(function (t) {
       return "<div class='tile'><span class='value'>" + escape(t[1]) + "</span><span class='label'>" + escape(t[0]) + "</span></div>";
@@ -199,10 +199,10 @@
   function drawEstimate(estimate) {
     if (!estimate) return;
     var t = estimate.totals;
-    el("estimate-summary").textContent = "The low bound is " + number(t.low.in_service_mw) + " MW in service and " +
-      number(t.low.pipeline_mw) + " MW under construction or planned, and the high bound is " + number(t.high.in_service_mw) +
+    el("estimate-summary").textContent = "The low estimate is " + number(t.low.in_service_mw) + " MW in service and " +
+      number(t.low.pipeline_mw) + " MW under construction or planned, and the high estimate is " + number(t.high.in_service_mw) +
       " MW in service and " + number(t.high.pipeline_mw) + " MW under construction or planned. " + t.sites_without_a_figure +
-      " of the " + t.sites + " sites have no figure of capacity and are left out of both bounds.";
+      " of the " + t.sites + " sites have no figure of capacity and are left out of both estimates.";
     el("estimate").innerHTML = estimate.rows.filter(function (x) { return Number(x.mw) > 0; }).map(function (x) {
       return "<tr><td>" + escape(x.component) + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td>" +
         "<td>" + (STAGES[x.stage] || escape(x.stage)) + "</td><td>" + escape(number(x.mw)) + " MW</td><td>" + (BASIS[x.basis] || escape(x.basis)) + "</td>" +
@@ -241,8 +241,9 @@
     var operators = unique(list.map(function (x) { return x.operator; })).length;
     var held = list.length - (counts.none_found || 0) - (counts.unconfirmed || 0);
     return "<li><strong>" + escape(market) + ".</strong> Baxtel's public list names " + list.length + " data-centre facilities run by " + operators +
-      " operators. A role of a Chinese firm or a Chinese state lender's fund is recorded at " + held + " of them, a Chinese link is reported but not confirmed at " +
-      (counts.unconfirmed || 0) + ", and none was found at " + (counts.none_found || 0) + ".</li>";
+      " operators. A role of a Chinese firm or a Chinese state lender's fund is recorded at " + held + " of them" +
+      (counts.unconfirmed ? ", a Chinese link is reported but not confirmed at " + counts.unconfirmed : "") +
+      ", and no source found names a Chinese link at " + (counts.none_found || 0) + ".</li>";
   }
 
   function drawCensusRows(list) {
@@ -258,7 +259,7 @@
   }
 
   function drawCensus(list) {
-    var markets = unique(list.map(function (x) { return x.market; }));
+    var markets = unique(list.map(function (x) { return x.market; })).sort();
     el("census-summary").innerHTML = markets.map(function (m) {
       return censusSummary(m, list.filter(function (x) { return x.market === m; }));
     }).join("");
