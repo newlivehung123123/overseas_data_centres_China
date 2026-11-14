@@ -189,7 +189,7 @@ The script `scripts/summarise.py` counts the checked rows of the files of sites,
 
 ## Versions
 
-`CHANGELOG.md` lists the versions of the dataset and what each changed. Version 0.1.0, of 10 November 2026, is the dataset that the public post describes, at commit `80c3d88`. Version 0.2.0, of 14 November 2026, adds the censuses of Batam, Greater Bangkok, Singapore, Greater Kuala Lumpur and Jakarta, 22 sites, 4 rules and 3 reports of AI chips, applies one standard to decide which firms count as Chinese, which adds Bridge Data Centres, and corrects the capacity estimate and four rows of the census of Johor. The low estimate of capacity in service rose from 1,323 MW to 1,416 MW between the two versions, and the high estimate rose from 1,652 MW to 1,654 MW.
+`CHANGELOG.md` lists the versions of the dataset and what each changed. Version 0.1.0, of 10 November 2026, is the dataset that the public post describes, at commit `80c3d88`. Version 0.2.0, of 14 November 2026, at commit `8d3204a`, adds the censuses of Batam, Greater Bangkok, Singapore, Greater Kuala Lumpur and Jakarta, 22 sites, 4 rules and 3 reports of AI chips, applies one standard to decide which firms count as Chinese, which adds Bridge Data Centres, and corrects the capacity estimate and four rows of the census of Johor. The low estimate of capacity in service rose from 1,323 MW to 1,416 MW between the two versions, and the high estimate rose from 1,652 MW to 1,654 MW. A release on GitHub can be created by hand from each commit, because the repository records no tags.
 
 ## Dashboard
 

@@ -4,7 +4,7 @@ This file lists the versions of the dataset and the changes between them. Each v
 
 ## Version 0.2.0, 14 November 2026
 
-Version 0.2.0 holds 879 graded rows, of which 208 rest on a primary source, 649 on a secondary source and 22 are unconfirmed, against 376 rows in version 0.1.0, of which 176 were primary, 185 secondary and 15 unconfirmed. Most of the 503 new rows belong to the censuses of five further markets.
+Version 0.2.0 is commit `8d3204a` on the branch `main` and holds 879 graded rows, of which 208 rest on a primary source, 649 on a secondary source and 22 are unconfirmed, against 376 rows in version 0.1.0, of which 176 were primary, 185 secondary and 15 unconfirmed. Most of the 503 new rows belong to the censuses of five further markets.
 
 ### Additions
 
