@@ -17,6 +17,7 @@ The project has two uses. The first is a public, open dataset with a dashboard f
 7. Every row carries a grade of evidence, primary, secondary or unconfirmed, as the codebook defines. The low capacity estimate counts only primary figures, so a grade is raised only when a source supports the higher grade.
 8. A census codes a facility `none_found` only after `scripts/scan_census_pages.py` has searched the facility's page on Baxtel and the web searches for the market have been logged in `config/census_searches.csv`, with the date, the query and the result of each search. A term that the scan finds is a lead for a person to read, and the person codes the facility from the source that the lead points to.
 9. Baxtel shows an invented placeholder name for a facility whose name it withholds, and the placeholder changes each time the page loads. The census leaves the name of such a facility empty, and the passage starts at the words "Interested in this information? Contact us".
+10. A firm is added to `config/firms.csv`, with the grounds on which it counts as Chinese and a passage that supports them, before any role of the firm is added. The source check refuses a role whose firm or origin has no row in the file.
 
 ## Writing rules
 

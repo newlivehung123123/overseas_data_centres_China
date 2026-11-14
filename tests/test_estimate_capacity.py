@@ -82,3 +82,17 @@ class EstimateTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class OriginOnlyTest(unittest.TestCase):
+    def test_only_firms_with_origin_as_their_sole_ground_are_left_out(self):
+        firms = [{"firm": "DayOne", "grounds": "origin"}, {"firm": "Global Switch", "grounds": "control"},
+                 {"firm": "Hoyinn Technologies", "grounds": "headquarters; control"}, {"firm": "X", "grounds": "origin; control"}]
+        self.assertEqual(e.origin_only(firms), {"DayOne"})
+
+    def test_leaving_out_a_firm_drops_its_reported_totals_and_its_sites(self):
+        kept_roles = [r for r in ROLES if r["firm"] != "DayOne"]
+        kept_markets = [m for m in MARKETS if m["firm"] != "DayOne"]
+        rows, summary = e.summarise_rows(SITES, kept_roles, kept_markets, [], [], [])
+        self.assertFalse(any(r["firm"] == "DayOne" for r in rows))
+        self.assertNotIn("MYS-0003", {r["site_id"] for r in rows})

@@ -200,14 +200,31 @@ def with_a_figure(sites, roles, markets, capacity) -> set[str]:
     return out
 
 
+def origin_only(firms: list[dict]) -> set[str]:
+    """Firms that count as Chinese on their origin alone, such as DayOne, which the second estimate leaves out."""
+    return {f["firm"] for f in firms if {g.strip() for g in f["grounds"].split(";")} == {"origin"}}
+
+
+def summarise_rows(sites, roles, markets, capacity, epoch, definitions) -> tuple[list[dict], dict]:
+    rows = components(sites, roles, markets, capacity, epoch, definitions)
+    held = {r["site_id"] for r in roles if r["role"] not in SUPPLY_ROLES}
+    summary = totals(rows, [s for s in sites if s["site_id"] in held], with_a_figure(sites, roles, markets, capacity))
+    return rows, summary
+
+
 def estimate() -> tuple[list[dict], dict]:
     sites, roles = read("data/sites.csv"), read("data/site_roles.csv")
     markets, capacity = read("data/operator_markets.csv"), read("data/site_capacity.csv")
     epoch, definitions = read("data/epoch_estimates.csv"), read("data/capacity_definitions.csv")
-    rows = components(sites, roles, markets, capacity, epoch, definitions)
-    held = {r["site_id"] for r in roles if r["role"] not in SUPPLY_ROLES}
-    summary = totals(rows, [s for s in sites if s["site_id"] in held], with_a_figure(sites, roles, markets, capacity))
+    rows, summary = summarise_rows(sites, roles, markets, capacity, epoch, definitions)
     summary["sites_with_supply_roles_only"] = len(sites) - summary["sites"]
+    # The second estimate leaves out the roles and the reported totals of firms that count on their origin alone.
+    left_out = origin_only(read("data/firms.csv")) if (ROOT / "data" / "firms.csv").exists() else set()
+    kept_roles = [r for r in roles if r["firm"] not in left_out]
+    kept_markets = [m for m in markets if m["firm"] not in left_out]
+    _, without = summarise_rows(sites, kept_roles, kept_markets, capacity, epoch, definitions)
+    without["firms_left_out"] = sorted(left_out)
+    summary["without_origin_only"] = without
     return rows, summary
 
 
@@ -222,6 +239,9 @@ def main() -> None:
         s = summary[bound]
         print(f"{bound}: {s['in_service_mw']} MW in service, {s['pipeline_mw']} MW under construction or planned, "
               f"{s['total_mw']} MW in all; by basis {s['mw_by_basis']}")
+    w = summary["without_origin_only"]
+    print(f"without {', '.join(w['firms_left_out'])}: low {w['low']['in_service_mw']} MW in service and {w['low']['pipeline_mw']} MW "
+          f"under construction or planned; high {w['high']['in_service_mw']} MW and {w['high']['pipeline_mw']} MW")
     print(f"{summary['sites_without_a_figure']} of {summary['sites']} sites have no figure of capacity; "
           f"{summary['sites_with_supply_roles_only']} further sites, where Chinese firms only build or supply equipment, are left out")
 

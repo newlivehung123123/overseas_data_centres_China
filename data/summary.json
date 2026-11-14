@@ -1,15 +1,15 @@
 {
-  "sites": 82,
+  "sites": 89,
   "site_countries": 17,
   "sites_by_status": {
-    "operational": 33,
-    "under_construction": 9,
-    "planned": 31,
+    "operational": 38,
+    "under_construction": 10,
+    "planned": 32,
     "unclear": 9
   },
   "sites_by_country": {
-    "Malaysia": 20,
-    "Thailand": 11,
+    "Malaysia": 25,
+    "Thailand": 13,
     "Indonesia": 9,
     "Singapore": 8,
     "Germany": 5,
@@ -26,10 +26,10 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 105,
+  "roles": 114,
   "roles_by_role": {
-    "operator": 45,
-    "owner": 31,
+    "operator": 52,
+    "owner": 33,
     "tenant": 18,
     "user": 9,
     "financier": 1,
@@ -39,6 +39,7 @@
     "DayOne": 18,
     "Global Switch": 17,
     "ByteDance": 15,
+    "Bridge Data Centres": 9,
     "China Mobile International": 5,
     "Alibaba Cloud": 5,
     "China Unicom Global": 4,
@@ -59,7 +60,7 @@
     "Galaxy Data Center": 1
   },
   "sites_by_level": {
-    "A": 52,
+    "A": 59,
     "B": 30
   },
   "sites_with_capacity": 16,
@@ -96,8 +97,8 @@
       "facilities": 88,
       "operators": 39,
       "by_chinese_link": {
-        "none_found": 82,
-        "operator": 6
+        "none_found": 80,
+        "operator": 8
       }
     },
     "Batam": {
@@ -122,9 +123,8 @@
       "facilities": 84,
       "operators": 34,
       "by_chinese_link": {
-        "none_found": 55,
-        "operator": 17,
-        "tenant": 4,
+        "none_found": 50,
+        "operator": 26,
         "unconfirmed": 4,
         "financier": 3,
         "owner": 1
@@ -134,7 +134,8 @@
       "facilities": 90,
       "operators": 38,
       "by_chinese_link": {
-        "none_found": 85,
+        "none_found": 73,
+        "operator": 12,
         "tenant": 3,
         "unconfirmed": 1,
         "owner": 1
@@ -155,12 +156,12 @@
   "evidence_by_file": {
     "sites": {
       "primary": 45,
-      "secondary": 34,
+      "secondary": 41,
       "unconfirmed": 3
     },
     "site_roles": {
-      "primary": 62,
-      "secondary": 37,
+      "primary": 63,
+      "secondary": 45,
       "unconfirmed": 6
     },
     "cloud_regions": {
@@ -172,6 +173,10 @@
     },
     "capacity_definitions": {
       "primary": 4
+    },
+    "firms": {
+      "secondary": 22,
+      "primary": 5
     },
     "firm_links": {
       "primary": 2,
@@ -239,8 +244,44 @@
         "unspecified": 974
       }
     },
-    "sites": 81,
-    "sites_without_a_figure": 36,
-    "sites_with_supply_roles_only": 1
+    "sites": 88,
+    "sites_without_a_figure": 43,
+    "sites_with_supply_roles_only": 1,
+    "without_origin_only": {
+      "low": {
+        "in_service_mw": 452,
+        "pipeline_mw": 1259,
+        "total_mw": 1711,
+        "mw_by_basis": {
+          "it": 1091,
+          "unspecified": 620
+        }
+      },
+      "high": {
+        "in_service_mw": 585,
+        "pipeline_mw": 1917,
+        "total_mw": 2502,
+        "mw_by_basis": {
+          "it": 1324,
+          "power": 300,
+          "unspecified": 878
+        }
+      },
+      "sites": 57,
+      "sites_without_a_figure": 34,
+      "firms_left_out": [
+        "Bitdeer",
+        "Bridge Data Centres",
+        "DayOne",
+        "Megaspeed"
+      ]
+    }
+  },
+  "firms_by_ground": {
+    "control": 6,
+    "headquarters": 15,
+    "origin": 4,
+    "state lender": 1,
+    "state lender fund": 1
   }
 }

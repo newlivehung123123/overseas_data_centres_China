@@ -28,6 +28,7 @@ Dublin,Ireland,53.3493795,-6.2605593,relation,1109531,"Dublin, County Dublin, Le
 Osaka,Japan,34.6937569,135.5014539,relation,358674,"大阪市, 大阪府, 日本",https://nominatim.openstreetmap.org/search?q=Osaka%2C+Japan&format=json&limit=1
 Tokyo,Japan,35.6768601,139.7638947,relation,1543125,"東京都, 日本",https://nominatim.openstreetmap.org/search?q=Tokyo%2C+Japan&format=json&limit=1
 ,Malaysia,4.5693754,102.2656823,relation,2108121,Malaysia,https://nominatim.openstreetmap.org/search?q=Malaysia&format=json&limit=1
+"Banting, Selangor",Malaysia,2.8027574,101.4956767,way,825638418,"Banting, Kuala Langat, Selangor, Malaysia",https://nominatim.openstreetmap.org/search?q=Banting%2C+Selangor%2C+Malaysia&format=json&limit=1
 "Cyberjaya, Selangor",Malaysia,2.9338908,101.6455587,relation,10043206,"Cyberjaya, Sepang, Selangor, Malaysia",https://nominatim.openstreetmap.org/search?q=Cyberjaya%2C+Selangor%2C+Malaysia&format=json&limit=1
 "Dengkil, Selangor",Malaysia,2.8680243,101.6756275,node,364871498,"Dengkil, Sepang, Selangor, 43800, Malaysia",https://nominatim.openstreetmap.org/search?q=Dengkil%2C+Selangor%2C+Malaysia&format=json&limit=1
 "Iskandar Puteri, Johor",Malaysia,1.4522711,103.6144729,relation,12337490,"Iskandar Puteri, Johor Bahru, Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Iskandar+Puteri%2C+Johor%2C+Malaysia&format=json&limit=1
@@ -39,6 +40,7 @@ Kuala Lumpur,Malaysia,3.1516964,101.6942371,relation,2939672,"Kuala Lumpur, Mala
 "Kulai, Johor",Malaysia,1.6666667,103.6000000,relation,12306919,"Kulai, Johor, Malaysia",https://nominatim.openstreetmap.org/search?q=Kulai%2C+Johor%2C+Malaysia&format=json&limit=1
 "Pasir Gudang, Johor",Malaysia,1.4953437,103.9207048,node,5317908677,"Pasir Gudang, Johor Bahru, Johor, 81700, Malaysia",https://nominatim.openstreetmap.org/search?q=Pasir+Gudang%2C+Johor%2C+Malaysia&format=json&limit=1
 "Sedenak, Johor",Malaysia,1.7126551,103.5257302,node,4486473991,"Sedenak, Kulai, Johor, 81030, Malaysia",https://nominatim.openstreetmap.org/search?q=Sedenak%2C+Johor%2C+Malaysia&format=json&limit=1
+"Ulu Tiram, Johor",Malaysia,1.5993646,103.8208770,node,254073121,"Ulu Tiram, Johor Bahru, Johor, 81800, Malaysia",https://nominatim.openstreetmap.org/search?q=Ulu+Tiram%2C+Johor%2C+Malaysia&format=json&limit=1
 Mexico City,Mexico,19.3207722,-99.1514678,relation,1376330,"Ciudad de México, México",https://nominatim.openstreetmap.org/search?q=Mexico+City%2C+Mexico&format=json&limit=1
 Queretaro,Mexico,20.8052225,-99.8837376,relation,2340903,"Querétaro, México",https://nominatim.openstreetmap.org/search?q=Queretaro%2C+Mexico&format=json&limit=1
 ,Netherlands,52.2434979,5.6343227,relation,47796,Nederland,https://nominatim.openstreetmap.org/search?q=Netherlands&format=json&limit=1

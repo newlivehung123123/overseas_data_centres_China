@@ -43,7 +43,8 @@ OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "oper
                 (ROOT / "config" / "site_capacity.csv", ROOT / "data" / "site_capacity.csv"),
                 (ROOT / "config" / "epoch_links.csv", ROOT / "data" / "epoch_links.csv"),
                 (ROOT / "config" / "operator_customers.csv", ROOT / "data" / "operator_customers.csv"),
-                (ROOT / "config" / "capacity_definitions.csv", ROOT / "data" / "capacity_definitions.csv")]
+                (ROOT / "config" / "capacity_definitions.csv", ROOT / "data" / "capacity_definitions.csv"),
+                (ROOT / "config" / "firms.csv", ROOT / "data" / "firms.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found
@@ -52,6 +53,7 @@ ROLES = {"owner", "operator", "tenant", "user", "builder", "equipment supplier",
 STATUSES = {"operational", "under_construction", "planned", "unclear"}
 EVIDENCE = {"primary", "secondary", "unconfirmed"}
 CENSUS_LINKS = {"operator", "owner", "tenant", "financier", "unconfirmed", "none_found"}
+GROUNDS = {"headquarters", "control", "origin", "state lender", "state lender fund"}
 
 
 def census_tables() -> list[tuple[Path, Path]]:
@@ -142,6 +144,17 @@ def validate_evidence(name: str, rows: list[dict]) -> None:
         raise ValueError("; ".join(problems))
 
 
+def validate_firms(firms: list[dict], roles: list[dict]) -> None:
+    """Every firm with a role has a row in firms.csv, and every row gives grounds from the codebook's list."""
+    problems = [f"firms row {i + 2}: unknown ground {g!r}" for i, f in enumerate(firms)
+                for g in (x.strip() for x in f.get("grounds", "").split(";")) if g not in GROUNDS]
+    listed = {f["firm"] for f in firms}
+    problems += [f"site_roles: {firm!r} has no row in firms.csv" for firm in sorted({r["firm"] for r in roles} - listed)]
+    problems += [f"site_roles: origin {o!r} has no row in firms.csv" for o in sorted({r["firm_origin"] for r in roles if r.get("firm_origin")} - listed)]
+    if problems:
+        raise ValueError("; ".join(problems))
+
+
 def validate_census(name: str, rows: list[dict]) -> None:
     """Every facility of a census names its market and carries one of the codes of the Chinese link."""
     problems = [f"{name} row {i + 2}: unknown chinese_link {r.get('chinese_link')!r}"
@@ -177,6 +190,8 @@ def main() -> None:
         validate_evidence(name, rows)
         if name.endswith("_census"):
             validate_census(name, rows)
+        if name == "firms":
+            validate_firms(rows, roles)
     for name, rows, path in tables:
         checked = check(rows, args.refetch)
         write(path, checked)

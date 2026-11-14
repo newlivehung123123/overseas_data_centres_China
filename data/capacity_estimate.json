@@ -18,7 +18,36 @@
       "unspecified": 974
     }
   },
-  "sites": 81,
-  "sites_without_a_figure": 36,
-  "sites_with_supply_roles_only": 1
+  "sites": 88,
+  "sites_without_a_figure": 43,
+  "sites_with_supply_roles_only": 1,
+  "without_origin_only": {
+    "low": {
+      "in_service_mw": 452,
+      "pipeline_mw": 1259,
+      "total_mw": 1711,
+      "mw_by_basis": {
+        "it": 1091,
+        "unspecified": 620
+      }
+    },
+    "high": {
+      "in_service_mw": 585,
+      "pipeline_mw": 1917,
+      "total_mw": 2502,
+      "mw_by_basis": {
+        "it": 1324,
+        "power": 300,
+        "unspecified": 878
+      }
+    },
+    "sites": 57,
+    "sites_without_a_figure": 34,
+    "firms_left_out": [
+      "Bitdeer",
+      "Bridge Data Centres",
+      "DayOne",
+      "Megaspeed"
+    ]
+  }
 }

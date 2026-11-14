@@ -23,7 +23,7 @@ from estimate_capacity import estimate  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "summary.json"
-GRADED = ["sites", "site_roles", "cloud_regions", "operator_markets", "capacity_definitions", "firm_links",
+GRADED = ["sites", "site_roles", "cloud_regions", "operator_markets", "capacity_definitions", "firms", "firm_links",
           "operator_customers", "ai_compute", "site_capacity", "rules", "epoch_links"]
 
 
@@ -39,6 +39,14 @@ def censuses() -> list[str]:
 
 def number(value: str) -> float:
     return float(value) if value not in ("", None) else 0.0
+
+
+def firms_by_ground() -> dict:
+    """Number of firms in data/firms.csv on each ground, a firm with two grounds counting under both."""
+    out = Counter()
+    for f in read("data/firms.csv"):
+        out.update(g.strip() for g in f["grounds"].split(";"))
+    return dict(sorted(out.items()))
 
 
 def summarise() -> dict:
@@ -82,6 +90,7 @@ def summarise() -> dict:
         "evidence_by_file": {name: dict(Counter(r["evidence"] for r in read(f"data/{name}.csv")))
                              for name in GRADED + censuses()},
         "capacity_estimate_mw": estimate()[1],
+        "firms_by_ground": firms_by_ground(),
     }
 
 

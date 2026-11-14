@@ -202,7 +202,12 @@
     el("estimate-summary").textContent = "The low estimate is " + number(t.low.in_service_mw) + " MW in service and " +
       number(t.low.pipeline_mw) + " MW under construction or planned, and the high estimate is " + number(t.high.in_service_mw) +
       " MW in service and " + number(t.high.pipeline_mw) + " MW under construction or planned. " + t.sites_without_a_figure +
-      " of the " + t.sites + " sites have no figure of capacity and are left out of both estimates.";
+      " of the " + t.sites + " sites have no figure of capacity and are left out of both estimates." +
+      (t.without_origin_only ? " Without the firms that count as Chinese on their origin alone (" + t.without_origin_only.firms_left_out.join(", ") +
+        "), the low estimate is " + number(t.without_origin_only.low.in_service_mw) + " MW in service and " +
+        number(t.without_origin_only.low.pipeline_mw) + " MW under construction or planned, and the high estimate is " +
+        number(t.without_origin_only.high.in_service_mw) + " MW in service and " + number(t.without_origin_only.high.pipeline_mw) +
+        " MW under construction or planned." : "");
     el("estimate").innerHTML = estimate.rows.filter(function (x) { return Number(x.mw) > 0; }).map(function (x) {
       return "<tr><td>" + escape(x.component) + (x.note ? "<span class='quote'>" + escape(x.note) + "</span>" : "") + "</td>" +
         "<td>" + (STAGES[x.stage] || escape(x.stage)) + "</td><td>" + escape(number(x.mw)) + " MW</td><td>" + (BASIS[x.basis] || escape(x.basis)) + "</td>" +
