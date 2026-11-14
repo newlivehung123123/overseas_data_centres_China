@@ -54,7 +54,7 @@ Power density and cooling are not recorded for any site yet. The low and the hig
 
 ## Evidence
 
-Every row of the files written by hand in `config`, and every row of `cloud_regions.csv`, carries a grade of the evidence for the row in the variable `evidence`, with one of the three values in Table 4. The grade records who states the value in the source that the row cites, while `check_status` records only whether the passage is on the page. A news report of a filing is therefore graded secondary, because the row cites the report and not the filing. A row of the census of Johor carries a second grade, `link_evidence`, for the page that supports the Chinese link.
+Every row of the files written by hand in `config`, and every row of `cloud_regions.csv`, carries a grade of the evidence for the row in the variable `evidence`, with one of the three values in Table 4. The grade records who states the value in the source that the row cites, while `check_status` records only whether the passage is on the page. A news report of a filing is therefore graded secondary, because the row cites the report and not the filing. A row of a census carries a second grade, `link_evidence`, for the page that supports the Chinese link.
 
 **Table 4. Grades of evidence**
 
@@ -255,15 +255,15 @@ Epoch AI publishes a database of large AI data centres, "AI data centers", that 
 | note | text | Limits of the source |
 | evidence, source_url, source_quote, check_status, share_found, retrieved | | As in Table 6 |
 
-### data/johor_census.csv, data/batam_census.csv, data/bangkok_census.csv and data/singapore_census.csv
+### data/johor_census.csv, data/batam_census.csv, data/bangkok_census.csv, data/singapore_census.csv and data/kuala_lumpur_census.csv
 
-Each census file has one row for each data-centre facility that Baxtel's public list named in one market: Johor on 22 October 2026, and Batam, Greater Bangkok and Singapore on 12 and 13 November 2026. Baxtel's market of Bangkok includes Chon Buri, Rayong and Chachoengsao, and the census calls the market Greater Bangkok. The list is the frame of the census, and each row copies the operator and the status as the list gives them, with the passage of the list. A person coded the Chinese link of each facility from the sites of `sites.csv`, from the page of the facility on Baxtel and from web searches, and a row with a link carries a second passage from the page that supports the link, unless the operator on the list is itself a listed firm. The files are written in `config` and both passages are checked by `scripts/check_sources.py`, which also rejects a row without a market or with an unknown code of the Chinese link.
+Each census file has one row for each data-centre facility that Baxtel's public list named in one market: Johor on 22 October 2026, Batam, Greater Bangkok and Singapore on 12 and 13 November 2026, and Greater Kuala Lumpur on 14 November 2026. Baxtel's market of Bangkok includes Chon Buri, Rayong and Chachoengsao, and the census calls the market Greater Bangkok. Baxtel's market of Kuala Lumpur includes Cyberjaya and parts of Selangor and Negeri Sembilan, and the census calls the market Greater Kuala Lumpur. The list is the frame of the census, and each row copies the operator and the status as the list gives them, with the passage of the list. A person coded the Chinese link of each facility from the sites of `sites.csv`, from the page of the facility on Baxtel and from web searches, and a row with a link carries a second passage from the page that supports the link, unless the operator on the list is itself a listed firm. The files are written in `config` and both passages are checked by `scripts/check_sources.py`, which also rejects a row without a market or with an unknown code of the Chinese link.
 
 **Table 17. Variables in the census files**
 
 | Variable | Type | Values | Description |
 |---|---|---|---|
-| market | text | Johor, Batam, Greater Bangkok, Singapore | Market of the census |
+| market | text | Johor, Batam, Greater Bangkok, Singapore, Greater Kuala Lumpur | Market of the census |
 | facility, operator, baxtel_status | text | | Facility, operator and status as Baxtel's list gives them; the name is empty where Baxtel withholds it, because Baxtel shows in its place an invented name that changes on each load, and `baxtel_page` then identifies the facility |
 | baxtel_page | text | | Baxtel's page of the facility |
 | chinese_link | category | operator, owner, tenant, financier, unconfirmed, none_found | Role of a listed firm or of a fund of a Chinese state lender at the facility; unconfirmed for a link that a source reports but another source doubts, that the firms have not confirmed, that the source does not date, or that rests on an owner the source does not name; none_found when no source found names one |

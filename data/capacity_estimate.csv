@@ -30,6 +30,7 @@ GDS data centres at YTL Green Data Center Park,GDS,MYS-0014,pipeline,168,unspeci
 "BrightRay DC campus, Sedenak",Shanghai DC-Science,MYS-0015,pipeline,90,unspecified,secondary,high,site_capacity,"High estimate only, because the role of the Chinese firm is unconfirmed"
 Racks Central Johor AI Campus,China-ASEAN Investment Cooperation Fund II,MYS-0016,pipeline,510,unspecified,primary,both,site_capacity,
 Bitdeer AI Johor campus,Bitdeer,MYS-0017,pipeline,87,unspecified,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
+Bitdeer AI Cyberjaya campus,Bitdeer,MYS-0020,pipeline,72,it,primary,both,sites,
 Green Mountain OSL-Hamar campus,ByteDance,NOR-0001,in_service,90,it,primary,both,sites,
 Green Mountain OSL-Hamar campus,ByteDance,NOR-0001,pipeline,60,it,primary,both,site_capacity,Planned total of 150 MW less 90 MW in service
 Beijing Haoyang Rayong data centre,Beijing Haoyang,THA-0009,pipeline,300,it,primary,both,sites,
