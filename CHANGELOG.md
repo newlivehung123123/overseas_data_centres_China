@@ -2,6 +2,11 @@
 
 This file lists the versions of the dataset and the changes between them. Each version is identified by the commit on the branch `main` at which the version was complete, because the repository records no tags.
 
+## Changes after version 0.2.0
+
+1. A census of the 143 data-centre facilities that Baxtel lists in Greater Tokyo, in `config/tokyo_census.csv`. DayOne operates 2 of them, at Fuchu and Kodaira, and no source found names a Chinese link at the other 141. With Tokyo, the censuses cover 639 facilities in seven markets, and a role is recorded at 73 of them.
+2. 14 further web searches, which raise the log to 91: 7 for Tokyo and 7 for named Chinese tenants at the largest operators of Johor, Greater Bangkok and Singapore, none of which found such a tenant.
+
 ## Version 0.2.0, 14 November 2026
 
 Version 0.2.0 is commit `8d3204a` on the branch `main` and holds 879 graded rows, of which 208 rest on a primary source, 649 on a secondary source and 22 are unconfirmed, against 376 rows in version 0.1.0, of which 176 were primary, 185 secondary and 15 unconfirmed. Most of the 503 new rows belong to the censuses of five further markets.

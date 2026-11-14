@@ -151,6 +151,14 @@
         "unconfirmed": 2,
         "financier": 1
       }
+    },
+    "Greater Tokyo": {
+      "facilities": 143,
+      "operators": 40,
+      "by_chinese_link": {
+        "none_found": 141,
+        "operator": 2
+      }
     }
   },
   "evidence_by_file": {
@@ -222,6 +230,9 @@
     },
     "singapore_census": {
       "secondary": 110
+    },
+    "tokyo_census": {
+      "secondary": 143
     }
   },
   "capacity_estimate_mw": {
