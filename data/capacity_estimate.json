@@ -1,42 +1,42 @@
 {
   "low": {
     "in_service_mw": 1416,
-    "pipeline_mw": 5052,
-    "total_mw": 6467,
+    "pipeline_mw": 6163,
+    "total_mw": 7578,
     "mw_by_basis": {
-      "it": 5847,
+      "it": 6958,
       "unspecified": 620
     }
   },
   "high": {
-    "in_service_mw": 1654,
-    "pipeline_mw": 6006,
-    "total_mw": 7660,
+    "in_service_mw": 1655,
+    "pipeline_mw": 6984,
+    "total_mw": 8638,
     "mw_by_basis": {
-      "it": 6086,
+      "it": 7064,
       "power": 600,
       "unspecified": 974
     }
   },
   "sites": 88,
-  "sites_without_a_figure": 43,
+  "sites_without_a_figure": 38,
   "sites_with_supply_roles_only": 1,
   "without_origin_only": {
     "low": {
       "in_service_mw": 452,
-      "pipeline_mw": 1259,
-      "total_mw": 1711,
+      "pipeline_mw": 1657,
+      "total_mw": 2109,
       "mw_by_basis": {
-        "it": 1091,
+        "it": 1489,
         "unspecified": 620
       }
     },
     "high": {
       "in_service_mw": 585,
-      "pipeline_mw": 1917,
-      "total_mw": 2502,
+      "pipeline_mw": 2182,
+      "total_mw": 2767,
       "mw_by_basis": {
-        "it": 1324,
+        "it": 1589,
         "power": 300,
         "unspecified": 878
       }

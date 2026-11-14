@@ -37,7 +37,17 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "508",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2026-11-14",
+     "note": "Total IT capacity of the MY06 site of 15 buildings, as Bridge's page lists it; the first project of three buildings has 110 MW",
+     "source": "https://www.bridgedatacentres.com/locations/malaysia/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": {
     "name": "Bridge Data Centres MY06",
     "mw": "243",
@@ -3675,7 +3685,17 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "0.2",
+     "basis": "it",
+     "stage": "in_service",
+     "date": "2026-11-14",
+     "note": "Total IT capacity of BKK01, as Bridge's page lists it",
+     "source": "https://www.bridgedatacentres.com/locations/thailand/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     13.6532,
@@ -3710,13 +3730,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "193",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2026-11-14",
+     "note": "Total IT capacity of QHI01 and QHI02, as Bridge's page lists it",
+     "source": "https://www.bridgedatacentres.com/locations/thailand/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     13.1857,
     101.1211
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -3745,13 +3775,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "374",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2026-11-14",
+     "note": "Total IT capacity of the MY07 site of 8 buildings, as Bridge's page lists it",
+     "source": "https://www.bridgedatacentres.com/locations/malaysia/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     1.5994,
     103.8209
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -3815,13 +3855,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "98",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2026-11-14",
+     "note": "Total IT capacity that Bridge's page gives for MY01 and MY02 together, recorded at MY02 only so that the estimate counts the figure once; part of the capacity is in service, but the page does not say how much",
+     "source": "https://www.bridgedatacentres.com/locations/malaysia/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     2.9339,
     101.6456
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -3850,13 +3900,23 @@
     }
    ],
    "ai": [],
-   "capacity": [],
+   "capacity": [
+    {
+     "mw": "48",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2026-11-14",
+     "note": "Total IT capacity of the MY03 site of 4 buildings, as Bridge's page lists it; part of the capacity is in service, but the page does not say how much",
+     "source": "https://www.bridgedatacentres.com/locations/malaysia/",
+     "evidence": "primary"
+    }
+   ],
    "epoch": null,
    "point": [
     3.1517,
     101.6942
    ],
-   "level": "A"
+   "level": "B"
   },
   {
    "layer": "site",
@@ -17720,42 +17780,42 @@
   "totals": {
    "low": {
     "in_service_mw": 1416,
-    "pipeline_mw": 5052,
-    "total_mw": 6467,
+    "pipeline_mw": 6163,
+    "total_mw": 7578,
     "mw_by_basis": {
-     "it": 5847,
+     "it": 6958,
      "unspecified": 620
     }
    },
    "high": {
-    "in_service_mw": 1654,
-    "pipeline_mw": 6006,
-    "total_mw": 7660,
+    "in_service_mw": 1655,
+    "pipeline_mw": 6984,
+    "total_mw": 8638,
     "mw_by_basis": {
-     "it": 6086,
+     "it": 7064,
      "power": 600,
      "unspecified": 974
     }
    },
    "sites": 88,
-   "sites_without_a_figure": 43,
+   "sites_without_a_figure": 38,
    "sites_with_supply_roles_only": 1,
    "without_origin_only": {
     "low": {
      "in_service_mw": 452,
-     "pipeline_mw": 1259,
-     "total_mw": 1711,
+     "pipeline_mw": 1657,
+     "total_mw": 2109,
      "mw_by_basis": {
-      "it": 1091,
+      "it": 1489,
       "unspecified": 620
      }
     },
     "high": {
      "in_service_mw": 585,
-     "pipeline_mw": 1917,
-     "total_mw": 2502,
+     "pipeline_mw": 2182,
+     "total_mw": 2767,
      "mw_by_basis": {
-      "it": 1324,
+      "it": 1589,
       "power": 300,
       "unspecified": 878
      }
@@ -18099,6 +18159,30 @@
     "component": "Bridge Data Centres MY06",
     "firm": "Bridge Data Centres; ByteDance",
     "site_id": "MYS-0001",
+    "stage": "pipeline",
+    "mw": "398",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "low",
+    "source_table": "site_capacity",
+    "note": "Planned total of 508 MW less 110 MW in service"
+   },
+   {
+    "component": "Bridge Data Centres MY06",
+    "firm": "Bridge Data Centres; ByteDance",
+    "site_id": "MYS-0001",
+    "stage": "pipeline",
+    "mw": "265",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "The high estimate counts more capacity in service at the site; Planned total of 508 MW less 243 MW in service"
+   },
+   {
+    "component": "Bridge Data Centres MY06",
+    "firm": "Bridge Data Centres; ByteDance",
+    "site_id": "MYS-0001",
     "stage": "in_service",
     "mw": "133",
     "basis": "it",
@@ -18192,6 +18276,42 @@
     "note": "Planned total of 72 MW less 2 MW in service"
    },
    {
+    "component": "Bridge Data Centres MY07",
+    "firm": "Bridge Data Centres",
+    "site_id": "MYS-0021",
+    "stage": "pipeline",
+    "mw": "374",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Bridge Data Centres Cyberjaya MY02",
+    "firm": "Bridge Data Centres",
+    "site_id": "MYS-0023",
+    "stage": "pipeline",
+    "mw": "98",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Bridge Data Centres MY03",
+    "firm": "Bridge Data Centres",
+    "site_id": "MYS-0024",
+    "stage": "pipeline",
+    "mw": "48",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
     "component": "Green Mountain OSL-Hamar campus",
     "firm": "ByteDance",
     "site_id": "NOR-0001",
@@ -18249,6 +18369,30 @@
     "evidence": "primary",
     "counted_in": "both",
     "source_table": "sites",
+    "note": ""
+   },
+   {
+    "component": "Bridge Data Centres Samut Prakan BKK01",
+    "firm": "Bridge Data Centres",
+    "site_id": "THA-0012",
+    "stage": "in_service",
+    "mw": "0",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Bridge Data Centres Chonburi QH101",
+    "firm": "Bridge Data Centres",
+    "site_id": "THA-0013",
+    "stage": "pipeline",
+    "mw": "193",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
     "note": ""
    }
   ]

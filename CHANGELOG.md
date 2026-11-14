@@ -6,6 +6,7 @@ This file lists the versions of the dataset and the changes between them. Each v
 
 1. A census of the 143 data-centre facilities that Baxtel lists in Greater Tokyo, in `config/tokyo_census.csv`. DayOne operates 2 of them, at Fuchu and Kodaira, and no source found names a Chinese link at the other 141. With Tokyo, the censuses cover 639 facilities in seven markets, and a role is recorded at 73 of them.
 2. 14 further web searches, which raise the log to 91: 7 for Tokyo and 7 for named Chinese tenants at the largest operators of Johor, Greater Bangkok and Singapore, none of which found such a tenant.
+3. Figures of total IT capacity from Bridge's own pages for 6 sites: 508 MW at MY06, 374 MW at MY07, 98 MW at MY01 and MY02 together, 48 MW at MY03, 193 MW in Chonburi and 0.2 MW in Samut Prakan. The low estimate of capacity under construction or planned rises from 5,052 MW to 6,163 MW and the high estimate from 6,006 MW to 6,984 MW, and without the 4 firms that count on origin alone the range rises from 1,259 MW to 1,917 MW to between 1,657 MW and 2,182 MW, because MY06 also has ByteDance as its anchor tenant.
 
 ## Version 0.2.0, 14 November 2026
 
