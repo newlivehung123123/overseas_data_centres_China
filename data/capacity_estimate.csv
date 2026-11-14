@@ -55,3 +55,5 @@ Stratus Technology Rayong data centre,zData,THA-0010,pipeline,203,it,primary,bot
 Galaxy Data Center Rayong campus,Galaxy Data Center,THA-0011,pipeline,150,it,primary,both,sites,
 Bridge Data Centres Samut Prakan BKK01,Bridge Data Centres,THA-0012,in_service,0,it,primary,both,site_capacity,
 Bridge Data Centres Chonburi QH101,Bridge Data Centres,THA-0013,pipeline,193,it,primary,both,site_capacity,
+zData (Vistas Technology) Chonburi data centre,zData,THA-0014,pipeline,50,it,primary,low,site_capacity,
+zData (Vistas Technology) Chonburi data centre,zData,THA-0014,pipeline,80,it,secondary,high,site_capacity,Larger figure from a source below the grade that the low estimate requires

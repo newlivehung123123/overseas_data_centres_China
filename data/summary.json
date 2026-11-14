@@ -1,15 +1,15 @@
 {
-  "sites": 89,
+  "sites": 90,
   "site_countries": 17,
   "sites_by_status": {
     "operational": 38,
     "under_construction": 10,
-    "planned": 32,
+    "planned": 33,
     "unclear": 9
   },
   "sites_by_country": {
     "Malaysia": 25,
-    "Thailand": 13,
+    "Thailand": 14,
     "Indonesia": 9,
     "Singapore": 8,
     "Germany": 5,
@@ -26,10 +26,10 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 114,
+  "roles": 115,
   "roles_by_role": {
     "operator": 52,
-    "owner": 33,
+    "owner": 34,
     "tenant": 18,
     "user": 9,
     "financier": 1,
@@ -44,9 +44,9 @@
     "Alibaba Cloud": 5,
     "China Unicom Global": 4,
     "Megaspeed": 4,
+    "zData": 3,
     "Tencent Cloud": 3,
     "Bitdeer": 3,
-    "zData": 2,
     "Huawei Cloud": 2,
     "Huanbang (Hong Kong)": 1,
     "INF Tech": 1,
@@ -61,7 +61,7 @@
   },
   "sites_by_level": {
     "A": 51,
-    "B": 38
+    "B": 39
   },
   "sites_with_capacity": 16,
   "site_capacity_mw_by_basis": {
@@ -164,12 +164,12 @@
   "evidence_by_file": {
     "sites": {
       "primary": 45,
-      "secondary": 41,
+      "secondary": 42,
       "unconfirmed": 3
     },
     "site_roles": {
       "primary": 63,
-      "secondary": 45,
+      "secondary": 46,
       "unconfirmed": 6
     },
     "cloud_regions": {
@@ -201,8 +201,8 @@
       "primary": 3
     },
     "site_capacity": {
-      "secondary": 18,
-      "primary": 25,
+      "secondary": 19,
+      "primary": 26,
       "unconfirmed": 1
     },
     "rules": {
@@ -238,49 +238,49 @@
   "capacity_estimate_mw": {
     "low": {
       "in_service_mw": 1446,
-      "pipeline_mw": 6303,
-      "total_mw": 7748,
+      "pipeline_mw": 6353,
+      "total_mw": 7798,
       "mw_by_basis": {
-        "it": 6998,
+        "it": 7048,
         "power": 60,
         "unspecified": 690
       }
     },
     "high": {
       "in_service_mw": 1798,
-      "pipeline_mw": 7384,
-      "total_mw": 9182,
+      "pipeline_mw": 7464,
+      "total_mw": 9262,
       "mw_by_basis": {
-        "it": 7118,
+        "it": 7198,
         "power": 680,
         "unspecified": 1384
       }
     },
-    "sites": 88,
+    "sites": 89,
     "sites_without_a_figure": 31,
     "sites_with_supply_roles_only": 1,
     "without_origin_only": {
       "low": {
         "in_service_mw": 482,
-        "pipeline_mw": 1797,
-        "total_mw": 2279,
+        "pipeline_mw": 1847,
+        "total_mw": 2329,
         "mw_by_basis": {
-          "it": 1529,
+          "it": 1579,
           "power": 60,
           "unspecified": 690
         }
       },
       "high": {
         "in_service_mw": 728,
-        "pipeline_mw": 2582,
-        "total_mw": 3310,
+        "pipeline_mw": 2662,
+        "total_mw": 3390,
         "mw_by_basis": {
-          "it": 1642,
+          "it": 1722,
           "power": 380,
           "unspecified": 1288
         }
       },
-      "sites": 57,
+      "sites": 58,
       "sites_without_a_figure": 27,
       "firms_left_out": [
         "Bitdeer",

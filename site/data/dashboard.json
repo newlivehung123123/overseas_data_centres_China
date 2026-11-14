@@ -4051,6 +4051,60 @@
    "level": "A"
   },
   {
+   "layer": "site",
+   "id": "THA-0014",
+   "name": "zData (Vistas Technology) Chonburi data centre",
+   "city": "Chonburi",
+   "country": "Thailand",
+   "status": "planned",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Thailand's Board of Investment approved a project of Vistas Technology of about 50 MW of IT load in Chonburi in May 2025, and W.Media reports a second approval in November 2025 for 80 MW at Amata City Chonburi; the sources do not say whether the two approvals are one project or two, so the site counts the larger figure only. Baxtel's list of Bangkok does not name the facility",
+   "source": "https://w.media/thailand-approves-four-data-center-projects-worth-us-3-1-billion/",
+   "quote": "a 80MW facility by Vistas Technology Co., Ltd., a subsidiary of China’s ZDATA Technologies Co., Ltd. and its Singapore-based unit ZDATA Cloud Technology Pte. Ltd., for 9.09 billion baht",
+   "check": "found",
+   "evidence": "secondary",
+   "iso3": "THA",
+   "roles": [
+    {
+     "firm": "zData",
+     "origin": "",
+     "role": "owner",
+     "source": "https://w.media/thailand-approves-four-data-center-projects-worth-us-3-1-billion/",
+     "quote": "a 80MW facility by Vistas Technology Co., Ltd., a subsidiary of China’s ZDATA Technologies Co., Ltd. and its Singapore-based unit ZDATA Cloud Technology Pte. Ltd., for 9.09 billion baht",
+     "check": "found",
+     "evidence": "secondary"
+    }
+   ],
+   "ai": [],
+   "capacity": [
+    {
+     "mw": "50",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2025-05-19",
+     "note": "IT load of the project of Vistas Technology that the Board of Investment approved in May 2025",
+     "source": "https://osos.boi.go.th/article_attach/PR68_2568EN.pdf",
+     "evidence": "primary"
+    },
+    {
+     "mw": "80",
+     "basis": "it",
+     "stage": "planned_total",
+     "date": "2025-11",
+     "note": "IT load of the project of Vistas Technology at Amata City Chonburi that the Board of Investment approved in November 2025, as W.Media reports",
+     "source": "https://w.media/thailand-approves-four-data-center-projects-worth-us-3-1-billion/",
+     "evidence": "secondary"
+    }
+   ],
+   "epoch": null,
+   "point": [
+    13.1857,
+    101.1211
+   ],
+   "level": "B"
+  },
+  {
    "layer": "cloud_region",
    "id": "Brazil (São Paulo)",
    "name": "Alibaba Cloud Brazil (São Paulo)",
@@ -17877,49 +17931,49 @@
   "totals": {
    "low": {
     "in_service_mw": 1446,
-    "pipeline_mw": 6303,
-    "total_mw": 7748,
+    "pipeline_mw": 6353,
+    "total_mw": 7798,
     "mw_by_basis": {
-     "it": 6998,
+     "it": 7048,
      "power": 60,
      "unspecified": 690
     }
    },
    "high": {
     "in_service_mw": 1798,
-    "pipeline_mw": 7384,
-    "total_mw": 9182,
+    "pipeline_mw": 7464,
+    "total_mw": 9262,
     "mw_by_basis": {
-     "it": 7118,
+     "it": 7198,
      "power": 680,
      "unspecified": 1384
     }
    },
-   "sites": 88,
+   "sites": 89,
    "sites_without_a_figure": 31,
    "sites_with_supply_roles_only": 1,
    "without_origin_only": {
     "low": {
      "in_service_mw": 482,
-     "pipeline_mw": 1797,
-     "total_mw": 2279,
+     "pipeline_mw": 1847,
+     "total_mw": 2329,
      "mw_by_basis": {
-      "it": 1529,
+      "it": 1579,
       "power": 60,
       "unspecified": 690
      }
     },
     "high": {
      "in_service_mw": 728,
-     "pipeline_mw": 2582,
-     "total_mw": 3310,
+     "pipeline_mw": 2662,
+     "total_mw": 3390,
      "mw_by_basis": {
-      "it": 1642,
+      "it": 1722,
       "power": 380,
       "unspecified": 1288
      }
     },
-    "sites": 57,
+    "sites": 58,
     "sites_without_a_figure": 27,
     "firms_left_out": [
      "Bitdeer",
@@ -18601,6 +18655,30 @@
     "counted_in": "both",
     "source_table": "site_capacity",
     "note": ""
+   },
+   {
+    "component": "zData (Vistas Technology) Chonburi data centre",
+    "firm": "zData",
+    "site_id": "THA-0014",
+    "stage": "pipeline",
+    "mw": "50",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "low",
+    "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "zData (Vistas Technology) Chonburi data centre",
+    "firm": "zData",
+    "site_id": "THA-0014",
+    "stage": "pipeline",
+    "mw": "80",
+    "basis": "it",
+    "evidence": "secondary",
+    "counted_in": "high",
+    "source_table": "site_capacity",
+    "note": "Larger figure from a source below the grade that the low estimate requires"
    }
   ]
  }

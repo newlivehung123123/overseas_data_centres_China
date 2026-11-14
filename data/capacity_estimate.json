@@ -1,49 +1,49 @@
 {
   "low": {
     "in_service_mw": 1446,
-    "pipeline_mw": 6303,
-    "total_mw": 7748,
+    "pipeline_mw": 6353,
+    "total_mw": 7798,
     "mw_by_basis": {
-      "it": 6998,
+      "it": 7048,
       "power": 60,
       "unspecified": 690
     }
   },
   "high": {
     "in_service_mw": 1798,
-    "pipeline_mw": 7384,
-    "total_mw": 9182,
+    "pipeline_mw": 7464,
+    "total_mw": 9262,
     "mw_by_basis": {
-      "it": 7118,
+      "it": 7198,
       "power": 680,
       "unspecified": 1384
     }
   },
-  "sites": 88,
+  "sites": 89,
   "sites_without_a_figure": 31,
   "sites_with_supply_roles_only": 1,
   "without_origin_only": {
     "low": {
       "in_service_mw": 482,
-      "pipeline_mw": 1797,
-      "total_mw": 2279,
+      "pipeline_mw": 1847,
+      "total_mw": 2329,
       "mw_by_basis": {
-        "it": 1529,
+        "it": 1579,
         "power": 60,
         "unspecified": 690
       }
     },
     "high": {
       "in_service_mw": 728,
-      "pipeline_mw": 2582,
-      "total_mw": 3310,
+      "pipeline_mw": 2662,
+      "total_mw": 3390,
       "mw_by_basis": {
-        "it": 1642,
+        "it": 1722,
         "power": 380,
         "unspecified": 1288
       }
     },
-    "sites": 57,
+    "sites": 58,
     "sites_without_a_figure": 27,
     "firms_left_out": [
       "Bitdeer",
