@@ -10,15 +10,15 @@
   },
   "high": {
     "in_service_mw": 1652,
-    "pipeline_mw": 5912,
-    "total_mw": 7564,
+    "pipeline_mw": 6008,
+    "total_mw": 7660,
     "mw_by_basis": {
       "it": 6000,
       "power": 600,
-      "unspecified": 965
+      "unspecified": 1061
     }
   },
-  "sites": 79,
+  "sites": 81,
   "sites_without_a_figure": 36,
   "sites_with_supply_roles_only": 1
 }

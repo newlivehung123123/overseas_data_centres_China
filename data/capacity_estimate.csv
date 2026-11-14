@@ -23,6 +23,8 @@ component,firm,site_id,stage,mw,basis,evidence,counted_in,source_table,note
 "DayOne, Johor",DayOne,,in_service,106,it,secondary,high,epoch_estimates,"Epoch AI estimates 895 MW of IT power at the sites of the market, against 789 MW that the firm reports in service"
 Data Center Pecém,ByteDance,BRA-0001,pipeline,300,power,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
 Global Switch Madrid 2,Global Switch,ESP-0003,pipeline,36,it,primary,both,site_capacity,
+NexAI MettaDC Cikarang data centre,Megaspeed,IDN-0008,pipeline,36,unspecified,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
+NexAI Batang data centre,Megaspeed,IDN-0009,pipeline,60,unspecified,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
 Bridge Data Centres MY06,ByteDance,MYS-0001,in_service,110,unspecified,primary,both,sites,
 Bridge Data Centres MY06,ByteDance,MYS-0001,in_service,133,it,secondary,high,epoch_estimates,"Epoch AI estimates 243 MW of IT power, against 110 MW stated"
 MSFusion Johor campus,Megaspeed,MYS-0013,pipeline,300,power,secondary,high,site_capacity,"High estimate only, because the figure is not from a primary source"

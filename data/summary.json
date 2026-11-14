@@ -1,17 +1,17 @@
 {
-  "sites": 80,
+  "sites": 82,
   "site_countries": 17,
   "sites_by_status": {
     "operational": 33,
     "under_construction": 9,
-    "planned": 29,
+    "planned": 31,
     "unclear": 9
   },
   "sites_by_country": {
     "Malaysia": 20,
     "Thailand": 11,
+    "Indonesia": 9,
     "Singapore": 8,
-    "Indonesia": 7,
     "Germany": 5,
     "Japan": 4,
     "Hong Kong": 4,
@@ -26,11 +26,11 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 103,
+  "roles": 105,
   "roles_by_role": {
     "operator": 45,
     "owner": 31,
-    "tenant": 16,
+    "tenant": 18,
     "user": 9,
     "financier": 1,
     "equipment supplier": 1
@@ -42,11 +42,11 @@
     "China Mobile International": 5,
     "Alibaba Cloud": 5,
     "China Unicom Global": 4,
+    "Megaspeed": 4,
     "Tencent Cloud": 3,
     "Bitdeer": 3,
     "zData": 2,
     "Huawei Cloud": 2,
-    "Megaspeed": 2,
     "Huanbang (Hong Kong)": 1,
     "INF Tech": 1,
     "GDS": 1,
@@ -60,11 +60,11 @@
   },
   "sites_by_level": {
     "A": 52,
-    "B": 28
+    "B": 30
   },
-  "sites_with_capacity": 15,
+  "sites_with_capacity": 17,
   "site_capacity_mw_by_basis": {
-    "unspecified": 491,
+    "unspecified": 587,
     "it": 1084,
     "power": 460
   },
@@ -110,6 +110,14 @@
         "owner": 1
       }
     },
+    "Jakarta": {
+      "facilities": 104,
+      "operators": 40,
+      "by_chinese_link": {
+        "none_found": 102,
+        "unconfirmed": 2
+      }
+    },
     "Johor": {
       "facilities": 84,
       "operators": 34,
@@ -147,12 +155,12 @@
   "evidence_by_file": {
     "sites": {
       "primary": 43,
-      "secondary": 34,
+      "secondary": 36,
       "unconfirmed": 3
     },
     "site_roles": {
       "primary": 60,
-      "secondary": 37,
+      "secondary": 39,
       "unconfirmed": 6
     },
     "cloud_regions": {
@@ -180,7 +188,7 @@
       "primary": 3
     },
     "site_capacity": {
-      "secondary": 12,
+      "secondary": 14,
       "primary": 12,
       "unconfirmed": 1
     },
@@ -197,6 +205,9 @@
     },
     "batam_census": {
       "secondary": 20
+    },
+    "jakarta_census": {
+      "secondary": 104
     },
     "johor_census": {
       "secondary": 84
@@ -220,15 +231,15 @@
     },
     "high": {
       "in_service_mw": 1652,
-      "pipeline_mw": 5912,
-      "total_mw": 7564,
+      "pipeline_mw": 6008,
+      "total_mw": 7660,
       "mw_by_basis": {
         "it": 6000,
         "power": 600,
-        "unspecified": 965
+        "unspecified": 1061
       }
     },
-    "sites": 79,
+    "sites": 81,
     "sites_without_a_figure": 36,
     "sites_with_supply_roles_only": 1
   }
