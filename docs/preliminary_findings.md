@@ -36,4 +36,4 @@ Outside the four markets of the censuses, the dataset records the sites that sea
 
 ## Next steps
 
-The next step is to search the tenants of the 557 facilities in the seven markets at which no Chinese link was found, operator by operator, and to settle the 9 reported links. The study would then take censuses of the Gulf and Europe, add satellite imagery, permits and power allocations for the largest sites, record the rules of every host country, find primary sources for the 1,464 MW that only the high estimate counts, and publish the file of government data centres.
+The searches of 14 November 2026 covered the largest operators of the 557 facilities at which no Chinese link was found and named no Chinese tenant, so the next step is to search filings, permits and the smaller operators, and to settle the 9 reported links. The study would then take censuses of the Gulf and Europe, add satellite imagery, permits and power allocations for the largest sites, record the rules of every host country, find primary sources for the 1,464 MW that only the high estimate counts, and publish the file of government data centres.

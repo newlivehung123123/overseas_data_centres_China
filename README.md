@@ -188,7 +188,7 @@ The script `scripts/summarise.py` counts the checked rows of the files of sites,
 5. Add the rules of the other host countries, such as Brazil, Japan, Norway and the members of the European Union, and repeat the search for rules of Thailand and Indonesia in Thai and Indonesian sources.
 6. Identify the Oracle data centres in Southeast Asia at which Tencent is reported to lease chips, and the sites of Datasection in Japan and Australia that serve its largest customer.
 7. Match further sites to Epoch AI's database as it grows, and compare its estimates with the figures of capacity in `data/site_capacity.csv`.
-8. Search the tenants of the 557 facilities in the seven markets at which no Chinese link was found, operator by operator, and confirm or reject the 9 reported links.
+8. Continue the search of the 557 facilities in the seven markets at which no Chinese link was found. The searches of 14 November 2026 covered the largest operators, among them Digital Edge, NTT, Equinix, STT GDC, Keppel, Princeton Digital Group, AirTrunk, YTL, DCI Indonesia and True IDC, and found no named Chinese owner, operator, tenant or financier at their facilities, so the remaining work lies in filings, permits and the smaller operators. Confirm or reject the 9 reported links.
 9. Find primary sources for the 1,464 MW that only the high capacity estimate counts, and figures of capacity for the 31 sites that have none.
 
 ## Versions
