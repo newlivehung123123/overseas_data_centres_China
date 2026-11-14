@@ -3375,22 +3375,22 @@
    "country": "Malaysia",
    "status": "planned",
    "capacity_mw": "86.8",
-   "capacity_basis": "unspecified",
-   "note": "Two facilities under data-centre services agreements: A201 of 21.7 MW, due in January 2027, and A202 of 65.1 MW, due in the third quarter of 2027; the source does not name the owner of the campus, and Bitdeer reports no customer contract for either facility",
-   "source": "https://w.media/bitdeer-ai-signs-10-year-agreement-for-65-1-mw-data-center-in-malaysia/",
-   "quote": "A202 is located on the same Johor campus as Bitdeer AI’s 21.7 MW A201 facility when both facilities are operational, the campus will have 86.8 MW of AI cloud data center capacity.",
+   "capacity_basis": "it",
+   "note": "Two facilities under data-centre services agreements: A201 of 21.7 MW, due in January 2027, and A202 of 65.1 MW, due in the third quarter of 2027. Bitdeer's update filed at the SEC gives both figures in a table of IT load and does not name the owner of the site",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001899123/000121390026100537/ea030523501ex99-1.htm",
+   "quote": "Bitdeer AI executed a 10-year data center services agreement securing an additional 65.1 MW at its A202 facility on the Johor campus, scaling total campus AI Cloud capacity to 86.8 MW to capture high-density compute demand.",
    "check": "found",
-   "evidence": "secondary",
+   "evidence": "primary",
    "iso3": "MYS",
    "roles": [
     {
      "firm": "Bitdeer",
      "origin": "Bitmain",
      "role": "tenant",
-     "source": "https://w.media/bitdeer-ai-signs-10-year-agreement-for-65-1-mw-data-center-in-malaysia/",
-     "quote": "has signed a 10-year data center services agreement for a 65.1 MW AI cloud data center in Johor Bahru, Malaysia",
+     "source": "https://www.sec.gov/Archives/edgar/data/0001899123/000121390026100537/ea030523501ex99-1.htm",
+     "quote": "Bitdeer AI executed a 10-year data center services agreement securing an additional 65.1 MW at its A202 facility on the Johor campus, scaling total campus AI Cloud capacity to 86.8 MW to capture high-density compute demand.",
      "check": "found",
-     "evidence": "secondary"
+     "evidence": "primary"
     }
    ],
    "ai": [
@@ -3493,9 +3493,9 @@
    "city": "Cyberjaya, Selangor",
    "country": "Malaysia",
    "status": "under_construction",
-   "capacity_mw": "71.5",
-   "capacity_basis": "it",
-   "note": "Three facilities under data-centre services agreements: A101, A102 of 9.5 MW and A103 of 60 MW, which is due to be energised in the first quarter of 2028; the release does not name the owner of the campus or state whether A101 and A102 are in service, and Baxtel's list shows one of Bitdeer's three facilities in Kuala Lumpur as operational and two as under construction",
+   "capacity_mw": "",
+   "capacity_basis": "",
+   "note": "Three facilities under data-centre services agreements: A101, A102 of 9.5 MW and A103 of 60 MW, which is due to be energised in the first quarter of 2028; the release does not name the owner of the campus or state whether A101 and A102 are in service, and Baxtel's list shows one of Bitdeer's three facilities in Kuala Lumpur as operational and two as under construction. Bitdeer's update filed at the SEC in October 2026 lists A101 of 2.5 MW as live",
    "source": "https://finviz.com/news/400675/bitdeer-ai-secures-60mw-a103-facility-at-its-existing-cyberjaya-malaysia-campus-reaches-approximately-95-of-its-up-to-350mw-target-capacity",
    "quote": "today announced that it has entered into an 8-year data center services agreement for A103, a 60MW AI Cloud data center facility on the same Cyberjaya, Malaysia campus as its A101 and A102 facilities",
    "check": "found",
@@ -3521,6 +3521,15 @@
      "date": "2026-10-08",
      "note": "Planned total of A101, A102 and A103 of the Cyberjaya campus; the release states that all its figures are critical IT load",
      "source": "https://finviz.com/news/400675/bitdeer-ai-secures-60mw-a103-facility-at-its-existing-cyberjaya-malaysia-campus-reaches-approximately-95-of-its-up-to-350mw-target-capacity",
+     "evidence": "primary"
+    },
+    {
+     "mw": "2.5",
+     "basis": "it",
+     "stage": "in_service",
+     "date": "2026-10",
+     "note": "A101 of the site in Cyberjaya, which Bitdeer's table of IT load lists as live",
+     "source": "https://www.sec.gov/Archives/edgar/data/0001899123/000121390026110703/ea030767901ex99-1.htm",
      "evidence": "primary"
     }
    ],
@@ -14873,22 +14882,22 @@
  "estimate": {
   "totals": {
    "low": {
-    "in_service_mw": 1413,
-    "pipeline_mw": 4818,
-    "total_mw": 6230,
+    "in_service_mw": 1416,
+    "pipeline_mw": 4902,
+    "total_mw": 6317,
     "mw_by_basis": {
-     "it": 5610,
+     "it": 5697,
      "unspecified": 620
     }
    },
    "high": {
-    "in_service_mw": 1652,
-    "pipeline_mw": 6008,
+    "in_service_mw": 1654,
+    "pipeline_mw": 6006,
     "total_mw": 7660,
     "mw_by_basis": {
-     "it": 6000,
+     "it": 6086,
      "power": 600,
-     "unspecified": 1061
+     "unspecified": 974
     }
    },
    "sites": 81,
@@ -15286,23 +15295,35 @@
     "site_id": "MYS-0017",
     "stage": "pipeline",
     "mw": "87",
-    "basis": "unspecified",
-    "evidence": "secondary",
-    "counted_in": "high",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
     "source_table": "sites",
-    "note": "High estimate only, because the figure is not from a primary source"
+    "note": ""
+   },
+   {
+    "component": "Bitdeer AI Cyberjaya campus",
+    "firm": "Bitdeer",
+    "site_id": "MYS-0020",
+    "stage": "in_service",
+    "mw": "2",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "site_capacity",
+    "note": ""
    },
    {
     "component": "Bitdeer AI Cyberjaya campus",
     "firm": "Bitdeer",
     "site_id": "MYS-0020",
     "stage": "pipeline",
-    "mw": "72",
+    "mw": "69",
     "basis": "it",
     "evidence": "primary",
     "counted_in": "both",
-    "source_table": "sites",
-    "note": ""
+    "source_table": "site_capacity",
+    "note": "Planned total of 72 MW less 2 MW in service"
    },
    {
     "component": "Green Mountain OSL-Hamar campus",
