@@ -2,6 +2,10 @@
 
 This file lists the versions of the dataset and the changes between them. Each version is identified by the commit on the branch `main` at which the version was complete, because the repository records no tags.
 
+## Changes after version 0.3.0
+
+1. Two rows for the interim final rule "Addressing Remote Access to Advanced Semiconductors" (91 FR 74970), which the US Department of Commerce published on 19 November 2026 and which took effect on publication: `USA-0013` records the licence requirement for exports of advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, and `USA-0014` records the licence requirement for chips used at data centres that provide more than 12,000,000 aggregate TPP to firms headquartered, or whose ultimate parent company is headquartered, in Country Group D:5 or Macau. Both rows cite the official PDF on GovInfo, because FederalRegister.gov refuses automated downloads. The notes of `USA-0001` and `USA-0010` now refer to the rule, and the rules table holds 22 rows, of which 8 rest on a primary source.
+
 ## Version 0.3.0, 20 November 2026
 
 Version 0.3.0 is commit `97689cd` on the branch `main` and holds 1,042 graded rows, of which 221 rest on a primary source, 799 on a secondary source and 22 are unconfirmed. All 1,086 passages of the 1,042 rows were found on their pages. The censuses cover 639 facilities in seven markets, and a Chinese firm or a fund of a Chinese state lender holds a role at 73 of them. The low estimate of capacity is 1,446 MW in service and 6,353 MW under construction or planned, and the high estimate is 1,798 MW and 7,464 MW. Version 0.3.0 makes the following changes to version 0.2.0.

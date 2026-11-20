@@ -1,5 +1,5 @@
 {
- "built": "2026-11-14",
+ "built": "2026-11-20",
  "records": [
   {
    "layer": "site",
@@ -5822,7 +5822,7 @@
    "covers": "remote_access",
    "status": "in_force",
    "date": "",
-   "note": "Exports of advanced chips are controlled, but access to the chips through a cloud service is not, as of the source date",
+   "note": "Exports of advanced chips are controlled, but access to the chips through a cloud service is not, as of the source date of August 2024; since 19 November 2026, the rule recorded in USA-0014 requires a licence for chips used at a data centre that supplies significant computing power to firms headquartered in China or Macau",
    "source": "https://www.asiafinancial.com/china-using-microsoft-amazon-cloud-to-beat-ai-chip-sanctions",
    "quote": "Providing access to advanced chips — like that of Nvidia — or advanced AI models through the cloud is not a violation of US regulations since only exports or transfers of a commodity, software or technology are regulated.",
    "check": "found",
@@ -6124,7 +6124,7 @@
    "covers": "remote_access",
    "status": "announced",
    "date": "2026-08",
-   "note": "Reported from a draft that the Department of Commerce has not published; the report names Thailand and Singapore, and lawyers quoted in the report doubt that the Department can enforce such a rule before the Remote Access Security Act passes",
+   "note": "Reported from a draft that the Department of Commerce had not published; the report names Thailand and Singapore. The Department published a rule on remote access on 19 November 2026, recorded in USA-0013 and USA-0014",
    "source": "https://www.techtimes.com/articles/325957/20260829/commerce-drafts-ai-chip-rule-loophole-it-created-rescinding-biden-know-your-customer.htm",
    "quote": "The Trump administration is preparing a rule that would make it illegal to rent Nvidia GPU computing time to Chinese AI companies through servers in Thailand and Singapore",
    "check": "found",
@@ -6200,6 +6200,44 @@
    "quote": "Nvidia has also reportedly instructed cloud and data center partners to ensure that at least 51% of their services go to non-Chinese customers, according to the Financial Times",
    "check": "found",
    "evidence": "unconfirmed"
+  },
+  {
+   "id": "USA-0013",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "applies_in": [
+    "IDN",
+    "MYS",
+    "SGP",
+    "THA",
+    "BRA"
+   ],
+   "instrument": "Interim final rule \"Addressing Remote Access to Advanced Semiconductors\" (91 FR 74970), licence requirement for advanced chips to five countries",
+   "covers": "chip_export",
+   "status": "in_force",
+   "date": "2026-11-19",
+   "note": "Effective on publication; the requirement does not apply to end users headquartered in the United States, or whose ultimate parent company is, provided the exporter reports monthly",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23529.pdf",
+   "quote": "a license will be required to export, reexport, or transfer (in-country) advanced semiconductors to Indonesia, Malaysia, Singapore, Thailand, or Brazil",
+   "check": "found",
+   "evidence": "primary"
+  },
+  {
+   "id": "USA-0014",
+   "jurisdiction": "United States",
+   "iso3": "USA",
+   "applies_in": [
+    "all"
+   ],
+   "instrument": "Interim final rule \"Addressing Remote Access to Advanced Semiconductors\" (91 FR 74970), licence requirement for chips used at data centres that serve firms headquartered in China or Macau",
+   "covers": "remote_access",
+   "status": "in_force",
+   "date": "2026-11-19",
+   "note": "Requires a licence where chips will be used at a data centre that provides more than 12,000,000 aggregate TPP to firms headquartered, or whose ultimate parent company is headquartered, in Country Group D:5 or Macau; computing power used only for commercial recommender systems is exempt, and data centres already providing such services must obtain a licence within 90 days",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23529.pdf",
+   "quote": "this rule establishes new restrictions which will apply for exports, reexports, or transfers (in-country) to overseas data centers that remotely supply significant volumes of compute to companies headquartered in Country Group D:5 or Macau",
+   "check": "found",
+   "evidence": "primary"
   }
  ],
  "ai_without_site": [

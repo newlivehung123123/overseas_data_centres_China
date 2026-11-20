@@ -91,7 +91,7 @@
       "total_mw": 0
     }
   },
-  "rules": 20,
+  "rules": 22,
   "census": {
     "Greater Bangkok": {
       "facilities": 88,
@@ -207,7 +207,7 @@
     },
     "rules": {
       "secondary": 11,
-      "primary": 6,
+      "primary": 8,
       "unconfirmed": 3
     },
     "epoch_links": {

@@ -171,6 +171,8 @@ def figure_3():
         ("USA-0002", "", "Remote Access Security Act, passed the House January 2026", "", "", "", "N"),
         ("USA-0008", "", "BIS enforcement review of remote access, August 2026", "", "", "", "N"),
         ("USA-0010", "", "Draft rule on renting chips to Chinese firms abroad, reported August 2026", "", "", "", "N"),
+        ("USA-0013", "", "Licences for advanced chips to five countries, November 2026", "F", "", "", ""),
+        ("USA-0014", "", "Licences for data centres serving firms headquartered in China, November 2026", "", "", "", "F"),
         ("MYS-0001;MYS-0002", "Malaysia", "Strategic Trade Act permit, July 2025", "", "F", "X", ""),
         ("MYS-0003", "", "Trade ministry statement on AI servers, June 2025", "", "", "X", ""),
         ("SGP-0001", "Singapore", "Prosecutions for fraud on server suppliers", "", "P", "", ""),
