@@ -1,0 +1,860 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><title>Seven Markets Chart</title><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap"><style>
+/* Layout: one column of figures; each figure is a title block, a legend, the plot, a note and a table. */
+:root{
+  --bg:#FFFFFF;--card:#F7F6F4;--text:#22252C;--muted:#5F6169;--light:#8D8F97;--accent:#A2540D;--composite:#B45F0F;
+  --pale:#FFF4E4;--border:rgba(0,0,0,.1);--border-strong:rgba(0,0,0,.18);--grid:#D4D4D4;--tick:#5A5448;--ink:#1A1A1A;
+  --band:rgba(0,0,0,.07);--d1:#4E79A7;--d2:#F28E2B;--d3:#E15759;--sea:#E6EDF2;--land:#FBFAF8;--coast:#B5B0A6;
+  --lab-country:#22252C;--lab-city:#22252C;--halo:#FFFFFF;--ring:#FFFFFF;--shadow:0 4px 24px rgba(0,0,0,.15);--chip-bg:#A2540D;--chip-fg:#FFFFFF;
+  --font:"Figtree",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#16181D;--card:#22252C;--text:#ECEDEF;--muted:#B4B6BD;--light:#8D9099;--accent:#D9C2A0;--chip-bg:#ECEDEF;--chip-fg:#16181D;--composite:#F5AE5F;
+  --pale:#2B2219;--border:rgba(255,255,255,.12);--border-strong:rgba(255,255,255,.22);--grid:#3B3F48;--tick:#B9B3A8;
+  --ink:#ECEDEF;--band:rgba(255,255,255,.07);--sea:#1B222D;--land:#2A2D34;--coast:#4B4F59;--lab-country:#ECEDEF;
+  --lab-city:#ECEDEF;--halo:#16181D;--ring:#16181D;--shadow:0 4px 24px rgba(0,0,0,.55);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#16181D;--card:#22252C;--text:#ECEDEF;--muted:#B4B6BD;--light:#8D9099;--accent:#D9C2A0;--chip-bg:#ECEDEF;--chip-fg:#16181D;--composite:#F5AE5F;
+  --pale:#2B2219;--border:rgba(255,255,255,.12);--border-strong:rgba(255,255,255,.22);--grid:#3B3F48;--tick:#B9B3A8;
+  --ink:#ECEDEF;--band:rgba(255,255,255,.07);--sea:#1B222D;--land:#2A2D34;--coast:#4B4F59;--lab-country:#ECEDEF;
+  --lab-city:#ECEDEF;--halo:#16181D;--ring:#16181D;--shadow:0 4px 24px rgba(0,0,0,.55);color-scheme:dark}
+html,body{background:var(--bg)}
+body{margin:0;color:var(--text);font-family:var(--font);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.fx-page{max-width:1000px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px))}
+.fx-fig+.fx-fig{margin-top:56px;padding-top:40px;border-top:1px solid var(--border)}
+.fx-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.fx-title{font-size:clamp(22px,3vw,28px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:0 0 8px;text-wrap:balance}
+.fx-sub{font-size:16px;color:var(--text);margin:0 0 18px}
+.fx-legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--text);margin:0 0 14px}
+.fx-legend span{display:inline-flex;align-items:center;gap:7px}
+.fx-sw{width:12px;height:12px;border-radius:2px;display:inline-block;flex:none}
+.fx-sw.dot{border-radius:50%}
+.fx-sw.dashed{border-radius:50%;border:1.5px dashed var(--text);background:transparent;width:11px;height:11px}
+.fx-note{font-size:13px;line-height:1.6;color:var(--text);margin:16px 0 0}
+.fx-note b{color:var(--text);font-weight:600}
+details.fx-table{margin-top:14px;font-size:14px}
+details.fx-table summary{cursor:pointer;font-weight:700;color:var(--text);padding:6px 0}
+details.fx-table summary:hover{color:var(--accent)}
+.fx-scroll{overflow-x:auto}
+.fx-scroll table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+.fx-scroll th{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);
+  border-bottom:2px solid rgba(162,84,13,.22);padding:9px 10px;text-align:left;vertical-align:bottom}
+.fx-scroll td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+.fx-scroll tr:hover td{background:var(--pale)}
+.fx-scroll .n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* card tooltip, after the country card of the CORDA site */
+.fx-card{position:fixed;z-index:1000;background:var(--card);border:1px solid var(--border-strong);border-radius:6px;
+  box-shadow:var(--shadow);padding:16px;width:280px;max-width:calc(100vw - 24px);font-family:var(--font);color:var(--text);
+  pointer-events:none}
+.fx-card.pinned{pointer-events:auto}
+.fx-card[hidden]{display:none}
+.fx-ch{display:flex;align-items:center;gap:6px;font-weight:700;font-size:16px;line-height:1.25}
+.fx-pill{font-size:12px;font-weight:600;color:var(--chip-fg);background:var(--chip-bg);border-radius:10px;padding:1px 8px;margin-left:4px;white-space:nowrap}
+.fx-cs{font-size:12px;color:var(--text);margin-top:2px}
+.fx-cm{border-top:1px solid var(--border);padding-top:10px;margin-top:10px}
+.fx-cr{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:3px}
+.fx-cr b{font-size:13px;color:var(--text);font-weight:700;white-space:nowrap}
+.fx-cr span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.fx-mini{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.fx-mini i{display:block;height:100%;border-radius:3px}
+.fx-stack{display:flex}
+.fx-stack i{border-radius:0;flex:none}
+.fx-cl{display:flex;flex-direction:column;gap:7px;margin-top:10px}
+.fx-cf{font-size:12px;color:var(--text);margin-top:10px;line-height:1.45}
+.fx-site{display:grid;grid-template-columns:10px 1fr;gap:2px 8px;font-size:12px;line-height:1.4}
+.fx-site i{width:9px;height:9px;border-radius:50%;margin-top:4px}
+.fx-site b{font-weight:600}
+.fx-site span{grid-column:2;color:var(--text)}
+.fx-sites{max-height:260px;overflow:auto}
+.fx-close{position:absolute;top:8px;right:10px;background:none;border:0;font-size:18px;color:var(--text);cursor:pointer;display:none}
+.fx-card.pinned .fx-close{display:block}
+
+.mk-plot{display:grid;grid-template-columns:minmax(92px,170px) minmax(0,1fr);column-gap:12px;position:relative}
+.mk-row{display:contents}
+.mk-name{grid-column:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;
+  font-size:14px;color:var(--ink);line-height:1.2;padding:6px 0;min-height:46px}
+.mk-name small{font-size:11.5px;color:var(--text);margin-top:2px}
+.mk-cell{grid-column:2;position:relative;display:flex;align-items:center;padding-right:58px;cursor:pointer;outline:none}
+.mk-row:hover .mk-cell,.mk-row:hover .mk-name,.mk-cell:focus-visible,.mk-active .mk-cell,.mk-active .mk-name{background:var(--band)}
+.mk-cell:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}
+.mk-track{position:relative;flex:1;height:30px}
+.mk-seg{position:absolute;top:0;bottom:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mk-seg b{font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.mk-seg b.off{visibility:hidden}
+.mk-val{position:absolute;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;
+  padding-left:6px;font-variant-numeric:tabular-nums}
+.mk-grid{grid-column:2;grid-row:1 / span 7;position:relative;margin-right:58px;pointer-events:none;z-index:0}
+.mk-grid i{position:absolute;top:0;bottom:0;width:1px;background-image:linear-gradient(var(--grid) 50%,transparent 50%);
+  background-size:1px 6px}
+.mk-cell>*{z-index:1}
+.mk-axis{grid-column:2;position:relative;height:26px;margin-right:58px;border-top:1px solid var(--grid)}
+.mk-axis span{position:absolute;top:6px;transform:translateX(-50%);font-size:11px;color:var(--text);font-variant-numeric:tabular-nums}
+.mk-axis-title{grid-column:2;font-size:12px;color:var(--text);text-align:center;margin-right:58px;margin-top:2px}
+@media (max-width:520px){.mk-plot{grid-template-columns:86px minmax(0,1fr);column-gap:8px}.mk-name{font-size:13px}}
+
+.mp-views{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.mp-btn{font-family:var(--font);font-size:14px;font-weight:600;border:1px solid var(--border);background:var(--bg);border-radius:999px;
+  padding:7px 16px;cursor:pointer;color:var(--text);transition:all .15s ease;white-space:nowrap}
+.mp-btn:hover{border-color:var(--accent);color:var(--accent)}
+.mp-btn[aria-pressed="true"]{background:var(--chip-bg);border-color:var(--chip-bg);color:var(--chip-fg)}
+.mp-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#mp-map{height:clamp(380px,60vw,560px);border-radius:4px;background:var(--sea);border:1px solid var(--border)}
+#mp-map .leaflet-control-zoom a{color:var(--text);background:var(--bg);border-color:var(--border)}
+.mp-lab{width:0;height:0;overflow:visible;pointer-events:none}
+.mp-lab span{position:absolute;white-space:nowrap;font-family:var(--font);line-height:1;
+  text-shadow:0 0 3px var(--halo),0 0 3px var(--halo),0 0 2px var(--halo)}
+.mp-country span{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lab-country)}
+.mp-region span{font-size:12px;font-weight:600;font-style:italic;letter-spacing:.06em;color:var(--lab-country)}
+.mp-city span{font-size:12.5px;font-weight:600;color:var(--lab-city)}
+.mp-place span{font-size:11.5px;font-weight:500;font-style:italic;color:var(--text)}
+.mp-c span{transform:translate(-50%,-50%)}
+.mp-r span{transform:translate(var(--off,10px),-50%)}
+.mp-l span{transform:translate(calc(-100% - var(--off,10px)),-50%)}
+.mp-b span{transform:translate(-50%,var(--off,10px))}
+.mp-t span{transform:translate(-50%,calc(-100% - var(--off,10px)))}
+.mp-hint{font-size:12px;color:var(--text);margin:8px 0 0}
+.mp-print .mp-views,.mp-print .leaflet-control-container,.mp-print .mp-hint{display:none}
+/* required styles */
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+.leaflet-container {
+	overflow: hidden;
+	}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
+	  -webkit-user-drag: none;
+	}
+/* Prevents IE11 from highlighting tiles in blue */
+.leaflet-tile::selection {
+	background: transparent;
+}
+/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
+.leaflet-safari .leaflet-tile {
+	image-rendering: -webkit-optimize-contrast;
+	}
+/* hack that prevents hw layers "stretching" when loading new tiles */
+.leaflet-safari .leaflet-tile-container {
+	width: 1600px;
+	height: 1600px;
+	-webkit-transform-origin: 0 0;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	display: block;
+	}
+/* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
+/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+.leaflet-container .leaflet-overlay-pane svg {
+	max-width: none !important;
+	max-height: none !important;
+	}
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+	max-width: none !important;
+	max-height: none !important;
+	width: auto;
+	padding: 0;
+	}
+
+.leaflet-container img.leaflet-tile {
+	/* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+	mix-blend-mode: plus-lighter;
+}
+
+.leaflet-container.leaflet-touch-zoom {
+	-ms-touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
+	}
+.leaflet-container.leaflet-touch-drag {
+	-ms-touch-action: pinch-zoom;
+	/* Fallback for FF which doesn't support pinch-zoom */
+	touch-action: none;
+	touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.leaflet-container {
+	-webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+	filter: inherit;
+	visibility: hidden;
+	}
+.leaflet-tile-loaded {
+	visibility: inherit;
+	}
+.leaflet-zoom-box {
+	width: 0;
+	height: 0;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	z-index: 800;
+	}
+/* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+.leaflet-overlay-pane svg {
+	-moz-user-select: none;
+	}
+
+.leaflet-pane         { z-index: 400; }
+
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+
+.leaflet-vml-shape {
+	width: 1px;
+	height: 1px;
+	}
+.lvml {
+	behavior: url(#default#VML);
+	display: inline-block;
+	position: absolute;
+	}
+
+
+/* control positioning */
+
+.leaflet-control {
+	position: relative;
+	z-index: 800;
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+.leaflet-top,
+.leaflet-bottom {
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	}
+.leaflet-top {
+	top: 0;
+	}
+.leaflet-right {
+	right: 0;
+	}
+.leaflet-bottom {
+	bottom: 0;
+	}
+.leaflet-left {
+	left: 0;
+	}
+.leaflet-control {
+	float: left;
+	clear: both;
+	}
+.leaflet-right .leaflet-control {
+	float: right;
+	}
+.leaflet-top .leaflet-control {
+	margin-top: 10px;
+	}
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 10px;
+	}
+.leaflet-left .leaflet-control {
+	margin-left: 10px;
+	}
+.leaflet-right .leaflet-control {
+	margin-right: 10px;
+	}
+
+
+/* zoom and fade animations */
+
+.leaflet-fade-anim .leaflet-popup {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	opacity: 1;
+	}
+.leaflet-zoom-animated {
+	-webkit-transform-origin: 0 0;
+	    -ms-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	}
+svg.leaflet-zoom-animated {
+	will-change: transform;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+	}
+
+.leaflet-zoom-anim .leaflet-zoom-hide {
+	visibility: hidden;
+	}
+
+
+/* cursors */
+
+.leaflet-interactive {
+	cursor: pointer;
+	}
+.leaflet-grab {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
+	}
+.leaflet-popup-pane,
+.leaflet-control {
+	cursor: auto;
+	}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:         grabbing;
+	}
+
+/* marker & overlays interactivity */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+
+/* visual tweaks */
+
+.leaflet-container {
+	background: #ddd;
+	outline-offset: 1px;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #38f;
+	background: rgba(255,255,255,0.5);
+	}
+
+
+/* general typography */
+.leaflet-container {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	}
+
+
+/* general toolbar styles */
+
+.leaflet-bar {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	border-radius: 4px;
+	}
+.leaflet-bar a {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	}
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+	background-color: #f4f4f4;
+	}
+.leaflet-bar a:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	}
+.leaflet-bar a:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom: none;
+	}
+.leaflet-bar a.leaflet-disabled {
+	cursor: default;
+	background-color: #f4f4f4;
+	color: #bbb;
+	}
+
+.leaflet-touch .leaflet-bar a {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	}
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	}
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	}
+
+/* zoom control */
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+	}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	font-size: 22px;
+	}
+
+
+/* layers control */
+
+.leaflet-control-layers {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+	}
+.leaflet-control-layers-toggle {
+	background-image: url(images/layers.png);
+	width: 36px;
+	height: 36px;
+	}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: url(images/layers-2x.png);
+	background-size: 26px 26px;
+	}
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	display: none;
+	}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+	display: block;
+	position: relative;
+	}
+.leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	color: #333;
+	background: #fff;
+	}
+.leaflet-control-layers-scrollbar {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	}
+.leaflet-control-layers-selector {
+	margin-top: 2px;
+	position: relative;
+	top: 1px;
+	}
+.leaflet-control-layers label {
+	display: block;
+	font-size: 13px;
+	font-size: 1.08333em;
+	}
+.leaflet-control-layers-separator {
+	height: 0;
+	border-top: 1px solid #ddd;
+	margin: 5px -10px 5px -6px;
+	}
+
+/* Default icon URLs */
+.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+	background-image: url(images/marker-icon.png);
+	}
+
+
+/* attribution and scale controls */
+
+.leaflet-container .leaflet-control-attribution {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+	padding: 0 5px;
+	color: #333;
+	line-height: 1.4;
+	}
+.leaflet-control-attribution a {
+	text-decoration: none;
+	}
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
+	text-decoration: underline;
+	}
+.leaflet-attribution-flag {
+	display: inline !important;
+	vertical-align: baseline !important;
+	width: 1em;
+	height: 0.6669em;
+	}
+.leaflet-left .leaflet-control-scale {
+	margin-left: 5px;
+	}
+.leaflet-bottom .leaflet-control-scale {
+	margin-bottom: 5px;
+	}
+.leaflet-control-scale-line {
+	border: 2px solid #777;
+	border-top: none;
+	line-height: 1.1;
+	padding: 2px 5px 1px;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px #fff;
+	}
+.leaflet-control-scale-line:not(:first-child) {
+	border-top: 2px solid #777;
+	border-bottom: none;
+	margin-top: -2px;
+	}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	border-bottom: 2px solid #777;
+	}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	box-shadow: none;
+	}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	}
+
+
+/* popup */
+
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 24px 13px 20px;
+	line-height: 1.3;
+	font-size: 13px;
+	font-size: 1.08333em;
+	min-height: 1px;
+	}
+.leaflet-popup-content p {
+	margin: 17px 0;
+	margin: 1.3em 0;
+	}
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+
+	margin: -10px auto 0;
+	pointer-events: auto;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	font: 16px/24px Tahoma, Verdana, sans-serif;
+	color: #757575;
+	text-decoration: none;
+	background: transparent;
+	}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #585858;
+	}
+.leaflet-popup-scrolled {
+	overflow: auto;
+	}
+
+.leaflet-oldie .leaflet-popup-content-wrapper {
+	-ms-zoom: 1;
+	}
+.leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+
+
+/* div icon */
+
+.leaflet-div-icon {
+	background: #fff;
+	border: 1px solid #666;
+	}
+
+
+/* Tooltip */
+/* Base styles for the element that has a tooltip */
+.leaflet-tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+.leaflet-tooltip.leaflet-interactive {
+	cursor: pointer;
+	pointer-events: auto;
+	}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	position: absolute;
+	pointer-events: none;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	}
+
+/* Directions */
+
+.leaflet-tooltip-bottom {
+	margin-top: 6px;
+}
+.leaflet-tooltip-top {
+	margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+	left: 50%;
+	margin-left: -6px;
+	}
+.leaflet-tooltip-top:before {
+	bottom: 0;
+	margin-bottom: -12px;
+	border-top-color: #fff;
+	}
+.leaflet-tooltip-bottom:before {
+	top: 0;
+	margin-top: -12px;
+	margin-left: -6px;
+	border-bottom-color: #fff;
+	}
+.leaflet-tooltip-left {
+	margin-left: -6px;
+}
+.leaflet-tooltip-right {
+	margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	top: 50%;
+	margin-top: -6px;
+	}
+.leaflet-tooltip-left:before {
+	right: 0;
+	margin-right: -12px;
+	border-left-color: #fff;
+	}
+.leaflet-tooltip-right:before {
+	left: 0;
+	margin-left: -12px;
+	border-right-color: #fff;
+	}
+
+/* Printing */
+
+@media print {
+	/* Prevent printers from removing background-images of controls. */
+	.leaflet-control {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+		}
+	}
+.fx-intro{margin-bottom:36px}</style><main class="fx-page"><section class="fx-fig" id="mk">
+<h2 class="fx-title">Where Chinese firms and funds hold a role in data centres</h2>
+<p class="fx-sub">Share of the data-centre facilities that Baxtel lists in each market at which a Chinese firm or fund operates, owns, rents
+or finances the facility, by the ground on which the firm or fund counts as Chinese</p>
+<div class="fx-legend"><span><i class="fx-sw" style="background:var(--d1)"></i>Firm headquartered or controlled in mainland China</span><span><i class="fx-sw" style="background:var(--d2)"></i>Former subsidiary of a Chinese firm only</span><span><i class="fx-sw" style="background:var(--d3)"></i>Fund linked to the Chinese state</span></div>
+<div class="mk-plot" id="mk-plot">
+<div class="mk-grid"><i style="left:0.0%"></i><i style="left:25.0%"></i><i style="left:50.0%"></i><i style="left:75.0%"></i><i style="left:100.0%"></i></div>
+<div class="mk-row" data-i="0"><div class="mk-name" style="grid-row:1">Johor<small>30 of 84 facilities</small></div><div class="mk-cell" style="grid-row:1" tabindex="0" role="img" aria-label="Johor: 30 of 84 facilities, 35.7 per cent"><div class="mk-track"><span class="mk-seg" style="left:0.000%;width:20.833%;background:var(--d1)"><b style="color:#FFFFFF">7</b></span><span class="mk-seg" style="left:20.833%;width:59.524%;background:var(--d2)"><b style="color:#1A1A1A">20</b></span><span class="mk-seg" style="left:80.357%;width:8.929%;background:var(--d3)"><b style="color:#FFFFFF">3</b></span><span class="mk-val" style="left:89.286%">35.7%</span></div></div></div><div class="mk-row" data-i="1"><div class="mk-name" style="grid-row:2">Batam<small>6 of 20 facilities</small></div><div class="mk-cell" style="grid-row:2" tabindex="0" role="img" aria-label="Batam: 6 of 20 facilities, 30.0 per cent"><div class="mk-track"><span class="mk-seg" style="left:0.000%;width:12.500%;background:var(--d1)"><b style="color:#FFFFFF">1</b></span><span class="mk-seg" style="left:12.500%;width:50.000%;background:var(--d2)"><b style="color:#1A1A1A">4</b></span><span class="mk-seg" style="left:62.500%;width:12.500%;background:var(--d3)"><b style="color:#FFFFFF">1</b></span><span class="mk-val" style="left:75.000%">30.0%</span></div></div></div><div class="mk-row" data-i="2"><div class="mk-name" style="grid-row:3">Greater Kuala Lumpur<small>16 of 90 facilities</small></div><div class="mk-cell" style="grid-row:3" tabindex="0" role="img" aria-label="Greater Kuala Lumpur: 16 of 90 facilities, 17.8 per cent"><div class="mk-track"><span class="mk-seg" style="left:0.000%;width:44.444%;background:var(--d2)"><b style="color:#1A1A1A">16</b></span><span class="mk-val" style="left:44.444%">17.8%</span></div></div></div><div class="mk-row" data-i="3"><div class="mk-name" style="grid-row:4">Singapore<small>11 of 110 facilities</small></div><div class="mk-cell" style="grid-row:4" tabindex="0" role="img" aria-label="Singapore: 11 of 110 facilities, 10.0 per cent"><div class="mk-track"><span class="mk-seg" style="left:0.000%;width:18.182%;background:var(--d1)"><b style="color:#FFFFFF">8</b></span><span class="mk-seg" style="left:18.182%;width:4.545%;background:var(--d2)"><b style="color:#1A1A1A">2</b></span><span class="mk-seg" style="left:22.727%;width:2.273%;background:var(--d3)"><b style="color:#FFFFFF">1</b></span><span class="mk-val" style="left:25.000%">10.0%</span></div></div></div><div class="mk-row" data-i="4"><div class="mk-name" style="grid-row:5">Greater Bangkok<small>8 of 88 facilities</small></div><div class="mk-cell" style="grid-row:5" tabindex="0" role="img" aria-label="Greater Bangkok: 8 of 88 facilities, 9.1 per cent"><div class="mk-track"><span class="mk-seg" style="left:0.000%;width:14.205%;background:var(--d1)"><b style="color:#FFFFFF">5</b></span><span class="mk-seg" style="left:14.205%;width:8.523%;background:var(--d2)"><b style="color:#1A1A1A">3</b></span><span class="mk-val" style="left:22.727%">9.1%</span></div></div></div><div class="mk-row" data-i="5"><div class="mk-name" style="grid-row:6">Greater Tokyo<small>2 of 143 facilities</small></div><div class="mk-cell" style="grid-row:6" tabindex="0" role="img" aria-label="Greater Tokyo: 2 of 143 facilities, 1.4 per cent"><div class="mk-track"><span class="mk-seg" style="left:0.000%;width:3.497%;background:var(--d2)"><b style="color:#1A1A1A">2</b></span><span class="mk-val" style="left:3.497%">1.4%</span></div></div></div><div class="mk-row" data-i="6"><div class="mk-name" style="grid-row:7">Jakarta<small>0 of 104 facilities</small></div><div class="mk-cell" style="grid-row:7" tabindex="0" role="img" aria-label="Jakarta: 0 of 104 facilities, 0.0 per cent"><div class="mk-track"><span class="mk-val" style="left:0.000%">0.0%</span></div></div></div>
+<div class="mk-axis" style="grid-row:8"><span style="left:0.0%">0%</span><span style="left:25.0%">10%</span><span style="left:50.0%">20%</span><span style="left:75.0%">30%</span><span style="left:100.0%">40%</span></div>
+<div class="mk-axis-title" style="grid-row:9">Share of the facilities listed in the market</div>
+</div>
+<p class="fx-note">A facility counts under the fund if the China-ASEAN Investment Cooperation Fund II finances the facility; otherwise under
+headquarters or control if any firm at the facility has its headquarters or controlling owner in mainland China; and otherwise under former
+subsidiaries, which are DayOne, Bridge Data Centres, Bitdeer and Megaspeed. <b>In Johor, 20 of the 30 facilities with a Chinese role count only
+because the operator or owner was once part of a Chinese firm; without that ground, 10 of the 84 facilities (11.9 per cent) have a Chinese
+role.</b> The number inside each coloured segment counts facilities; the axis gives the share of all facilities
+listed in the market. The bars do not count the 9 facilities with an unconfirmed report of a Chinese firm. Source: Overseas Data Centres
+of Chinese Firms, a dataset compiled by Jason Hung, November 2026, from Baxtel&rsquo;s market lists and the sources cited for each facility.</p>
+</section></main><div class="fx-card" id="fx-card" hidden role="status" aria-live="polite"></div><script>
+window.fxCard=(function(){
+  var card=document.getElementById('fx-card'), pinnedEl=null, activeCls=null;
+  function place(x,y){
+    var w=card.offsetWidth,h=card.offsetHeight,vw=window.innerWidth,vh=window.innerHeight;
+    var left=x+16, top=y+16;
+    if(left+w>vw-8) left=Math.max(8,x-w-16);
+    if(top+h>vh-8) top=Math.max(8,vh-h-8);
+    card.style.left=left+'px'; card.style.top=top+'px';
+  }
+  function show(html,x,y,pin){ card.innerHTML=html; card.hidden=false; card.classList.toggle('pinned',!!pin); place(x,y);
+    var c=card.querySelector('.fx-close'); if(c) c.onclick=function(){hide(true);}; }
+  function mark(el){ document.querySelectorAll('.'+'mk-active').forEach(function(e){e.classList.remove('mk-active');}); if(el&&activeCls) el.classList.add(activeCls); }
+  function hide(force){ if(pinnedEl&&!force) return; pinnedEl=null; card.hidden=true; card.classList.remove('pinned'); mark(null); }
+  document.addEventListener('pointerdown',function(e){ if(pinnedEl&&!card.contains(e.target)&&!pinnedEl.contains(e.target)) hide(true); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(true); });
+  window.addEventListener('scroll',function(){ if(!pinnedEl) hide(); },{passive:true});
+  return {
+    show:show, hide:hide, place:place,
+    bind:function(root,sel,make,cls){
+      activeCls=cls;
+      root.querySelectorAll(sel).forEach(function(el){
+        el.addEventListener('pointermove',function(e){ if(e.pointerType==='mouse'&&!pinnedEl){ show(make(el),e.clientX,e.clientY); mark(el);} });
+        el.addEventListener('pointerleave',function(e){ if(e.pointerType==='mouse') hide(); });
+        el.addEventListener('click',function(e){ pinnedEl=el; show(make(el),e.clientX,e.clientY,true); mark(el); });
+        var f=el.querySelector('[tabindex]');
+        if(f){ f.addEventListener('focus',function(){ var b=f.getBoundingClientRect(); show(make(el),b.left+b.width*0.4,b.top+b.height/2); mark(el); });
+               f.addEventListener('blur',function(){ hide(); }); }
+      });
+    }
+  };
+})();
+
+(function(){
+  var MK=[{"market": "Johor", "country": "Malaysia", "flag": "🇲🇾", "rank": 1, "facilities": 84, "hq_control": 7, "former_subsidiary": 20, "state_fund": 3, "chinese_role": 30, "share": 35.7, "unconfirmed": 4, "operator": 26, "owner": 1, "tenant": 0, "financier": 3}, {"market": "Batam", "country": "Indonesia", "flag": "🇮🇩", "rank": 2, "facilities": 20, "hq_control": 1, "former_subsidiary": 4, "state_fund": 1, "chinese_role": 6, "share": 30.0, "unconfirmed": 0, "operator": 4, "owner": 1, "tenant": 0, "financier": 1}, {"market": "Greater Kuala Lumpur", "country": "Malaysia", "flag": "🇲🇾", "rank": 3, "facilities": 90, "hq_control": 0, "former_subsidiary": 16, "state_fund": 0, "chinese_role": 16, "share": 17.8, "unconfirmed": 1, "operator": 12, "owner": 1, "tenant": 3, "financier": 0}, {"market": "Singapore", "country": "Singapore", "flag": "🇸🇬", "rank": 4, "facilities": 110, "hq_control": 8, "former_subsidiary": 2, "state_fund": 1, "chinese_role": 11, "share": 10.0, "unconfirmed": 2, "operator": 5, "owner": 5, "tenant": 0, "financier": 1}, {"market": "Greater Bangkok", "country": "Thailand", "flag": "🇹🇭", "rank": 5, "facilities": 88, "hq_control": 5, "former_subsidiary": 3, "state_fund": 0, "chinese_role": 8, "share": 9.1, "unconfirmed": 0, "operator": 8, "owner": 0, "tenant": 0, "financier": 0}, {"market": "Greater Tokyo", "country": "Japan", "flag": "🇯🇵", "rank": 6, "facilities": 143, "hq_control": 0, "former_subsidiary": 2, "state_fund": 0, "chinese_role": 2, "share": 1.4, "unconfirmed": 0, "operator": 2, "owner": 0, "tenant": 0, "financier": 0}, {"market": "Jakarta", "country": "Indonesia", "flag": "🇮🇩", "rank": 7, "facilities": 104, "hq_control": 0, "former_subsidiary": 0, "state_fund": 0, "chinese_role": 0, "share": 0.0, "unconfirmed": 2, "operator": 0, "owner": 0, "tenant": 0, "financier": 0}], plot=document.getElementById('mk-plot'), card=document.getElementById('fx-card');
+  var LAB=['Headquartered or controlled in mainland China','Former subsidiary of a Chinese firm only','Fund linked to the Chinese state'];
+  var KEY=['hq_control','former_subsidiary','state_fund'];
+  // every figure in the card uses the chart's base (all facilities listed) and the chart's scale (0 to 40 per cent)
+  function pct(n,r){ return 100*n/r.facilities; }
+  function w(n,r){ return Math.min(100,100*pct(n,r)/40); }
+  function cardHTML(r){
+    var stack=KEY.map(function(k,i){ return r[k]?'<i style="width:'+w(r[k],r)+'%;background:var(--d'+(i+1)+')"></i>':''; }).join('');
+    var parts=KEY.map(function(k,i){
+      return '<div><div class="fx-cr"><span>'+LAB[i]+'</span><span>'+r[k]+' of '+r.facilities+' ('+pct(r[k],r).toFixed(1)+'%)</span></div>'+
+        '<div class="fx-mini"><i style="width:'+w(r[k],r)+'%;background:var(--d'+(i+1)+')"></i></div></div>';
+    });
+    var roles=[['operator','operator'],['owner','owner'],['tenant','tenant'],['financier','financier']].filter(function(p){return r[p[0]]>0;})
+      .map(function(p){return p[1]+' '+r[p[0]];});
+    return '<button class="fx-close" aria-label="Close">&times;</button>'+
+      '<div class="fx-ch"><span>'+r.flag+'</span><span>'+r.market+'</span><span class="fx-pill">#'+r.rank+'</span></div>'+
+      '<div class="fx-cs">'+r.country+' &middot; '+r.facilities+' facilities listed by Baxtel</div>'+
+      '<div class="fx-cm"><div class="fx-cr"><span>Chinese role: '+r.chinese_role+' of '+r.facilities+' facilities</span><b>'+r.share.toFixed(1)+'%</b></div>'+
+      '<div class="fx-cs">'+KEY.map(function(k){return r[k];}).join(' + ')+' = '+r.chinese_role+' facilities</div></div>'+
+      '<div class="fx-cl">'+parts.join('')+'</div>'+
+      '<div class="fx-cf">Bars use the scale of the chart, 0 to 40 per cent of the facilities listed.'+
+      (roles.length?'<br>By role of the Chinese firm or fund: '+roles.join(', '):'')+
+      (r.unconfirmed?'<br>Unconfirmed reports, not counted: '+r.unconfirmed:'')+'</div>';
+  }
+  function fit(){ plot.querySelectorAll('.mk-seg b').forEach(function(b){ b.classList.remove('off');
+    if(b.scrollWidth+6>b.parentNode.clientWidth) b.classList.add('off'); }); }
+  fit(); window.addEventListener('resize',fit); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  window.fxCard.bind(plot,'.mk-row',function(el){return cardHTML(MK[+el.getAttribute('data-i')]);},'mk-active');
+})();
+
+</script></body></html>
