@@ -1,8 +1,11 @@
 # Changelog
 
-This file lists the versions of the dataset and the changes between them. Each version is identified by the commit on the branch `main` at which the version was complete, because the repository records no tags.
+This file lists the versions of the dataset and the changes between them. Versions 0.1.0 and 0.2.0 are identified by the commit on the branch `main` at which each version was complete. From version 0.3.0, each version also carries a tag of the same name.
 
-## Changes after version 0.2.0
+## Version 0.3.0, 20 November 2026
+
+Version 0.3.0 carries the tag `v0.3.0` and holds 1,042 graded rows, of which 221 rest on a primary source, 799 on a secondary source and 22 are unconfirmed. All 1,086 passages of the 1,042 rows were found on their pages. The censuses cover 639 facilities in seven markets, and a Chinese firm or a fund of a Chinese state lender holds a role at 73 of them. The low estimate of capacity is 1,446 MW in service and 6,353 MW under construction or planned, and the high estimate is 1,798 MW and 7,464 MW. Version 0.3.0 makes the following changes to version 0.2.0.
+
 
 1. A census of the 143 data-centre facilities that Baxtel lists in Greater Tokyo, in `config/tokyo_census.csv`. DayOne operates 2 of them, at Fuchu and Kodaira, and no source found names a Chinese link at the other 141. With Tokyo, the censuses cover 639 facilities in seven markets, and a role is recorded at 73 of them.
 2. 14 further web searches, which raise the log to 91: 7 for Tokyo and 7 for named Chinese tenants at the largest operators of Johor, Greater Bangkok and Singapore, none of which found such a tenant.
