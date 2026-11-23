@@ -1,8 +1,10 @@
 # Changelog
 
-This file lists the versions of the dataset and the changes between them. Each version is identified by the commit on the branch `main` at which the version was complete, because the repository records no tags.
+This file lists the versions of the dataset and the changes between them. Each version carries a tag of the form `v0.3.1` on the commit at which the version was complete, and the tags of versions 0.1.0 to 0.3.0 were added on 23 November 2026 to the commits named below.
 
-## Changes after version 0.3.0
+## Version 0.3.1, 23 November 2026
+
+Version 0.3.1 carries the tag `v0.3.1` and holds 1,044 graded rows, of which 223 rest on a primary source, 799 on a secondary source and 22 are unconfirmed. The passages of the 2 new rows were found on their page. The sites, roles, censuses and capacity estimate are those of version 0.3.0. Version 0.3.1 makes the following changes to version 0.3.0.
 
 1. Two rows for the interim final rule "Addressing Remote Access to Advanced Semiconductors" (91 FR 74970), which the US Department of Commerce published on 19 November 2026 and which took effect on publication: `USA-0013` records the licence requirement for exports of advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, and `USA-0014` records the licence requirement for chips used at data centres that provide more than 12,000,000 aggregate TPP to firms headquartered, or whose ultimate parent company is headquartered, in Country Group D:5 or Macau. Both rows cite the official PDF on GovInfo, because FederalRegister.gov refuses automated downloads. The notes of `USA-0001` and `USA-0010` now refer to the rule, and the rules table holds 22 rows, of which 8 rest on a primary source.
 2. Three interactive figures for the article on Racks Central's data centres in Johor, published on GitHub Pages from `site/figures/`: `financing-chain.html`, which traces the capital from the sponsors of CAF II to Racks Central's sites in Johor and Batam, `map.html`, which maps the 90 sites and opens on the world or on Johor, Singapore and Batam with `?view=world` or `?view=strait`, and `seven-markets.html`, which charts the share of the facilities in the seven censuses at which a Chinese firm or fund holds a role. `site/figures/img/` holds an image of each figure for print.
