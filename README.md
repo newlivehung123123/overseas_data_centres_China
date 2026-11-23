@@ -284,6 +284,8 @@ The tests use small tables and passages written in the test files and need no do
 | `docs/figures/` | The four figures of the public post, drawn from the current files as SVG files |
 | `docs/figures/post_v0.1.0/` | The four figures as the post published them, drawn from version 0.1.0 |
 | `CHANGELOG.md` | Versions of the dataset and what each changed |
+| `data/remote_access_rule.csv` | Each site sorted by the way in which the US rule of 19 November 2026 on remote access can apply to the site, with the licence deadline of 17 February 2027 for operational sites with a named Chinese customer |
+| `scripts/flag_remote_access.py` | Writes `data/remote_access_rule.csv` from the checked rows of the sites, roles and firms |
 | `config/firms.csv` | Grounds on which each firm counts as Chinese, each with its page and passage |
 | `config/firm_links.csv` | Ownership links between listed firms and Chinese firms, each with its page and passage |
 | `config/operator_markets.csv` | Capacity that operators report by market, each with its page and passage |

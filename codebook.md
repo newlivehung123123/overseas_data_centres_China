@@ -392,3 +392,31 @@ One row for each record in AidData's Global Chinese Development Finance Dataset,
 | aiddata_url | text | Page of the record on china.aiddata.org |
 
 The amounts cover the whole project, because AidData does not separate the cost of the data centre from the rest of each project.
+
+### data/remote_access_rule.csv
+
+The script `scripts/flag_remote_access.py` sorts each of the sites in `sites.csv` by the way in which the US interim final rule of 19 November 2026 on remote access to advanced chips, recorded in `rules.csv` as `USA-0013` and `USA-0014`, can apply to the site. The rule requires a licence for advanced chips used at a data centre that provides more than 12,000,000 aggregate TPP to companies headquartered, or whose ultimate parent company is headquartered, in Country Group D:5 or Macau, and a data centre that provided such computing power before 19 November 2026 must obtain a licence within 90 days of that date, by 17 February 2027, in order to continue. Computing power used only for a commercial recommender system is exempt when the data centre reports the customer, the TPP of the chips and its checks to the Bureau of Industry and Security. The file is derived only from the checked rows of `sites.csv`, `site_roles.csv` and `firms.csv`, and it does not decide whether a site needs a licence, because the sources give neither the TPP of the chips at a site nor the share of the computing power that each customer uses.
+
+**Table 25. Categories in remote_access_rule.csv**
+
+| Category | Meaning |
+|---|---|
+| named_customer | A firm that counts as Chinese on the ground of headquarters or control is named as a tenant or user of the site, so the licence requirement of `USA-0014` can apply |
+| chinese_operator_owner | No such tenant or user is named, but a firm on the ground of headquarters or control operates or owns the site, so chips that the firm itself receives already need a licence under the rule of October 2023, recorded as `USA-0007` |
+| no_chinese_customer | The only firms named are firms on the ground of origin, a fund of a Chinese state lender or a supplier of equipment, so the rule can apply only through customers that the sources do not name |
+
+**Table 26. Variables in remote_access_rule.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| site_id, site_name, country_iso3, status | text | | As in Table 6 |
+| category | category | Table 25 | Way in which the rule can apply to the site |
+| chinese_customers | text | | Firms on the ground of headquarters or control named as tenant or user, separated by semicolons |
+| customer_evidence | category | primary, secondary, unconfirmed | Lowest grade of evidence among the roles of those firms, as in Table 4 |
+| chinese_operators_owners | text | | Firms on the ground of headquarters or control named as operator or owner, separated by semicolons |
+| other_firms | text | | Every other firm with a role at the site, separated by semicolons |
+| capacity_mw, capacity_basis | | | As in Table 6 |
+| licence_deadline | date | YYYY-MM-DD | 2027-02-17 for an operational site with a named customer, which needed a licence by that date to continue if it provided more than 12,000,000 aggregate TPP to the customer, and empty otherwise |
+| note | text | | What the category means for a licence under the rule |
+
+The status of a site is the status at the date of the source, so an operational site is taken to have provided computing power before 19 November 2026, and a planned site or a site under construction is not.

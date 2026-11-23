@@ -2,6 +2,10 @@
 
 This file lists the versions of the dataset and the changes between them. Each version carries a tag of the form `v0.3.1` on the commit at which the version was complete, and the tags of versions 0.1.0 to 0.3.0 were added on 23 November 2026 to the commits named below.
 
+## Changes after version 0.3.1
+
+1. A file, `data/remote_access_rule.csv`, written by `scripts/flag_remote_access.py`, that sorts each of the 90 sites by the way in which the US rule of 19 November 2026 on remote access can apply to the site. At 18 sites a firm headquartered or controlled in mainland China or Hong Kong is named as a tenant or user, at 39 further sites such a firm operates or owns the site, and at the other 33 sites the only firms named are former subsidiaries of Chinese firms, a fund of a Chinese state lender or a supplier of equipment. 8 of the 18 sites with a named customer are operational, and each of the 8 needed a licence by 17 February 2027 to continue if it provided more than 12,000,000 aggregate TPP to the customer. The file decides no licence, because the sources give neither the TPP of the chips at a site nor the share of the computing power that each customer uses.
+
 ## Version 0.3.1, 23 November 2026
 
 Version 0.3.1 carries the tag `v0.3.1` and holds 1,044 graded rows, of which 223 rest on a primary source, 799 on a secondary source and 22 are unconfirmed. The passages of the 2 new rows were found on their page. The sites, roles, censuses and capacity estimate are those of version 0.3.0. Version 0.3.1 makes the following changes to version 0.3.0.
