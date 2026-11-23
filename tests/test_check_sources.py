@@ -88,5 +88,26 @@ class ValidateTest(unittest.TestCase):
         c.validate([self.site(status="planned")], [{"site_id": "MYS-0001", "role": "equipment supplier"}])
 
 
+class OnlyNewTest(unittest.TestCase):
+    def test_unchanged_row_keeps_its_result_and_is_not_downloaded(self):
+        old = [{"source_url": "https://a.example", "source_quote": "a passage", "check_status": "found",
+                "share_found": "1.00", "retrieved": "2026-10-21"}]
+        rows = [{"source_url": "https://a.example", "source_quote": "a passage"},
+                {"source_url": "https://b.example", "source_quote": "ByteDance System Sdn. Bhd"}]
+        with mock.patch.object(c, "page", return_value=(PAGE, "2026-11-23")) as fetched:
+            checked = c.check(rows, False, c.earlier_results(old))
+        fetched.assert_called_once_with("https://b.example", False)
+        self.assertEqual((checked[0]["check_status"], checked[0]["retrieved"]), ("found", "2026-10-21"))
+        self.assertEqual((checked[1]["check_status"], checked[1]["retrieved"]), ("found", "2026-11-23"))
+
+    def test_changed_passage_is_checked_again(self):
+        old = [{"source_url": "https://a.example", "source_quote": "old words", "check_status": "found",
+                "share_found": "1.00", "retrieved": "2026-10-21"}]
+        rows = [{"source_url": "https://a.example", "source_quote": "Alibaba Cloud will be the anchor tenant in Batam"}]
+        with mock.patch.object(c, "page", return_value=(PAGE, "2026-11-23")):
+            checked = c.check(rows, False, c.earlier_results(old))
+        self.assertEqual(checked[0]["check_status"], "not_found")
+
+
 if __name__ == "__main__":
     unittest.main()

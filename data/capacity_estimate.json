@@ -1,50 +1,50 @@
 {
   "low": {
     "in_service_mw": 1446,
-    "pipeline_mw": 6353,
-    "total_mw": 7798,
+    "pipeline_mw": 6473,
+    "total_mw": 7918,
     "mw_by_basis": {
-      "it": 7048,
+      "it": 7168,
       "power": 60,
       "unspecified": 690
     }
   },
   "high": {
     "in_service_mw": 1798,
-    "pipeline_mw": 7464,
-    "total_mw": 9262,
+    "pipeline_mw": 7584,
+    "total_mw": 9382,
     "mw_by_basis": {
-      "it": 7198,
+      "it": 7318,
       "power": 680,
       "unspecified": 1384
     }
   },
-  "sites": 89,
+  "sites": 90,
   "sites_without_a_figure": 31,
   "sites_with_supply_roles_only": 1,
   "without_origin_only": {
     "low": {
       "in_service_mw": 482,
-      "pipeline_mw": 1847,
-      "total_mw": 2329,
+      "pipeline_mw": 1967,
+      "total_mw": 2449,
       "mw_by_basis": {
-        "it": 1579,
+        "it": 1699,
         "power": 60,
         "unspecified": 690
       }
     },
     "high": {
       "in_service_mw": 728,
-      "pipeline_mw": 2662,
-      "total_mw": 3390,
+      "pipeline_mw": 2782,
+      "total_mw": 3510,
       "mw_by_basis": {
-        "it": 1722,
+        "it": 1842,
         "power": 380,
         "unspecified": 1288
       }
     },
-    "sites": 58,
-    "sites_without_a_figure": 27,
+    "sites": 60,
+    "sites_without_a_figure": 28,
     "firms_left_out": [
       "Bitdeer",
       "Bridge Data Centres",

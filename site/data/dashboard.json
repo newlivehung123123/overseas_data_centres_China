@@ -1,5 +1,5 @@
 {
- "built": "2026-11-20",
+ "built": "2026-11-23",
  "records": [
   {
    "layer": "site",
@@ -407,6 +407,15 @@
      "role": "operator",
      "source": "https://www.sec.gov/Archives/edgar/data/2118192/000119312526414188/d223752df1.htm",
      "quote": "Since entering Johor, we have built campuses at two locations, Nusajaya Tech Park and Kempas Tech Park, secured approximately 1.4GW of Bookings and brought five global hyperscalers into the market.",
+     "check": "found",
+     "evidence": "primary"
+    },
+    {
+     "firm": "Bank of China",
+     "origin": "",
+     "role": "financier",
+     "source": "https://www.prnewswire.com/apac/news-releases/gds-secures-myr1-27-billion-syndicated-green-financing-to-complete-the-next-phase-of-nusajaya-tech-park-data-center-campus-development-302009836.html",
+     "quote": "secured a syndicated green financing facility of MYR1.27 billion from: UOB Malaysia, Bank of China ( Malaysia ) Berhad, OCBC Bank ( Malaysia ) Berhad and Standard Chartered Bank ( Malaysia ) Berhad. Proceeds from the loan will be used to complete the development of Nusajaya Tech Park (NTP) Data Center Campus Plot 1 in Johor, Malaysia",
      "check": "found",
      "evidence": "primary"
     }
@@ -4101,6 +4110,50 @@
    "point": [
     13.1857,
     101.1211
+   ],
+   "level": "B"
+  },
+  {
+   "layer": "site",
+   "id": "MYS-0026",
+   "name": "Epoch Digital Johor campus (Project Mercury)",
+   "city": "Iskandar Puteri, Johor",
+   "country": "Malaysia",
+   "status": "under_construction",
+   "capacity_mw": "120",
+   "capacity_basis": "it",
+   "note": "An initial IT capacity of 60 MW within a campus designed for 120 MW, on freehold land in the Nusa Cemerlang Industrial Park; Baxtel lists the site as Epoch Digital: Johor, short code EMY1",
+   "source": "https://www.aiib.org/en/projects/details/2026/_download/Malaysia/P000938-Project-Mercury-Malaysia-Green-Data-Center-Financing-Updated-PSI-vApproved.pdf",
+   "quote": "The facility will have an initial IT capacity of 60MW within a campus designed for a total IT capacity of 120MW",
+   "check": "found",
+   "evidence": "primary",
+   "iso3": "MYS",
+   "roles": [
+    {
+     "firm": "ByteDance",
+     "origin": "",
+     "role": "tenant",
+     "source": "https://www.aiib.org/en/projects/details/2026/_download/Malaysia/P000938-Project-Mercury-Malaysia-Green-Data-Center-Financing-Updated-PSI-vApproved.pdf",
+     "quote": "AIIB’s financing will support the development of the first 60MW phase, which is fully contracted under an off-take agreement with BytePlus",
+     "check": "found",
+     "evidence": "primary"
+    },
+    {
+     "firm": "Bank of China",
+     "origin": "",
+     "role": "financier",
+     "source": "https://theedgemalaysia.com/node/825956",
+     "quote": "Lead arrangers HSBC Holdings plc, Asian Infrastructure Investment Bank, Sumitomo Mitsui Banking Corp and Bank of China have signed the loan and committed to providing Epoch Digital with the funds",
+     "check": "found",
+     "evidence": "unconfirmed"
+    }
+   ],
+   "ai": [],
+   "capacity": [],
+   "epoch": null,
+   "point": [
+    1.4523,
+    103.6145
    ],
    "level": "B"
   },
@@ -11292,17 +11345,17 @@
    "operator": "Epoch Digital",
    "status": "Construction, Planned",
    "page": "https://baxtel.com/data-center/epoch-digital-johor",
-   "link": "none_found",
-   "site": "",
-   "note": "No source found in the searches of 22 October 2026 reports a role of a Chinese firm at this facility",
+   "link": "tenant",
+   "site": "MYS-0026",
+   "note": "Epoch Digital belongs to Actis, a private equity firm of London; the AIIB states that the first phase of 60 MW is fully contracted under an off-take agreement with BytePlus, the cloud business of ByteDance, and Bloomberg reports Bank of China among the lead arrangers of the loan",
    "source": "https://baxtel.com/data-center/johor",
    "quote": "Epoch Digital: Johor Epoch Digital Extra Large Construction, Planned Carrier-Neutral",
    "check": "found",
-   "link_source": "",
-   "link_quote": "",
-   "link_check": "",
+   "link_source": "https://www.aiib.org/en/projects/details/2026/_download/Malaysia/P000938-Project-Mercury-Malaysia-Green-Data-Center-Financing-Updated-PSI-vApproved.pdf",
+   "link_quote": "AIIB’s financing will support the development of the first 60MW phase, which is fully contracted under an off-take agreement with BytePlus",
+   "link_check": "found",
    "evidence": "secondary",
-   "link_evidence": ""
+   "link_evidence": "primary"
   },
   {
    "market": "Johor",
@@ -17969,50 +18022,50 @@
   "totals": {
    "low": {
     "in_service_mw": 1446,
-    "pipeline_mw": 6353,
-    "total_mw": 7798,
+    "pipeline_mw": 6473,
+    "total_mw": 7918,
     "mw_by_basis": {
-     "it": 7048,
+     "it": 7168,
      "power": 60,
      "unspecified": 690
     }
    },
    "high": {
     "in_service_mw": 1798,
-    "pipeline_mw": 7464,
-    "total_mw": 9262,
+    "pipeline_mw": 7584,
+    "total_mw": 9382,
     "mw_by_basis": {
-     "it": 7198,
+     "it": 7318,
      "power": 680,
      "unspecified": 1384
     }
    },
-   "sites": 89,
+   "sites": 90,
    "sites_without_a_figure": 31,
    "sites_with_supply_roles_only": 1,
    "without_origin_only": {
     "low": {
      "in_service_mw": 482,
-     "pipeline_mw": 1847,
-     "total_mw": 2329,
+     "pipeline_mw": 1967,
+     "total_mw": 2449,
      "mw_by_basis": {
-      "it": 1579,
+      "it": 1699,
       "power": 60,
       "unspecified": 690
      }
     },
     "high": {
      "in_service_mw": 728,
-     "pipeline_mw": 2662,
-     "total_mw": 3390,
+     "pipeline_mw": 2782,
+     "total_mw": 3510,
      "mw_by_basis": {
-      "it": 1722,
+      "it": 1842,
       "power": 380,
       "unspecified": 1288
      }
     },
-    "sites": 58,
-    "sites_without_a_figure": 27,
+    "sites": 60,
+    "sites_without_a_figure": 28,
     "firms_left_out": [
      "Bitdeer",
      "Bridge Data Centres",
@@ -18548,6 +18601,18 @@
     "evidence": "primary",
     "counted_in": "both",
     "source_table": "site_capacity",
+    "note": ""
+   },
+   {
+    "component": "Epoch Digital Johor campus (Project Mercury)",
+    "firm": "Bank of China; ByteDance",
+    "site_id": "MYS-0026",
+    "stage": "pipeline",
+    "mw": "120",
+    "basis": "it",
+    "evidence": "primary",
+    "counted_in": "both",
+    "source_table": "sites",
     "note": ""
    },
    {

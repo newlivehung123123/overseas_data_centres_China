@@ -31,7 +31,7 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 | Data-centre operators | GDS, VNET, zData, ChinData, DayOne (origin in GDS), Bridge Data Centres (origin in ChinData Group), Global Switch (controlled by Jiangsu Shagang Group), Shanghai DC-Science, RangeIDC (Range Intelligent Computing Technology), Beijing Haoyang, Galaxy Data Center (origin in Hoyinn Technologies) |
 | Builders and equipment | Huawei, ZTE, Inspur, Sugon |
 | Other subsidiaries of Chinese groups | Huanbang (Hong Kong), a subsidiary of Jiangsu Shagang Group |
-| AI developers and compute brokers | INF Tech, Moonshot AI, Megaspeed (origin in a Chinese gaming firm), Bitdeer (origin in Bitmain) |
+| AI developers and compute brokers | INF Tech, Moonshot AI, Megaspeed (origin in 7Road International, a Chinese gaming firm), Bitdeer (origin in Bitmain) |
 | State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA, and funds that they sponsor, such as the China-ASEAN Investment Cooperation Fund II |
 
 Bridge Data Centres is a listed firm on the ground of origin. Bain Capital merged ChinData, which had its headquarters in Beijing, and Bridge under the parent ChinData Group in 2019, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge has never had a controlling owner in mainland China, and version 0.1.0 left Bridge out on that ground alone. The same test would leave out DayOne, which also has no controlling owner in mainland China, so version 0.2.0 applies the three grounds above to every firm and counts Bridge by its origin, as it counts DayOne and Bitdeer.
@@ -145,7 +145,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 | Variable | Type | Description |
 |---|---|---|
 | firm, related_firm | text | The listed firm and the Chinese firm linked to it |
-| relation | category | shareholder, parent, former parent, former group member, or sponsor for a fund whose main sponsor is a Chinese state lender |
+| relation | category | shareholder, parent, former parent, former group member, former name for a firm that was itself the Chinese firm under another name, or sponsor for a fund whose main sponsor is a Chinese state lender |
 | share | number | Share held, from 0 to 1, empty when the source gives none |
 | as_of | date | Date of the share, empty when the source gives none |
 | evidence, source_url, source_quote, check_status, share_found, retrieved | | As in Table 6 |
@@ -420,3 +420,16 @@ The script `scripts/flag_remote_access.py` sorts each of the sites in `sites.csv
 | note | text | | What the category means for a licence under the rule |
 
 The status of a site is the status at the date of the source, so an operational site is taken to have provided computing power before 19 November 2026, and a planned site or a site under construction is not.
+
+### config/finance_searches.csv
+
+`config/finance_searches.csv` is a log, written by hand, of each web search for loans and investments of Chinese state lenders and Chinese banks in data centres outside mainland China, so that a search that found nothing can be checked as well as one that found a lender. The searches began on 23 November 2026 with the state commercial banks, China Development Bank, the Silk Road Fund and the China-ASEAN Investment Cooperation Funds, and they cover only what reports and releases in English name.
+
+**Table 27. Variables in finance_searches.csv**
+
+| Variable | Type | Description |
+|---|---|---|
+| scope | text | Market that the search served, or All markets for a search by lender |
+| date | date | Date of the search |
+| query | text | Words of the search |
+| result | text | What the search found, in one sentence |

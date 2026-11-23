@@ -14,6 +14,11 @@ a census can carry a second passage, for the link of a Chinese firm, which is ch
 
     python scripts/check_sources.py              downloads pages not saved yet
     python scripts/check_sources.py --refetch    downloads every page again
+    python scripts/check_sources.py --only-new   checks only rows whose page or passage differs from the checked file
+
+The option --only-new keeps the result already written in data for every row whose page and passage are unchanged,
+and downloads only the pages of new or changed rows, so that a new row can be checked where the saved copies of the
+pages are not at hand.
 """
 
 from __future__ import annotations
@@ -102,8 +107,26 @@ def page(url: str, refetch: bool) -> tuple[str, str] | None:
     return text, retrieved
 
 
-def check(rows: list[dict], refetch: bool) -> list[dict]:
-    """Check the passage of each row, and also the second passage of a row that carries one in link_source_url."""
+def earlier_results(rows: list[dict]) -> dict[tuple[str, str, str], dict]:
+    """Results already written for each page and passage, keyed by the prefix, the page and the passage."""
+    out = {}
+    for r in rows:
+        for prefix in ("", "link_"):
+            if r.get(prefix + "source_url") and r.get(prefix + "check_status"):
+                key = (prefix, r[prefix + "source_url"], r[prefix + "source_quote"])
+                out[key] = {prefix + "check_status": r[prefix + "check_status"],
+                            prefix + "share_found": r.get(prefix + "share_found", "")}
+                if not prefix:
+                    out[key]["retrieved"] = r.get("retrieved", "")
+    return out
+
+
+def check(rows: list[dict], refetch: bool, earlier: dict | None = None) -> list[dict]:
+    """Check the passage of each row, and also the second passage of a row that carries one in link_source_url.
+
+    A passage whose page and wording appear in earlier keeps the result recorded there and is not downloaded again.
+    """
+    earlier = earlier or {}
     out = []
     for r in rows:
         r = dict(r)
@@ -111,6 +134,10 @@ def check(rows: list[dict], refetch: bool) -> list[dict]:
             if prefix and not r.get("link_source_url"):
                 if "link_source_url" in r:
                     r.update(link_check_status="", link_share_found="")
+                continue
+            kept = earlier.get((prefix, r[prefix + "source_url"], r[prefix + "source_quote"]))
+            if kept:
+                r.update(kept)
                 continue
             got = page(r[prefix + "source_url"], refetch)
             if got is None:
@@ -180,6 +207,8 @@ def write(path: Path, rows: list[dict]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--refetch", action="store_true", help="download every page again")
+    parser.add_argument("--only-new", action="store_true",
+                        help="keep the results in data for rows whose page and passage are unchanged")
     args = parser.parse_args()
 
     sites, roles = read(SITES_IN), read(ROLES_IN)
@@ -193,7 +222,8 @@ def main() -> None:
         if name == "firms":
             validate_firms(rows, roles)
     for name, rows, path in tables:
-        checked = check(rows, args.refetch)
+        earlier = earlier_results(read(path)) if args.only_new and path.exists() else {}
+        checked = check(rows, args.refetch, earlier)
         write(path, checked)
         counts = {status: sum(r["check_status"] == status for r in checked)
                   for status in ("found", "partly_found", "not_found", "not_read")}
