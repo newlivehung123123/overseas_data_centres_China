@@ -109,5 +109,32 @@ class OnlyNewTest(unittest.TestCase):
         self.assertEqual(checked[0]["check_status"], "not_found")
 
 
+class FinancingTest(unittest.TestCase):
+    FIRMS = [{"firm": "Bank of China"}, {"firm": "Industrial Bank"}]
+    SITES = [{"site_id": "MYS-0003"}]
+    ROLES = [{"site_id": "MYS-0003", "firm": "Bank of China", "role": "financier"}]
+
+    def row(self, **kw):
+        base = {"financing_id": "FIN-0001", "lender": "Bank of China", "instrument": "loan", "site_id": "MYS-0003"}
+        return {**base, **kw}
+
+    def test_loan_tied_to_a_site_with_a_financier_role_passes(self):
+        c.validate_financing([self.row(), self.row(financing_id="FIN-0002", lender="Industrial Bank", site_id="")],
+                             self.FIRMS, self.SITES, self.ROLES)
+
+    def test_loan_at_a_site_without_the_role_is_refused(self):
+        with self.assertRaises(ValueError):
+            c.validate_financing([self.row(lender="Industrial Bank")], self.FIRMS, self.SITES, self.ROLES)
+
+    def test_unknown_lender_instrument_or_site_is_refused(self):
+        for bad in (self.row(lender="Unknown Bank", site_id=""), self.row(instrument="bond"), self.row(site_id="MYS-9999")):
+            with self.assertRaises(ValueError):
+                c.validate_financing([bad], self.FIRMS, self.SITES, self.ROLES)
+
+    def test_repeated_identifier_is_refused(self):
+        with self.assertRaises(ValueError):
+            c.validate_financing([self.row(), self.row()], self.FIRMS, self.SITES, self.ROLES)
+
+
 if __name__ == "__main__":
     unittest.main()

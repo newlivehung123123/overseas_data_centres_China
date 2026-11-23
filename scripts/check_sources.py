@@ -9,7 +9,7 @@ of eight characters appear on the page, with spacing, punctuation, accents and c
 partly found from 50 percent. The check writes data/sites.csv and data/site_roles.csv with the
 result for each row, and checks config/operator_markets.csv, config/firm_links.csv,
 config/rules.csv, config/ai_compute.csv, config/site_capacity.csv, config/epoch_links.csv, config/operator_customers.csv,
-config/capacity_definitions.csv and the census of each market, such as config/johor_census.csv, in the same way. A row of
+config/capacity_definitions.csv, config/financing.csv and the census of each market, such as config/johor_census.csv, in the same way. A row of
 a census can carry a second passage, for the link of a Chinese firm, which is checked as well. Pages on sec.gov need a contact email in SEC_CONTACT_EMAIL.
 
     python scripts/check_sources.py              downloads pages not saved yet
@@ -49,7 +49,8 @@ OTHER_TABLES = [(ROOT / "config" / "operator_markets.csv", ROOT / "data" / "oper
                 (ROOT / "config" / "epoch_links.csv", ROOT / "data" / "epoch_links.csv"),
                 (ROOT / "config" / "operator_customers.csv", ROOT / "data" / "operator_customers.csv"),
                 (ROOT / "config" / "capacity_definitions.csv", ROOT / "data" / "capacity_definitions.csv"),
-                (ROOT / "config" / "firms.csv", ROOT / "data" / "firms.csv")]
+                (ROOT / "config" / "firms.csv", ROOT / "data" / "firms.csv"),
+                (ROOT / "config" / "financing.csv", ROOT / "data" / "financing.csv")]
 
 PIECE = 8          # characters in each piece of a passage looked up on the page
 FOUND = 0.9        # share of a passage's pieces that must be on the page for the passage to count as found
@@ -59,6 +60,7 @@ STATUSES = {"operational", "under_construction", "planned", "unclear"}
 EVIDENCE = {"primary", "secondary", "unconfirmed"}
 CENSUS_LINKS = {"operator", "owner", "tenant", "financier", "unconfirmed", "none_found"}
 GROUNDS = {"headquarters", "control", "origin", "state lender", "state lender fund"}
+INSTRUMENTS = {"loan", "equity"}
 
 
 def census_tables() -> list[tuple[Path, Path]]:
@@ -182,6 +184,28 @@ def validate_firms(firms: list[dict], roles: list[dict]) -> None:
         raise ValueError("; ".join(problems))
 
 
+def validate_financing(rows: list[dict], firms: list[dict], sites: list[dict], roles: list[dict]) -> None:
+    """Every lender has a row in firms.csv, every site exists, and a loan or stake tied to a site matches a financier role there."""
+    listed, site_ids = {f["firm"] for f in firms}, {s["site_id"] for s in sites}
+    financiers = {(r["site_id"], r["firm"]) for r in roles if r["role"] == "financier"}
+    problems, seen = [], set()
+    for i, r in enumerate(rows):
+        where = f"financing row {i + 2}"
+        if r["financing_id"] in seen:
+            problems.append(f"{where}: repeated financing_id {r['financing_id']!r}")
+        seen.add(r["financing_id"])
+        if r["lender"] not in listed:
+            problems.append(f"{where}: lender {r['lender']!r} has no row in firms.csv")
+        if r["instrument"] not in INSTRUMENTS:
+            problems.append(f"{where}: instrument {r['instrument']!r} is not one of {sorted(INSTRUMENTS)}")
+        if r["site_id"] and r["site_id"] not in site_ids:
+            problems.append(f"{where}: site {r['site_id']!r} is not in sites.csv")
+        elif r["site_id"] and (r["site_id"], r["lender"]) not in financiers:
+            problems.append(f"{where}: {r['lender']!r} has no financier role at {r['site_id']!r} in site_roles.csv")
+    if problems:
+        raise ValueError("; ".join(problems))
+
+
 def validate_census(name: str, rows: list[dict]) -> None:
     """Every facility of a census names its market and carries one of the codes of the Chinese link."""
     problems = [f"{name} row {i + 2}: unknown chinese_link {r.get('chinese_link')!r}"
@@ -221,6 +245,8 @@ def main() -> None:
             validate_census(name, rows)
         if name == "firms":
             validate_firms(rows, roles)
+        if name == "financing":
+            validate_financing(rows, read(ROOT / "config" / "firms.csv"), sites, roles)
     for name, rows, path in tables:
         earlier = earlier_results(read(path)) if args.only_new and path.exists() else {}
         checked = check(rows, args.refetch, earlier)

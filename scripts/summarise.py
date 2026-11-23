@@ -24,7 +24,7 @@ from estimate_capacity import estimate  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "summary.json"
 GRADED = ["sites", "site_roles", "cloud_regions", "operator_markets", "capacity_definitions", "firms", "firm_links",
-          "operator_customers", "ai_compute", "site_capacity", "rules", "epoch_links"]
+          "operator_customers", "ai_compute", "site_capacity", "rules", "epoch_links", "financing"]
 
 
 def read(name: str) -> list[dict]:

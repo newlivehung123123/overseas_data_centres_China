@@ -33,6 +33,7 @@ The first version covers the firms in Table 2. A firm is added when a source sho
 | Other subsidiaries of Chinese groups | Huanbang (Hong Kong), a subsidiary of Jiangsu Shagang Group |
 | AI developers and compute brokers | INF Tech, Moonshot AI, Megaspeed (origin in 7Road International, a Chinese gaming firm), Bitdeer (origin in Bitmain) |
 | State lenders | China Eximbank, China Development Bank, the state commercial banks, the Ministry of Commerce and CIDCA, and funds that they sponsor, such as the China-ASEAN Investment Cooperation Fund II |
+| Other banks headquartered in mainland China | Industrial Bank |
 
 Bridge Data Centres is a listed firm on the ground of origin. Bain Capital merged ChinData, which had its headquarters in Beijing, and Bridge under the parent ChinData Group in 2019, separated the two after taking ChinData private in 2023, and kept Bridge when it sold ChinData to a Chinese-led consortium in September 2025. Bridge has never had a controlling owner in mainland China, and version 0.1.0 left Bridge out on that ground alone. The same test would leave out DayOne, which also has no controlling owner in mainland China, so version 0.2.0 applies the three grounds above to every firm and counts Bridge by its origin, as it counts DayOne and Bitdeer.
 
@@ -152,7 +153,7 @@ A passage counts as found when at least 90 percent of its overlapping pieces of 
 
 ### data/firms.csv
 
-`data/firms.csv` has one row for each firm with a role in `site_roles.csv`, for each firm named in `firm_origin`, and for each state lender, with the grounds on which the firm counts as Chinese and a passage that supports them. The file is written by hand in `config/firms.csv`, and `scripts/check_sources.py` refuses a role whose firm or origin has no row, so that every firm is tested in the same way. The headquarters and the owners are recorded only where the cited passage gives them, and the note gives what other sources add.
+`data/firms.csv` has one row for each firm with a role in `site_roles.csv`, for each firm named in `firm_origin`, for each lender in `financing.csv`, and for each state lender, with the grounds on which the firm counts as Chinese and a passage that supports them. The file is written by hand in `config/firms.csv`, and `scripts/check_sources.py` refuses a role whose firm or origin has no row, so that every firm is tested in the same way. The headquarters and the owners are recorded only where the cited passage gives them, and the note gives what other sources add.
 
 **Table 10. Variables in firms.csv**
 
@@ -433,3 +434,24 @@ The status of a site is the status at the date of the source, so an operational 
 | date | date | Date of the search |
 | query | text | Words of the search |
 | result | text | What the search found, in one sentence |
+
+### data/financing.csv
+
+`data/financing.csv` has one row for each loan or stake that a lender or fund of `firms.csv` provides to a firm that owns, builds or operates data centres outside mainland China. A role of financier in `site_roles.csv` needs a site, but many sources name the borrower and not the site, so the table records the deal itself and leaves the site empty where the source names none. A row with a site must match a role of the lender as financier at that site, which `scripts/check_sources.py` checks together with the lender and the instrument. Amounts are recorded in the currency that the source gives and are not converted. The file is written by hand in `config/financing.csv` and checked in the same way as `config/sites.csv`.
+
+**Table 28. Variables in financing.csv**
+
+| Variable | Type | Values | Description |
+|---|---|---|---|
+| financing_id | text | FIN- and four digits | Identifier of the row, assigned once and never reused |
+| lender | text | | Lender or fund as `firms.csv` names it |
+| borrower | text | | Firm that receives the loan or the investment, as the source names it |
+| instrument | category | loan, equity | loan for a loan or a syndicated facility, equity for a stake or a strategic investment |
+| lender_role | text | | Role of the lender in the deal as the source gives it, such as lead arranger or investor |
+| amount, currency | number, text | | Size of the whole loan or investment and its currency, empty when the source gives none |
+| lender_amount, lender_currency | number, text | | Part that the lender itself provides and its currency, empty when the source gives none |
+| date | date | YYYY-MM-DD | Date of the deal that the source gives, or the date of the source where the note says so, empty when the source gives none |
+| site_id | text | | Site in `sites.csv` that the source names, empty when the source names none |
+| purpose | text | | Use of the money as the source gives it |
+| note | text | | Limits of the source, such as an undisclosed amount or a report that rests on unnamed people |
+| evidence, source_url, source_quote, check_status, share_found, retrieved | | | As in Table 6 |

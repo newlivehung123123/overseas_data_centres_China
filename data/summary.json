@@ -186,7 +186,7 @@
     },
     "firms": {
       "secondary": 23,
-      "primary": 5
+      "primary": 6
     },
     "firm_links": {
       "primary": 2,
@@ -214,6 +214,10 @@
     },
     "epoch_links": {
       "secondary": 4
+    },
+    "financing": {
+      "primary": 3,
+      "unconfirmed": 1
     },
     "bangkok_census": {
       "secondary": 88
@@ -294,7 +298,7 @@
   },
   "firms_by_ground": {
     "control": 6,
-    "headquarters": 15,
+    "headquarters": 16,
     "origin": 4,
     "state lender": 2,
     "state lender fund": 1
