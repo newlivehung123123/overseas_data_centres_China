@@ -21,7 +21,7 @@ component,firm,site_id,stage,mw,basis,evidence,counted_in,source_table,note
 "DayOne, Zaragoza",DayOne,,pipeline,304,it,primary,both,operator_markets,Capacity under construction and on secured powered land that the firm reports
 "Global Switch, All markets",Global Switch,,in_service,252,it,primary,both,operator_markets,Total that the firm reports
 "DayOne, Johor",DayOne,,in_service,106,it,secondary,high,epoch_estimates,"Epoch AI estimates 895 MW of IT power at the sites of the market, against 789 MW that the firm reports in service"
-Data Center Pecém,ByteDance,BRA-0001,pipeline,300,power,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
+Data Center Pecém,ByteDance; China-LAC Industrial Cooperation Investment Fund,BRA-0001,pipeline,300,power,secondary,high,sites,"High estimate only, because the figure is not from a primary source"
 Global Switch Madrid 2,Global Switch,ESP-0003,pipeline,36,it,primary,both,site_capacity,
 China Mobile International United Kingdom 1 Data Centre,China Mobile International,GBR-0001,in_service,10,unspecified,secondary,high,site_capacity,"High estimate only, because the status of the site is unclear"
 Global Switch London South,Global Switch,GBR-0004,pipeline,40,it,primary,both,site_capacity,

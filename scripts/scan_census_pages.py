@@ -9,11 +9,13 @@ a lead for a person to read and not a coded link, because a page can name a Chin
 supplier of equipment. The script downloads each page once, at most one request every 1.5 seconds, and keeps the text
 in data/raw/pages/sources with the pages of the source check.
 
-    python scripts/scan_census_pages.py    writes data/census_page_scan.csv
+    python scripts/scan_census_pages.py              writes data/census_page_scan.csv
+    python scripts/scan_census_pages.py --only-new   scans only the pages that the file does not hold yet
 """
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import re
@@ -83,10 +85,19 @@ def scan(rows: list[dict]) -> list[dict]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--only-new", action="store_true",
+                        help="keep the rows already in the file and scan only the pages of facilities it does not hold")
+    args = parser.parse_args()
     rows = []
     for src, _ in cs.census_tables():
         rows += cs.read(src)
-    result = scan(rows)
+    kept = {}
+    if args.only_new and OUT.exists():
+        kept = {(r["market"], r["baxtel_page"], r["facility"]): r for r in cs.read(OUT)}
+    new = scan([r for r in rows if (r["market"], r["baxtel_page"], r["facility"]) not in kept])
+    fresh = {(r["market"], r["baxtel_page"], r["facility"]): r for r in new}
+    result = [kept.get(k) or fresh[k] for k in ((r["market"], r["baxtel_page"], r["facility"]) for r in rows)]
     with OUT.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()

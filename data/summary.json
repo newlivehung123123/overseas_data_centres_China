@@ -26,13 +26,13 @@
     "Saudi Arabia": 1,
     "South Africa": 1
   },
-  "roles": 118,
+  "roles": 119,
   "roles_by_role": {
     "operator": 52,
     "owner": 34,
     "tenant": 19,
     "user": 9,
-    "financier": 3,
+    "financier": 4,
     "equipment supplier": 1
   },
   "sites_by_firm": {
@@ -58,7 +58,8 @@
     "RangeIDC": 1,
     "Huawei": 1,
     "Beijing Haoyang": 1,
-    "Galaxy Data Center": 1
+    "Galaxy Data Center": 1,
+    "China-LAC Industrial Cooperation Investment Fund": 1
   },
   "sites_by_level": {
     "A": 51,
@@ -112,6 +113,14 @@
         "owner": 1
       }
     },
+    "Fortaleza": {
+      "facilities": 10,
+      "operators": 7,
+      "by_chinese_link": {
+        "none_found": 8,
+        "tenant": 2
+      }
+    },
     "Jakarta": {
       "facilities": 104,
       "operators": 40,
@@ -143,6 +152,20 @@
         "owner": 1
       }
     },
+    "Rio de Janeiro": {
+      "facilities": 20,
+      "operators": 11,
+      "by_chinese_link": {
+        "none_found": 20
+      }
+    },
+    "Greater São Paulo": {
+      "facilities": 113,
+      "operators": 32,
+      "by_chinese_link": {
+        "none_found": 113
+      }
+    },
     "Singapore": {
       "facilities": 110,
       "operators": 49,
@@ -171,7 +194,7 @@
     },
     "site_roles": {
       "primary": 65,
-      "secondary": 46,
+      "secondary": 47,
       "unconfirmed": 7
     },
     "cloud_regions": {
@@ -185,12 +208,12 @@
       "primary": 4
     },
     "firms": {
-      "secondary": 23,
+      "secondary": 24,
       "primary": 6
     },
     "firm_links": {
       "primary": 2,
-      "secondary": 7
+      "secondary": 8
     },
     "operator_customers": {
       "primary": 5,
@@ -217,13 +240,17 @@
     },
     "financing": {
       "primary": 3,
-      "unconfirmed": 1
+      "unconfirmed": 1,
+      "secondary": 1
     },
     "bangkok_census": {
       "secondary": 88
     },
     "batam_census": {
       "secondary": 20
+    },
+    "fortaleza_census": {
+      "secondary": 10
     },
     "jakarta_census": {
       "secondary": 104
@@ -233,6 +260,12 @@
     },
     "kuala_lumpur_census": {
       "secondary": 90
+    },
+    "rio_de_janeiro_census": {
+      "secondary": 20
+    },
+    "sao_paulo_census": {
+      "secondary": 113
     },
     "singapore_census": {
       "secondary": 110
@@ -301,6 +334,6 @@
     "headquarters": 16,
     "origin": 4,
     "state lender": 2,
-    "state lender fund": 1
+    "state lender fund": 2
   }
 }
